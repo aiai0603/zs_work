@@ -1,0 +1,51 @@
+﻿S->S S * -->a S * --> a S S + *  XXX
+
+S->S S * --> SS+S * -->aS+S* --> aa+a* 
+
+=========python=============
+>>> import dis
+>>> def f(x):
+...     return x + x
+...
+>>> dis.dis(f)
+  2           0 LOAD_FAST                0 (x)
+              3 LOAD_FAST                0 (x)
+              6 BINARY_ADD
+              7 RETURN_VALUE
+>>>
+==============gcc==========
+ 
+{ ~ }  » cat test.c                                                                          ~
+#include <stdio.h>
+
+int main (){
+
+
+}
+
+#编辑器
+
+nano test.c
+
+
+
+//预处理
+gcc -H test.c
+gcc -E test.c > test.p.c
+
+//汇编
+gcc  test.c -S
+
+//编译
+gcc -c test.c
+
+//链接
+gcc test.c -o test
+
+
+
+
+
+
+
+

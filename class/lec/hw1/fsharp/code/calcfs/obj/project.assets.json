@@ -1,0 +1,271 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "FSharp.Core/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FSharp.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharp.Core.dll": {}
+        },
+        "resource": {
+          "lib/netstandard2.0/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard2.0/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard2.0/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard2.0/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard2.0/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard2.0/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard2.0/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard2.0/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard2.0/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard2.0/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard2.0/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard2.0/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard2.0/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "FsLexYacc/10.2.0": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.5.2",
+          "FsLexYacc.Runtime": "[10.2.0, 10.3.0)"
+        },
+        "build": {
+          "build/FsLexYacc.targets": {}
+        }
+      },
+      "FsLexYacc.Runtime/10.2.0": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/FsLexYacc.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FsLexYacc.Runtime.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FSharp.Core/5.0.0": {
+      "sha512": "iHoYXA0VaSQUONGENB1aVafjDDZDZpwu39MtaRCTrmwFW/cTcK0b2yKNVYneFHJMc3ChtsSoM9lNtJ1dYXkHfA==",
+      "type": "package",
+      "path": "fsharp.core/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "fsharp.core.5.0.0.nupkg.sha512",
+        "fsharp.core.nuspec",
+        "lib/netstandard2.0/FSharp.Core.dll",
+        "lib/netstandard2.0/FSharp.Core.xml",
+        "lib/netstandard2.0/cs/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/de/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/es/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/fr/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/it/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/ja/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/ko/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/pl/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/pt-BR/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/ru/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/tr/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/zh-Hans/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/zh-Hant/FSharp.Core.resources.dll"
+      ]
+    },
+    "FsLexYacc/10.2.0": {
+      "sha512": "q7mhuEMm8rvFAJ9jaH1atYCRN96tMbjHarYIDooeMKFCbUuqvep+vA2ijGhA06GZ5BG+jg4TjG6dt/4gR2qHHA==",
+      "type": "package",
+      "path": "fslexyacc/10.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/FsLexYacc.targets",
+        "build/fslex/netcoreapp3.1/FSharp.Core.dll",
+        "build/fslex/netcoreapp3.1/FsLexYacc.Runtime.dll",
+        "build/fslex/netcoreapp3.1/cs/FSharp.Core.resources.dll",
+        "build/fslex/netcoreapp3.1/de/FSharp.Core.resources.dll",
+        "build/fslex/netcoreapp3.1/en/FSharp.Core.resources.dll",
+        "build/fslex/netcoreapp3.1/es/FSharp.Core.resources.dll",
+        "build/fslex/netcoreapp3.1/fr/FSharp.Core.resources.dll",
+        "build/fslex/netcoreapp3.1/fslex.deps.json",
+        "build/fslex/netcoreapp3.1/fslex.dll",
+        "build/fslex/netcoreapp3.1/fslex.pdb",
+        "build/fslex/netcoreapp3.1/fslex.runtimeconfig.json",
+        "build/fslex/netcoreapp3.1/it/FSharp.Core.resources.dll",
+        "build/fslex/netcoreapp3.1/ja/FSharp.Core.resources.dll",
+        "build/fslex/netcoreapp3.1/ko/FSharp.Core.resources.dll",
+        "build/fslex/netcoreapp3.1/pl/FSharp.Core.resources.dll",
+        "build/fslex/netcoreapp3.1/pt-BR/FSharp.Core.resources.dll",
+        "build/fslex/netcoreapp3.1/ru/FSharp.Core.resources.dll",
+        "build/fslex/netcoreapp3.1/tr/FSharp.Core.resources.dll",
+        "build/fslex/netcoreapp3.1/zh-Hans/FSharp.Core.resources.dll",
+        "build/fslex/netcoreapp3.1/zh-Hant/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/FSharp.Core.dll",
+        "build/fsyacc/netcoreapp3.1/FsLexYacc.Runtime.dll",
+        "build/fsyacc/netcoreapp3.1/FsLexYacc.targets",
+        "build/fsyacc/netcoreapp3.1/cs/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/de/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/en/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/es/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/fr/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/fsyacc.deps.json",
+        "build/fsyacc/netcoreapp3.1/fsyacc.dll",
+        "build/fsyacc/netcoreapp3.1/fsyacc.pdb",
+        "build/fsyacc/netcoreapp3.1/fsyacc.runtimeconfig.json",
+        "build/fsyacc/netcoreapp3.1/it/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/ja/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/ko/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/pl/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/pt-BR/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/ru/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/tr/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/zh-Hans/FSharp.Core.resources.dll",
+        "build/fsyacc/netcoreapp3.1/zh-Hant/FSharp.Core.resources.dll",
+        "fslexyacc.10.2.0.nupkg.sha512",
+        "fslexyacc.nuspec",
+        "src/FsLexYacc.targets",
+        "src/fslex/Arg.fs",
+        "src/fslex/Arg.fsi",
+        "src/fslex/Lexing.fs",
+        "src/fslex/Lexing.fsi",
+        "src/fslex/Parsing.fs",
+        "src/fslex/Parsing.fsi",
+        "src/fslex/fslex.fs",
+        "src/fslex/fslex.fsx",
+        "src/fslex/fslexast.fs",
+        "src/fslex/fslexlex.fs",
+        "src/fslex/fslexpars.fs",
+        "src/fsyacc/Arg.fs",
+        "src/fsyacc/Arg.fsi",
+        "src/fsyacc/Lexing.fs",
+        "src/fsyacc/Lexing.fsi",
+        "src/fsyacc/Parsing.fs",
+        "src/fsyacc/Parsing.fsi",
+        "src/fsyacc/fsyacc.fs",
+        "src/fsyacc/fsyacc.fsx",
+        "src/fsyacc/fsyaccast.fs",
+        "src/fsyacc/fsyacclex.fs",
+        "src/fsyacc/fsyaccpars.fs"
+      ]
+    },
+    "FsLexYacc.Runtime/10.2.0": {
+      "sha512": "d2+gguRIvsn1e7AycVc0r7L1QWptrnUOvQvJLbgkANcS5SjfM/FRgfUGwfqV2cJo3KOFQB5Mqmda/4YTQkkvdA==",
+      "type": "package",
+      "path": "fslexyacc.runtime/10.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fslexyacc.runtime.10.2.0.nupkg.sha512",
+        "fslexyacc.runtime.nuspec",
+        "lib/netstandard2.0/FsLexYacc.Runtime.dll",
+        "lib/netstandard2.0/FsLexYacc.Runtime.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "FSharp.Core >= 5.0.0",
+      "fslexyacc >= 10.2.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\asus\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\asus\\Desktop\\class\\lec\\hw\\hw1\\fsharp\\code\\calcfs\\calcfs.fsproj",
+      "projectName": "calcfs",
+      "projectPath": "C:\\Users\\asus\\Desktop\\class\\lec\\hw\\hw1\\fsharp\\code\\calcfs\\calcfs.fsproj",
+      "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\asus\\Desktop\\class\\lec\\hw\\hw1\\fsharp\\code\\calcfs\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "dependencies": {
+          "FSharp.Core": {
+            "target": "Package",
+            "version": "[5.0.0, )",
+            "generatePathProperty": true
+          },
+          "fslexyacc": {
+            "target": "Package",
+            "version": "[10.2.0, )",
+            "generatePathProperty": true
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

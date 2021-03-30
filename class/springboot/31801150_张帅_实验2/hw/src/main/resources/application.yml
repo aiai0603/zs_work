@@ -1,0 +1,14 @@
+demo:
+  sValue: ${random.value}
+  nValue: ${random.int}
+
+demo-value:
+  string: ${random.value}
+  int: ${random.int}
+
+admin: admin
+password: admin
+
+spring:
+  profiles:
+    active: product

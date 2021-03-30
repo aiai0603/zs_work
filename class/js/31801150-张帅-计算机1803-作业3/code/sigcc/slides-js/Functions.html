@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>FUNCTIONS
+		</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<!-- <link rel="stylesheet" href="css/theme/white.css" id="theme"> -->
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+
+	<!-- Used to fade in a background when a specific slide state is reached -->
+	<div class="state-background"></div>
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+
+	
+<section class="present" style="display: block;">
+	<h1>Functions</h1>
+	<h3 class="inverted">as first class values</h3>
+	<p>
+		<i>
+			修改：<a href="https://gitee.com/sigcc" class="roll"><span>sigcc </span></a> <br>
+			参考：<a href="http://people.csail.mit.edu/dnj/" class="roll"><span data-title="Daniel Jackson">Daniel Jackson</span></a></i>
+	</p>
+
+	<script>
+		// Deliciously hacky. Look away.
+		if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+	</script>
+</section>
+
+<section class="stack future" style="display: block;">
+	<section>
+	<h2>Functions as values</h2>
+	<ul>
+		<li>Evaluation vs application</li>
+		<li>Functions, variables &amp; slots</li>
+		<li>Evaluation order</li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Evaluation &amp; Application</h2>
+	<ul>
+		<li>Evaluating a <i>function expression 函数表达式</i> gives a <i>function value函数值</i></li>
+		<li>Then the function (value) can be <i>applied</i></li>
+		<li>可以将<b>函数值</b>应用到参数</li>
+		
+		<li>Note that <i>print</i> is called only in application</li>
+	</ul>
+	<iframe src="./Functions_files/evalapp.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Functions bound to variables</h2>
+	<ul>
+		<li>Function values bound like any other</li>
+		<li>变量可以动态绑定到 函数值</li>
+	</ul>
+	<iframe src="./Functions_files/funvar.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Functions as objects</h2>
+	<ul>
+		<li>Functions are objects, so can add slots to them</li>
+		<li>函数也是普通对象，可以拥有自己的属性</li>
+		<li>Here's a function that carries its own state (badly)</li>
+	</ul>
+	<iframe src="./Functions_files/funstr.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Functions in objects</h2>
+	<ul>
+		<li>Functions are values, so can store in slots</li>
+		<li>函数也可以作为对象的属性</li>
+		<li>Another example with poor <i>encapsulation</i></li>
+		<li>Note API <i>protocol</i>: what if forget to init <i>seq.c</i>?</li>
+	</ul>
+	<iframe src="./Functions_files/funslot.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Evaluation order</h2>
+	<ul>
+		<li>Order is left to right</li>
+		<li>函数参数按次序，从左到右求值</li>
+		<li>In application, evaluate arguments then evaluate body</li>
+	</ul>
+	<iframe src="./Functions_files/evalorder.html" width="800" height="500"></iframe>
+	</section>
+</section>
+
+<section class="stack future" style="display: block;">
+	<section>
+	<h2>Functions &amp; Variable Scope</h2>
+	<ul>
+		<li>Polluting the namespace</li>
+		<li>Arguments, globals &amp; locals</li>
+		<li>Semantics of <i>var</i> keyword</li>
+		<li>A scoping principle</li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Functions that modify globals</h2>
+	<ul>
+		<li>Recall function that assigns to <b>global</b> variable</li>
+		<li>Variables are by default global</li>
+		<li>默认情况下(无声明前缀)，变量是全局的</li>
+	</ul>
+	<iframe src="./Functions_files/globals.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Polluting the namespace</h2>
+	<ul>
+		<li>Risk of modifying or <i>polluting</i> the global namespace</li>
+		<li>How to fix this function?</li>
+	</ul>
+	<iframe src="./Functions_files/pollute.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Arguments are local</h2>
+	<ul>
+		<li>函数参数是 函数体内的局部变量</li>
+		<li>what is the value of <i>s</i> after? why?</li>
+	</ul>
+	<iframe src="./Functions_files/argslocal.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Formals and actuals</h2>
+	<ul>
+		<li>Numbers of <i>formals</i> and <i>actuals</i> need not match</li>
+		<li>Bound by position</li>
+	</ul>
+	<iframe src="./Functions_files/formact.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Creating a local namespace</h2>
+	<ul>
+		<li>Can use extra arguments as local variables</li>
+		<li>But don't actually do this (wait two slides)</li>
+	</ul>
+	<iframe src="./Functions_files/extras.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>The var keyword</h2>
+	<ul>
+		<li>Mark a variable with keyword <i>var</i> to make it local</li>
+		<li>As if declared as extra, but inaccessible, argument</li>
+		<li>Doesn't matter which assignment you mark (try it!)</li>
+	</ul>
+	<iframe src="./Functions_files/var.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Good practice</h2>
+	<ul>
+		<li><i>Scope 作用域</i> of a variable: program text it's accessible in, Minimize the <i>scope</i> of all variables</li>
+		<li>var 的作用域为函数体 </li>
+		<li>ES6 建议规范 ---- 只使用 let 与 const 声明变量，作用域为代码块 </li>
+	</ul>
+	<iframe src="./Functions_files/good.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>A common JavaScript idiom</h2>
+	<h3>习惯用法</h3>
+	<ul>
+		<li>"Main function" is often coded like this in JavaScript--- <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F">IIFE（立即调用函数表达式）</a></li>
+		<li>What's going on?</li>
+		<li>每个单独的 .js 都如此，防止污染全局作用域</li>
+
+	</ul>
+	<iframe src="./Functions_files/idiom.html" width="800" height="500"></iframe>
+	</section>
+</section>
+
+<section class="stack future" style="display: block;">
+	<section>
+	<h2>Functions as Arguments</h2>
+	<ul>
+		<li><i><a href="https://cn.bing.com/dict/search?q=Functionals&FORM=HDRSC6">Functionals</a></i>: functions that take functions</li>
+		<li>高阶函数</li>
+		<li>Iteration abstractions: roll your own loops</li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Twice</h2>
+	<ul>
+		<li>A function that applies its argument twice</li>
+	</ul>
+	<iframe src="./Functions_files/twice.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Happy Times</h2>
+	<ul>
+		<li>In Ruby, could make this a method: <i>4.times(hi)</i></li>
+	</ul>
+	<iframe src="./Functions_files/times.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>An Iteration Abstraction</h2>
+	<ul>
+		<li>Roll your own looping constructs!</li>
+	</ul>
+	<iframe src="./Functions_files/fromto.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Applying from to</h2>
+	<ul>
+		<li>Let's clean up our sum function</li>
+		<li>Use our functional instead of <i>for</i></li>
+	</ul>
+	<iframe src="./Functions_files/fromtosum.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>An iterator function</h2>
+	<ul>
+		<li>We can do better: iterate over elements, not indexes</li>
+		<li>Note that function passed to <i>each</i> accesses <i>s</i>: a <i>closure</i></li>
+		<li>JQuery <i>each</i> function works like this
+	</li></ul>
+	<iframe src="./Functions_files/iterator.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>An iterator method</h2>
+	<ul>
+		<li>Can modify the prototype for <i>Array</i> and make it a method</li>
+		<li>ECMAScript 5 has <i>array.forEach (callback(value,index,array))</i></li>
+	</ul>
+	<iframe src="./Functions_files/arrayeach.html" width="800" height="500"></iframe>
+	</section>
+</section>
+
+<section class="stack future" style="display: none;">
+	<section>
+	<h2>List Functionals</h2>
+	<h3>列表操作函数</h3>
+	<ul>
+		<li>Classic functionals for immutable lists</li>
+		<li>Applied to JavaScript arrays</li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Signatures函数签名</h2>
+	<ul>
+		<li>map: list[a] x (a-&gt;b) -&gt; list[b]</li>
+		<li>reduce: list[a] x (a x b -&gt; b) x b -&gt; b</li>
+		<li>filter: list[a] x (a -&gt; bool) -&gt; list[a]</li>
+		<li>以上三个函数操作列表前后的列表长度  
+			 <li>map -- n:n 映射</li>
+			 <li>reduce -- n:1 累积</li> 
+			 <li>filter -- n:m 过滤</li> </li>
+	</ul>
+	</section>
+	
+	<section>
+	<h2>Map映射</h2>
+	<ul>
+		<li>Apply a function to each element</li>
+		<li>Exercise: map [1,2,3] to [[1], [2], [3]]</li>
+	</ul>
+	<iframe src="./Functions_files/map.html" width="800" height="500"></iframe>
+	</section>
+	
+	<section>
+	<h2>Filter过滤</h2>
+	<ul>
+		<li>Choose elements based on a predicate</li>
+		<li>predicate 谓词--返回布尔值的函数</li>
+	</ul>
+	<iframe src="./Functions_files/filter.html" width="800" height="500"></iframe>
+	</section>
+	
+	<section>
+	<h2>Reduce累积</h2>
+	<ul>
+		<li>Distribute a function across the elements</li>
+	</ul>
+	<iframe src="./Functions_files/reduce.html" width="800" height="500"></iframe>
+	</section>
+	
+	<section>
+	<h2>Exercise: sum</h2>
+	<ul>
+		<li>Implement the sum function with a functional</li>
+		<li>用reduce 高阶函数实现sum</li>
+	</ul>
+	<iframe src="./Functions_files/sumfunc.html" width="800" height="500"></iframe>
+	</section>
+</section>
+
+<section class="stack future" style="display: none;">
+	<section>
+	<h2>Functions as Results</h2>
+	<ul>
+		<li>Currying functions</li>
+		<li>Closures and lexical scope</li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Returning a function</h2>
+	<ul>
+		<li>Here's a function that makes reporter functions</li>
+		<li>Make instrumentation more modular</li>
+		<li>在程序执行时，动态创建函数</li>
+	</ul>
+	<iframe src="./Functions_files/funresult.html" width="800" height="500"></iframe>
+	</section>
+	
+	<section>
+	<h2>Times, Revisited</h2>
+	<ul>
+		<li><i>times</i> function, a <i>curried</i> version柯里化版本</li>
+		<li>Currying function with type <i>a x b -&gt; c</i> gives <i>a -&gt; (b -&gt; c)</i></li>
+		<li>多参数函数可以通过多个单参数函数构造出来</li>
+	</ul>
+	<iframe src="./Functions_files/curriedtimes.html" width="800" height="500"></iframe>
+	</section>
+	
+	<section>
+	<h2>Free vars &amp; lexical scope</h2>
+	<ul style="font-size: smaller;">
+		<li>What happens when a function body references a <i>free variable</i>?</li>
+		<li>Rule: var is bound in environment in which function is <i>created</i></li><li>自由变量依赖于函数的声明环境而不是执行环境</li>
+		<li><i>lexical scoping词法作用域（静态作用域）</i></li>
+	</ul>
+	<iframe src="./Functions_files/lexical.html" width="800" height="500"></iframe>
+	</section>
+	<section>
+		<h2>Static Scope 静态作用域</h2>
+		<ul style="font-size: smaller;">
+			<li>词法作用域 也被称为静态作用域</li>
+			<li>如果自由变量依赖于函数的执行环境（执行上下文）</li>
+			<li>则称为动态作用域</li>
+			<li>Javascript语言是动态语言，但是变量作用域解析是动态作用域</li>
+		</ul>
+	</section>
+	<section>
+	<h2>Counter, revisited</h2>
+	<ul style="font-size: smaller;">
+		<li>Function returned by <i>Seq</i> is called a <i>closure 闭包</i></li>
+		<li>闭包 --- 函数体 + 函数的声明环境</li>
+		<li>环境中变量的查找是按 作用域链的次序查找，Scope Chain</li>
+		<li><i>所有的</i>JavaScript函数都是闭包</li>
+		<li>Carries environment of creation in which var <i>c</i> is bound</li>
+		<li>Try modifying <i>c</i> after call to <i>Seq()</i></li>
+	</ul>
+	<iframe src="./Functions_files/counter.html" width="800" height="500"></iframe>
+	</section>
+</section>
+
+<section class="stack future" style="display: none;">
+	<section>
+	<h2>Data Abstraction</h2>
+	<ul>
+		<li>A pattern for abstract types</li>
+		<li>Using closures to encapsulate the rep</li>
+		<li>使用闭包封装数据</li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Object-oriented counter</h2>
+	<ul>
+		<li><i>Seq</i> is a constructor that returns an object</li>
+		<li>Object fields are closures; no external access to rep 无法从外部访问封装值</li>
+	</ul>
+	<iframe src="./Functions_files/fancycounter.html" width="800" height="500"></iframe>
+	</section>
+	<section>
+		<h2>Seq中闭包函数的环境链</h2>
+		<ul>
+			<li>Scope Chain 作用域链/环境</li>
+			<img src="scope.chain.png" width="800" height="500">
+		</ul>
+
+		</section>
+
+	<section>
+	<h2>A bank account</h2>
+	<ul>
+		<li>Can you rob the bank, ie. increase balance without calling <i>deposit</i>?</li>
+	</ul>
+	<iframe src="./Functions_files/bank.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>A mutable set</h2>
+	<ul>
+	</ul>
+	<iframe src="./Functions_files/set.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Some refinements</h2>
+	<ul>
+		<li>Can "attach" a type using prototypes</li>
+		<li>For immutables, replace equality check in <i>contains</i> (see 6.005)</li>
+	</ul>
+	<iframe src="./Functions_files/setpolished.html" width="800" height="500"></iframe>
+	</section>
+</section>
+
+<section class="stack future" style="display: block;">
+	<section>
+	<h2>A cool example</h2>
+	<ul>
+		<li>Using a functional to change a function's performance</li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Fibonacci</h2>
+	<ul>
+		<li>Classic function, returns fibonacci number</li>
+		<li>Try incrementing argument and note performance</li>
+	</ul>
+	<iframe src="./Functions_files/fib.html" width="800" height="500"></iframe>
+	</section>
+	
+	<section>
+	<h2>Timing a function</h2>
+	<ul>
+		<li>Let's time it, with a functional (of course)</li>
+	</ul>
+	<iframe src="./Functions_files/timer.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>	  
+	<h2>A memoizing functional</h2>
+	<ul>
+		<li>Takes a function &amp; returns a memoizing version</li>
+		<li>Apply to Fibonacci: can we do better?</li>
+		<li>Exercise: what if you <i>inline</i> the expr for <i>mfib</i>?</li>
+	</ul>
+	<iframe src="./Functions_files/memo.html" width="800" height="500"></iframe>
+  </section>
+  
+  <section>
+	<h2>Memoizing Fibonacci</h2>
+	<ul>
+		<li>Can we do better? Apply to internal calls?</li>
+		<li>Now linear, no longer exponential!</li>
+	</ul>
+	<iframe src="./Functions_files/memofib.html" width="800" height="500"></iframe>
+  </section>
+</section>
+	
+<section class="stack future" style="display: block;">
+	<section>
+	<h2>Closure puzzles</h2>
+	<ul>
+		<li>Test yourself: how well do you understand closures?</li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>One free x</h2>
+	<ul>
+		<li>What does <i>f()</i> evaluate to?</li>
+	</ul>
+	<iframe src="./Functions_files/onefreex.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Another free x</h2>
+	<ul>
+		<li>What does <i>f()</i> evaluate to?</li>
+	</ul>
+	<iframe src="./Functions_files/xagain.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Modifying arguments</h2>
+	<ul>
+		<li>What does <i>x</i> evaluate to at the end?</li>
+	</ul>
+	<iframe src="./Functions_files/xplus.html" width="800" height="500"></iframe>
+	</section>
+
+
+	<section>
+	<h2>Multipliers</h2>
+	<ul>
+		<li>Can you guess what <i>multipliers</i> was supposed to return?</li>
+		<li>What does <i>multipliers</i> actually return? Why?</li>
+		<li>Hint: try rewriting with <i>from_to</i></li>
+	</ul>
+	<iframe src="./Functions_files/multipliers.html" width="800" height="500"></iframe>
+	</section>
+</section>
+
+<section class="future" style="display: block;">
+	<h1>THE END</h1>
+</section>
+
+    </div>
+	<!-- The navigational controls UI -->
+	<!-- <aside class="controls" style="display: block;">
+		<a class="left" href="Basics.html#">◄</a>
+		<a class="right enabled" href="Basics.html#">►</a>
+		<a class="up" href="Basics.html#">▲</a>
+		<a class="down" href="Basics.html#">▼</a>
+	</aside> -->
+
+	<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+	<div class="progress" style="display: block;"><span style="width: 0px;"></span></div>
+	
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

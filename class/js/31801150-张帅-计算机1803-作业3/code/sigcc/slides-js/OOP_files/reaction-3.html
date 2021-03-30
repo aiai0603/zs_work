@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)http://people.csail.mit.edu/dnj/teaching/6170/accelerator/modules/objects/code/reaction-3.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../editor/codestyles.css">
+    <script src="../editor/codeeditor.js"></script>
+	
+
+    <style>
+    canvas {position: absolute; left: 580px; top: 67px}
+    </style>    
+</head>
+<body style="">
+
+<div id="buttons">
+	<input type="submit" value="run" id="runIntro" onclick="slide.runCode();">
+	<input type="submit" value="clear output" id="clearOutput" onclick="clearOutputBox();">
+	<input type="submit" value="revert" id="reloadCode" onclick="location.reload();">
+</div>
+
+<canvas id="canvas" height="200" width="200"></canvas>
+<script src="trafficlight.js"> </script>
+<script src="button.js"> </script>
+<script>
+
+
+
+// currently unused
+// exercise to make button set light to random color?
+var toss = function () {
+	return Math.random() > 0.5;
+}
+// return a function that when called randomly calls either f or g
+var choose = function (f, g) {
+	return function () {toss() ? f() : g();};
+}
+
+//return time in ms
+var now = function () {return new Date().getTime();}
+
+/*
+// solution to exercise
+t = TrafficLight();
+b = Button();
+b.onclick(function () {
+	 console.log("your time was " + (now()-start) + "ms");
+})
+go = function () {
+   console.log("click!"); t.green(); start = now(); 
+}
+setTimeout(go, Math.random() * 10000);
+ console.log("get ready...");
+*/
+
+var avg = function (a) {
+    var result = 0;
+    a.forEach(function (e) {
+        result += e;
+    });
+    return Math.floor(result / a.length);
+	}
+
+Array.prototype.zip = function (a, f) {
+	var result = [];
+	for (i=0; i < this.length; i++)
+		result.push(f(this[i], a[i]))
+	return result;
+	}
+
+var pos = function (x) {return x >= 0;}
+
+var plus = function (a, b) {return a + b;}
+
+var not = function (f) {return function (x) {return !f(x)}};
+
+var max = function (a, b) {return Math.max(a, b);}
+
+
+</script>
+
+<textarea id="code" name="code" style="display: none;">t = TrafficLight(); b = Button(); es = [];
+b.onclick(function () {
+  t.red(); es.push(now());
+  if (es.length == 6) report(); else start();
+  });
+start = function () {setTimeout(go, Math.random() * 3000)}
+go = function () {t.green(); es.push(-now())};
+report = function () {
+   console.log("Average: " + 0 + "ms");
+   console.log("Longest: " + 0 + "ms");
+  };
+start(); "Ready...";</textarea><div class="CodeMirror"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 8.99306px; left: 51.9907px;"><textarea style="position: absolute; padding: 0; width: 1px; height: 1em" wrap="off" autocorrect="off" autocapitalize="off"></textarea></div><div class="CodeMirror-scroll cm-s-default" tabindex="-1"><div style="position: relative; height: 273.76px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-gutter" style="height: 274px;"><div class="CodeMirror-gutter-text"><pre>&nbsp;1</pre><pre>2</pre><pre>3</pre><pre>4</pre><pre>5</pre><pre>6</pre><pre>7</pre><pre>8</pre><pre>9</pre><pre>10</pre><pre>11</pre><pre>12</pre></div></div><div class="CodeMirror-lines"><div style="position: relative; z-index: 0; outline: none; margin-left: 43px;"><div style="position: absolute; width: 100%; height: 0; overflow: hidden; visibility: hidden; outline: 5px auto none"></div><pre class="CodeMirror-cursor" style="top: 0px; left: 0px;">&nbsp;</pre><div style="position: relative; z-index: -1; display: none;"></div><div style=""><pre><span class="cm-variable">t</span> = <span class="cm-variable">TrafficLight</span>(); <span class="cm-variable">b</span> = <span class="cm-variable">Button</span>(); <span class="cm-variable">es</span> = [];</pre><pre><span class="cm-variable">b</span>.<span class="cm-property">onclick</span>(<span class="cm-keyword">function</span> () {</pre><pre>  <span class="cm-variable">t</span>.<span class="cm-property">red</span>(); <span class="cm-variable">es</span>.<span class="cm-property">push</span>(<span class="cm-variable">now</span>());</pre><pre>  <span class="cm-keyword">if</span> (<span class="cm-variable">es</span>.<span class="cm-property">length</span> == <span class="cm-number">6</span>) <span class="cm-variable">report</span>(); <span class="cm-keyword">else</span> <span class="cm-variable">start</span>();</pre><pre>  });</pre><pre><span class="cm-variable">start</span> = <span class="cm-keyword">function</span> () {<span class="cm-variable">setTimeout</span>(<span class="cm-variable">go</span>, <span class="cm-variable">Math</span>.<span class="cm-property">random</span>() * <span class="cm-number">3000</span>)}</pre><pre><span class="cm-variable">go</span> = <span class="cm-keyword">function</span> () {<span class="cm-variable">t</span>.<span class="cm-property">green</span>(); <span class="cm-variable">es</span>.<span class="cm-property">push</span>(-<span class="cm-variable">now</span>())};</pre><pre><span class="cm-variable">report</span> = <span class="cm-keyword">function</span> () {</pre><pre>  <span class="cm-variable"> console.log</span>(<span class="cm-string">"Average: "</span> + <span class="cm-number">0</span> + <span class="cm-string">"ms"</span>);</pre><pre>  <span class="cm-variable"> console.log</span>(<span class="cm-string">"Longest: "</span> + <span class="cm-number">0</span> + <span class="cm-string">"ms"</span>);</pre><pre>  };</pre><pre><span class="cm-variable">start</span>(); <span class="cm-string">"Ready..."</span>;</pre></div></div></div></div></div></div></div>
+<div id="output"><i>Output</i></div>
+
+
+
+</body></html>

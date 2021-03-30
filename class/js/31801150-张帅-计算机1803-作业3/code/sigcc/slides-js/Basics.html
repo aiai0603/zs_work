@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Basics</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<!-- <link rel="stylesheet" href="css/theme/white.css" id="theme"> -->
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+
+	<!-- Used to fade in a background when a specific slide state is reached -->
+	<div class="state-background"></div>
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+		
+<section class="present" style="display: block;">
+	<h1>JavaScript Basics</h1>
+	<h3 class="inverted">Values, expressions, variables &amp; objects</h3>
+	<p>
+	<i>
+ 修改：<a href="https://gitee.com/sigcc" class="roll"><span>sigcc </span></a></i> <br>
+ 参考：<a href="http://people.csail.mit.edu/dnj/" class="roll"><span data-title="Daniel Jackson">Daniel Jackson</span></a></i>
+	</p>
+	
+	<script>
+		// Deliciously hacky. Look away.
+		if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+	</script>
+</section>
+
+<section class="stack future" style="display: block;">
+	<section class="present" style="display: block;">
+	<h2>Expressions &amp; Evaluation</h2>
+	<h3>表达式与求值</h3>
+	<ul>
+		<li>Literals(字面量), operators, expressions</li>
+		<li>Numbers, strings, arrays &amp; booleans</li>
+		<li>Object literals</li>
+	</ul>
+	</section>
+
+	<section class="future" style="display: block;">
+	<h2>Execution &amp; Evaluation</h2>
+	<ul>
+		<li><i>Statements</i> are <i>executed</i> for their <i>side effects</i></li>
+		<li><i>Expressions</i> are <i>evaluated</i> for their <i>values</i> and <i>side effects</i></li>
+		<li><i>Statements</i> also have <i>values</i>, but best not used</li>
+	</ul>
+	<iframe src="./Basics_files/execution.html" width="800" height="500"></iframe>
+	</section>
+
+	<section class="future" style="display: block;">
+	<h2>Operators &amp; Precedence</h2>
+	<ul>
+		<li>Operators have <i>precedence</i></li>
+	</ul>
+	<iframe src="./Basics_files/precedence.html" width="800" height="500"></iframe>
+	</section>
+
+	<section class="future" style="display: block;">
+	<h2>Numbers</h2>
+	<ul>
+		<li>No <i>integer/float</i> distinction</li>
+		<li>(Almost) no <i>overflow</i></li>
+		<li>Exercise: make it overflow</li>
+	</ul>
+	<iframe src="./Basics_files/numbers.html" width="800" height="500"></iframe>
+	</section>
+
+	<section class="future" style="display: none;">
+	<h2>Strings</h2>
+	<ul>
+		<li>No separate <i>character</i> type</li>
+		<li>String <i>literal</i> enclosed in single or double quotes</li>
+		<li>Plus sign for <i>concatenation</i>; can use to format code</li>
+		<li>Built in <i>methods</i> includes lastIndexOf, eg</li>
+	</ul>
+	<iframe src="./Basics_files/strings.html" width="800" height="500"></iframe>
+	</section>
+
+	<section class="future" style="display: block;">
+	<h2>Arrays</h2>
+	<ul>
+		<li>Grow and shrink <i>dynamically</i></li>
+		<li>Can have holes: element is <i>undefined</i></li>
+	</ul>
+	<iframe src="./Basics_files/arrays.html" width="800" height="500"></iframe>
+	</section>
+
+	<section class="future" style="display: block;">
+	<h2>Objects</h2>
+	<ul>
+		<li>Object <i>literal</i>: {s: e, ...} makes object with slot <i>s</i> holding value of <i>e</i></li>
+		<li><i>o.s</i> is an expression; evaluates to value held in slot <i>s</i> of object <i>o</i></li>
+		<li><i>o.s = e</i> updates slot <i>s</i> with value of <i>e</i></li>
+	</ul>
+	<iframe src="./Basics_files/objects.html" width="800" height="500"></iframe>
+	</section>
+
+	<section class="future" style="display: block;">
+	<h2>Booleans</h2>
+	<ul>
+		<li><i>Comparison</i> operators standard, but use === instead of ==</li>
+		<li><i>Boolean expressions</i> in standard form</li>
+	</ul>
+	<iframe src="./Basics_files/booleans.html" width="800" height="500"></iframe>
+	</section>
+</section>
+
+<section class="stack future" style="display: block;">
+	<section>
+	<h2>Types &amp; assignment</h2>
+	<ul>
+		<li>Dynamic typing( 动态类型 )</li>
+		<li>Mutable vs. immutable</li>
+		<li>Sharing and aliasing</li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Typeof</h2>
+	<ul>
+		<li>Built-in operator that returns a string</li>
+		<li>Shows some of the rough edges of JavaScript</li>
+	</ul>
+	<iframe src="./Basics_files/typeof.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Typed values</h2>
+	<ul>
+		<li>Interpreter tracks types of values at runtime( 运行时 )</li>
+		<li>Only applies operators that are allowed for that type</li>
+		<li>If non-existent method applied, get error message</li>
+		<li>If operator applied to wrong type, usually get a special value back</li>
+	</ul>
+	<iframe src="./Basics_files/typedval.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Untyped variables</h2>
+	<ul>
+		<li>Common feature of <i>dynamic</i> languages</li>
+		<li>Variable can <u>hold</u> values of <u>different types</u> at different times</li>
+		<li>Operators are <i>overloaded</i>: beware strange bugs!</li>
+		<li>Also, arrays are <i>heterogeneous( 异构 )</i></li>
+		<li>变量是名称到值的 <u>绑定关系</u> 的声明</li>
+
+	</ul>
+	<iframe src="./Basics_files/untypedvar.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Untyped objects</h2>
+	<ul>
+		<li>Objects aren't typed</li>
+		<li>Can add and remove slots dynamically</li>
+		<li>Misspellings lead to nasty bugs!</li>
+	</ul>
+	<iframe src="./Basics_files/untypedobj.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Mutable vs immutable</h2>
+	<ul>
+		<li>Numbers, booleans, strings are <i>immutable 可变更</i></li>
+		<li>Arrays and objects are <i>mutable不可变更</i></li>
+	</ul>
+	<iframe src="./Basics_files/immutable.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Aliasing( 别名 ) </h2>
+	<ul>
+		<li>Assignment of mutable values results in <i>aliasing</i></li>
+		<li>After assignment, total symmetry: modify value through either name</li>
+		<li>Aliasing is essential for passing mutable objects, but can lead to subtle bugs</li>
+		<li>A reason to use immutables: no aliasing, no need to copy</li>
+	</ul>
+	<iframe src="./Basics_files/aliasing.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Puzzle</h2>
+	<ul>
+		<li>What is <i>a[0]</i> at the end of this code?</li>
+	</ul>
+	<iframe src="./Basics_files/puzzle.html" width="800" height="500"></iframe>
+	</section>
+
+</section>
+
+<section class="stack future" style="display: block;">
+	<section>
+	<h2>Functions and names</h2>
+	<ul>
+		<li>Functions are values</li>
+		<li>All names are variables</li>
+		<li>Functions aren't functions (in the math sense)</li>
+	</ul>
+	</section>
+	
+	<section>
+	<h2>Function values</h2>
+	<ul>
+		<li>A <i>function literal(函数字面值) </i> evaluates to a function</li>
+		<li>A function is a value like any other: can assign, pass around, etc</li>
+		<li>Can you explain this code?</li>
+		<li>函数本身是普通值，是一种强大的语言特性</li>
+		<li>增强了语言的 抽象能力，灵活性，表达能力</li>
+
+	</ul>
+	<iframe src="./Basics_files/funvalue.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Polymorphic functions</h2>
+	<ul>
+		<li>Functions are naturally <i>polymorphic</i></li>
+		<li>Can have different type on each application</li>
+	</ul>
+	<iframe src="./Basics_files/funpoly.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Names</h2>
+	<ul>
+		<li>In JS, all names are variables (or slots); cf. Java with packages, methods, etc</li>
+		<li>So can accidentally replace built-in functions</li>
+	</ul>
+	<iframe src="./Basics_files/escape.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Explaining Recursion</h2>
+	<ul>
+		<li>In some languages, need <i>letrec</i>: special construct for recursive binding</li>
+		<li>In JS, assignment semantics gives us easy recursion</li>
+		<li>See next slide</li>
+	</ul>
+	<iframe src="./Basics_files/recursion.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Exploring Function Bindings</h2>
+	<ul>
+		<li>Reload, and remove assignment to <i>exp1</i></li>
+		<li>When is exception thrown?</li>
+	</ul>
+	<iframe src="./Basics_files/recursionagain.html" width="800" height="500"></iframe>
+	</section>
+	
+	<section>
+	<h2>Global Variables</h2>
+	<ul>
+		<li>By default, all variables are <i>global</i></li>
+		<li>Defined in the <i>top-level environment 顶层环境</i></li>
+		<li>Modifying a global is a <i>side effect</i></li>
+	</ul>
+	<iframe src="./Basics_files/globals.html" width="800" height="500"></iframe>
+	</section>
+<section>
+	<h2>Global Environment 全局环境</h2>
+	<ul>
+		<li> global 关键字 </li>
+		<li> this 关键字 </li>
+		<li> Node REPL与浏览器的DevTools中环境不同（global的值不同） </i></li>
+		<li> 但是其解释器行为是相同的 </li>
+	</ul>
+	</section>
+	<section>
+	<h2>Functions aren't functions</h2>
+	<ul>
+		<li>In algebra(代数), <i>f(x) = f(x)</i> is always true</li>
+		<li>In JavaScript, <i>f(x) === f(x)</i> may evaluate to false</li>
+		<li>If so, function <i>f</i> is <i>non-deterministic</i></li>
+		<li>Exercise: print false, by modifying <i>body</i> of <i>f</i> alone</li>
+	</ul>
+	<iframe src="./Basics_files/notfun.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Solution to exercise</h2>
+	<ul>
+		<li>Call another non-deterministic function (eg, <i>Math.random</i>)</li>
+		<li>Or, more interesting: a self-modifying function 运行时修改自己</li>
+		<li>动态语言的灵活 <===> 调试困难</li>
+	</ul>
+	<iframe src="./Basics_files/selfmod.html" width="800" height="500"></iframe>
+	</section>
+</section>
+	
+<section class="stack future" style="display: block;">
+	<section>
+	<h2>Eval: a lethal weapon</h2>
+	<h3>Eval: 强大而致命的函数</h3>
+	<ul>
+		<li>Key feature of dynamic languages</li>
+		<li>Interpreter itself available as function解释器本身当作函数</li>
+		<li>Leads to <i>injection(代码注入)</i> vulnerabilities(漏洞) </li>
+		<li>How our HTML sandbox(代码沙盒) is implemented</li>
+	</ul>
+	</section>
+	
+	<section>
+	<h2>Playing with Eval</h2>
+	<ul>
+		<li>Takes string, parses and evaluates</li>
+	</ul>
+	<iframe src="./Basics_files/eval.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Hidden Eval</h2>
+	<ul>
+		<li>Arrays are like objects with indices for properties</li>
+	    <li>数组的索引 可以通过运算得出，隐含的eval操作</li>
+		<li>Can use [] on objects too, but don't!</li>
+		<li>尽管[]索引可以用于对象，但是不建议如此使用</li>
+	</ul>
+	<iframe src="./Basics_files/hiddeneval.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>A JSON interpreter</h2>
+	<ul>
+		<li>JSON: just JavaScript literals</li>
+		<li>Common interchange format, especially client/server</li>
+		<li>Can easily interpret with <i>eval</i>, but it's dangerous!</li>
+	</ul>
+	<iframe src="./Basics_files/json.html" width="800" height="500"></iframe>
+	</section>
+
+</section>
+
+
+<section class="future" style="display: block;">
+	<h1>THE END</h1>
+</section>
+
+</div>
+	<!-- The navigational controls UI -->
+	<!-- <aside class="controls" style="display: block;">
+		<a class="left" href="Basics.html#">◄</a>
+		<a class="right enabled" href="Basics.html#">►</a>
+		<a class="up" href="Basics.html#">▲</a>
+		<a class="down" href="Basics.html#">▼</a>
+	</aside> -->
+
+	<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+	<div class="progress" style="display: block;"><span style="width: 0px;"></span></div>
+	
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

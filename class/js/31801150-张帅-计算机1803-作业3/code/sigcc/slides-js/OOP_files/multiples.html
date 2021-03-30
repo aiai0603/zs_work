@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)http://people.csail.mit.edu/dnj/teaching/6170/accelerator/modules/objects/code/multiples.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../editor/codestyles.css">
+    <script src="../editor/codeeditor.js"></script>
+    <style>
+    canvas {position: absolute; left: 580px; top: 67px}
+    </style>    
+</head>
+<body>
+
+<div id="buttons">
+	<input type="submit" value="run" id="runIntro" onclick="slide.runCode();">
+	<input type="submit" value="clear output" id="clearOutput" onclick="clearOutputBox();">
+	<input type="submit" value="revert" id="reloadCode" onclick="location.reload();">
+</div>
+
+<canvas id="canvas" height="200" width="200"></canvas>
+
+<script>
+var Account = function (bal) {
+	return {
+		balance: function () { console.log(bal);},
+		deposit: function (x) {bal = bal + x;  console.log("yes");},
+		withdraw: function (x) {
+			if (bal < x) { console.log("no");}
+			else {bal = bal - x;  console.log("yes");}
+			}
+		}
+	};
+</script>
+
+<textarea id="code" name="code" style="display: none;">a1 = Account(100);  // a1 a2 是两个不同的对象
+a2 = Account(100);
+a1.deposit(10);
+a1.balance();
+a2.balance();</textarea><div class="CodeMirror"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 8.99306px; left: 49.9884px;"><textarea style="position: absolute; padding: 0; width: 1px; height: 1em" wrap="off" autocorrect="off" autocapitalize="off"></textarea></div><div class="CodeMirror-scroll cm-s-default" tabindex="-1"><div style="position: relative; height: 123.4px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-gutter" style="height: 124px;"><div class="CodeMirror-gutter-text"><pre>1</pre><pre>2</pre><pre>3</pre><pre>4</pre><pre>5</pre></div></div><div class="CodeMirror-lines"><div style="position: relative; z-index: 0; outline: none; margin-left: 41px;"><div style="position: absolute; width: 100%; height: 0; overflow: hidden; visibility: hidden; outline: 5px auto none"></div><pre class="CodeMirror-cursor" style="top: 0px; left: 0px;">&nbsp;</pre><div style="position: relative; z-index: -1; display: none;"></div><div style=""><pre><span class="cm-variable">a1</span> = <span class="cm-variable">Account</span>(<span class="cm-number">100</span>);</pre><pre><span class="cm-variable">a2</span> = <span class="cm-variable">Account</span>(<span class="cm-number">100</span>);</pre><pre><span class="cm-variable">a1</span>.<span class="cm-property">deposit</span>(<span class="cm-number">10</span>);</pre><pre><span class="cm-variable">a1</span>.<span class="cm-property">balance</span>();</pre><pre><span class="cm-variable">a2</span>.<span class="cm-property">balance</span>();</pre></div></div></div></div></div></div></div>
+<div id="output"><i>Output</i></div>
+
+
+
+</body></html>

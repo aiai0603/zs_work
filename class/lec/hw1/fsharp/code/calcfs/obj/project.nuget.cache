@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "PAbncLetzXnQ+lcm0aKQQNDWW0G+gNuFYu8LuJwOAS/Mbur1skAHCdiBqAxOeyk0WW2juVxUu+oclIAdJYHcsQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\asus\\Desktop\\class\\lec\\hw\\hw1\\fsharp\\code\\calcfs\\calcfs.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\asus\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512",
+    "C:\\Users\\asus\\.nuget\\packages\\fslexyacc\\10.2.0\\fslexyacc.10.2.0.nupkg.sha512",
+    "C:\\Users\\asus\\.nuget\\packages\\fslexyacc.runtime\\10.2.0\\fslexyacc.runtime.10.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}

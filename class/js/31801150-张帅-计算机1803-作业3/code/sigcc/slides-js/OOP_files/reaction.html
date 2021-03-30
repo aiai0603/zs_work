@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)http://people.csail.mit.edu/dnj/teaching/6170/accelerator/modules/objects/code/reaction.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../editor/codestyles.css">
+    <script src="../editor/codeeditor.js"></script>
+	
+
+    <style>
+    canvas {position: absolute; left: 580px; top: 67px}
+    </style>    
+</head>
+<body style="">
+
+<div id="buttons">
+	<input type="submit" value="run" id="runIntro" onclick="slide.runCode();">
+	<input type="submit" value="clear output" id="clearOutput" onclick="clearOutputBox();">
+	<input type="submit" value="revert" id="reloadCode" onclick="location.reload();">
+</div>
+
+<canvas id="canvas" height="200" width="200"></canvas>
+<script src="trafficlight.js"> </script>
+<script src="button.js"> </script>
+<script>
+/* uses forEach from JS 1.6; should be supported in all modern browsers */
+// var TrafficLight = function () {
+// 	var img = function (path) {return $('<img src="'+ path +'">').load();}
+// 	var place = function (image) {$('body').append(image);}
+// 	var position = function (image) {image.css({"top": top+"px", "left": left+"px", "position":"fixed"});}
+// 	var top = 300; var left = 600;
+// 	var current;  // index of light currently showing
+	
+// 	var images = [img("../media/images/red.gif"), img("../media/images/yellow.gif"), img("../media/images/green.gif")]
+// 	images.forEach(place); 
+// 	images.forEach(position); 
+
+// 	// show light with index k
+// 	var show = function (k) {
+// 		current = k;
+// 		for (var i = 0; i < images.length; i++)
+// 			images[i].css("opacity", i===k ? 1 : 0);
+// 		}
+
+// 	show(0); // initially show red
+
+// 	var that = {};
+// 	that.red = function () {show(0);}
+// 	that.yellow = function () {show(1);}
+// 	that.green = function () {show(2);}
+// 	that.next = function () {current = (current + 1)%3; show(current);}
+
+// 	Object.freeze(that);
+// 	return that;
+// 	};
+// var Button = function () {
+// 	var img = function (path) {return $('<img src="'+ path +'">').load();}
+// 	var place = function (image) {$('body').append(image);}
+// 	var position = function (image) {image.css({"top": top+"px", "left": left+"px", "position":"absolute"});}
+// 	var top = 350; var left = 300;
+// 	var button = img("../media/images/button.png");
+// 	place(button); position(button);
+
+// 	var that = {};
+// 	that.onclick = function (f) {button.click(f); return "click bound to [" + f + "]";}
+// //	that.onclick = function (f) {button.click(f);}
+// 	Object.freeze(that);
+// 	return that;
+// 	}
+
+// currently unused
+// exercise to make button set light to random color?
+var toss = function () {
+	return Math.random() > 0.5;
+}
+// return a function that when called randomly calls either f or g
+var choose = function (f, g) {
+	return function () {toss() ? f() : g();};
+}
+
+//return time in ms
+var now = function () {return new Date().getTime();}
+
+/*
+// solution to exercise
+t = TrafficLight();
+b = Button();
+b.onclick(function () {
+	 console.log("your time was " + (now()-start) + "ms");
+})
+go = function () {
+   console.log("click!"); t.green(); start = now(); 
+}
+setTimeout(go, Math.random() * 10000);
+ console.log("get ready...");
+*/
+
+</script>
+
+<textarea id="code" name="code" style="display: none;">// some code to get you started
+t = TrafficLight();
+b = Button();
+b.onclick(function () { console.log("done")});
+go = function () {
+   console.log("now!");
+}
+// after a random time up to 10 seconds, call go
+setTimeout(go, Math.random() * 10000);
+ console.log("get ready...");</textarea><div class="CodeMirror"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 8.99306px; left: 51.9907px;"><textarea style="position: absolute; padding: 0; width: 1px; height: 1em" wrap="off" autocorrect="off" autocapitalize="off"></textarea></div><div class="CodeMirror-scroll cm-s-default" tabindex="-1"><div style="position: relative; height: 230.8px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-gutter" style="height: 231px;"><div class="CodeMirror-gutter-text"><pre>&nbsp;1</pre><pre>2</pre><pre>3</pre><pre>4</pre><pre>5</pre><pre>6</pre><pre>7</pre><pre>8</pre><pre>9</pre><pre>10</pre></div></div><div class="CodeMirror-lines"><div style="position: relative; z-index: 0; outline: none; margin-left: 43px;"><div style="position: absolute; width: 100%; height: 0; overflow: hidden; visibility: hidden; outline: 5px auto none"></div><pre class="CodeMirror-cursor" style="top: 0px; left: 0px;">&nbsp;</pre><div style="position: relative; z-index: -1; display: none;"></div><div style=""><pre><span class="cm-comment">// some code to get you started</span></pre><pre><span class="cm-variable">t</span> = <span class="cm-variable">TrafficLight</span>();</pre><pre><span class="cm-variable">b</span> = <span class="cm-variable">Button</span>();</pre><pre><span class="cm-variable">b</span>.<span class="cm-property">onclick</span>(<span class="cm-keyword">function</span> () {<span class="cm-variable"> console.log</span>(<span class="cm-string">"done"</span>)});</pre><pre><span class="cm-variable">go</span> = <span class="cm-keyword">function</span> () {</pre><pre>  <span class="cm-variable"> console.log</span>(<span class="cm-string">"now!"</span>);</pre><pre>}</pre><pre><span class="cm-comment">// after a random time up to 10 seconds, call go</span></pre><pre><span class="cm-variable">setTimeout</span>(<span class="cm-variable">go</span>, <span class="cm-variable">Math</span>.<span class="cm-property">random</span>() * <span class="cm-number">10000</span>);</pre><pre><span class="cm-variable"> console.log</span>(<span class="cm-string">"get ready..."</span>);</pre></div></div></div></div></div></div></div>
+<div id="output"><i>Output</i></div>
+
+
+
+</body></html>

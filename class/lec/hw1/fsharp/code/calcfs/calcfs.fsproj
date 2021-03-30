@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+  <!-- 
+  fslex fsyacc 工具依赖
+  dotnet run 会自动调用工具fslex fsyacc，并生成 Scanner.fs Parser.fs
+   -->
+    <FsLex Include="Scanner.fsl">
+      <OtherFlags>--module Scanner --unicode</OtherFlags>
+    </FsLex>
+   <FsYacc Include="Parser.fsy">
+      <OtherFlags>--module Parser</OtherFlags>
+    </FsYacc>
+<!-- 
+  编译文件列表，注意有前后次序，被依赖的文件放前面，主文件 Calc.fs放在最后
+ -->
+    <Compile Include="Ast.fs" />
+    <Compile Include="Parser.fs" />
+    <Compile Include="Scanner.fs" />
+    <Compile Include="Calc.fs" />
+
+<!-- 
+  fslexyacc外部包依赖 
+  在项目目录，运行 `dotnet add package  fslexyacc`  添加
+-->
+    <PackageReference Include="fslexyacc" Version="10.2.0" />
+    
+  </ItemGroup>
+
+</Project>

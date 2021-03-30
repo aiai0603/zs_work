@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>OOP</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<!-- <link rel="stylesheet" href="css/theme/white.css" id="theme"> -->
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+	<!-- Used to fade in a background when a specific slide state is reached -->
+	<div class="state-background"></div>
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+		
+<section class="present" style="display: block;" data-index-h="0">
+	<h1>Object-oriented programming</h1>
+	<h3 class="inverted">Objects, abstract types, sharing, callbacks</h3>
+	<p>
+	<i>
+		 修改：<a href="https://gitee.com/sigcc" class="roll"><span>sigcc </span></a><br> 
+	参考：<a href="http://people.csail.mit.edu/devadas/" class="roll"><span data-title="Srini Devadas">Srini Devadas</span></a>
+	and <a href="http://people.csail.mit.edu/dnj/" class="roll"><span data-title="Daniel Jackson">Daniel Jackson</span></a></i>
+	</p>
+	
+	<script>
+		// Deliciously hacky. Look away.
+		if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+	</script>
+</section>
+
+<section class="stack future" style="display: block;" data-index-h="1">
+	<section class="present" style="display: block;" data-index-h="1" data-index-v="0">
+	<h2>Part 1: Review</h2>
+	<ul>
+		<li>Object literals: for packaging values</li>
+		<li>JavaScript中的OO 是基于对象的编程</li>
+		<li>更加接近OO的本质，OO其实不需要<i>类</i>这个概念</li>
+		<li>Slots can hold any value, including functions</li>
+		<li>Closures: functions on out-of-scope variables</li>
+		</ul>
+	</section>
+
+	<section class="future" style="display: block;" data-index-h="1" data-index-v="1">
+	<h2>i18n</h2>
+	<ul>
+		<li><i>i18n</i> stands for <i>internationalization</i></li>
+		<li>"Factor out" choice of language</li>
+		<li>Here's a tiny example using an <i>object literal</i></li>
+		<li>Can you modify it to speak French instead?</li>
+	</ul>
+	<iframe src="./OOP_files/greeting.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section class="future" style="display: block;" data-index-h="1" data-index-v="2">
+	<h2>Answer: i18n</h2>
+	<ul>
+		<li>Just switch the object assigned to <i>g</i></li>
+		<li>We're swapping one "module" for another</li>
+	</ul>
+	<iframe src="./OOP_files/greeting-2.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section class="future" style="display: block;" data-index-h="1" data-index-v="3">
+	<h2>Function Slots</h2>
+	<ul>
+		<li>Slots(槽位) can hold any kind of value, including functions</li>
+		<li>这里就是对象属性，<i>slots</i>是传统对象编程的术语</li>
+	</ul>
+	<iframe src="./OOP_files/hibye.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section class="future" style="display: block;" data-index-h="1" data-index-v="4">
+	<h2>Slot machine</h2>
+	<ul>
+		<li>Here's a function that returns an object</li>
+		<li>On object-oriented settings, called a <i>constructor</i></li>
+		<li>返回对象的函数被称为<i>构造函数</i></li>
+		<li>Can you change it to greet you by name instead?</li>
+		
+	</ul>
+	<iframe src="./OOP_files/greeter.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section class="future" style="display: block;" data-index-h="1" data-index-v="5">
+	<h2>Answer: Slot machine</h2>
+	<ul>
+		<li>Just change the argument to <i>Greeter</i></li>
+	</ul>
+	<iframe src="./OOP_files/greeter-2.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section class="future" style="display: block;" data-index-h="1" data-index-v="6">
+	<h2>Counting closures</h2>
+	<ul>
+		<li>Our old friend the counter, with an initial value</li>
+		<li>Note update to <i>i</i>, which is out of scope when <i>Counter</i> returns</li>
+		<li>Can you make it count backwards from 10?</li>
+	</ul>
+	<iframe src="./OOP_files/counter.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section class="future" style="display: block;" data-index-h="1" data-index-v="7">
+	<h2>Answer: Counting closures</h2>
+	<ul>
+		<li>Here's the answer: subtract one in the closure instead</li>
+		<li>Start at 11, since it subtracts before printing</li>
+	</ul>
+	<iframe src="./OOP_files/counter-2.html" width="800" height="500"></iframe><br>
+	</section>
+
+</section>
+
+<section class="stack future" style="display: block;" data-index-h="2">
+	<section data-index-h="2" data-index-v="0" style="display: block;">
+	<h2>Part 2: Objects and Methods</h2>
+	<ul>
+		<li>Methods: slots holding functions</li>
+		<li>Accessing an object via methods alone</li>
+		<li>Encapsulation of state</li>
+	</ul>
+	</section>
+
+	<section data-index-h="2" data-index-v="1" style="display: block;">
+	<h2>Up and down</h2>
+	<ul>
+		<li>An object with slots holding functions</li>
+		<li>These functions are called <i>methods</i></li>
+		<li>对象的属性如果是函数，称为<i>方法</i></li>
+	</ul>
+	<iframe src="./OOP_files/countermethods.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="2" data-index-v="2" style="display: block;">
+	<h2>Banking</h2>
+	<ul>
+		<li>Same idea, this time for a bank account</li>
+		<li>Try and withdraw too much money and see what happens</li>
+	</ul>
+	<iframe src="./OOP_files/account.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="2" data-index-v="3" style="display: block;">
+	<h2>Answer: Banking</h2>
+	<ul>
+		<li>If you withdraw too much, prints "no" and doesn't reduce balance</li>
+	</ul>
+	<iframe src="./OOP_files/account-2.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="2" data-index-v="4" style="display: block;">
+	<h2>Attacking the Bank</h2>
+	<ul>
+		<li>Can a robber reduce the balance without a withdrawal?</li>
+		<li>No way to set <i>bal</i> from outside; it's <i>encapsulated</i></li>
+		<li>无法直接修改<i>bal</i>的值, 它是一个 <i>封装值</i></li>
+	</ul>
+	<iframe src="./OOP_files/accountattack.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="2" data-index-v="5" style="display: block;">
+	<h2>An Aside: Secure Banking</h2>
+	<ul>
+		<li>Can't modify balance, but can break the bank anyway</li>
+		<li>To fix this, can call <i>Object.freeze(a)</i>: try it!</li>
+		<li>调用<i>Object.freeze(a)</i>方法，冻结对象，防止修改</li>
+	</ul>
+	<iframe src="./OOP_files/accounthack.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="2" data-index-v="6" style="display: block;">
+	<h2>More: Secure Banking</h2>
+	<ul>
+		<li>Here's the same code, with <i>freeze</i></li>
+		<li>In practice, call <i>freeze</i> inside the constructor</li>
+	</ul>
+	<iframe src="./OOP_files/accounthack-2.html" width="800" height="500"></iframe><br>
+	</section>
+</section>
+
+<section class="stack future" style="display: block;" data-index-h="3">
+	<section data-index-h="3" data-index-v="0" style="display: block;">
+	<h2>Part 3: Sharing and Aliasing</h2>
+	<ul>
+		<li>When two variables point to one object</li>
+		<li>对象的共享与别名，两个变量指向同一对象</li>
+		<li>Idea is often confusing to novices</li>
+		<li>Unexpected sharing is often confusing to experts</li>
+	</ul>
+	</section>
+	
+	<section data-index-h="3" data-index-v="1" style="display: block;">
+	<h2>Bank Accounts</h2>
+	<ul>
+		<li>How many account objects are there?</li>
+		<li>What happens to <i>a2</i> when you deposit in <i>a1</i>?</li>
+	</ul>
+	<iframe src="./OOP_files/multiples.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="3" data-index-v="2" style="display: block;">
+	<h2>Answer: Bank Accounts</h2>
+	<ul>
+		<li>How many account objects are there? <i>Two!</i></li>
+		<li>What happens to <i>a2</i> when you deposit in <i>a1</i>? <i>Nothing!</i></li>
+	</ul>
+	<iframe src="./OOP_files/multiples-2.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="3" data-index-v="3" style="display: block;">
+	<h2>Multiple Variables</h2>
+	<ul>
+		<li>How many account objects are there?</li>
+		<li>What happens to <i>a2</i> when you deposit in <i>a1</i>?</li>
+	</ul>
+	<iframe src="./OOP_files/aliasing.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="3" data-index-v="4" style="display: block;">
+	<h2>Answer: Multiple Variables</h2>
+	<ul>
+		<li>How many account objects are there? <i>One!</i></li>
+		<li>What happens to <i>a2</i> when you deposit in <i>a1</i>? <i>It changes too!</i></li>
+	</ul>
+	<iframe src="./OOP_files/aliasing-2.html" width="800" height="500"></iframe><br>
+	</section>
+
+
+	<section data-index-h="3" data-index-v="5" style="display: block;">
+	<h2>Aliasing 别名 </h2>
+	<ul>
+		<li>Variable <i>a1</i> and <i>a2</i> are <i>aliases</i> or <i>aliased</i></li>
+		<li>The account object is <i>shared</i> between <i>a1</i>and <i>a2</i></li>
+		<li>Assignment <i>x = e</i>: make <i>x</i> point to the value of <i>e</i></li>
+		<li>Results in two names for <i>one</i> object</li>
+	</ul>
+	<iframe src="./OOP_files/aliasing(1).html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="3" data-index-v="6" style="display: block;">
+	<h2>Aliasing, Visually</h2>
+	<ul>
+		<li>Look at the picture</li>
+		<li>Think of variables as pointers, not slots</li>
+		<li>After the assignment, the situation is symmetrical!</li>
+		<img src="./OOP_files/aliasing.png" width="500">    
+	</ul>
+<!--
+	<iframe src="code/aliasing.html" width="800" height="500" ></iframe><br>
+-->
+	</section>
+
+</section>
+
+<section class="stack future" style="display: block;" data-index-h="4">
+	<section data-index-h="4" data-index-v="0" style="display: block;">
+	<h2>Part 4: Callbacks</h2>
+	<ul>
+		<li>APIs: using objects through specs</li>
+		<li>Callbacks: functions that an object calls</li>
+		<li>Registration methods</li>
+	</ul>
+	</section>
+
+	<section data-index-h="4" data-index-v="1" style="display: block;">
+	<h2>A Traffic light API</h2>
+	<ul style="font-size: 0.7em;">
+		<li>To use an object, you just need <i>specifications</i> of methods</li>
+		<li>Called an <i>API</i>: application programmers' interface</li>
+		<li>Specifications of traffic light methods:
+			<ul>
+				<li><i>red</i>: switch to red light</li>
+				<li><i>yellow</i>: switch to yellow light</li>
+				<li><i>green</i>: switch to green light</li>
+				<li><i>next</i>: switch to next light in sequence</li>
+			</ul>
+		</li><li>Can you turn the light to green?</li>
+		<li>Can you cycle through the colors on each click of run?</li>
+	</ul>
+	<iframe src="./OOP_files/lights.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="4" data-index-v="2" style="display: block;">
+	<h2>Answer: A Traffic light API</h2>
+	<ul>
+		<li>Easy: just use the <i>green</i> method, and click run</li>
+		<li>Then replace code by t.next() and click run</li>
+	</ul>
+	<iframe src="./OOP_files/lights-2.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="4" data-index-v="3" style="display: block;">
+	<h2>Don't call me, I'll call you</h2>
+	<ul>
+		<li>We've seen that functions can be passed as arguments</li>
+		<li><i>Callback</i> or <i>listener</i>: function passed as argument, called later</li>
+		<li>Example: account that lets you choose how success is reported</li>
+	</ul>
+	<iframe src="./OOP_files/accountcallback.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="4" data-index-v="4" style="display: block;">
+	<h2>Traffic Light in the Bank</h2>
+	<ul>
+		<li>Let's hook the account up to the traffic light</li>
+		<li>Recall that <i>t.green</i> if a function that turns <i>t</i> green</li>
+		<li>Can you change the withdrawal amount so that a red light shows?</li>
+		<li>Can you make it show yellow for a failed account operation?</li>
+	</ul>
+	<iframe src="./OOP_files/accountlight.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="4" data-index-v="5" style="display: block;">
+	<h2>Answer: Traffic Light in the Bank</h2>
+	<ul>
+		<li>To show yellow for failed account operation, just pass <i>t.yellow</i> instead</li>
+	</ul>
+	<iframe src="./OOP_files/accountlight-2.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="4" data-index-v="6" style="display: block;">
+	<h2>On the Button</h2>
+	<ul>
+		<li>Often want to choose the callback <i>dynamically</i></li>
+		<li>Common idiom: provide a <i>registration method</i></li>
+		<li>Our button object has method <i>onclick(f)</i> to register <i>f</i> for clicks</li>
+		<li>Run the code, and click the button to see what happens</li>
+	</ul>
+	<iframe src="./OOP_files/button.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="4" data-index-v="7" style="display: block;">
+	<h2>Controlling the Lights</h2>
+	<ul>
+		<li>How does this work?</li>
+	</ul>
+	<iframe src="./OOP_files/buttonlight.html" width="800" height="500"></iframe><br>
+	</section>
+
+	<section data-index-h="4" data-index-v="8" style="display: block;">
+	<h2>Answer: Controlling the Lights</h2>
+	<ul>
+		<li>The call to <i>onclick</i> binds the function <i>t.next</i> to the button</li>
+		<li>Now every time the button is clicked, the traffic light switches to next color</li>
+	</ul>
+	<iframe src="./OOP_files/buttonlight(1).html" width="800" height="500"></iframe><br>
+	</section>
+
+</section>
+
+<section class="stack future" style="display: block;" data-index-h="5">
+<section data-index-h="5" data-index-v="0" style="display: block;">
+		<h2>Exercise: Action &amp; Reaction</h2>
+		<ul>
+			<li>Build a reaction tester</li>
+			<li>Should go green after random delay</li>
+			<li>Then you click button, and it reports your reaction time</li>
+			<li>Hint: now() returns current time in ms</li>
+		</ul>
+		<iframe src="./OOP_files/reaction.html" width="800" height="500"></iframe><br>
+</section>
+
+<!--
+<section>
+		<h2>Answer: Action & Reaction</h2>
+		<ul>
+			<li>Here's a solution</li>
+		</ul>
+		<iframe src="code/reaction-2.html" width="800" height="500" ></iframe><br>
+</section>
+-->
+
+<section data-index-h="5" data-index-v="1" style="display: block;">
+		<h2>Some Functions</h2>
+		<ul>
+			<li>Functions for the next exercise</li>
+		</ul>
+		<iframe src="./OOP_files/reaction-funs.html" width="800" height="500"></iframe><br>
+</section>
+
+<section data-index-h="5" data-index-v="2" style="display: block;">
+		<h2>Exercise: Action &amp; Reaction Trace</h2>
+		<ul>
+			<li>This time, compute average over multiple tries</li>
+			<li>Complete the code inside the function <i>report</i></li>
+			<li>Hint: use some of <i>map, reduce, zip, filter</i> and <i>pos, plus, max</i></li>
+		</ul>
+		<iframe src="./OOP_files/reaction-3.html" width="800" height="500"></iframe><br>
+</section>
+
+<!--
+<section>
+		<h2>Solution: Action & Reaction Trace</h2>
+		<ul>
+			<li></li>
+		</ul>
+		<iframe src="code/reaction-3-solution.html" width="800" height="500" ></iframe><br>
+</section>
+-->
+
+
+</section>
+
+<section class="future" style="display: block;" data-index-h="6">
+	<h1>THE END</h1>
+</section>
+
+
+	</div>
+	<!-- The navigational controls UI -->
+	<!-- <aside class="controls" style="display: block;">
+		<a class="left" href="Basics.html#">◄</a>
+		<a class="right enabled" href="Basics.html#">►</a>
+		<a class="up" href="Basics.html#">▲</a>
+		<a class="down" href="Basics.html#">▼</a>
+	</aside> -->
+
+	<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+	<div class="progress" style="display: block;"><span style="width: 0px;"></span></div>
+	
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

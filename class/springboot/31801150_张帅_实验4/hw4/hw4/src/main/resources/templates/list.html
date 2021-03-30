@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>thymeleaf</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>数据展示</h1>
+<h5>Power by 31801150-张帅</h5>
+<a th:href="@{'/'}">返回首页</a>
+<div></div>
+
+<table  border="1">
+    <thead>
+        <td >编号</td>
+        <td >姓名</td>
+        <td >年龄</td>
+        <td >身份证</td>
+        <td  >性别 </td>
+        <td >邮箱</td>
+        <td >修改</td>
+
+    </thead>
+    <tr th:each="item : ${msg}">
+
+
+        <td th:text="${item.id}"></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.age}"></td>
+        <td th:text="${item.number}"></td>
+        <td  th:if="${item.sex}==0"> 男</td>
+        <td  th:if="${item.sex}==1"> 女</td>
+        <td th:text="${item.email}">    </td>
+        <td > <a th:href="@{'/modify?id='+${item.id}}" >修改</a>
+
+            <a th:href="@{'/remove?id='+${item.id}}" >删除</a></td>
+
+    </tr>
+</table>
+
+
+<a th:href="@{'/list?page='+${index - 1}}"  th:if="${index}>0">上一页</a>
+<div th:text="'当前页码: '+${index + 1}+'/'+${sum + 1}"></div>
+<a th:href="@{'/list?page='+${index + 1}}" th:if="${flag}==0">下一页</a>
+
+
+</body>

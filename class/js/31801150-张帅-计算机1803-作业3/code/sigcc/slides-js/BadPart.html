@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>BadPart</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<!-- <link rel="stylesheet" href="css/theme/white.css" id="theme"> -->
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+	<!-- Used to fade in a background when a specific slide state is reached -->
+	<div class="state-background"></div>
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+    <!-- insert here  -->
+
+
+	
+<section class="present" style="display: block;">
+	<h1>The Bad Parts</h1>
+	<h3 class="inverted">problematic features of JavaScript</h3>
+	<p>
+	<i>
+ <a href="http://people.csail.mit.edu/dnj/" class="roll"><span data-title="Daniel Jackson">Daniel Jackson</span></a></i>
+	</p>
+
+	<script>
+		// Deliciously hacky. Look away.
+		if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+	</script>
+</section>
+
+<section class="future stack" style="display: block;">
+	<section>
+	<h2>Lexical issues</h2>
+	<ul>
+		<li>Semicolon insertion</li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Semicolon insertion</h2>
+	<ul>
+		<li>JavaScript helpfully (!) inserts semicolons when you forget</li>
+		<li>Makes the language <i>whitespace sensitive</i></li>
+		<li>Lesson: use standard formatting</li>
+	</ul>
+	<iframe src="./BadPart_files/semi.html" width="800" height="500"></iframe>
+	</section>
+</section>
+
+<section class="future stack" style="display: block;">
+	<section>
+	<h2>Generous operators</h2>
+	<ul>
+		<li>Implicit type conversions</li>
+		<li>Ignoring 'small' differences</li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Overloading of +</h2>
+	<ul>
+		<li>Meaning of + depends on context</li>
+		<li>Source of hard-to-track bugs</li>
+		<li>Lesson: be careful, don't be clever</li>
+	</ul>
+	<iframe src="./BadPart_files/over.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Strange Equalities</h2>
+	<ul>
+		<li>The == operator is complicated, and not <i>transitive</i></li>
+		<li>(And for extra entertainment, remove the parens!)</li>
+		<li>Lesson: use === and !== instead (try it!)</li>
+	</ul>
+	<iframe src="./BadPart_files/equals.html" width="800" height="500"></iframe>
+	</section>
+</section>
+
+<section class="future stack" style="display: block;">
+	<section>
+	<h2>Special Values</h2>
+	<ul>
+		<li><i>NaN</i> and its properties</li>
+		<li>The needless <i>null</i></li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Not a number?</h2>
+	<ul>
+		<li><i>NaN</i>: a bad idea from IEEE 754</li>
+		<li>Lesson: avoid it, especially comparisons</li>
+	</ul>
+	<iframe src="./BadPart_files/nan.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Null or undefined?</h2>
+	<ul>
+		<li>Why <i>null</i>? Not clear</li>
+		<li>Don't confuse with <i>undefined</i></li>
+		<li>In this code, should have used <i>undefined</i></li>
+	</ul>
+	<iframe src="./BadPart_files/null.html" width="800" height="500"></iframe>
+	</section>
+</section>
+
+<section class="future stack" style="display: none;">
+	<section>
+	<h2>Truthiness</h2>
+	<ul>
+		<li>Truthy and falsy values</li>
+		<li>The troubles they cause</li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Truthiness</h2>
+	<ul>
+		<li>Non-boolean values can be used in conditionals</li>
+		<li><i>Truthy</i> values are like true; <i>falsy</i> values are like false</li>
+		<li>Lesson: use only booleans in boolean expressions</li>
+	</ul>
+	<iframe src="./BadPart_files/truthiness.html" width="800" height="500"></iframe>
+  </section>
+</section>
+
+<section class="future stack" style="display: none;">
+	<section>
+	<h2>Prototypes</h2>
+	<ul>
+		<li>No empty objects</li>
+		<li>Problems with <i>new</i> &amp; <i>this</i></li>
+	</ul>
+	</section>
+
+	<section>
+	<h2>No empty objects</h2>
+	<ul>
+		<li>No truly empty objects, due to prototype fields</li>
+		<li>Entertaining example below by Doug Crockford</li>
+		<li>Lesson: don't use objects as hash tables</li>
+	</ul>
+	<iframe src="./BadPart_files/noempty.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>Omitting new</h2>
+	<ul>
+		<li><i>new</i> allocates object &amp; binds to <i>this</i></li>
+		<li>If omitted, <i>this</i> is bound to the global environment (!)</li>
+		<li>Lesson: design constructors that don't use <i>new</i></li>
+	</ul>
+	<iframe src="./BadPart_files/new.html" width="800" height="500"></iframe>
+	</section>
+
+	<section>
+	<h2>this and that</h2>
+	<ul>
+		<li>The variable <i>this</i> is <i>dynamically scoped</i></li>
+		<li>Inside a function call <i>o.f()</i>, <i>this</i> is bound to <i>o</i></li>
+		<li>Lesson: avoid use of <i>this</i>; work around by defining <i>that</i></li>
+	</ul>
+	<iframe src="./BadPart_files/this.html" width="800" height="500"></iframe>
+	</section>
+</section>
+
+<section class="future stack" style="display: block;">
+	<section>
+	<h2>Function declarations</h2>
+	<ul>
+		<li><i>function f () {}</i> short for <i>var f = function () {}</i></li>
+		<li>But not quite...</li>
+<!--
+		<li>What is <i>f()</i>? Chrome/Safari: 4; Firefox: 1</li>
+-->
+	</ul>
+	<iframe src="./BadPart_files/fundecl.html" width="800" height="500"></iframe>
+  </section>
+</section>
+
+<section class="future stack" style="display: block;">
+	<section>
+	<h2>Silent Failure</h2>
+	<ul>
+		<li>Examples of silent failure</li>
+		<li>Strict mode</li>
+	</ul>
+  </section>
+
+	<section>
+	<h2>Silent Failure</h2>
+	<ul>
+		<li>Illegal actions often have no effect in JavaScript</li>
+		<li>Instead of complaining, interpreter just continues silently</li>
+		<li>Violates principle of early errors</li>
+	</ul>
+	<iframe src="./BadPart_files/silent.html" width="800" height="500"></iframe>
+  </section>
+
+	<section>
+	<h2>Strict mode</h2>
+	<ul>
+		<li>A helpful hack to make JavaScript less generous</li>
+		<li>Just put "use strict" as first line in script or function</li>
+		<li>Turns some silent errors into thrown exceptions</li>
+  	<li>Disables some features (eg, eval)</li>
+  	<li>(Demo works in console but not live slide: not sure why)</li>
+	</ul>
+	<iframe src="./BadPart_files/strict.html" width="800" height="500"></iframe>
+  </section>
+</section>
+
+
+<section class="future" style="display: block;">
+	<h1>THE END</h1>
+</section>
+
+
+
+
+	</div>
+	<!-- The navigational controls UI -->
+	<!-- <aside class="controls" style="display: block;">
+		<a class="left" href="Basics.html#">◄</a>
+		<a class="right enabled" href="Basics.html#">►</a>
+		<a class="up" href="Basics.html#">▲</a>
+		<a class="down" href="Basics.html#">▼</a>
+	</aside> -->
+
+	<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+	<div class="progress" style="display: block;"><span style="width: 0px;"></span></div>
+	
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
