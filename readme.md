@@ -27,5 +27,5 @@
 ##### 联系方式    wx：ZS7290（男，单身，性取向正常，目前备战考研，可能不能及时回复）
 
 本文档资源完全免费，当然果然您觉得其中的内容对您有所帮助，也希望各位大佬支持一下，您的支持肯定对我十分重要！
-<img src="/alipay1.png" alt="image-20210330193208537" style="zoom:25%;" />
+<img src="https://github.com/aiai0603/zs_work/blob/master/alipay1.png" alt="image-20210330193208537" style="zoom:25%;" />
 
