@@ -14,9 +14,9 @@
 
 跨平台脚本开发技术（js文件夹 by guom）
 
-软件架构与应用开发（springboot by pengb）
+软件架构与应用开发（springboot文件夹 by pengb）
 
-编译原理（lec by guom）
+编译原理（lec文件夹 by guom）
 
 ### 随缘更新，不支持催更，懒癌晚期，考研为主
 
