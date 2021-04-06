@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>thymeleaf</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>提交成功</h1>
+<h5>Power by 31801150-张帅</h5>
+<a th:href="@{'/'}">返回首页</a>
+<div>
+
+    <div th:text="'编号 '+${stu.id}"></div>
+    <div th:text="'姓名 '+${stu.name}"></div>
+    <div th:text="'年龄 '+${stu.age}"></div>
+    <div th:text="'身份证 '+${stu.number}"></div>
+    <div  th:if="${stu.sex}==0">性别 男</div>
+    <div  th:if="${stu.sex}==1">性别 女</div>
+    <div th:text="'邮箱 '+${stu.email}"></div>
+</div>
+
+
+
+
+
+</body>
