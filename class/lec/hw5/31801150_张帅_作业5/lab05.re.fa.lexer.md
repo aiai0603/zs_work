@@ -21,10 +21,26 @@
 1. 阅读课件，阅读教材第2章
 
     - 理解词元token的概念，理解词元类型，词元语义值
+
     - 理解正则表达式的基本情况，与组合方法（选择、连接、重复）
+
     - 理解 最长匹配，优先次序
+
     - 理解 p13  2-1 2-2
+
     - 理解 NFA 、DFA，DFA最小化方法
+
+    - [Automata.js](http://hokein.github.io/Automata.js/) 输入正则表达式，查看结果
+
+      ![image-20210412082047382](.\img\22.png)
+
+      ![image-20210412082122421](.\img\23.png)
+
+      - 招募该项目的改进学生
+        - DFA 最小化
+        - 识别过程，分步显示
+        - 多条正则表达式支持
+        - 正则表达式命名支持
 
 2. 写出下面的正则表达式
 
@@ -54,7 +70,11 @@
       ^(-?\d+)(\.\d+)?$
       ```
 
+    - 学习 URL 匹配的 正则表达式的例子
+
+          - https://regex101.com/r/Zu0FBG/1
       
+         ![image-20210412082315758](.\img\24.png)
 
 1. 请结合实际例子说明什么是 p13
     - 最长匹配规则
@@ -163,7 +183,7 @@ dotnet "C:\Users\gm\.nuget\packages\fslexyacc\10.2.0\build\/fsyacc/netcoreapp3.1
   - VOID        语义值与类型同
           - NAME “n”   类型是`NAME` 语义值是 “n”
           - CSTINT 1   类型是 `CSTINT` 语义值是“1”
-    
+        
     ```sh
 ~ microc>dotnet run -p .\interpc.fsproj -g ex1.c 8
     Micro-C interpreter v 1.1.0 of 2021-3-22
