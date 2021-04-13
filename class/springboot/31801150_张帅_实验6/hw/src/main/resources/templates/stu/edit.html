@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+</head>
+<style type="text/css"> .warn{color:red} </style>
+<body>
+
+<h1 style="margin: 10px">修改信息</h1>
+<div style="margin: 10px">power by 31801150 zs</div>
+<a style="margin: 10px" th:href="@{/stu}">[返回]</a>
+<form class="form-horizontal" th:action="@{/stu/}+${stu.id}" method="post" th:object="${stu}">
+    <div class="form-group">
+        <label for="sid" class="col-sm-2 control-label">sid</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="sid" id="sid" th:field="*{sid}" placeholder="sid"/>
+            <span  class="warn" th:if="${#fields.hasErrors('sid')}" th:errors="*{sid}">学号有误</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="name" id="name" th:field="*{name}" placeholder="name"/>
+            <span  class="warn" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">姓名错误</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="age" class="col-sm-2 control-label">age</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" name="age" id="age" placeholder="age" th:field="*{age}"/>
+            <span  class="warn" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">年龄错误</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label  class="col-sm-2 control-label">sex</label>
+        <div class="col-sm-10">
+            <input id="male" name="sex" type="radio" value="0" th:checked="*{sex == 0}"/>
+            <label for="male">男</label>
+
+        </div>
+        <div class="col-sm-10">
+            <input id="female" name="sex" type="radio" value="1" th:checked="*{sex == 1}"/>
+            <label for="female">女</label>
+
+        </div>
+        <span  class="warn" th:if="${#fields.hasErrors('sex')}" th:errors="*{sex}">性别错误</span>
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">email</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="email" id="email" placeholder="email" th:field="*{email}"/>
+            <span  class="warn" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">邮箱错误</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="cardId" class="col-sm-2 control-label">cardId</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="cardId" id="cardId" placeholder="cardId" th:field="*{cardId}"/>
+            <span  class="warn" th:if="${#fields.hasErrors('cardId')}" th:errors="*{cardId}">身份证错误</span>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" value="提交" class="btn btn-info"/>
+            &nbsp; &nbsp; &nbsp;
+            <input type="reset" value="重置" class="btn btn-info"/>
+        </div>
+
+    </div>
+</form>
+</body>
+</html>
