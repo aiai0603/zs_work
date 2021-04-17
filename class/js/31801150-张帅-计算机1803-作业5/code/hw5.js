@@ -1,24 +1,23 @@
 var R = require('ramda');
 
-class Vec{
-    constructor(x,y){
-        this.x = x;
-        this.y = y;
-    }
 
-    get length(){
-        return Math.sqrt((Math.pow(this.x,2)+Math.pow(this.y,2)))
-    }
 
-    plus(o1){
-        return new Vec(this.x+o1.x,this.y+o1.y)
-    }
+function Vec(x,y) {
+    this.x = x;
+    this.y = y;
+  }
+Vec.prototype.length = function() {
+    return Math.sqrt((Math.pow(this.x,2)+Math.pow(this.y,2)))
+};
 
-    minus(o1){
-        return new Vec(this.x-o1.x,this.y-o1.y)
-    }
-
+Vec.prototype.plus = function(o1) {
+    return new Vec(this.x+o1.x,this.y+o1.y)
 }
+
+Vec.prototype.minus = function(o1) {
+    return new Vec(this.x-o1.x,this.y-o1.y)
+}
+ 
 
 function VectorMul(x,y) {
     Vec.call(this, x,y);  
