@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.StuMapper">
+
+    <select id="queryById" resultType="com.example.demo.entity.Stu" parameterType="java.lang.Integer">
+       SELECT * FROM stu WHERE id = #{id}
+    </select>
+
+
+    <select id="queryAll" resultType="com.example.demo.entity.Stu" >
+       SELECT * FROM stu
+    </select>
+
+
+    <select id="queSiryByd" resultType="com.example.demo.entity.Stu" parameterType="java.lang.Integer">
+       SELECT * FROM stu WHERE sid = #{sid}
+    </select>
+
+
+    <delete id="delById" parameterType="java.lang.Integer">
+        DELETE FROM stu WHERE id = #{id}
+    </delete>
+
+    <insert id="add" parameterType="com.example.demo.entity.Stu" >
+        INSERT INTO stu(name,age,sex,sid,email,card_id,text) VALUES(#{name},#{age},#{sex},#{sid},#{email},#{card_id},#{text})
+    </insert>
+
+
+    <update id="updateById" parameterType="com.example.demo.entity.Stu" >
+        UPDATE stu SET name=#{name},age=#{age},sex=#{sex},sid=#{sid},email=#{email},card_id=#{card_id},text=#{text} WHERE id = #{id}
+    </update>
+</mapper>
