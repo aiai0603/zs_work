@@ -91,29 +91,7 @@
 ​    
 1. 考虑下面的正则表达式, 画出相应的NFA/DFA
 
-    (ab|ac)\*
-
-    ![ededdd13ab5d1328908675702833090](.\img\13.jpg)
-
-    ![c6cfd3d15c75971d8deb8d25915391a](.\img\14.jpg)
-
-    ![8c83bc2db0d4beb601ccf3d16eb6114](.\img\15.jpg)
-
-    (0|1)\* 11001\*
-
-    ![58a6b636104ab7c79353025a4c422ad](.\img\16.jpg)
-
-    ![f132694112fb614f5655225a2aa50c5](.\img\17.jpg)
-
-    ![ef8d01484496f3c46708a954b2226eb](.\img\18.jpg)
-
-    (01|10|00)\* 11
-
-    ![9244ed02f26c7a02e43a525a05fe8f9](.\img\19.jpg)
-
-    ![4dfb11109b27dbb2e898f5dab7773c6](.\img\20.jpg)
-
-    ![8c83bc2db0d4beb601ccf3d16eb6114](.\img\21.jpg)
+    <h1>错误太多，紧急下架，作者太菜</h1>
 
     (a) 构造 NFA
 
