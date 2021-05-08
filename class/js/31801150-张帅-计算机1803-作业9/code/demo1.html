@@ -1,0 +1,17 @@
+<p>One</p>
+<p>Two</p>
+<p>Three</p>
+
+<script>
+  let paragraphs = document.body.getElementsByTagName("p");
+  let temp = [];
+  for(let i = 0;i<paragraphs.length;i++){
+    temp.push(paragraphs[i].cloneNode(true));
+  }
+
+ //document.body.insertBefore(paragraphs[2], paragraphs[0]);
+ document.body.insertBefore(temp[0],paragraphs[0]);
+ document.body.insertBefore(temp[1],paragraphs[0]);
+ document.body.insertBefore(temp[2],paragraphs[0]);
+
+</script>

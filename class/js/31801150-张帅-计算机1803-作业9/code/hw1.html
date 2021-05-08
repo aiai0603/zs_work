@@ -1,0 +1,58 @@
+<h1>Mountains</h1>
+
+<div id="mountains"></div>
+
+
+
+<script>
+  const MOUNTAINS = [
+    {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+    {name: "Everest", height: 8848, place: "Nepal"},
+    {name: "Mount Fuji", height: 3776, place: "Japan"},
+    {name: "Vaalserberg", height: 323, place: "Netherlands"},
+    {name: "Denali", height: 6168, place: "United States"},
+    {name: "Popocatepetl", height: 5465, place: "Mexico"},
+    {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+  ];
+
+
+
+  let tab = document.createElement("table");
+  let text = document.createElement("tr");
+  let name = document.createElement("th");
+  name.innerHTML = "name";
+
+  let height = document.createElement("th");
+  height.innerHTML = "height";
+
+  let place = document.createElement("th");
+  place.innerHTML = "place";
+
+  text.appendChild(name);
+  text.appendChild(height);
+  text.appendChild(place);
+
+  tab.appendChild(text);
+
+  for(let i=0;i<MOUNTAINS.length;i++){
+    let text = document.createElement("tr");
+    let name = document.createElement("td");
+    name.innerHTML = MOUNTAINS[i].name;
+
+    let height = document.createElement("td");
+    height.innerHTML = MOUNTAINS[i].height;
+
+    let place = document.createElement("td");
+    place.innerHTML = MOUNTAINS[i].place;
+
+    text.appendChild(name);
+    text.appendChild(height);
+    text.appendChild(place);
+
+    tab.appendChild(text);
+  }
+  tab.style.textAlign="right";
+
+  document.getElementById("mountains").appendChild(tab);
+
+</script>
