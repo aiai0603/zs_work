@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FsLexYacc" Version="10.0.0" />
+
+    <FsYacc Include="ExprPar.fsy">
+      <OtherFlags>--module ExprPar</OtherFlags>
+    </FsYacc>
+    <FsLex Include="ExprLex.fsl">
+      <OtherFlags>--unicode</OtherFlags>
+    </FsLex>
+    <Compile Include="Absyn.fs" />
+    <Compile Include="ExprPar.fs" />
+    <Compile Include="ExprLex.fs" />
+    <Compile Include="Parse.fs" />
+    <Compile Include="Expr.fs" />
+    <Compile Include="Program.fs" />
+
+  </ItemGroup>
+
+</Project>

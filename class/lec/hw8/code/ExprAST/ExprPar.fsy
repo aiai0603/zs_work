@@ -1,0 +1,34 @@
+%{
+(* Parser specification for the simple expression language.*)
+open Absyn
+%}
+
+%token <int> CSTINT
+%token <string> NAME
+%token PLUS MINUS TIMES DIVIDE EQ
+%token END IN LET
+%token LPAR RPAR
+%token EOF
+
+%left MINUS PLUS        /* lowest precedence  */
+%left TIMES             /* highest precedence */
+
+%start Main
+%type <Absyn.expr> Main 
+
+%%
+
+Main:
+    Expr EOF                            { $1                }
+;
+
+Expr:
+    NAME                                { Var $1            }
+  | CSTINT                              { CstI $1           }
+  | MINUS CSTINT                        { CstI (- $2)       }
+  | LPAR Expr RPAR                      { $2                }
+  | LET NAME EQ Expr IN Expr END        { Let($2, $4, $6)   }
+  | Expr TIMES Expr                     { Prim("*", $1, $3) }
+  | Expr PLUS  Expr                     { Prim("+", $1, $3) }  
+  | Expr MINUS Expr                     { Prim("-", $1, $3) } 
+;
