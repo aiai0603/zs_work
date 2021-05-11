@@ -1,0 +1,13 @@
+<p id="para">Hello</p>
+<script>
+var id = 'doc';
+var para = document.getElementById('para');
+
+function hello(){
+  // this为 p元素,id为 para
+  console.log(this.id);
+}
+
+para.addEventListener('click', hello, false);
+
+</script>

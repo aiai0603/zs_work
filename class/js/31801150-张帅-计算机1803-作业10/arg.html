@@ -1,0 +1,15 @@
+<meta charset="utf-8">
+<div id='div1'>click</div>
+<script>
+//处理参数 x
+function print(x) {
+  console.log(x);
+}
+
+var el = document.getElementById("div1");
+
+// 事件监听器为匿名函数 fuction(){...}
+// print()参数值为 ‘Hello’
+el.addEventListener("click", function(){print('Hello')}, false);
+
+</script>

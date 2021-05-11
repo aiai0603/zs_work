@@ -1,0 +1,22 @@
+<p style="font-size: 10px;">🎈</p>
+
+<script>
+  let p = document.querySelector("p");
+ 
+
+  function handleArrow(event) {
+    if (event.key == "ArrowUp") {
+      if (parseInt(p.style.fontSize)> 70) {
+        p.textContent = "💥";
+        document.body.removeEventListener("keydown", handleArrow);
+      } else {
+        p.style.fontSize = parseInt(p.style.fontSize)*1.1+'px';
+        event.preventDefault();
+      }
+    } else if (event.key == "ArrowDown") {
+      p.style.fontSize = parseInt(p.style.fontSize)*0.9+'px';
+      }
+  }
+  document.body.addEventListener("keydown", handleArrow);
+</script>
+

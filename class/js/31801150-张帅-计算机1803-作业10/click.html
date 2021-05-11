@@ -1,0 +1,22 @@
+<!-- <meta charset="utf-8"> -->
+<script >
+    function hello(){
+      console.log('Hello ');
+    }
+    function world(){
+      console.log('world');
+    }
+    
+    // 文档节点 添加事件监听
+    //  hello 只被执行一次
+    
+    document.addEventListener('click', hello, false);
+    document.addEventListener('click', hello, false);
+    document.addEventListener('click', world, false);
+    
+    //事先保留函数名称
+    //移除事件处理程序
+    //document.removeEventListener('click', hello);
+
+    </script>
+    

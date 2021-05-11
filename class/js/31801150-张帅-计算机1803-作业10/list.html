@@ -1,0 +1,16 @@
+//list.html
+<ul>
+<li>1</li>
+ <li>2</li>
+ <li>3</li>
+ </ul>
+<script>
+var ul = document.querySelector('ul');
+
+ul.addEventListener('click', function(event) {
+
+  // tagName
+  if (event.target.tagName.toLowerCase() === 'li') {
+    console.log('li')
+  }
+});</script>

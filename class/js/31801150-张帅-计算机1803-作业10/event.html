@@ -1,0 +1,30 @@
+<!-- <meta charset="utf-8">  -->
+<div>
+  <p>Click Me</p>
+</div>
+ 
+
+ <script>
+var phases = {
+  1: 'capture',
+  2: 'target',
+  3: 'bubble'
+};
+
+var div = document.querySelector('div');
+var p = document.querySelector('p');
+
+//捕获阶段也处理事件
+div.addEventListener('click', callback, true);
+p.addEventListener('click', callback, true);
+
+//只在冒泡阶段处理事件
+div.addEventListener('click', callback, false);
+p.addEventListener('click', callback, false);
+
+function callback(event) {
+  var tag = event.currentTarget.tagName;
+  var phase = phases[event.eventPhase];
+  console.log("Tag: '" + tag + "'. EventPhase: '" + phase + "'");
+}
+</script>

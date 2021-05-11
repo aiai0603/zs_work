@@ -1,0 +1,19 @@
+﻿
+<script>
+
+//构造worker对象
+var worker = new Worker('work.js')
+
+//向 worker 线程 发送消息
+
+//worker.postMessage("Hello World");
+
+worker.postMessage({method: 'echo', args:5 })
+
+//接受worker 线程的消息
+
+worker.addEventListener('message', function(e) {
+console.log(e.data);
+}, false)
+
+</script> 

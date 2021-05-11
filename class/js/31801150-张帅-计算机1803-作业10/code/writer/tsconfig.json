@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "jsx": "react",
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      //"JsonLexer": ["static/js/"]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": false
+}

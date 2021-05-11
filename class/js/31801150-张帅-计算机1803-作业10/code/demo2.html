@@ -1,0 +1,50 @@
+<style>
+  #progress {
+   width: 470px;
+   height: 195px;
+  }
+
+  .CodeMirror-scroll {
+            overflow: auto;
+            height: 360px;
+            width: 860px;
+ }
+</style>
+<textarea id="progress">
+
+  <html style="color: green">
+    <!-- this is a comment -->
+    <head>
+      <title>Mixed HTML Example</title>
+      <style>
+        h1 {font-family: comic sans; color: #f0f;}
+        div {background: yellow !important;}
+        body {
+          max-width: 50em;
+          margin: 1em 2em 1em 5em;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Mixed HTML Example</h1>
+      <script>
+        function jsFunc(arg1, arg2) {
+          if (arg1 && arg2) document.body.innerHTML = "achoo";
+        }
+      </script>
+    </body>
+  </html>
+  
+
+
+</textarea>
+<link rel="stylesheet" href="./codemirror-5.61.0/lib/codemirror.css"/>
+<script type="text/javascript" src="./codemirror-5.61.0/lib/codemirror.js"></script>
+<script type="text/javascript" src="./codemirror-5.61.0/mode/xml/xml.js"></script>
+<script>
+  editor_req = CodeMirror.fromTextArea(document.getElementById("progress"), {
+        mode: "xml",
+        lineNumbers: true,
+        scrollbarStyle: null
+ });
+</script>
