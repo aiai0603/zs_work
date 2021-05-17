@@ -1,0 +1,62 @@
+
+
+  <div>GET</div>
+  <p>Name: <input type="text" name="name"></p>
+  <p>Message:<br><textarea name="message"></textarea></p>
+  <p><button onclick="fetch1()">Send via GET </button></p>
+
+  <div>POST</div>
+  <p>Name: <input type="text" name="name"></p>
+  <p>Message:<br><textarea name="message"></textarea></p>
+  <p><button onclick="fetch2()">Send via POST </button></p>
+
+
+
+
+<script>
+   var fetch1 = function(){
+    fetch("http://192.168.130.1:8080/demo1.html?name="+document.getElementsByName("name")[0].innerText+"&message="+document.getElementsByName("message")[0].innerText, {
+    method: "GET",
+   
+        headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+    },
+  
+}).then(function(res) {
+  if (res.ok) {
+    console.log("Perfect! Your settings are saved.");
+  } else if (res.status == 401) {
+    console.log("Oops! You are not authorized.");
+  }
+}, function(e) {
+  console.log("Error submitting form!");
+});
+}
+
+
+var fetch2 = function(){
+    fetch("http://192.168.130.1:8080/demo1.html",{
+    method: "POST",
+   
+        headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body:"name="+document.getElementsByName("name")[1].innerText+"&message="+document.getElementsByName("message")[1].innerText,
+  
+}).then(function(res) {
+  if (res.ok) {
+    console.log("Perfect! Your settings are saved.");
+  } else if (res.status == 401) {
+    console.log("Oops! You are not authorized.");
+  }
+}, function(e) {
+  console.log("Error submitting form!");
+});
+}
+
+
+
+
+
+
+</script>

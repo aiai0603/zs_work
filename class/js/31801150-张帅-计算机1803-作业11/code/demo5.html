@@ -1,0 +1,20 @@
+<p>天气：</p>
+<p id="myp"></p>
+<script>
+  
+  fetch("http://wthrcdn.etouch.cn/weather_mini?city=北京",{
+    method: "GET",
+  
+  }).then(function(res) {
+  
+    console.log(res);
+    return res.json()
+    }).then(function(json) {
+      document.getElementById("myp").innerHTML = JSON.stringify(json.data);
+     
+ 
+  })
+
+ 
+
+</script>
