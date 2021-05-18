@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<h1 style="margin: 10px">查看信息</h1>
+<div style="margin: 10px">power by 31801150 zs</div>
+<a style="margin: 10px" th:href="@{/stu}">[返回]</a>
+<form class="form-horizontal"  >
+    <div class="form-group">
+        <label for="sid" class="col-sm-2 control-label">sid</label>
+        <div class="col-sm-10">
+            <input type="text"  th:field="${stu.sid}"  disabled="disabled" class="form-control" name="sid" id="sid" placeholder="sid"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" disabled="disabled" name="name" id="name" placeholder="name"
+                   th:field="${stu.name}"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="age" class="col-sm-2 control-label">age</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" disabled="disabled" name="age" id="age" placeholder="age"
+                   th:field="${stu.age}"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label  class="col-sm-2 control-label">sex</label>
+        <div class="col-sm-10">
+            <input type="input" class="form-control"  placeholder="sex"  th:if="${stu.sex == 0}" value="男" disabled="disabled"/>
+            <input type="input" class="form-control"  placeholder="sex"  th:if="${stu.sex == 1}"  value="女" disabled="disabled"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">email</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" disabled="disabled" name="email" id="email" placeholder="email"
+                   th:field="${stu.email}"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="card_id" class="col-sm-2 control-label">cardId</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" disabled="disabled" name="card_id" id="card_id" placeholder="card_id"
+                   th:field="${stu.card_id}"/>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="text" class="col-sm-2 control-label">text</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" disabled="disabled" name="text" id="text" placeholder="text" th:field="${stu.text}"/>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="gpa" class="col-sm-2 control-label">gpa</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" disabled="disabled" name="gpa" id="gpa" placeholder="gpa"
+                   th:field="${stu.gpa}"/>
+        </div>
+    </div>
+
+
+</form>
+
+
+
+
+</body>
+</html>

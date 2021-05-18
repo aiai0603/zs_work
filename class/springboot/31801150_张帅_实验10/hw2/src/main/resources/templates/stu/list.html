@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+</head>
+<body>
+<h1 style="margin: 10px">显示信息</h1>
+<div style="margin: 10px">power by 31801150 zs</div>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        学号
+                    </th>
+                    <th>
+                        姓名
+                    </th>
+                    <th>
+                       性别
+                    </th>
+                    <th>
+                        年龄
+                    </th>
+                    <th>
+                        身份证
+                    </th>
+                    <th>
+                        邮箱
+                    </th>
+                    <th>
+                        绩点
+                    </th>
+
+                    <th>
+                        操作
+                    </th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="item : ${page.getList()}">
+                    <td th:text="${item.id}">id</td>
+                    <td th:text="${item.sid}">sid</td>
+                    <td th:text="${item.name}">name</td>
+                    <td th:if="${item.sex == 0}">男</td>
+                    <td th:if="${item.sex == 1}">女</td>
+                    <td th:text="${item.age}">age</td>
+                    <td th:text="${item.card_id}">cardId</td>
+                    <td th:text="${item.email}">email</td>
+                    <td th:text="${item.gpa}">gpa</td>
+
+
+
+
+                    <td>
+                        <a th:href="@{'/stu/'+${item.id}}" class="btn btn-outline-info">查看</a>
+
+                        <a th:href="@{'/stu/edit/'+${item.id}}" class="btn btn-outline-success">编辑</a>
+
+
+                        <button th:attr="del_uri=@{/stu/}+${item.id}" class="btn btn-outline-danger deleteBtn">删除
+                        </button>
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <form id="deleteEmpForm" method="post">
+
+
+            <input type="hidden" name="_method" value="delete"/>
+        </form>
+        <div>
+            <div th:text="第+${page.getPageNum()}+页+'/'+ 共+${page.getPages()}+页"></div>
+            <a th:href="@{/stu(start=1)}">[首页]</a>
+            <a th:if="${not page.isFirstPage}" th:href="@{/stu(start=${page.getPageNum()-1})}">[上页]</a>
+            <a th:if="${not page.isLastPage}" th:href="@{/stu(start=${page.getPageNum()+1})}">[下页]</a>
+            <a th:href="@{/stu(start=${page.getPages()})}">[末页]</a>
+        </div>
+        <a th:href="@{/stu/add}">[添加]</a>
+        <a th:href="@{/stu/rank}">[排名]</a>
+
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+			$(".deleteBtn").click(function(){
+			    //删除
+			    $("#deleteEmpForm").attr("action",$(this).attr("del_uri")).submit();
+			    return false;
+            });
+
+
+</script>
+
+</body>
+</html>

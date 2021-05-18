@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+</head>
+<body>
+<h1 style="margin: 10px">排名信息</h1>
+<div style="margin: 10px">power by 31801150 zs</div>
+<a style="margin: 10px" th:href="@{/stu}">[返回]</a>
+
+
+
+
+<a th:href="@{/stu/rank(rank=5)}">[前5]</a>
+<a th:href="@{/stu/rank(rank=10)}">[前10]</a>
+<a th:href="@{/stu/rank(rank=20)}">[前20]</a>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        学号
+                    </th>
+                    <th>
+                        姓名
+                    </th>
+                    <th>
+                        绩点
+                    </th>
+
+
+
+                </tr>
+                </thead>
+                <tbody>
+
+
+                <tr th:each="item : ${page}">
+                    <td th:text="${item.id}">id</td>
+                    <td th:text="${item.sid}">sid</td>
+                    <td th:text="${item.name}">name</td>
+                    <td th:text="${item.gpa}">gpa</td>
+
+
+
+
+
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <form id="deleteEmpForm" method="post">
+
+
+            <input type="hidden" name="_method" value="delete"/>
+        </form>
+
+
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+</body>
+</html>
