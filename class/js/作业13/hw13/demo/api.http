@@ -1,0 +1,94 @@
+@hostname = conduit.productionready.io
+@port = 80
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+@createdAt = {{$datetime iso8601}}
+@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTczMTM1LCJ1c2VybmFtZSI6InRlc3R6dWNjIiwiZXhwIjoxNjI3NjI3NjgxfQ.YxLVMK5I4f23lLjUnszIkYrfTtH1Gpjgl1jvntZz0NU
+@token1 = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QxIiwiZW1haWwiOiJqYWtlMUBqYWtlLmpha2UiLCJpYXQiOjE2MjE4OTA4MDB9.fx5nD6_MjXLPzO-QQswu22HsOwDivI_3-AU0fIoRv64
+###
+POST /api/users/login
+host: {{host}}
+content-type: {{contentType}}
+
+{
+  "user":{
+    "email": "jake1@zucc.edu.cn",
+    "password": "jakejake"
+  }
+}
+
+###
+
+POST /api/users
+host: {{host}}
+content-type: {{contentType}}
+
+{
+  "user": {
+    "username": "testzucc",
+    "email": "jake1@zucc.edu.cn",
+    "password": "jakejake"
+  }
+}
+###
+GET /api/user
+host: {{host}}
+content-type: {{contentType}}
+Authorization: Token {{token1}}
+###
+PUT /api/user
+host: {{host}}
+content-type: {{contentType}}
+Authorization: Token {{token}}
+
+{
+  "user":{
+    "email": "jake@jake.jake"
+  }
+}
+
+###
+GET /api/profiles/test1
+host: {{host}}
+content-type: {{contentType}}
+Authorization: Token {{token1}}
+
+###
+POST /api/profiles/test1/follow
+host: {{host}}
+content-type: {{contentType}}
+Authorization: Token {{token1}}
+
+###
+POST /api/articles
+host: {{host}}
+content-type: {{contentType}}
+Authorization: Token {{token}}
+
+{
+  "article": {
+    "title": "2How to train your dragon af c",
+    "description": "Ever wonder how?",
+    "body": "You have to believe",
+    "tagList": ["reactjs", "angularjs", "cs", "js" ,"c","dragons"]
+  }
+}
+###
+GET /api/articles?author=testzucc
+host: {{host}}
+content-type: {{contentType}}
+
+
+
+###
+POST /api/articles/how-to-train-your-dragon-af-c/favorite
+host: {{host}}
+content-type: {{contentType}}
+Authorization: Token {{token}}
+
+###
+GET /api/tags
+host: {{host}}
+content-type: {{contentType}}
+
+###
