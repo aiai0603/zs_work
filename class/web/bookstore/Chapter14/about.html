@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们</title>
+    <meta name="keywords" content="网上书店,IT图书,前端技术">
+    <meta name="description" content="叮叮书店是一个主要销售IT图书的垂直网站">
+    <meta name="robots" content="index,follow">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        nav ul li:last-child{background-color: hsl(20,50%,30%);}
+        footer ul li:nth-child(2){background-color: hsl(20,50%,30%);}
+    </style>
+</head>
+<body>
+<!--页眉-->
+<header class="container">
+    <!--网站logo-->
+    <div id="logo">
+        <a href="index.html"><h1>叮叮书店</h1></a>
+    </div>
+    <!--站内搜索-->
+    <div id="search">
+        <form action="index.html" method="get">
+            <input type="search" placeholder="站内搜索"><input type="submit" value="搜索">
+        </form>
+    </div>
+</header>
+<!--导航菜单-->
+<div id="nav">
+    <nav class="container">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="category.html">书籍分类</a>
+                <ul>
+                    <li><a href="#">编程语言</a></li>
+                    <li>
+                        <a href="#">数据库</a></li>
+                    <li>
+                        <a href="#">图形图像</a></li>
+                </ul>
+            </li>
+            <li><a href="specials.html">特刊降价</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="about.html">关于我们</a></li>
+        </ul>
+        <!--购物车-->
+        <div id="cart">
+            <span class="icon-cart"></span>
+            <a href="cart.html">购物车</a>
+        </div>
+    </nav>
+</div>
+<!--内容-->
+<div id="content-wrapper" class="container">
+    <!--左边内容区-->
+    <main>
+        <!--面包屑导航-->
+        <section class="crumb-nav">您现在的位置：<a href="index.html">首页</a> &gt;&gt;关于我们</section>
+        <section id="video">
+            <h2>关于我们</h2>
+            <p>叮叮书店成立于1980年6月，是由教育部主管、清华大学主办的综合出版单位。植根于“清华”这座久负盛名的高等学府，秉承清华人“自强不息，厚德载物”的人文精神。</p>
+            <div class="video">
+                <video controls autoplay>
+                    <source src="images/book-store.mp4" type="video/mp4">
+                    <source src="images/book-store.webm" type="video/webm">
+                    <source src="images/book-store.ogv" type="video/ogg">
+                    <p>您的浏览器不支持video元素。</p>
+                </video>
+            </div>
+        </section>
+    </main>
+    <!--右边边栏区-->
+    <aside>
+        <!--边栏广告-->
+        <div id="advert">
+            <a href="#"><img src="images/ad1.jpg" alt="广告"></a>
+            <a href="#"><img src="images/ad2.jpg" alt="广告"></a>
+            <a href="#"><img src="images/ad3.jpg" alt="广告"></a>
+        </div>
+        <!--畅销图书-->
+        <section id="best-selling">
+            <span class="icon-sell"></span>
+            <h2>畅销图书</h2>
+            <ul>
+                <li><a class="selling" href="#">深度学习 [deep learning]</a>
+                    <div class="curr">
+                        <div class="p-img">
+                            <a title="深度学习 [deep learning]" href="#">
+                                <img src="images/selling1.jpg" alt="封面">
+                            </a>
+                        </div>
+                        <div class="p-name">
+                            <a title="深度学习 [deep learning]" href="#">深度学习 [deep learning]</a>
+                            <strong>￥43.50</strong>
+                            <del>￥52.00</del>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="selling" href="#">Hadoop权威指南：大数据的存储与分析(第4版)，累计销量超过10万册</a>
+                    <div class="curr">
+                        <div class="p-img">
+                            <a title="Hadoop权威指南：大数据的存储与分析(第4版)" href="#">
+                                <img src="images/selling2.jpg" alt="封面">
+                            </a>
+                        </div>
+                        <div class="p-name">
+                            <a title="Hadoop权威指南：大数据的存储与分析(第4版)" href="#">Hadoop权威指南：大数据的存储与分析(第4版)，累计销量超过10万册</a>
+                            <strong>￥43.50</strong>
+                            <del>￥52.00</del>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="selling" href="#">和秋叶一起学PPT 第3版</a>
+                    <div class="curr">
+                        <div class="p-img">
+                            <a title="和秋叶一起学PPT 第3版" href="#">
+                                <img src="images/selling3.jpg" alt="封面">
+                            </a>
+                        </div>
+                        <div class="p-name">
+                            <a title="和秋叶一起学PPT 第3版" href="#">和秋叶一起学PPT 第3版</a>
+                            <strong>￥43.50</strong>
+                            <del>￥52.00</del>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="selling" href="#">深度学习优化与识别</a>
+                    <div class="curr">
+                        <div class="p-img">
+                            <a title="深度学习优化与识别" href="#">
+                                <img src="images/selling4.jpg" alt="封面">
+                            </a>
+                        </div>
+                        <div class="p-name">
+                            <a title="深度学习优化与识别" href="#">深度学习优化与识别</a>
+                            <strong>￥43.50</strong>
+                            <del>￥52.00</del>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="selling" href="#">区块链原理、设计与应用</a>
+                    <div class="curr">
+                        <div class="p-img">
+                            <a title="区块链原理、设计与应用" href="#">
+                                <img src="images/selling5.jpg" alt="封面">
+                            </a>
+                        </div>
+                        <div class="p-name">
+                            <a title="区块链原理、设计与应用" href="#">区块链原理、设计与应用</a>
+                            <strong>￥43.50</strong>
+                            <del>￥52.00</del>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <div id="classify-partner">
+            <!--图书分类-->
+            <section id="classify">
+                <span class="icon-classify"></span>
+                <h2>图书分类</h2>
+                <ul>
+                    <li><a href="category.html">编程语言</a></li>
+                    <li><a href="category.html">数据库</a></li>
+                    <li><a href="category.html">图形图像</a></li>
+                    <li><a href="category.html">网页制作</a></li>
+                    <li><a href="category.html">考试认证</a></li>
+                </ul>
+            </section>
+            <!--合作伙伴-->
+            <section id="partner">
+                <span class="icon-partner"></span>
+                <h2>合作伙伴</h2>
+                <ul>
+                    <li><a href="#">中国电子商务研究中心</a></li>
+                    <li><a href="#">清华大学出版社</a></li>
+                    <li><a href="#">中国人民大学出版社</a></li>
+                    <li><a href="#">中国社会科学出版社</a></li>
+                </ul>
+            </section>
+        </div>
+        <!--关于书店-->
+        <section id="about">
+            <span class="icon-about"></span>
+            <h2>关于书店</h2>
+            <div class="content">
+                <img src="images/about.gif" alt="叮叮书店">
+                <p>叮叮书店成立于2010年6月，是由教育部主管、清华大学主办的综合出版单位。植根于“清华”这座久负盛名的高等学府，秉承清华人“自强不息，厚德载物”的人文精神。</p>
+            </div>
+        </section>
+    </aside>
+</div>
+<!--页脚导航-->
+<div id="footer-wrapper">
+    <footer class="container">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="#">服务条款</a></li>
+            <li><a href="#">隐私策略</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+    </footer>
+</div>
+<!--版权信息-->
+<div id="copyright" class="container">
+    <div>Copyright (C) <a href="index.html">叮叮书店</a> 2016-2018, All Rights Reserved | 京ICP证000001号音像制品经营许可证
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px" src="images/vcss.gif" alt="Valid CSS!">
+        </a>
+    </div>
+    <address>通讯地址：清华大学学研大厦A座 读者服务部&nbsp;&nbsp;电话：（010）62781733&nbsp;&nbsp;网管信箱：netadmin@tup.tsinghua.edu.cn</address>
+</div>
+</body>
+</html>

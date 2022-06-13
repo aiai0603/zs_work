@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+#all {
+	background: url(图片/x-6.jpg);
+	background-size: 100% 1100px;
+	height: 1100px;
+}
+
+.nav {
+	width: 100%;
+	
+}
+
+.nav ul {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	background: rgba(100, 0, 200, 0.2);
+	height: 50px;
+	font-weight: 800;
+	padding-right: 220px;
+}
+
+.nav ul li {
+	min-width: 100px;
+}
+
+.nav ul a {
+	height: 30px;
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	justify-content: center;
+	color: #FFF;
+	text-decoration: none;
+	width: 70px;
+	font-size: 16px;
+	transition: background 0.5s linear;
+}
+
+.nav ul a:hover {
+	border-bottom: 3px white solid;
+
+}
+
+#showtime {
+	width: 320px;
+	height: 50px;
+	padding-left: 50px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+
+/*定义服务器端使用的图标字体*/
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('fonts/fontawesome-webfont.eot?v=4.7.0');
+	src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class*="icon-"] {
+	font-family: FontAwesome;
+	font-size: 1.5rem;
+	color: white;
+}
+.icon-1{
+	position: absolute;
+	top:10px;
+	left: 40px;
+}
+.icon-2{
+	position: absolute;
+	top:12px;
+	right: 70px;
+}
+.icon-3{
+	position: absolute;
+	top:12px;
+	right:120px;
+}
+.icon-4{
+	position: absolute;
+	top:12px;
+	right:170px;
+}
+#main{
+	width: 90%;
+	margin-top: 20px;
+	height: 2800px;
+	background-color: rgba(230,230,230,0.2);
+	border-radius: 50px;
+}
+
+#nav1{
+	border-bottom: 3px white solid;
+}
+#daohang{
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	
+	
+}
+
+#under ul{
+	display:flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+}
+#under li{
+	width: 79px;
+	height: 70px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	
+	
+}
+.main{
+	width: 100%;
+	height: 860px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+
+
+}
+
+.line{
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	height: 50px;
+	align-items: center;
+}
+.div1{
+	width: 200px;
+	font-size: 20px;
+	
+}
+.div2{
+	width: 200px;
+	margin-right: 30px;
+}
+input{
+	width: 200px;
+	height: 25px;
+}
+#button{
+	width: 80px;
+	height: 25px;
+	border-radius: 6px;
+	margin-left: 10px;
+}
+#button:hover{
+	color: #853F26;
+}
+
+.div3{
+	width:300px;
+	font-size: 14px;
+	color: #000000;
+}
+#submit{
+	margin-top: 20px;
+	width: 200px;
+	height: 35px;
+	border-radius: 6px;
+	margin-right: 130px;
+	background-color: plum;
+	color: #000000;
+	margin-bottom: 50px;
+	font-size: 16px;
+	font-weight: 800;
+}
+#submit:hover{
+	color: #808080;
+}
+.line:hover{
+	background: rgba(100,0,200,0.2);
+}
+
+#under a{
+	color: #FFFFFF;
+}
+#under a:hover{
+	color: #CCCCCC;
+}
+#copyright{
+	color: white;
+}
+form{
+	width:	800px;
+	height: 460px;
+	background-color: rgba(255,255,255,0.3);
+	padding-top: 50px;
+	box-shadow: #808080 5px 5px 10px;
+	border-radius: 15px;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>全站搜索</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="keywords" content="美文，心灵鸡汤，励志">
+		<meta name="description" content="心情之旅是一个欣赏美文的放松心情的论坛">
+		<meta name="robots" content="index,follow">
+		<link rel="stylesheet" type="text/css" href="css/index2搜索.css" />
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			text-decoration: none;
+		}
+	</style>
+	<script type="text/javascript">
+		function showDate() {
+			var curDate = new Date();
+			var year = curDate.getFullYear();
+			var month = curDate.getMonth() + 1;
+			var date = curDate.getDate();
+			var day = curDate.getDay();
+			var week = ["日", "一", "二", "三", "四", "五", "六"];
+			var hours = curDate.getHours();
+			var mintues = curDate.getMinutes();
+			var seconds = curDate.getSeconds();
+			var str;
+			str = year + "年" + time(month) + "月" + time(date) + "日&nbsp;&nbsp;" + "星期" + week[day] + "&nbsp;&nbsp;" + time(hours) +
+				"时" + time(mintues) + "分" + time(seconds) + "秒";
+			//document.write(str);
+			document.getElementById("showtime").innerHTML = str;
+		}
+
+		function time(x) {
+			return x > 9 ? x : "0" + x;
+		}
+
+		function autoPlay() {
+			var myAuto = document.getElementById('myaudio');
+			if (!myAuto.paused) {
+				myAuto.pause();
+			} else {
+				myAuto.play();
+			}
+
+		}
+		
+		window.onload = function() {
+		
+			showDate();
+			setInterval(showDate, 1000);
+			var myAuto = document.getElementById('myaudio');
+			myAuto.play();
+			
+			var a2=document.getElementsByClassName("nr");
+			for(var i=0;i<a2.length;i++){
+				a2[i].onmousedown=function(){
+				document.getElementById("searchlan").value=this.innerHTML;
+			}
+			
+			document.form1.id.focus();
+			
+		}
+		}
+		function check() {
+			if (document.form1.id.value.length ==0) {
+				window.alert("内容为空");
+				return false;
+			}
+			return true;
+			
+		
+		}
+	</script>
+	<body>
+		<audio src="音乐/背景音乐2.mp3" id="myaudio" controls="controls" loop="true" hidden="true" autoplay="autoplay"></audio>
+		<div id="all" align="center">
+			<div class="nav">
+				<a href="主页.html" class="icon-1" title="返回主页">
+					&#xf015 &nbsp心情之旅
+				</a>
+				<ul>
+
+					<li><a href="主页.html">首页</a></li>
+					<li><a href="心灵鸡汤.html">心灵鸡汤</a></li>
+					<li><a href="励志故事.html">励志故事</a></li>
+					<li><a href="注册表.html">注册会员</a></li>
+					<li>
+						<div id="showtime"></div>
+					</li>
+
+				</ul>
+
+				<a href="搜索.html" class="icon-2" title="站内搜索">&#xf002</a>
+				<a href="javascrip:void(0)" class="icon-3" title="背景音乐" onclick="autoPlay()">&#xf001</a>
+				<a href="登录.html" class="icon-4" title="会员登录">
+					&#xf007
+				</a>
+			</div>
+
+
+			<div class="main">
+				<form action="" method="get" onsubmit="return check()" name="form1">
+					<h2 style="font-size: 40px;margin-bottom: 20px;margin-right: 25px;">全站搜索</h2>
+					<div class="line">
+
+						<div class="div2"><input type="text" name="id" id="searchlan" placeholder="请输入搜索内容"></div>
+						<div class="div1">
+							<div class="register">
+								<input type="submit" name="submit" id="submit" value="&#xf002" />
+
+							</div>
+							
+						</div>
+						
+
+					</div>
+					<h2 style="font-size: 20px;margin-right: 512px;margin-bottom:20px;font-weight: 400;">热门搜索</h2>
+					<div id="gjc">
+						<div>
+							<a href="你欠自己一个幸福的模样.html" style="background-color: rgba(125,0,100,0.6);" class="nr">你欠自己一个幸福的模样</a>
+						</div>
+						<div>
+							<a href="明天你好,含着泪微笑.html" style="background-color: rgba(125,0,0,0.6);" class="nr">明天你好</a>
+						</div>
+						<div>
+							<a href="#"  style="background-color: rgba(0,125,0,0.6);" class="nr" >面朝大海，春暖花开</a>
+						</div>
+						<div>
+							<a href="#"  style="background-color: rgba(0,0,125,0.6);" class="nr">请允许我偶尔的不坚强</a>
+						</div>
+					</div>
+					
+
+
+
+				</form>
+			</div>
+
+
+
+
+			<div id="under">
+				<ul>
+
+					<li><a href="主页.html">返回首页&nbsp;|</a></li>
+					<li><a href="#">联系我们&nbsp;|</a></li>
+					<li><a href="#">服务条款&nbsp;|</a></li>
+					<li><a href="#">后台管理</a></li>
+
+				</ul>
+			</div>
+
+			<div id="copyright">
+				<div>Copyright (C) <a href="主页.html">心情之旅</a> 2016-2020, All Rights Reserved </div>
+				<address>通讯地址：************** 电话：***********网管信箱：1016868503@qq.com</address>
+			</div>
+		</div>
+
+
+
+
+
+
+
+	</body>
+</html>

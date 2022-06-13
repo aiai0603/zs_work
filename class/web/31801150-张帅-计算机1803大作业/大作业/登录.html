@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>会员登录</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="keywords" content="美文，心灵鸡汤，励志">
+		<meta name="description" content="心情之旅是一个欣赏美文的放松心情的论坛">
+		<meta name="robots" content="index,follow">
+		<link rel="stylesheet" type="text/css" href="css/index2登录.css" />
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			text-decoration: none;
+		}
+	</style>
+	<script type="text/javascript">
+		
+		function showDate() {
+			var curDate = new Date();
+			var year = curDate.getFullYear();
+			var month = curDate.getMonth() + 1;
+			var date = curDate.getDate();
+			var day = curDate.getDay();
+			var week = ["日", "一", "二", "三", "四", "五", "六"];
+			var hours = curDate.getHours();
+			var mintues = curDate.getMinutes();
+			var seconds = curDate.getSeconds();
+			var str;
+			str = year + "年" + time(month) + "月" + time(date) + "日&nbsp;&nbsp;" + "星期" + week[day] + "&nbsp;&nbsp;" + time(hours) +
+				"时" + time(mintues) + "分" + time(seconds) + "秒";
+			//document.write(str);
+			document.getElementById("showtime").innerHTML = str;
+		}
+
+		function time(x) {
+			return x > 9 ? x : "0" + x;
+		}
+		function autoPlay() {
+			var myAuto = document.getElementById('myaudio');
+			if(!myAuto.paused)
+			{				
+				myAuto.pause();
+			}
+			else{
+				myAuto.play();
+			}
+
+		}
+		window.onload = function() {
+		
+			showDate();
+			setInterval(showDate, 1000);
+			var myAuto = document.getElementById('myaudio');
+			myAuto.play();
+			
+			document.form1.text.focus();
+		
+		}
+		
+		
+		function check() {
+			if (document.form1.text.value!="admin") {
+				window.alert("账号错误");
+				return false;
+			}
+			if (document.form1.pw.value!="admin") {
+				window.alert("密码错误");
+				return false;
+			}
+		
+			window.alert("登陆成功！欢迎 admin 进入心情之旅");
+			window.location.href="主页.html";
+			return false;
+		
+		}
+	
+	</script>
+	<body>
+		<audio src="音乐/背景音乐2.mp3" id="myaudio" controls="controls" loop="true" hidden="true" autoplay="autoplay"></audio>
+		<div id="all" align="center">
+			<div class="nav">
+				<a href="主页.html" class="icon-1" title="返回主页">
+					&#xf015 &nbsp心情之旅
+				</a>
+				<ul>
+
+					<li><a href="主页.html" >首页</a></li>
+					<li><a href="心灵鸡汤.html">心灵鸡汤</a></li>
+					<li><a href="励志故事.html">励志故事</a></li>
+					<li><a href="注册表.html">注册会员</a></li>
+					<li>
+						<div id="showtime"></div>
+					</li>
+
+				</ul>
+
+				<a href="搜索.html" class="icon-2" title="站内搜索">&#xf002</a>
+				<a href="javascrip:void(0)" class="icon-3" title="背景音乐" onclick="autoPlay()">&#xf001</a>
+				<a href="登录.html" class="icon-4" title="会员登录">
+					&#xf007
+				</a>
+			</div>
+				
+				
+					<div class="main">
+						<form action="" method="get" onsubmit="return check()" name="form1">
+							<h2 >欢迎进入心情之旅</h2>
+							<div class="line">
+								&#xf007&nbsp;账号<input type="text" name="text" class="text" />
+							</div>
+							<div class="line">
+								&#xf007&nbsp;密码<input type="password" name="pw" class="text" />
+							</div>
+							
+								<input type="submit" value="登录" class="button"/>
+							
+						</form>
+					</div>
+				
+			
+			
+	
+				<div id="under">
+					<ul>
+	
+						<li><a href="主页.html">返回首页&nbsp;|</a></li>
+						<li><a href="#">联系我们&nbsp;|</a></li>
+						<li><a href="#">服务条款&nbsp;|</a></li>
+						<li><a href="#">后台管理</a></li>
+	
+					</ul>
+				</div>
+	
+				<div id="copyright">
+					<div>Copyright (C) <a href="主页.html">心情之旅</a> 2016-2020, All Rights Reserved </div>
+					<address>通讯地址：************** 电话：***********网管信箱：1016868503@qq.com</address>
+				</div>
+			</div>
+	
+	
+	
+	
+	
+	
+	
+		</body>
+	</html>
+	

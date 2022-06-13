@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>试读</title>
+    <meta name="keywords" content="网上书店,IT图书,前端技术">
+    <meta name="description" content="叮叮书店是一个主要销售IT图书的垂直网站">
+    <meta name="robots" content="index,follow">
+    <link href="style.css" rel="stylesheet">
+    <style type="text/css">
+        /*Accordion*/
+        aside{border: 1px solid hsl(20,30%,50%);box-sizing: border-box;}
+        h2{color:hsl(20,50%,30%);text-align: center;}
+        h3{text-align: center;}
+        .list, .bar{padding: 10px 10px;}
+        .list dl{cursor:pointer;}
+        .bar a,.list dl dt{font-size:1rem}
+        .list a, .bar a{text-decoration:none;color:hsl(0,0%,0%);}
+        .list a:hover, .bar a:hover{color:hsl(20,30%,50%);}
+        .list dl dd{margin-left:10px;display:none;}
+        .right-footer a{font-size:1rem;}
+    </style>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.list dt').click(function(){
+                $(this).nextAll().slideToggle();
+                var sTc=$(this).css("color");
+                if(sTc=="rgb(0, 0, 0)"){$(this).css({"color":"#734633"});}
+                else{$(this).css({"color":"#000000"});}
+            })
+            $('.all-show').click(function(){
+                $('.list dl dd').slideDown();
+                $('.list dl dt').css({"color":"#734633"});
+            })
+            $('.all-hide').click(function(){
+                $('.list dl dd').slideUp();
+                $('.list dl dt').css({"color":"#000000"});
+            })
+            $('.m11').click(function(){
+                $('.Ajaxcontent').load('m11.html');
+                $('.list dl dd a').css({"color":"#000000"});
+                $(this).css({"color":"#FF9900"});
+            })
+            $('.m12').click(function(){
+                $('.Ajaxcontent').load('m12.html');
+                $('.list dl dd a').css({"color":"#000000"});
+                $(this).css({"color":"#FF9900"});
+            })
+        });
+    </script>
+</head>
+<body>
+<!--页眉-->
+<header class="container">
+    <!--网站logo-->
+    <div id="logo">
+        <a href="index.html"><h1>叮叮书店</h1></a>
+    </div>
+    <!--站内搜索-->
+    <div id="search">
+        <form action="index.html" method="get">
+            <input type="search" placeholder="站内搜索"><input type="submit" value="搜索">
+        </form>
+    </div>
+</header>
+<!--导航菜单-->
+<div id="nav">
+    <nav class="container">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="category.html">书籍分类</a>
+                <ul>
+                    <li><a href="#">编程语言</a></li>
+                    <li>
+                        <a href="#">数据库</a></li>
+                    <li>
+                        <a href="#">图形图像</a></li>
+                </ul>
+            </li>
+            <li><a href="specials.html">特刊降价</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="about.html">关于我们</a></li>
+        </ul>
+        <!--购物车-->
+        <div id="cart">
+            <span class="icon-cart"></span>
+            <a href="cart.html">购物车</a>
+        </div>
+    </nav>
+</div>
+<!--内容-->
+<div id="content-wrapper" class="container">
+    <!--左边内容区-->
+    <main>
+        <!--面包屑导航-->
+        <section class="crumb-nav">您现在的位置：<a href="index.html">首页</a> &gt;&gt;试读</section>
+        <section class="Ajaxcontent">
+            <h3>前 言</h3>
+            <p>本教程阐述了Web的基本技术，主要围绕网站前端设计所必须知道的知识进行展开。包括Web体系、超文本与标记语言和浏览器，重点介绍了HTML5、CSS3和JavaScript等Web前端应用的基础知识和关键技术，在阐述必不可少的理论知识之外，着重通过实际操作的案例来为读者提供了一个确实掌握Web基本技术的指南。</p>
+        </section>
+    </main>
+    <!--右边边栏区-->
+    <aside>
+        <div class="bar">
+            <h2> 《Web前端设计基础—HTML5、CSS3、JavaScript》</h2>
+            <h3>作者：张树明</h3>
+            <a href="#" class="all-show">全部展开</a>&nbsp;&nbsp;<a href="#" class="all-hide">全部折叠</a> </div>
+        <div class="list">
+            <dl>
+                <dt>第1章  Web技术概述</dt>
+                <dd><a href="#" class="m11">1.1  Internet概述</a></dd>
+                <dd><a href="#" class="m12">1.2  Web概述</a></dd>
+                <dd><a href="#">1.3  超文本与标记语言</a></dd>
+                <dd><a href="#">1.4  Web标准</a></dd>
+                <dd><a href="#">1.5  浏览器</a></dd>
+                <dd><a href="#">1.6  Web开发工具</a></dd>
+            </dl>
+            <dl>
+                <dt>第2章  HTML5基础</dt>
+                <dd><a href="#">2.1  HTML基础</a></dd>
+                <dd><a href="#">2.2  WebStorm基础</a></dd>
+                <dd><a href="#">2.3  文档结构元素</a></dd>
+                <dd><a href="#">2.4  头部元素</a></dd>
+            </dl>
+        </div>
+    </aside>
+</div>
+<!--页脚导航-->
+<div id="footer-wrapper">
+    <footer class="container">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="#">服务条款</a></li>
+            <li><a href="#">隐私策略</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+    </footer>
+</div>
+<!--版权信息-->
+<div id="copyright" class="container">
+    <div>Copyright (C) <a href="index.html">叮叮书店</a> 2016-2018, All Rights Reserved | 京ICP证000001号音像制品经营许可证
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px" src="images/vcss.gif" alt="Valid CSS!">
+        </a>
+    </div>
+    <address>通讯地址：清华大学学研大厦A座 读者服务部&nbsp;&nbsp;电话：（010）62781733&nbsp;&nbsp;网管信箱：netadmin@tup.tsinghua.edu.cn</address>
+</div>
+</body>
+</html>

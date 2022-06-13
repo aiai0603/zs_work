@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>励志故事</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="keywords" content="美文，心灵鸡汤，励志">
+		<meta name="description" content="心情之旅是一个欣赏美文的放松心情的论坛">
+		<meta name="robots" content="index,follow">
+		<link rel="stylesheet" type="text/css" href="css/index2-列表页2.css" />
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			text-decoration: none;
+		}
+	</style>
+	<script type="text/javascript">
+		function showDate() {
+			var curDate = new Date();
+			var year = curDate.getFullYear();
+			var month = curDate.getMonth() + 1;
+			var date = curDate.getDate();
+			var day = curDate.getDay();
+			var week = ["日", "一", "二", "三", "四", "五", "六"];
+			var hours = curDate.getHours();
+			var mintues = curDate.getMinutes();
+			var seconds = curDate.getSeconds();
+			var str;
+			str = year + "年" + time(month) + "月" + time(date) + "日&nbsp;&nbsp;" + "星期" + week[day] + "&nbsp;&nbsp;" + time(hours) +
+				"时" + time(mintues) + "分" + time(seconds) + "秒";
+			//document.write(str);
+			document.getElementById("showtime").innerHTML = str;
+		}
+
+		function time(x) {
+			return x > 9 ? x : "0" + x;
+		}
+
+		function autoPlay() {
+			var myAuto = document.getElementById('myaudio');
+			if (!myAuto.paused) {
+				myAuto.pause();
+			} else {
+				myAuto.play();
+			}
+
+		}
+		
+		
+		window.onload = function() {
+			showDate();
+			setInterval(showDate, 1000);
+			var myAuto = document.getElementById("myaudio");
+			myAuto.play();
+			
+			var ss=2;
+			
+			var d=document.getElementById("dd");
+			function show() {
+				var d=document.getElementById("dd");
+				if(ss==1)
+				{
+					d.style.left="-784px";
+				}
+				if(ss==2)
+				{
+					d.style.left="0px";
+				}
+				else if(ss==3)
+				{
+					d.style.left="784px";
+				}
+				
+			}
+			
+			
+		
+			var zuo=document.getElementById("anzuo");
+			var you=document.getElementById("anyou");
+			zuo.onmousedown=function(){
+				ss-=1;
+				if(ss==0)
+				{
+				ss=3;
+				}
+				show();
+			};
+			you.onmousedown=function(){
+				ss+=1;
+				if(ss==4)
+				{
+					ss=1;
+					
+					}
+				show();
+			};
+			
+			
+			
+			}
+	</script>
+	<body>
+		<audio src="音乐/背景音乐2.mp3" id="myaudio" controls="controls" loop="true" hidden="true" autoplay="autoplay"></audio>
+		<div id="all" align="center">
+			<div class="nav">
+				<a href="主页.html" class="icon-1" title="返回主页">
+					&#xf015 &nbsp心情之旅
+				</a>
+				<ul>
+
+					<li><a href="主页.html">首页</a></li>
+					<li><a href="心灵鸡汤.html">心灵鸡汤</a></li>
+					<li><a href="励志故事.html" id="nav1">励志故事</a></li>
+					<li><a href="注册表.html">注册会员</a></li>
+					<li>
+						<div id="showtime"></div>
+					</li>
+
+				</ul>
+
+				<a href="搜索.html" class="icon-2" title="站内搜索">&#xf002</a>
+				<a href="javascrip:void(0)" class="icon-3" title="背景音乐" onclick="autoPlay()">&#xf001</a>
+				<a href="登录.html" class="icon-4" title="会员登录">
+					&#xf007
+				</a>
+			</div>
+			<div id="tiao">
+				<input type="text" name="search" id="search" placeholder="&nbsp请输入作品名称" />
+				<input type="button" name="put up" id="tijiao" value="搜索" />
+			</div>
+			<div id="main">
+				<div id="up">
+					<div id="left" style="overflow: hidden;">
+						<h2>精华作品</h2>
+						<button id="anzuo" class="an">
+							<
+						</button>
+						<button id="anyou" class="an">
+							>
+						</button>
+						
+						
+						<div  id="tui" style="overflow: hidden;">
+							<ul id="dd">
+								
+								
+								<li>
+									<div id="d3">
+										
+										<aside>
+											<h3>你欠自己一个幸福的模样</h3>
+											
+											<img src="图片/幸福.jpg" />
+											
+										</aside>
+										<aside>
+											<article>
+											
+												我是女生，一个不漂亮，没有什么才华的普普通通的女生。
+											
+												今天，自己在考研的路上充满了迷茫，一切都无从下手，于是打电话给一个考研成功的学长，想听听他的指导。
+											
+												说到父母时，我对他说：“我希望自己能够给的起父母想要的生活，给的起自己想要的生活。
+											</article>
+											<a href="你欠自己一个幸福的模样.html" class="yue">
+												阅读全文>
+											</a>
+										</aside>
+										
+										</div>
+									
+									
+								</li>
+								<li>
+									<div id="d2">
+										<aside>
+											<h3>明天你好！含着泪微笑</h3>
+											
+											<img src="图片/明天.jpg" />
+											
+										</aside>
+										<aside>
+											<article>
+											
+												深秋，在这个陌生的城市，显得格外冷。
+													下午5:30，天色已接近黄昏，我下了公交车，路上的车辆和行人在我身边来来往往，却没有一个和我有任何关系，是的，在这个现在还不属于我的城市，一切都是陌生和孤独的。回到住宿的地方，和朋友的妈妈打了招呼，便走进房间了。因为昨天下午回来的时候天已经黑了，听朋友说这边晚上不是很安全，叮嘱我白天找完工作早些回去，所以今天我回来的早些。
+											</article>
+											<a href="明天你好,含着泪微笑.html" class="yue">
+												阅读全文>
+											</a>
+										</aside>
+										
+									</div>
+								</li>
+								
+								<li>
+									<div id="d1">
+										<aside>
+											<h3>不逼自己，命运就逼你一辈子</h3>
+											
+											<img src="图片/逼自己.jpg" />
+											
+										</aside>
+										<aside>
+											<article>
+											
+												出色的人不一定比你聪明，而是比你更加自律，更有效率。你不逼自己一把，命运就会逼你一辈子。新的一年，忌拖延，从学会自律开始，
+													世界上，成功的有两种人，一种人是傻子，一种人是疯子。傻子是会吃亏的人，疯子是会行动的人。赚钱是一种才调，花钱是一种程度，才调可以练，程度是随便草率练不出来的。一小我的常识，经过过程进修可以获得;一小我的发展，必须经过过程考验
+											</article>
+											<a href="#" class="yue">
+												阅读全文>
+											</a>
+										</aside>
+										
+									</div>
+								</li>
+								
+								
+							</ul>
+							
+						</div>
+						
+						</div>
+						
+						
+					
+
+					<div id="right">
+						<h2>热门排行</h2>
+						<ul>
+
+							<li>
+								<a href="明天你好,含着泪微笑.html">
+									<div>1</div><p>明天你好！含着泪微笑</p>
+									<article class="ping"><img src="图片/x-2.jpg" class="ping" ><div>阅读全文
+										
+									</div></article>
+									
+								</a>
+								
+							</li>
+							<li>
+								<a href="#">
+									<div>2</div><p>不逼自己一把，命运就逼你一辈子</p>
+									<article class="ping"><img src="图片/逼自己.jpg" class="ping" ><div>阅读全文
+										
+									</div></article>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>3</div><p>请允许我偶尔不坚强</p>
+									<article class="ping"><img src="图片/x-4.jpg" class="ping" ><div>阅读全文
+										
+									</div></article>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>4</div><p>相隔34年的雨季</p>
+									<article class="ping"><img src="图片/x-7.jpg" class="ping" ><div>阅读全文
+										
+									</div></article>
+									
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>5</div><p>青春里的了不起与对不起</p>
+									<article class="ping"><img src="图片/x-5.jpg" class="ping" ><div>阅读全文
+										
+									</div></article>
+								</a>
+							</li>
+						</ul>
+						<h2>最新发布</h2>
+						<ul>
+
+							<li>
+								<a href="#">
+									<div>1</div><p>青春里的了不起与对不起</p>
+									<article class="ping"><img src="图片/x-5.jpg" class="ping" ><div>阅读全文
+										
+									</div></article>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>2</div><p>如果明天天晴</p>
+									<article class="ping"><img src="图片/x-8.jpg" class="ping" ><div>阅读全文
+										
+									</div></article>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>3</div><p>是啊，我自卑</p>
+									<article class="ping"><img src="图片/x-6.jpg" class="ping" ><div>阅读全文
+										
+									</div></article>
+								</a>
+							</li>
+							
+						</ul>
+
+					</div>
+
+				</div>
+
+
+				<div id="down">
+					<h2 id="quanbu">全部作品</h2>
+					<div id="text-all">
+						<ul>
+							<li class="text-1">
+								<a href="勇气：不畏失败，依旧热情.html" title="阅读全文"><img src="图片/x-3.jpg">
+									<div id="wz">
+										<h3>勇气，就是不断失败而不丧失热情</h3>
+										<p>鸵鸟是一种非常有意思的动物，当它觉得遇到困难，被逼到绝境的时候，就会把头埋进沙子里，蒙蔽视线自以为安全。看不见苦难和失败是不是就可以当它们不存在？大多数人都觉得这种“鸵鸟心态”非常可笑，但是当真正遇到困难或者失败的时候，有的人披荆斩棘勇往直前，有的人则是遮住双眼，选择做一只鸵鸟。
+										</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a>
+							</li>
+							<li class="text-1"><a href="#" title="阅读全文"><img src="图片/逼自己.jpg">
+									<div id="wz">
+										<h3>不逼自己一把，命运就逼你一辈子</h3>
+										<p>出色的人不一定比你聪明，而是比你更加自律，更有效率。你不逼自己一把，命运就会逼你一辈子。新的一年，忌拖延，从学会自律开始，
+											世界上，成功的有两种人，一种人是傻子，一种人是疯子。傻子是会吃亏的人，疯子是会行动的人。赚钱是一种才调，花钱是一种程度，才调可以练，程度是随便草率练不出来的。一小我的常识，经过过程进修可以获得;一小我的发展，必须经过过程考验</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1"><a href="明天你好,含着泪微笑.html" title="阅读全文"><img src="图片/x-2.jpg">
+									<div id="wz">
+										<h3>明天你好！含着泪微笑</h3>
+										<p>深秋，在这个陌生的城市，显得格外冷。
+											下午5:30，天色已接近黄昏，我下了公交车，路上的车辆和行人在我身边来来往往，却没有一个和我有任何关系，是的，在这个现在还不属于我的城市，一切都是陌生和孤独的。回到住宿的地方，和朋友的妈妈打了招呼，便走进房间了。因为昨天下午回来的时候天已经黑了，听朋友说这边晚上不是很安全，叮嘱我白天找完工作早些回去，所以今天我回来的早些。
+										</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1"><a href="你欠自己一个幸福的模样.html" title="阅读全文"><img src="图片/幸福.jpg">
+									<div id="wz">
+										<h3>你欠自己一个幸福的模样</h3>
+										<p>我是女生，一个不漂亮，没有什么才华的普普通通的女生。
+											今天，自己在考研的路上充满了迷茫，一切都无从下手，于是打电话给一个考研成功的学长，想听听他的指导。在一起聊了学习之后，我们开始聊了些别的。在我对他说：“好好努力，一定要考到自己心仪的学校！”时，他打趣的说：“你是女生呀，考不上还会有后路，找一个有钱的男朋友嫁了~”说到父母时，我对他说：“我希望自己能够给的起父母想要的生活，给的起自己想要的生活。”他对我说：“你是女生，不要把自己弄的这么累，找个好一点的男朋友，问题就解决了啊。”接连说了很多次后，我开始不知道该如何去接这个话题。
+										</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1"><a href="#" title="阅读全文"><img src="图片/x-4.jpg">
+									<div id="wz">
+										<h3>请允许我偶尔不坚强</h3>
+										<p>8岁的时候，我想学骑自行车。我找来家里快被淘汰的车子，破旧的墨绿色，车筐早已不见踪迹，车轮转起来咯吱作响，脚蹬的踏板已经脱落，只留下直愣愣的两根铁棒，穿着薄鞋底的凉鞋踩上去，咯得脚底生疼。
+											但这些并不影响我想学骑自行车的熱情。我找来有经验的小姐妹，趁傍晚人少，在家门口的柏油路上练习骑车。
+											　当时母亲也在一旁，于是我毫无顾忌地跨上自行车。车轮转起来的那一刻，我的大脑一片空白，将之前好友的嘱咐全然忘记。车子开始不受控制，左歪右斜，我双手紧握着车把，失声尖叫：“妈妈，快来救我！”</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1"><a href="#" title="阅读全文"><img src="图片/x-5.jpg">
+									<div id="wz">
+										<h3>青春里的了不起与对不起</h3>
+										<p>如果你知道10年后的自己依然不够优秀，还愿不愿意全力以赴呢？
+											　　
+											　　我从来就不是一个优秀的人。10年前如此，10年后也是，青春期里的敏感少女长大后顺理成章地成为一个活在自己内心世界里的城市边缘人，这本身并不奇怪。比较特殊的是，偏偏我还是个焦虑感特别严重的人。在我读高中的时候，分文理科，家人都让我选理科，我却坚定地选择了文科。嘴上笃定，内心忐忑。</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1"><a href="#" title="阅读全文"><img src="图片/x-6.jpg">
+									<div id="wz">
+										<h3>是啊，我自卑</h3>
+										<p>光是打出这个标题就花了我半个小时。
+											对我而言，要如此坦诚地说出“我自卑”这三个字真的太难了，因为我一直觉得这是一个无解的命题。自卑伴随了我这么多年，一不留神它就会兴风作浪，管都管不住。但仔细想想，不仅是我，好像全天下人都自卑。
+											“我脸上有很多痘痘，讲话时都不敢抬起头看对方。”
+											　　</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1"><a href="#" title="阅读全文"><img src="图片/x-7.jpg">
+									<div id="wz">
+										<h3>相隔34年的雨季</h3>
+										<p>那年我17岁，一个被作业压抑太久、渴望自由又多愁善感的年龄。我在县城的一所高中读书，按路程我应该住校，但我选择了半住校，在学校留有宿舍，只用来午休和雨雪天时留宿。高二那年夏季的一天，临放学时突然电闪雷鸣，大雨就要来临。同学们都劝我住校，可我那段时间心烦到极点，特别渴望一场大雨洗刷心中的烦闷，于是我丢下一句“让暴风雨来得更猛烈些吧”，便背着书包跑向车棚。</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1"><a href="#" title="阅读全文"><img src="图片/x-8.jpg">
+									<div id="wz">
+										<h3>如果明天天很晴</h3>
+										<p>如果明天天很晴，我要骏马般奔驰在乡间的路上，抛下生活的小小烦恼，对来去匆匆的农民们问声好，向疾驰而去的三轮车道声安，如果明天天很晴，我要投进大自然的炽热怀抱
+											与白云同行，与鸟儿肩并肩，如果明天天晴啊，有梦就去追，有事就去做，记得随时带上自己的“小太阳”，别忘了心中装满“开心的童话”，　　</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+						</ul>
+					</div>
+					
+
+
+
+				</div>
+				<div id="ye">
+					<div>
+						<a href="#">1</a>
+					</div>
+					<div>
+						<a href="#">2</a>
+					</div>
+					<div>
+						<a href="#">3</a>
+					</div>
+					<div>
+						<a href="#">4</a>
+					</div>
+					<div>
+						<a href="#">5</a>
+					</div>
+					<div style="background-color: rgba(0,0,0,0);">
+						<a href="#" style="color: #000000;">........</a>
+					</div>
+				<div>
+					<a href="#">97</a>
+				</div>
+					<div style="width: 50px;">
+						<a href="#" style="width: 60px;">首页</a>
+					</div>
+					<div style="width: 50px;">
+						<a href="#" style="width: 60px;">尾页</a>
+					</div>
+				</div>
+
+			</div>
+
+
+			<div id="under">
+				<ul>
+
+					<li><a href="主页.html">返回首页&nbsp;|</a></li>
+					<li><a href="#">联系我们&nbsp;|</a></li>
+					<li><a href="#">服务条款&nbsp;|</a></li>
+					<li><a href="#">后台管理</a></li>
+
+				</ul>
+			</div>
+
+			<div id="copyright">
+				<div>Copyright (C) <a href="主页.html">心情之旅</a> 2016-2020, All Rights Reserved </div>
+				<address>通讯地址：************** 电话：***********网管信箱：1016868503@qq.com</address>
+			</div>
+		</div>
+
+
+
+
+
+
+
+	</body>
+</html>

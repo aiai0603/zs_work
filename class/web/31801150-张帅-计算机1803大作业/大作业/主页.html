@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>心情之旅</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="keywords" content="美文，心灵鸡汤，励志">
+		<meta name="description" content="心情之旅是一个欣赏美文的放松心情的论坛">
+		<meta name="robots" content="index,follow">
+		<link rel="stylesheet" type="text/css" href="css/index2.css" />
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			text-decoration: none;
+		}
+	</style>
+	<script type="text/javascript">
+			
+			
+		function showDate() {
+			var curDate = new Date();
+			var year = curDate.getFullYear();
+			var month = curDate.getMonth() + 1;
+			var date = curDate.getDate();
+			var day = curDate.getDay();
+			var week = ["日", "一", "二", "三", "四", "五", "六"];
+			var hours = curDate.getHours();
+			var mintues = curDate.getMinutes();
+			var seconds = curDate.getSeconds();
+			var str;
+			str = year + "年" + time(month) + "月" + time(date) + "日&nbsp;&nbsp;" + "星期" + week[day] + "&nbsp;&nbsp;" + time(hours) +
+				"时" + time(mintues) + "分" + time(seconds) + "秒";
+			//document.write(str);
+			document.getElementById("showtime").innerHTML = str;
+		}
+
+		function time(x) {
+			return x > 9 ? x : "0" + x;
+		}
+		
+		
+		function autoPlay() {
+			var myAuto = document.getElementById('myaudio');
+			if(!myAuto.paused)
+			{				
+				myAuto.pause();
+			}
+			else{
+				myAuto.play();
+			}
+
+		}
+		
+			
+				
+				
+				
+		
+		window.onload = function() {
+			var gg = document.getElementById("gg");
+			var gg1 = document.getElementById("gg1")
+			var gg2 = document.getElementById("gg2");
+			gg2.innerHTML = gg1.innerHTML;
+				function move() {
+				    var wid = gg1.offsetHeight;
+				
+				    if (gg.scrollTop >= wid) {
+				        gg.scrollTop = 0;
+				    } else {
+				        gg.scrollTop++;
+				    }
+				}
+			
+			
+				
+				var run = setInterval(move, 20);
+			
+				gg.onmouseover = function() {
+				        clearInterval(run);
+				    }
+				   
+				gg.onmouseout = function() {
+				   
+				        run = setInterval(move, 20);
+				   
+				}
+			
+			showDate();
+			
+			
+			setInterval(showDate, 1000);
+			
+			var myAuto = document.getElementById("myaudio");
+			 myAuto.play();
+			var a1 = document.getElementById("lan1");
+			var a2 = document.getElementById("lan2");
+			var a3 = document.getElementById("lan3");
+			document.getElementById("tui1").style.opacity = 1;
+			document.getElementById("tui2").style.opacity = 0;
+			document.getElementById("tui3").style.opacity = 0;
+			a1.style.backgroundColor = "rgb(255,255,255,0.7)";
+			a1.style.color = "rgba(100, 0, 200, 0.4)";
+			document.getElementById("tui1").style.zIndex = 100;
+			document.getElementById("tui2").style.opacity = -1;
+			document.getElementById("tui3").style.opacity = -1;
+			
+		
+			
+			a1.onmouseover = function() {
+				document.getElementById("tui1").style.opacity = 1;
+				document.getElementById("tui2").style.opacity = 0;
+				document.getElementById("tui3").style.opacity = 0;
+				document.getElementById("tui1").style.zIndex = 100;
+				document.getElementById("tui2").style.zIndex = -1;
+				document.getElementById("tui3").style.zIndex = -1;
+				a2.style.backgroundColor = "";
+				a2.style.color = "white";
+				a3.style.backgroundColor = "";
+				a3.style.color = "white";
+				this.style.backgroundColor = "rgb(255,255,255,0.7)";
+				this.style.color = "rgba(100, 0, 200, 0.4)";
+			}
+			a2.onmouseover= function() {
+				document.getElementById("tui1").style.opacity = 0;
+				document.getElementById("tui2").style.opacity = 1;
+				document.getElementById("tui3").style.opacity = 0;
+				document.getElementById("tui1").style.zIndex = -1;
+				document.getElementById("tui2").style.zIndex = 100;
+				document.getElementById("tui3").style.zIndex = -1;
+				a1.style.backgroundColor = "";
+				a1.style.color = "white";
+				a3.style.backgroundColor = "";
+				a3.style.color = "white";
+				this.style.backgroundColor = "rgb(255,255,255,0.7)";
+				this.style.color = "rgba(100, 0, 200, 0.4)";
+			}
+		
+			a3.onmouseover= function() {
+				document.getElementById("tui1").style.opacity = 0;
+				document.getElementById("tui2").style.opacity = 0;
+				document.getElementById("tui3").style.opacity = 1;
+				document.getElementById("tui1").style.zIndex = -1;
+				document.getElementById("tui2").style.zIndex = -1;
+				document.getElementById("tui3").style.zIndex = 100;
+				a1.style.backgroundColor = "";
+				a1.style.color = "white";
+				a2.style.backgroundColor = "";
+				a2.style.color = "white";
+				this.style.backgroundColor = "rgb(255,255,255,0.7)";
+				this.style.color = "rgba(100, 0, 200, 0.4)";
+			}
+			
+			
+			
+				
+			
+			
+		};	  
+	</script>
+	<body>
+		
+		
+		<audio src="音乐/背景音乐2.mp3" id="myaudio" controls="controls" loop="true" hidden="true" autoplay="autoplay"></audio>
+		<div id="all" align="center">
+			<div class="nav">
+				<a href="#" class="icon-1" title="返回主页">
+					&#xf015 &nbsp心情之旅
+				</a>
+				<ul>
+
+					<li><a href="#" id="nav1">首页</a></li>
+					<li><a href="心灵鸡汤.html">心灵鸡汤</a></li>
+					<li><a href="励志故事.html">励志故事</a></li>
+					<li><a href="注册表.html">注册会员</a></li>
+					<li>
+						<div id="showtime"></div>
+					</li>
+
+				</ul>
+
+				<a href="搜索.html" class="icon-2" title="站内搜索">&#xf002</a>
+				<a href="javascrip:void(0)" class="icon-3" title="背景音乐" onclick="autoPlay()">&#xf001</a>
+				<a href="登录.html" class="icon-4" title="会员登录">
+					&#xf007
+				</a>
+			</div>
+			<div id="main">
+				<div id="daohang">
+					<div id="adv">
+						<ul>
+							<li class="lunbo1">
+								<span></span>
+								<div></div>
+							</li>
+							<li class="lunbo2">
+								<span></span>
+								<div></div>
+							</li>
+							<li class="lunbo3">
+								<span></span>
+								<div></div>
+							</li>
+							<li class="lunbo4">
+								<span></span>
+								<div></div>
+							</li>
+						</ul>
+					</div>
+					<div id="gonggao">
+						<h2 align="left">&#xf073; &nbsp;公告栏</h2>
+						
+							<div  id="gg" style="overflow:hidden;">
+								    
+								        <div  id="gg1" align="left">
+								           欢迎来到心情之旅美文论坛<br />
+										  <br />
+								           1.本论坛供放松心情，交友使用，无商业用途<br />
+								           本论坛的全部资源均免费浏览阅读<br />
+										   注册会员，可以为你喜爱的文章作者点赞<br />
+										   <br />
+										   2.本论坛遵守《中华人民共和国信息安全法》的相关条款<br />
+										   评论区任何进行侮辱诽谤的行为将严肃处理<br />
+										   请文明评论，共建和睦友好网络社区<br />
+										   <br />
+										   3.投稿请发送至相关邮箱<br />
+										   31801150@stu.zucc.edu.cn<br />
+										   一经采用将根据有关规定给予物质报酬<br />
+										   <br />
+										   4.任何问题请咨询：17857688301<br />
+										   本论坛最高解释权归制作者所有<br />
+										   <br />
+										   ——powered by AIAI<br />
+								        </div>
+								       
+								        <div  id="gg2" align="left">
+											
+								        </div>
+								    
+							</div>
+					</div>
+				</div>
+				<div id="tuijian">
+					<h2>今日推荐</h2>
+					<div id="lan">
+						<ul>
+							<li>
+								<a href="javascrip:void(0)" id="lan1" title="阅读全文">不逼自己一把，命运就逼你一辈子</a>
+								<div id="tui1">
+									<img src="图片/逼自己.jpg">
+									<article class="wen">
+										<p>出色的人不一定比你聪明，而是比你更加自律，更有效率。你不逼自己一把，命运就会逼你一辈子。新的一年，忌拖延，从学会自律开始</p>
+										<p>世界上，成功的有两种人，一种人是傻子，一种人是疯子。傻子是会吃亏的人，疯子是会行动的人。</p>
+										<p>赚钱是一种才调，花钱是一种程度，才调可以练，程度是随便草率练不出来的。一小我的常识，经过过程进修可以获得;一小我的发展，必须经过过程考验</p>
+										<p>这个世界上好书很多，可以改动命运的书很少。这个世界上同伙很多，可以用生平奉求的同伙很少。</p>
+										<p>假定发现一小我，一个处所，一件事，一本书，可以改动你的命运。必定要想编制跟他产生关系，不然，他就跟你没紧要。</p>
+										<p>当一小我没有成功的时辰，装也装出成功的模样。(因为装的时辰，他曾成为你脾气的一局部)</p>
+										<a href="#" class="yue">
+											阅读全文>
+										</a>
+
+									</article>
+									
+								</div>
+							</li>
+							<li>
+								<a href="javascrip:void(0)" id="lan2" title="阅读全文">拥抱阳光,做最好的自己</a>
+								<div  id="tui2">
+									<img src="图片/阳光.jpg" alt="拥抱阳光">
+									<article class="wen">
+										<p>做人就是要阳光些，切不可阴郁和灰暗。只有阳光些，才能做最好的自己！</p>
+										<p>人人都渴望拥有。渴望拥有健康的身体，渴望拥有较长的寿命，渴望拥有美好的爱情，渴望拥有无限的金钱，渴望拥有富裕的生活……</p>
+										<p>然而，如果不能拥有那些，那么，拥有阳光的心态就是最好的选择。</p>
+										<p>人的一生是短暂而脆弱的，任何人的生命都无法承载太重的负荷，我们要学会忘记。</p>
+										<p>忘记那些不该记住的东西，忘记不属于自己的一切，无论风景有多美，我们也只能做短暂的欣赏。</p>
+										<p>人生不可能完美，有遗憾的人生，才是真正的人生。</p>
+										<p>你想追求快乐和幸福，你想经营如意的生活，你想追求美好的爱情，你想追求诱人的金钱……这些都在情理之中，无可非议。</p>
+										<a href="#" class="yue">
+											阅读全文>
+										</a>
+									</article>
+									
+								</div>
+							</li>
+							<li>
+								<a href="javascrip:void(0)" id="lan3" title="阅读全文">再见，和过去告别</a>
+								<div  id="tui3">
+									<img src="图片/再见.jpg">
+									<article href="#" class="wen">
+										<p>过去的负面经历或多或少都会对我们造成影响。有些时候这些事会表现得很明显，给我们带来长时间的不良情绪体验。那还有些事会深藏在我们的潜意识中不被我们察觉，那这部分经历对我们的影响往往时间也更长，有些时候甚至会伴随我们的一生。能够正确的认识并和过去告别，是我们拥有更好生活的开始。</p>
+										<p>
+											负面经历对我们最常见的影响，就是我们会长时间地沉浸在这个事件给我们带来的负面情绪之中。比如说我们会有愤怒、羞耻、自责等痛苦的情绪体验。长时间负面的情绪体验会给我们的生活带来更多的压力，影响我们的注意力、工作学习效率、人际关系，甚至会影响到我们的身体健康。
+										</p>
+										<p>负面经历对我们的另一个影响就是会让我们对自己的认知造成偏差，我们会觉得自己不够好，自己太懦弱，自己就是做不好某些事，自己就是某种人，等等。</p>
+										<a href="#" class="yue">
+											阅读全文>
+										</a>
+									</article>
+									
+								</div>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				<div id="xljt">
+					<h2>心灵鸡汤</h2>
+					<div class="xljt-z">
+						<a href="#" title="阅读全文"><img src="图片/活在.jpg"></a>
+						<div class="xljt-w" align="left" style="color: rgb(60,60,60);">
+							<h3>活在当下，珍惜眼前</h3>
+							<br>
+							<p>作者：匿名</p>
+							<p>人生短暂，瞬间即过，我们不要为丢失的幸福而叹息，也不要对未知的东西感到恐慌，太多的东西不在我们掌握之中，过去已经成为过去，未来也不一定是我们的想象之中，只有当下现在的每一秒才是实实在在地掌握在我们手中。好好珍惜现在，活在当下。</p>
+							<p>生活的意义就在于顺境和逆境中的那份坚持，自己的期望就是对命运的一份安慰和捍卫。往事如烟总是轻，脚下路远细思量。但愿我们以后有更好的际遇，不用在四下无人的深夜长叹人生。</p>
+							<p>人生就像赶路，山一程，水一程，一路风雨兼程，一路披荆斩棘，往前看，人生仿佛遥不可及，往后看，却又咫尺可量，希望每个整装待发的重新开始，都在这年少的岁月里为时不晚。</p>
+						</div>
+					</div>
+					<div class="xljt-z">
+						<div class="xljt-w" align="left"  style="color: rgb(60,60,60);">
+							<h3>爱笑的人运气都不会太差</h3>
+							<br>
+							<p>作者：匿名</p>
+							<p>当体验某种情感与思想时，人的行为是可以高度预测的。比如，当人感到悲伤时，就会哭泣；当人感到快乐时，就会微笑；当人同意某件
+								事情时，就会点头。当然，这不足为奇。而根据“本体感受心理学”的观点，这个过程同时也是可逆的。你可以让人们以某种方式行动，让他 们去感受某些情感和思想，这一观点开始时存在很多争议，但幸运的是，
+								一系列让人信服的实验都证明了它的正确性。同样的道理也适用于寻求快乐。当人感到幸福时就会微笑，但是反过来，当人微笑时也会感到更快乐。即使人们没有意识到自己在笑，这个影响也依然存在。有句话说，微笑的人运气都不会太差。我在2014年的日记里也写过一篇关于微笑的文章。我找出来分享给大家。我抑郁的4年里，我写了40万字的抑郁日记.</p>
+
+						</div>
+						<a href="#" title="阅读全文"><img src="图片/爱笑.jpg"></a>
+					</div>
+					<div class="link" align="center">
+						<a href="心灵鸡汤.html">进入板块></a>
+					</div>
+
+				</div>
+				<div id="mrlz">
+					<h2>励志故事</h2>
+					<div id="mrlz-z">
+						<div class="mrlz-w">
+							<img src="图片/幸福.jpg">
+							<div>
+								<a href="你欠自己一个幸福的模样.html" title="阅读全文">你欠自己一个幸福的模样</a>
+								
+							</div>
+						</div>
+						<div class="mrlz-w">
+							<img src="图片/失败.jpg">
+							<div>
+								<a href="勇气：不畏失败，依旧热情.html" title="阅读全文">勇气：不畏失败，依旧热情</a>
+							
+							</div>
+						</div>
+						<div class="mrlz-w">
+							<img src="图片/明天.jpg">
+							<div>
+								<a href="明天你好,含着泪微笑.html" title="阅读全文">明天你好,含着泪微笑</a>
+								
+							</div>
+						</div>
+
+					</div>
+					<div class="link" align="center">
+						<a href="励志故事.html">进入板块></a>
+					</div>
+				</div>
+
+
+			</div>
+			<div id="under">
+				<ul>
+
+					<li><a href="主页.html">返回首页&nbsp;|</a></li>
+					<li><a href="#">联系我们&nbsp;|</a></li>
+					<li><a href="#">服务条款&nbsp;|</a></li>
+					<li><a href="#">后台管理</a></li>
+
+				</ul>
+			</div>
+
+			<div id="copyright">
+				<div>Copyright (C) <a href="主页.html">心情之旅</a> 2016-2020, All Rights Reserved </div>
+				<address>通讯地址：************** 电话：***********网管信箱：1016868503@qq.com</address>
+			</div>
+		</div>
+
+
+
+
+
+
+
+	</body>
+</html>

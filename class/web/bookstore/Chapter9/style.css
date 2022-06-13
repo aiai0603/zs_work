@@ -1,0 +1,51 @@
+/*Chapter9*/
+/*公共*/
+/*清除所有元素默认的内、外边距，默认字体是微软雅黑。*/
+*{padding: 0px; margin: 0px;font-family:"微软雅黑", Verdana, Arial, Helvetica, sans-serif;}
+/*图像宽度设为百分比，可以自动调整宽度，适应响应式Web设计。*/
+img{width: 100%;border: 0px;}
+/*目前移动设备屏幕最小宽度为260px，所以设min-width:260px。margin: 0 auto，整个页面内容自动居中。*/
+.container{width:100%;max-width:1260px;min-width:260px;margin: 0 auto;}
+/*屏幕宽度大于420px，页面显示宽度设为80%。*/
+@media screen and (min-width: 420px) {
+    .container{width:80%;}
+}
+
+/*布局*/
+/*内容区水平方向伸缩，当到达最小宽度时换行。左边内容区的宽度是右边边栏区的2倍。*/
+#content-wrapper{display: flex;flex-flow: row wrap;}
+main{flex:2;margin: 0.5rem; min-width: 260px;}
+aside{flex:1;margin: 0.5rem; min-width: 260px;}
+
+/*本周推荐，最近新书，最近促销水平方向伸缩，当到达最小宽度时换行。*/
+.recommend-book .content,#new .content,#sales .content{display:flex;flex-flow: row wrap;}
+/*本周推荐图书封面和内容布局空间分配。*/
+.recommend-book .content .cover{flex: 1; min-width: 260px;}
+.recommend-book .content .description{flex: 2;margin-right: 1rem;}
+
+/*最近新书，最近促销内容按列方向伸缩。*/
+.book{flex:1;min-width: 260px;margin: 0.5rem;}
+.effect-1{display: flex;flex-flow: column;}
+
+/*图书分类和合作伙伴水平方向伸缩。*/
+#classify-partner{display:flex;}
+#classify{flex: 1;}
+#partner{flex: 1;}
+
+/*最近新书和最近促销里的图像、加入购物车和详细内容链接居中*/
+.effect-1 .image-box,.cart-more{display: flex;justify-content: center;}
+/*版权信息显示的文字内容居中*/
+#copyright{height: 90px;display: none; flex-flow:column;justify-content: center;align-items: center;font-size: 1.1rem;}
+/*宽度大于640px宽度显示版权信息*/
+@media screen and (min-width: 640px) {
+    #copyright{display:flex;}
+}
+#copyright div,#copyright address{display: flex; align-items: center;justify-content: center;}
+
+/*定义本周推荐里图书的下边框为实线。*/
+.recommend-book{border-bottom:hsl(0,0%,80%) solid 1px; padding-bottom: 1rem;}
+/*定义本周推荐、最近新书、最近促销、边栏广告、图书分类和合作伙伴的下边框为虚线。*/
+#recommend,#new,#sales,#best-selling,#classify-partner,#about,#advert{border-bottom:hsl(0,0%,80%) dashed 1px;margin-bottom:1rem; padding-bottom: 1rem;}
+
+
+

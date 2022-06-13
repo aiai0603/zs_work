@@ -1,0 +1,494 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+#all {
+	background: url(图片/bg.jpg);
+	background-size: cover;
+	
+	height: 3000px;
+	
+}
+
+.nav {
+	width: 100%;
+	
+}
+
+.nav ul {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	background: rgba(100, 0, 200, 0.2);
+	height: 50px;
+	font-weight: 800;
+	padding-right: 220px;
+}
+
+.nav ul li {
+	min-width: 100px;
+}
+
+.nav ul a {
+	height: 30px;
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	justify-content: center;
+	color: #FFF;
+	text-decoration: none;
+	width: 70px;
+	font-size: 16px;
+	transition: background 0.5s linear;
+}
+
+.nav ul a:hover {
+	border-bottom: 3px white solid;
+
+}
+
+#showtime {
+	width: 320px;
+	height: 50px;
+	padding-left: 50px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	font-weight: 400;
+}
+#nav1{
+	border-bottom: 3px white solid;
+}
+
+/*定义服务器端使用的图标字体*/
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('fonts/fontawesome-webfont.eot?v=4.7.0');
+	src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class*="icon-"] {
+	font-family: FontAwesome;
+	font-size: 1.5rem;
+	color: white;
+}
+.icon-1{
+	position: absolute;
+	top:10px;
+	left: 40px;
+}
+.icon-2{
+	position: absolute;
+	top:12px;
+	right: 70px;
+}
+.icon-3{
+	position: absolute;
+	top:12px;
+	right:120px;
+}
+.icon-4{
+	position: absolute;
+	top:12px;
+	right:170px;
+}
+
+#tiao{
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 20px 0 20px 150px;
+}
+#tiao #search{
+	height: 25px;
+	width: 250px;
+}
+#tijiao{
+	height: 25px;
+	width: 60px;
+	margin-left: 10px;
+	background-color:plum;
+	font-size: 15px;
+	color: white;
+}
+#under ul{
+	display:flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+}
+#under li{
+	width: 79px;
+	height: 70px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+#main{
+	width: 90%;
+	height: 2750px;
+	background-color: rgba(255,255,255,0.3);
+	display: flex;
+	flex-flow: column;
+}
+#up{
+	width:96%;
+	display:flex;
+	flex-flow: row;
+	height: 100%;
+}
+#left{
+	display: flex;
+	flex-flow: column;
+	position: relative;
+	width: 1000px;
+}
+#tui{
+	
+	position: absolute;
+	top:0px;
+	left:90px;
+	height: 600px;
+	width: 790px;
+}
+
+#up h2,#down h2{
+	margin-top: 20px;
+	font-size: 30px;
+	width:120px;
+	padding-bottom: 7px;
+	font-weight: normal;
+	margin-bottom: 20px;
+	border-bottom: hotpink 4px solid;
+	align-self: center;
+}
+#tui li div{
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+	width:778px;
+	height:440px;
+	box-shadow: #808080 2px 2px 5px;
+	opacity: 1;
+	margin-top: 90px;
+	background-color: rgba(255,255,255,0.4);
+	border: #CCCCCC 2px dashed;
+	transition: 2s;
+	top:30px
+	
+}
+#dd{
+	position: absolute;
+	left:0;
+	top:0;
+	display:flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: center;
+	height: 600px;
+	width: 790px;
+	transition: 0.5s;
+}
+#tui li div h3{
+	font-weight: 500;
+	margin-bottom: 12px;
+	font-size: 28px;
+}
+
+#tui li div img{
+	margin: 20px;
+	width:380px;
+	height: 300px;
+	transition: 1s;
+}
+	
+
+#tui li div article{
+	margin-top: 50px;
+	height: 200px;
+	padding: 20px;
+	font-size: 16px;
+	text-align: left;
+	text-indent: 2em;
+	width: 300px;
+}
+.yue{
+	text-indent: 0;
+	width:120px;
+	height: 40px;
+	font-size: 14px;
+	color: #000000;
+	border: #000000 1px solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px 20px 20px 20px;
+	background-color:rgba(255,255,255,0.2);
+	
+}
+.yue:hover{
+	color: #808080;
+}
+
+.an{
+	width: 50px;
+	height: 50px;
+	background: -webkit-linear-gradient(top,white,rgba(80, 0, 160, 0.2),rgba(100, 0, 200, 0.2));
+	color: #000000;
+	box-shadow: #CCCCCC 2px 2px ;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 36px;
+	font-weight: 100;
+	border-radius: 5px;
+}
+.an:hover{
+	color: white;
+}
+#anzuo{
+	position: absolute;
+	left:20px;
+	top:300px;
+}
+
+#anyou{
+	position: absolute;
+	right:10px;
+	top:300px;
+}
+
+
+
+
+#right{
+	margin-left: 30px;
+	width:25%;
+	display:flex;
+	flex-flow: column;
+	height: 620px;
+
+
+}
+#right h2{
+	margin-top: 20px;
+	font-size: 30px;
+	width:120px;
+	padding-bottom: 7px;
+	margin-right: 10px;
+	font-weight: normal;
+	margin-bottom: 20px;
+	border-bottom: hotpink 4px solid;
+	align-self: center;
+}
+#right ul{
+	width: 340px;
+	height: 350px;
+	margin-left: 20px;
+}
+#right ul li{
+	display: flex;
+	flex-flow:column;
+	align-items:center;
+	justify-content: center;
+	
+}
+#right ul li .ping{
+	width:300px;
+	height: 100px;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: 0.5s;
+	
+}
+#right ul li .ping div{
+	width:80px;
+	height: 30px;
+	background-color:rgba(0,0,0,0);
+	border-radius:0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border:1px solid #000000;
+	margin-left: 20px;
+}
+#right ul li .ping img{
+	width:120px;
+	height: 80px;
+	
+}
+#right ul li a{
+	padding-top: 10px;
+	height: 40px;
+	width: 320px;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	color: black;
+	text-decoration: none;
+	font-size:16px;
+	font-weight: normal;
+	background: rgba(255,255,255,0.2);
+	border-bottom:1px #CCCCCC dashed;
+	padding-left: 5px;
+	transition: 0.5s;
+}
+
+
+#right ul li div{
+	width:30px;
+	height: 30px;
+	background-color:rgba(155,0,155,0.3);
+	border-radius:30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 10px;
+}
+#right ul li a:hover{
+	background: rgba(200,0,100,0.2);
+	height: 130px;
+	color: #DB7093;
+	transition: 0.5s;
+	
+}
+#right ul li a:hover .ping{
+	opacity: 1;
+	transition: 0.5s;
+
+}
+
+
+#under a{
+	color: #000000;
+}
+#under a:hover{
+	color: #CCCCCC;
+}
+
+#under #quanbu{
+	margin-top: 200px;
+	font-size: 30px;
+	width:120px;
+	padding-bottom: 7px;
+	font-weight: normal;
+	margin-bottom: 20px;
+	border-bottom: hotpink 4px solid;
+	align-self: center;
+}
+
+#text-all ul{
+	width:100%;
+	display: flex;
+	flex-flow: row wrap;
+	margin: 20px 0px 50px 20px;
+}
+
+#text-all a{
+	width:400px;
+	display: flex;
+	flex-flow: column;
+	height: 600px;
+	align-items: center;
+	justify-content: center;
+	margin:17px;
+	border: #CCCCCC 1px solid;
+		transition: 0.5s;
+}
+#text-all a:hover{
+	background-color: rgba(255,255,255,0.6);
+		transform: scale(1.05);
+		transition: 0.5s;
+}
+
+#text-all img{
+	
+	width:300px;
+	height:210px;
+}
+#text-all a{
+	color: #000000;
+	
+}
+#text-all p{
+	text-align: left;
+	text-indent: 2em;
+	width:300px;
+	
+	font-size: 16px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	height:190px;
+	
+}
+#text-all span{
+	
+	font-family: FontAwesome;
+	color: black;
+	width: 550px;
+	height: 50px;
+	margin-left: 70px;
+	color: #808080;
+	
+}
+#text-all h3{
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	
+}
+
+
+#ye{
+	display: flex;
+	flex-flow: row;
+	margin-left: 850px;
+}
+#ye div{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0px;
+	width:30px;
+	height:30px;
+	margin: 10px;
+	background-color: rgba(200,0,100,0.4);
+	
+}
+#ye div a{
+	color: white;
+	font-weight: 800;
+	border: 0px;
+	width:30px;
+	height:30px;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+}
+#ye div a:hover{
+	border: 0px;
+	height: 30px;
+	width:30px;
+	color: rgba(200,0,100,0.4);
+	background-color: white;
+	
+}
+

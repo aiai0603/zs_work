@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="网上书店,IT图书,前端技术">
+    <meta name="description" content="叮叮书店是一个主要销售IT图书的垂直网站">
+    <meta name="robots" content="index,follow">
+    <title>购物车</title>
+    <style>
+        .cart-table h2{margin: 1rem 0;}
+        /*合并边框*/
+        .cart-table table{font-size:1.2rem;width: 100%;border-collapse:collapse;margin: 10px 0px; color:hsl(0,0%,0%);}
+        .cart-table tr,.cart-table td{border:1px solid hsl(20,30%,50%);}
+        .cart-table td h3{font-size:1.2rem;color:hsl(0,0%,0%); }
+        .cart-table img{width:60px;height:60px;}
+        .cart-table td:first-child{text-align: center;}
+        .cart-table td:nth-child(5),.cart-table td:nth-child(4),.cart-table td:nth-child(3){text-align: right;padding-right: 5px;}
+        .cart-table tr:last-child a{color:hsl(0,20%,30%);font-size: 1.1rem;text-decoration: none;margin-left: 20px;}
+        .cart-table tr:last-child a:hover{color:hsl(0,0%,100%); }
+        /*第一行和最后一行背景色*/
+        .cart-table tr:first-child,.cart-table tr:last-child{background-color:hsl(20,30%,50%);line-height: 40px; text-align: center;color:hsl(0,0%,100%);}
+    </style>
+</head>
+
+<body>
+<section class="cart-table"><span class="icon-cart"></span>
+    <h2>购物车</h2>
+    <table>
+        <tr>
+            <th colspan="2">名称</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>合计</th>
+        </tr>
+        <tr>
+            <td><a href="details.html"><img src="images/selling1.jpg" alt="封面"/></a></td>
+            <td><h3>《深度学习》</h3></td>
+            <td>100.00</td>
+            <td>1</td>
+            <td>100.00</td>
+        </tr>
+        <tr>
+            <td><a href="details.html"><img src="images/selling2.jpg" alt="封面"/></a></td>
+            <td><h3>《Hadoop权威指南：大数据的存储与分析》</h3></td>
+            <td>100.00</td>
+            <td>1</td>
+            <td>100.00</td>
+        </tr>
+        <tr>
+            <td><a href="details.html"><img src="images/selling4.jpg" alt="封面"/></a></td>
+            <td><h3>《深度学习优化与识别》</h3></td>
+            <td>100.00</td>
+            <td>1</td>
+            <td>100.00</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <div>3件商品总价（不含运费）：￥300.00 <a href="#">去结算</a></div>
+            </td>
+        </tr>
+    </table>
+</section>
+</body>
+</html>

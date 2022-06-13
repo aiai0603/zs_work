@@ -1,0 +1,111 @@
+/*Chapter9*/
+/*公共*/
+/*清除所有元素默认的内、外边距，默认字体是微软雅黑。*/
+*{padding: 0px; margin: 0px;font-family:"微软雅黑", Verdana, Arial, Helvetica, sans-serif;}
+/*图像宽度设为百分比，可以自动调整宽度，适应响应式Web设计。*/
+img{width: 100%;border: 0px;}
+/*目前移动设备屏幕最小宽度为260px，所以设min-width:260px。margin: 0 auto，整个页面内容自动居中。*/
+.container{width:100%;max-width:1260px;min-width:260px;margin: 0 auto;}
+/*屏幕宽度大于420px，页面显示宽度设为80%。*/
+@media screen and (min-width: 420px) {
+    .container{width:80%;}
+}
+
+/*布局*/
+/*内容区水平方向伸缩，当到达最小宽度时换行。左边内容区的宽度是右边边栏区的2倍。*/
+#content-wrapper{display: flex;flex-flow: row wrap;}
+main{flex:2;margin: 0.5rem; min-width: 260px;}
+aside{flex:1;margin: 0.5rem; min-width: 260px;}
+
+/*本周推荐，最近新书，最近促销水平方向伸缩，当到达最小宽度时换行。*/
+.recommend-book .content,#new .content,#sales .content{display:flex;flex-flow: row wrap;}
+/*本周推荐图书封面和内容布局空间分配。*/
+.recommend-book .content .cover{flex: 1; min-width: 260px;}
+.recommend-book .content .description{flex: 2;margin-right: 1rem;}
+
+/*最近新书，最近促销内容按列方向伸缩。*/
+.book{flex:1;min-width: 260px;margin: 0.5rem;}
+.effect-1{display: flex;flex-flow: column;}
+
+/*图书分类和合作伙伴水平方向伸缩。*/
+#classify-partner{display:flex;}
+#classify{flex: 1;}
+#partner{flex: 1;}
+
+/*最近新书和最近促销里的图像、加入购物车和详细内容链接居中*/
+.effect-1 .image-box,.cart-more{display: flex;justify-content: center;}
+/*版权信息显示的文字内容居中*/
+#copyright{height: 90px;display: none; flex-flow:column;justify-content: center;align-items: center;font-size: 1.1rem;}
+/*宽度大于640px宽度显示版权信息*/
+@media screen and (min-width: 640px) {
+    #copyright{display:flex;}
+}
+#copyright div,#copyright address{display: flex; align-items: center;justify-content: center;}
+
+/*定义本周推荐里图书的下边框为实线。*/
+.recommend-book{border-bottom:hsl(0,0%,80%) solid 1px; padding-bottom: 1rem;}
+/*定义本周推荐、最近新书、最近促销、边栏广告、图书分类和合作伙伴的下边框为虚线。*/
+#recommend,#new,#sales,#best-selling,#classify-partner,#about,#advert{border-bottom:hsl(0,0%,80%) dashed 1px;margin-bottom:1rem; padding-bottom: 1rem;}
+
+/*Chapter10*/
+/*文本*/
+h2 {font-size:1.2rem; font-weight: normal;color: hsl(20,50%,30%);}
+/*h2 {font-size:1.2rem; font-weight: normal;color: hsl(20,50%,30%);background:linear-gradient(to right,hsl(0,0%,100%),hsl(20,30%,50%));height: 40px;display: flex; align-items: center;border-radius: 5px;}*/
+/*h3标题内容居中*/
+h3 {font-size:1.1rem; font-weight: normal;display: flex; justify-content: center; margin: 0.5rem 0;color: hsl(20,50%,30%);}
+.recommend-book h3{font-weight: bolder;}
+p, a, span {font-size:1rem}
+/*段落首行缩进2个字，分散对齐*/
+p {text-indent:2rem;text-align: justify;}
+/*清除列表项标记*/
+ul{list-style-type: none;}
+mark{background-color: hsl(20,30%,50%);color: hsl(0,0%,100%);}
+
+/*页眉*/
+header{height: 150px;background-image:url("images/header.png");position: relative;}
+/*导航菜单*/
+#nav{ background-image:url("images/navbg.jpg");}
+/*页脚导航*/
+#footer-wrapper{ background-image:url("images/navbg.jpg");}
+
+/*网站logo使用绝对定位确定位置*/
+#logo{position:absolute;top:30px;left:75px;}
+#logo a{font-size:1.2rem;color: hsl(20,50%,30%);text-decoration:none;}
+#logo a h1{font-weight: normal;}
+/*边栏广告图像最小宽度为260px*/
+#advert img{min-width: 260px;}
+/*关于书店图像最大宽度为120px*/
+#about img{max-width: 120px;margin-bottom: 1rem;}
+#about .content{margin-top: 1rem;}
+
+/*标题图标，引用多种格式，满足不同设备和浏览器的需要*/
+/*定义服务器端使用的图标字体*/
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*设置栏目标题图标样式*/
+.icon-book,.icon-sale,.icon-new,.icon-sell,.icon-classify,.icon-partner,.icon-about,.icon-cart,.icon-contact  {
+    font-family: FontAwesome;font-size: 1.5rem;display: flex;align-items: center;
+    float: left; margin-right: 0.5rem;font-weight: normal;color: hsl(20,50%,30%);
+}
+/*本周推荐标题图标*/
+.icon-book:before {content: "\f02d";}
+/*最近新书标题图标*/
+.icon-new:before {content: "\f044";}
+/*最近促销标题图标*/
+.icon-sale:before {content: "\f295";}
+/*畅销图书标题图标*/
+.icon-sell:before {content: "\f073";}
+/*图书分类标题图标*/
+.icon-classify:before {content: "\f022";}
+/*合作伙伴标题图标*/
+.icon-partner:before {content: "\f2b5";}
+/*关于书店标题图标*/
+.icon-about:before {content: "\f143";}
+/*联系我们标题图标，在contact.html页面上*/
+.icon-contact:before {content: "\f199";}
+

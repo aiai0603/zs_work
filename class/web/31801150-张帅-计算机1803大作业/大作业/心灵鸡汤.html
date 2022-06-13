@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>心灵鸡汤</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="keywords" content="美文，心灵鸡汤，励志">
+		<meta name="description" content="心情之旅是一个欣赏美文的放松心情的论坛">
+		<meta name="robots" content="index,follow">
+		<link rel="stylesheet" type="text/css" href="css/index2-列表页.css" />
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			text-decoration: none;
+		}
+	</style>
+	<script type="text/javascript">
+		function showDate() {
+			var curDate = new Date();
+			var year = curDate.getFullYear();
+			var month = curDate.getMonth() + 1;
+			var date = curDate.getDate();
+			var day = curDate.getDay();
+			var week = ["日", "一", "二", "三", "四", "五", "六"];
+			var hours = curDate.getHours();
+			var mintues = curDate.getMinutes();
+			var seconds = curDate.getSeconds();
+			var str;
+			str = year + "年" + time(month) + "月" + time(date) + "日&nbsp;&nbsp;" + "星期" + week[day] + "&nbsp;&nbsp;" + time(hours) +
+				"时" + time(mintues) + "分" + time(seconds) + "秒";
+			//document.write(str);
+			document.getElementById("showtime").innerHTML = str;
+		}
+
+		function time(x) {
+			return x > 9 ? x : "0" + x;
+		}
+
+		function autoPlay() {
+			var myAuto = document.getElementById('myaudio');
+			if (!myAuto.paused) {
+				myAuto.pause();
+			} else {
+				myAuto.play();
+			}
+
+		}
+		window.onload = function() {
+			showDate();
+			setInterval(showDate, 1000);
+			var myAuto = document.getElementById("myaudio");
+			myAuto.play();
+
+
+
+		};
+		
+	</script>
+	<body>
+		<audio src="音乐/背景音乐2.mp3" id="myaudio" controls loop hidden="true" autoplay="autoplay"></audio>
+		<div id="all" align="center">
+			<div class="nav">
+				<a href="主页.html" class="icon-1" title="返回主页">
+					&#xf015 &nbsp心情之旅
+				</a>
+				<ul>
+
+					<li><a href="主页.html">首页</a></li>
+					<li><a href="#" id="nav1">心灵鸡汤</a></li>
+					<li><a href="励志故事.html">励志故事</a></li>
+					<li><a href="注册表.html">注册会员</a></li>
+					<li>
+						<div id="showtime"></div>
+					</li>
+
+				</ul>
+
+				<a href="搜索.html" class="icon-2" title="站内搜索">&#xf002</a>
+				<a href="javascrip:void(0)" class="icon-3" title="背景音乐" onclick="autoPlay()">&#xf001</a>
+				<a href="登录.html" class="icon-4" title="会员登录">
+					&#xf007
+				</a>
+			</div>
+			<div id="tiao">
+				<input type="text" name="search" id="search" placeholder="&nbsp请输入作品名称" />
+				<input type="button" name="put up" id="tijiao" value="搜索" />
+			</div>
+			<div id="main">
+				<div id="left">
+					<h2>精华作品</h2>
+					<div id="tui">
+
+						<div>
+
+							<h3>活在当下，珍惜眼前</h3>
+							<p>感动千万人的力作</p>
+							<img src="图片/1-2.jpg" />
+							<article>
+
+								人生短暂，瞬间即过，我们不要为丢失的幸福而叹息，也不要对未知的东西感到恐慌，太多的东西不在我们掌握之中，
+								过去已经成为过去，未来也不一定是我们的想象之中，只有当下现在的每一秒才是实实在在地掌握在我们手中。好好珍惜现在，活在当下。
+							</article>
+							<a href="#" class="yue">
+								阅读全文>
+							</a>
+						</div>
+						<div>
+							<h3>爱笑的人运气都不会太差</h3>
+							<p>教会你乐观对世界</p>
+							<img src="图片/爱笑.jpg" />
+							<article>
+
+								当体验某种情感与思想时，人的行为是可以高度预测的。比如，当人感到悲伤时，就会哭泣；当人感到快乐时，就会微笑；当人同意某件
+								事情时，就会点头。当然，这不足为奇。而根据“本体感受心理学”的观点，这个过程同时也是可逆的。
+							</article>
+							<a href="#" class="yue">
+								阅读全文>
+							</a>
+						</div>
+						<div>
+							
+							<h3>别抱怨 ，别自怜</h3>
+							<p>激励百万人的作品</p>
+							<img src="图片/活在.jpg" />
+							<article>
+								别抱怨 ，别自怜，所有的现状都是你自己选择的，而且当你在开口责怪这种现状的时候 ，你其实已经享受过它带来了的一切好处，抱怨能说明什么呢？除了你什么都想要的贪 ，还有你不想努力的懒 ！
+
+							</article>
+							<a href="#" class="yue">
+								阅读全文>
+							</a>
+						</div>
+					</div>
+					<h2 id="quanbu">全部作品</h2>
+					<div id="text-all">
+						<ul>
+							<li class="text-1">
+								<a href="#" title="阅读全文"><img src="图片/x-1.jpg">
+									<div id="wz">
+										<h3>别抱怨 ，别自怜</h3>
+										<p>别抱怨，别自怜。所有的现状都是你自己选择的，而且当你在开口责怪这种现状的时候，你其实已经享受过它带来了的一切好处。抱怨能说明什么呢，除了你什么都想要的贪，还有你不想去努力的懒。凡是内心尚有需求的人，都是内在有所缺憾的人。但是内心毫无需求，却不代表内在已完美无缺，或许只是尚未经历罢了。</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a>
+							</li>
+							<li class="text-1" ><a href="#" title="阅读全文"><img src="图片/再见.jpg">
+									<div id="wz">
+										<h3>再见，和过去告别</h3>
+										<p>过去的负面经历或多或少都会对我们造成影响。有些时候这些事会表现得很明显，给我们带来长时间的不良情绪体验。那还有些事会深藏在我们的潜意识中不被我们察觉，那这部分经历对我们的影响往往时间也更长，有些时候甚至会伴随我们的一生。能够正确的认识并和过去告别，是我们拥有更好生活的开始。负面经历对我们最常见的影响，就是我们会长时间地沉浸在这个事件给我们带来的负面情绪之中。比如说我们会有愤怒、羞耻、自责等痛苦的情绪体验。</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1" ><a href="#" title="阅读全文"><img src="图片/阳光.jpg">
+									<div id="wz">
+										<h3>拥抱阳光，做最好的自己</h3>
+										<p>做人就是要阳光些，切不可阴郁和灰暗。只有阳光些，才能做最好的自己！人人都渴望拥有。渴望拥有健康的身体，渴望拥有较长的寿命，渴望拥有美好的爱情，渴望拥有无限的金钱，渴望拥有富裕的生活……然而，如果不能拥有那些，那么，拥有阳光的心态就是最好的选择。人的一生是短暂而脆弱的，任何人的生命都无法承载太重的负荷，我们要学会忘记。</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1"><a href="#" title="阅读全文"><img src="图片/活在.jpg">
+									<div id="wz">
+										<h3>活在当下，珍惜眼前</h3>
+										<p>人生短暂，瞬间即过，我们不要为丢失的幸福而叹息，也不要对未知的东西感到恐慌，太多的东西不在我们掌握之中，
+											过去已经成为过去，未来也不一定是我们的想象之中，只有当下现在的每一秒才是实实在在地掌握在我们手中。好好珍惜现在，活在当下。</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1"><a href="#" title="阅读全文"><img src="图片/3.jpg">
+									<div id="wz">
+										<h3>轻舟已过万重山</h3>
+										<p>人生如海。有时清风徐来，有时汹涌澎湃。谁也无法预料是什么在前方把我们等待，纵使我们豪情满怀，但太多的意外常常使我们备感无奈。在生命的舟上，我们的帆，便是心态。
+
+得意的时候，鲜花与掌声之间，我们需要一叶轻帆——淡然的心态。惟有淡然，我们的舟船才不会被沉重的荣誉和累赘的骄傲压垮，我们才能扬帆而过驶入另一片更加辉煌的港湾。“宜将剩勇追穷寇，不可沽名学霸王。”得意的时候需要这样一种依然上进、奋发、淡然的心态，否则，就只能在乌江边叩石而歌了。拿破仑说：“最危险的一刻便是胜利的一刻。”须知超然物外，不忘骄兵必败，因此在得意的时候，让我们为生命之舟挂上淡然的心态。</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1"><a href="#" title="阅读全文"><img src="图片/夏夜晚风.jpg">
+									<div id="wz">
+										<h3>夏夜晚风</h3>
+										<p>明月多情应笑我，笑我如今，孤负春心，独自闲行独自吟。
+
+											近来怕说当时事，结遍兰襟，月浅灯深，梦里云归何处寻......
+
+											伶仃长夜，万籁俱寂。我站在窗前，凝望着远方的苍穹。
+
+											晚风徐来，吹过脸颊，吹过发梢，吹过思绪。我想象着，我对你的思念，会不会也随着这轻柔的风，飘向夜空......
+
+											是谁说过，思念是一种痛，一种无可名状，又难以痊愈的痛。</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1"><a href="#" title="阅读全文"><img src="图片/爱笑.jpg">
+									<div id="wz">
+										<h3>爱笑的人运气都不会太差</h3>
+										<p>当体验某种情感与思想时，人的行为是可以高度预测的。比如，当人感到悲伤时，就会哭泣；当人感到快乐时，就会微笑；当人同意某件
+											事情时，就会点头。当然，这不足为奇。而根据“本体感受心理学”的观点，这个过程同时也是可逆的。</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1"><a href="#" title="阅读全文"><img src="图片/看淡.jpg">
+									<div id="wz">
+										<h3>何不看淡一些</h3>
+										<p>因为想得太多，看得太多，让我对这个世界失去了信心和希望，甚至觉得这个世界很快就会被毁灭。事实证明，我的担心是多余的，无论这个世界有多么糟糕，它还是在运转着，承载着数十亿人口的生活和生产。那些我所看不惯的事情，我无力阻止，眼不见为净似乎是唯一的选择。试着让自己看到更多这个世界美好的一面，让心情好一些，别再自寻烦恼。当我看到的美好越来越多的时候，我才发现原来是我以前看事情的角度太灰暗了，这个世界并没有我所想的那么不堪。</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+							<li class="text-1"><a href="#" title="阅读全文"><img src="图片/素时.jpg">
+									<div id="wz">
+										<h3>守一份安然，绘一段素年锦时</h3>
+										<p>生命是一条漫长的旅途，走过就是风景，路过就是记忆，经历过就是成长。回望来时的路，那些真爱过的情，拥抱过的人，迷恋过的歌，都只是幸福的一个站点。有喜有悲的才是人生，有苦有乐的才是生活，走过才知深浅，品过才知涩甜，原来我也只是沧海一粟，犹如一粒沙的平凡，然记忆的风帆一直向前，你终于学会放下痛苦，笑对未来。</p>
+										<span> &#xf040;：匿名&nbsp;&nbsp;&nbsp;&#xf06e; ：0&nbsp;&nbsp;&nbsp;&#xf075;：54</span>
+									</div>
+
+								</a></li>
+						</ul>
+						<div id="ye">
+							<div >
+								<a href="#">1</a>
+							</div>
+							<div >
+								<a href="#">2</a>
+							</div>
+							<div >
+								<a href="#">3</a>
+							</div>
+							<div >
+								<a href="#">4</a>
+							</div>
+							<div style="background-color: rgba(0,0,0,0);">
+								<a href="#" style="color: #000000;">........</a>
+							</div>
+							<div>
+								<a href="#">44</a>
+							</div>
+							
+							
+							<div style="width: 50px;">
+								<a href="心灵鸡汤.html" >首页</a>
+							</div>
+							<div style="width: 50px;">
+								<a href="#" style="width: 60px;">尾页</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div id="right">
+					<h2>热门排行</h2>
+					<ul>
+						
+							<li>
+								<a href="#" title="阅读文章"><div>1</div>爱笑的人运气都不会差</a>
+							</li>
+							<li>
+								<a href="#" title="阅读文章"><div>2</div>守一份安然，绘一段素年锦时</a>
+							</li>
+							<li>
+								<a href="#" title="阅读文章"><div>3</div>拥抱阳光，做最好的自己</a>
+							</li>
+							<li>
+								<a href="#" title="阅读文章"><div>4</div>面朝大海，春暖花开</a>
+							</li>
+							<li>
+								<a href="#" title="阅读文章"><div>5</div>别抱怨 ，别自怜</a>
+							</li>
+					</ul>
+					<h2>人气作者</h2>
+					<div id="zz">
+						<div>
+							<a href="#" title="他的主页"><img src="图片/谢健的.jpg" ></a>
+							Ash<br/><br/>&#xf004;：1.7w<br />&#xf087;：999+
+						</div>
+						<div>
+							<a href="#" title="他的主页"><img src="图片/xcx.jpg" ></a>
+							Xiang<br/><br/>&#xf004;：1.9w<br />&#xf087;：999+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+
+			<div id="under">
+				<ul>
+
+					<li><a href="主页.html">返回首页&nbsp;|</a></li>
+					<li><a href="#">联系我们&nbsp;|</a></li>
+					<li><a href="#">服务条款&nbsp;|</a></li>
+					<li><a href="#">后台管理</a></li>
+
+				</ul>
+			</div>
+
+			<div id="copyright">
+				<div>Copyright (C) <a href="主页.html">心情之旅</a> 2016-2020, All Rights Reserved </div>
+				<address>通讯地址：************** 电话：***********网管信箱：1016868503@qq.com</address>
+			</div>
+		</div>
+
+
+
+
+
+
+
+	</body>
+</html>

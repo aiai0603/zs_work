@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web技术基础</title>
+</head>
+<body>
+<div>
+    <h2>1.2 &nbsp; Web概述</h2>
+    <p>现在的Internet已经普及到整个社会，其中的Web技术已经成为Internet上最受欢迎的应用，正是由于它的出现，Internet普及推广的速度才大大提高。</p>
+    <p>Web是World Wide Web的简称，Web提供了全新的信息发布与浏览模式，实际上Web是运行在Internet之上的所有Web服务器软件和所管理的对象的集合，对象主要包括网页（Web
+        Page）和程序。</p>
+    <h3>1.2.1 &nbsp; Web历史</h3>
+    <p>Web技术诞生于欧洲原子能研究中心（CERN）。1989年3月，CERN的物理学家Tim
+        Berners-Lee提出了一个新的因特网应用，命名为Web，其目的是让全世界的科学家能利用因特网交换文档。同年他编写了第一个浏览器与服务器软件。1991年，CERN正式发布了Web技术。</p>
+    <p>1993年3月，网景（Netscape）公司创始人马克&#8226;安德森与好友埃里克&#8226;比纳合作开发了支持图像的浏览器Mosaic，并在网上迅速扩散。1994年4月安德森与SGI公司的创始人吉姆&#8226;克拉克共同创办了网景公司，安德森等人又重写了Mosaic，于1994年10月推出了Navigator浏览器，后来改名为Netscape浏览器。1995年Netscape公司的Brendan
+        Eich在Netscape浏览器里使用了JavaScript，为浏览器提供了脚本功能和动态网页能力。1995年微软公司从伊利诺大学购买Mosaic，并在此基础上开发出IE（Internet
+        Explorer）浏览器。从此Web应用步入了快车道。</p>
+    <p>有一些组织机构对Web技术的发展影响较大。</p>
+    <p>1.
+        W3C</p>
+    <p>1994年CERN和MIT（Massachusetts Institute of
+        Technology）共同建立了Web联盟（World Wide Web Consortium，简称W3C，http://www.w3.org/），该组织致力于进一步开发Web技术和对协议进行标准化等工作。</p>
+    <p>2.
+        IETF</p>
+    <p>IETF（Internet Engineering Task
+        Force，Internet工程任务组，http://www.ietf.org/）是全球Internet最具权威的技术标准化组织，主要任务是负责Internet相关技术规范的研发和制定。</p>
+    <p>3.
+        WHATWG</p>
+    <p>WHATWG（Web Hypertext Application
+        Technology Working
+        Group，Web超文本应用技术工作组，http://www.whatwg.org/）是Web浏览器生产厂商和一些相关团体形成的一个松散的、非正式的协作组织，这些团体希望发展一些新的技术，由Apple、Mozilla、Opera、Google等公司发起成立的。</p>
+    <h3>1.2.2 &nbsp;Web体系结构</h3>
+    <p>Web是基于客户/服务器（C/S）的一种体系结构，客户在计算机上使用浏览器向Web服务器发出请求，服务器响应客户请求，向客户回送所请求的网页，客户在浏览器窗口上显示网页的内容。如图1.4所示。</p>
+    <p>Web体系结构主要由三部分构成：
+    </p>
+    <p>1.
+        Web服务器</p>
+    <p>用户要访问Web页面或其他资源，必须事先有一个服务器来提供Web页面和这些资源，这种服务器就是Web服务器，也称为网站。</p>
+    <p>2.
+        客户端</p>
+    <p>用户一般是通过浏览器访问Web资源的，它是运行在客户端的一种软件。</p>
+    <p>3.
+        通信协议</p>
+    <p>客户端和服务器之间采用HTTP协议进行通信。HTTP（Hypertext
+        Transfer Protocol 超文本传输协议）协议是客户浏览器和Web服务器通信的基础，是应用层协议。</p>
+    <h3>1.2.&nbsp; 基本Web技术</h3>
+    <p>1.
+        URL</p>
+    <p>在Internet上有众多的服务器，每台服务器上又有很多信息，客户端如何能正确识别每个服务器并发送请求呢？Web使用URL技术来标识服务器及服务器信息。</p>
+    <p>URL（Uniform Resource Locator，统一资源定位符）通过定义资源位置的标识来定位网络资源。URL格式：</p>
+    <p>&lt;scheme&gt;:&lt;scheme-specific-part&gt;</p>
+    <p>其中&lt;scheme&gt;指所用的URL方案名，方案名由字符组成，包括字母（a-z）、数字（0-9）、加号（+）、句点（.）和连词符（-），字母不分大小写。&lt;scheme-specific-part&gt;具体含义与所用方案有关。</p>
+    <p>对于Internet，&lt;scheme&gt;指协议名，主要包括：http、ftp、gopher、mailto、new、nntp、telnet、wais和file等，以后可能还会不断扩充。</p>
+    <p>HTTP URL方案用于表示可通过HTTP协议访问Internet资源。HTTP URL格式：</p>
+    <p>http://&lt;host&gt;:&lt;port&gt;/&lt;path&gt;?&lt;searchpart&gt;</p>
+    <p>其中&lt;host&gt;是主机域名或IP地址，&lt;port&gt;表示端口号，&lt;host&gt;和&lt;port&gt;之间用“:”隔开，如果省略&lt;port&gt;，默认端口为80。&lt;path&gt;是要请求访问文件的路径，
+        &lt;searchpart&gt;是查询字符串，指定通过URL传递的参数，它们都是可选的，如果这两项不存在，&lt;host&gt;或&lt;port&gt;后的斜杠也不应该省略。</p>
+    <p>
+        例如：http://www.tsinghua.edu.cn/publish/th/index.html，其中http是协议名，www.tsinghua.edu.cn是域名，publish/th/index.html是请求访问的文件路径，包括文件名。</p>
+    <p>2.
+        HTTP</p>
+    <p>HTTP（Hypertext Transfer Protocol，超文本传输协议）是Web技术的核心，HTTP设计了一套相当简单的规则，用来支持客户端主机和服务器主机的通信。</p>
+    <p>
+        HTTP采用客户/服务器（C/S）结构，定义了客户端和服务器之间进行“对话”的请求响应规则。客户端的请求程序与运行在服务器端的接收程序建立连接，客户端发送请求给服务器，HTTP规则定义了如何正确解析请求信息，服务器用响应信息回复请求，响应信息中包含了客户端希望得到的信息。HTTP并没有定义网络如何建立连接、管理及信息如何发送，这些由底层协议TCP/IP来完成，HTTP是建立在TCP/IP之上的，属于应用层协议。</p>
+    <p>当客户端浏览器从Web服务器请求服务时，可能会发生错误，服务器会返回一系列状态消息。表1.1至1.5列出了服务器返回的各种状态信息。</p>
+    <p>表1.1&nbsp; HTTP 1xx状态信息</p>
+    <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+           style='width:100.0%;border-collapse:collapse;border:none'>
+        <tr>
+            <td width="34%" style='border:solid windowtext 1.0pt;border-left:
+  none;'>
+                <p>消息</p>
+            </td>
+            <td width="65%" style='border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  '>
+                <p>描述</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>100 Continue</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>服务器仅接收到部分请求，但是服务器并没有拒绝该请求，客户端应该继续发送其余的请求</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>101 Switching Protocols</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>服务器将遵从客户的请求转换到另外一种协议</p>
+            </td>
+        </tr>
+    </table>
+    <p>表1.2&nbsp;
+        HTTP 2xx成功信息</p>
+    <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+           style='width:100.0%;border-collapse:collapse;border:none'>
+        <tr>
+            <td width="34%" style='border:solid windowtext 1.0pt;border-left:
+  none;'>
+                <p>消息</p>
+            </td>
+            <td width="65%" style='border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  '>
+                <p>描述</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>200 OK</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>请求成功</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>201 Created</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>请求被创建完成，同时新的资源被创建</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>202 Accepted</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>供处理的请求已被接受，但是处理未完成</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>203 Non-authoritative Information</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>文档已经返回，因为使用的是文档的拷贝，一些应答头可能不正确</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>204 No Content</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>没有新文档。浏览器应该继续显示原来的文档</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>205 Reset Content</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>没有新文档。浏览器应该重置它所显示的内容</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>206 Partial Content</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>客户发送了一个带有Range<span
+                        style='font-size:9.0pt;font-family:宋体'>头的GET<span style='font-size:9.0pt;font-family:
+  宋体'>请求，服务器完成了它</p>
+            </td>
+        </tr>
+    </table>
+    <p>表1.3&nbsp;
+        HTTP 3xx重定向信息</p>
+    <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+           style='width:100.0%;border-collapse:collapse;border:none'>
+        <tr>
+            <td width="26%" style='width:26.22%;border:solid windowtext 1.0pt;border-left:
+  none;'>
+                <p>消息</p>
+            </td>
+            <td width="73%" style='width:73.78%;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  '>
+                <p>描述</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="26%" valign=top style='width:26.22%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>300 Multiple Choices</p>
+            </td>
+            <td width="73%" valign=top style='width:73.78%;border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>多重选择。用户可以选择某连接到达目的地，最多允许五个地址</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="26%" valign=top style='width:26.22%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>301 Moved Permanently</p>
+            </td>
+            <td width="73%" valign=top style='width:73.78%;border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>所请求的页面已经转移至新的URL</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="26%" valign=top style='width:26.22%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>302 Found</p>
+            </td>
+            <td width="73%" valign=top style='width:73.78%;border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>所请求的页面已经临时转移至新的URL</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="26%" valign=top style='width:26.22%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>303 See Other</p>
+            </td>
+            <td width="73%" valign=top style='width:73.78%;border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>所请求的页面可在别的URL<span
+                        style='font-size:9.0pt;font-family:宋体'>下被找到</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="26%" valign=top style='width:26.22%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>304 Not Modified</p>
+            </td>
+            <td width="73%" valign=top style='width:73.78%;border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>未按预期修改文档。客户端有缓冲的文档并发出了一个条件性的请求。服务器告诉客户，原来缓冲的文档还可以继续使用</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="26%" valign=top style='width:26.22%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>305 Use Proxy</p>
+            </td>
+            <td width="73%" valign=top style='width:73.78%;border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>客户请求的文档应该通过Location<span
+                        style='font-size:9.0pt;font-family:宋体'>所指明的代理服务器提取</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="26%" valign=top style='width:26.22%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>306 Unused</p>
+            </td>
+            <td width="73%" valign=top style='width:73.78%;border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>此代码被用于前一版本。目前已不再使用，但是代码依然被保留</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="26%" valign=top style='width:26.22%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>307 Temporary Redirect</p>
+            </td>
+            <td width="73%" valign=top style='width:73.78%;border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>被请求的页面已经临时移至新的URL</p>
+            </td>
+        </tr>
+    </table>
+    <p>表1.4&nbsp;
+        HTTP 4xx客户端错误信息</p>
+    <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+           style='width:100.0%;border-collapse:collapse;border:none'>
+        <tr>
+            <td width="34%" style='border:solid windowtext 1.0pt;border-left:
+  none;'>
+                <p>消息</p>
+            </td>
+            <td width="65%" style='border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  '>
+                <p>描述</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>400 Bad Request</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>服务器未能理解请求</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>401 Unauthorized</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>被请求的页面需要用户名和密码</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>402 Payment Required</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>此代码尚无法使用</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>403 Forbidden</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>对被请求页面的访问被禁止</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>404 Not Found</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>服务器无法找到被请求的页面</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>405 Method Not Allowed</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>请求中指定的方法不被允许</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>406 Not Acceptable</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>服务器生成的响应无法被客户端所接受</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>407 Proxy Authentication Required</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>用户必须首先使用代理服务器进行验证，这样请求才会被处理</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>408 Request Timeout</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>请求超出了服务器的等待时间</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>409 Conflict</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>由于冲突，请求无法被完成</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>410 Gone</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>被请求的页面不可用</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>411 Length Required</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>&quot;Content-Length&quot;未被定义。如果无此内容，服务器不会接受请求</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>412 Precondition Failed</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>请求中的前提条件被服务器评估为失败</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>413 Request Entity Too Large</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>由于所请求的实体的太大，服务器不会接受请求</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>414 Request-url Too Long</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>由于URL<span
+                        style='font-size:9.0pt;font-family:宋体'>太长，服务器不会接受请求</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>415 Unsupported Media Type</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>由于媒介类型不被支持，服务器不会接受请求</p>
+            </td>
+        </tr>
+    </table>
+    <p>表1.5&nbsp;
+        HTTP 5xx服务器错误信息</p>
+    <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+           style='width:100.0%;border-collapse:collapse;border:none'>
+        <tr>
+            <td width="34%" style='border:solid windowtext 1.0pt;border-left:
+  none;'>
+                <p>消息</p>
+            </td>
+            <td width="65%" style='border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  '>
+                <p>描述</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>500&nbsp;Internal Server Error</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>请求未完成。服务器遇到不可预知的情况</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>501 Not Implemented</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>请求未完成。服务器不支持所请求的功能</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>502 Bad Gateway</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>请求未完成。服务器从上游服务器收到一个无效的响应</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>503 Service Unavailable</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>请求未完成。服务器临时过载或当机</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>504 Gateway Timeout</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>网关超时</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="34%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>505 HTTP Version Not Supported</p>
+            </td>
+            <td width="65%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>服务器不支持请求中指明的HTTP<span
+                        style='font-size:9.0pt;font-family:宋体'>协议版本</p>
+            </td>
+        </tr>
+    </table>
+    <p>3.
+        MIME</p>
+    <p>MIME（Multipurpose Internet Mail
+        Extension，多用途Internet 邮件扩展）是一个开放的多语言、多媒体电子邮件标准，为了满足用户在不同的软件平台和硬件平台的信息交换而制订，它规定了不同数据类型的名字。</p>
+    <p>
+        Web文档需要的信息不仅仅局限于文本，还有图像、视频和声音等数据类型，所有类型文档的存储和传送都是以二进制数据形式进行的。在Web服务器程序看来，所有类型文档没有什么区别，可是客户端浏览器却能够将Web文档正确地识别和显示，实际上，浏览器事先对文档的内容一无所知。</p>
+    <p>
+        能够做到这一点必须让Web服务器根据文件的扩展名来给出文档类型的宏观描述。Web借用了MIME标准，即服务器根据数据文件的扩展名，生成相应的MIME类型返回给浏览器，浏览器根据MIME类型，处理不同类型的数据。Web仅用到MIME的一个子集。</p>
+    <p>
+        MIME的头格式为type/subtype，其中type表示数据类型，主要有：text、image、audio、video、application、multipart和message，subtype则指定所用格式的特定信息。表1.6列出了常用的MIME类型。</p>
+    <p>表1.6 常用的MIME类型列表</p>
+    <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+           style='width:100.0%;border-collapse:collapse;border:none'>
+        <tr>
+            <td width="41%" style='border:solid windowtext 1.0pt;border-left:
+  none;'>
+                <p>类型/子类型</p>
+            </td>
+            <td width="58%" style='border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  '>
+                <p>扩展名</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/hta</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>hta</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/internet-property-stream</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>acx</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/msword</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>doc,dot</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/octet-stream</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>*, bin, class, dms, exe, lha, lzh</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/pdf</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>pdf</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/rtf</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>rtf</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/vnd.ms-excel</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>xla, xlc, xlm, xls, xlt, xlw</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/vnd.ms-outlook</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>msg</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/vnd.ms-powerpoint</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>pot, pps, ppt</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/vnd.ms-project</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>mpp</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/vnd.ms-works</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>wcm, wdb, wks, wps</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/winhlp</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>hlp</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/x-director</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>dcr, dir, dxr</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/x-iphone</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>iii</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/x-javascript</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>js</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/x-msaccess</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>mdb</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/x-msmetafile</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>wmf</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/x-shockwave-flash</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>swf</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/x-tar</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>tar</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/x-tex</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>tex</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>application/zip</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>zip</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>audio/basic</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>au,snd</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>audio/mid</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>mid,rmi</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>audio/mpeg</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>mp3</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>audio/x-aiff</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>aif, aifc, aiff</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>audio/x-pn-realaudio</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>ra,ram</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>audio/x-wav</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>wav</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>image/bmp</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>bmp</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>image/gif</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>gif</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>image/jpeg</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>jpe, jpeg, jpg</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>image/tiff</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>tif, tiff</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>text/css</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>css</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>text/html</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>htm, html, stm</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>text/plain</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>bas,c,h,txt</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>video/mpeg</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>mp2,mpa,mpe,mpeg,mpg,mpv2</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>video/quicktime</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>mov,qt</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>video/x-ms-asf</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>asf, asx, asr</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>video/x-msvideo</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>avi</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="41%" valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  '>
+                <p>video/x-sgi-movie</p>
+            </td>
+            <td width="58%" valign=top style='border:none;border-bottom:
+  solid windowtext 1.0pt;'>
+                <p>movie</p>
+            </td>
+        </tr>
+    </table>
+    <h3>1.2.4&nbsp; Web服务器</h3>
+    <p>Web服务器（Web Server）也称为WWW服务器，主要功能是提供网上信息浏览服务。Web服务器应用层使用HTTP协议，信息内容采用HTML文档格式，信息定位使用URL。</p>
+    <p>
+        当Web服务器接收到一个HTTP请求（Request）时，会返回一个HTTP响应（Response）。Web服务器处理客户端请求有两种方式：一是静态请求，客户端所需请求的页面不需要进行任何处理，直接作为HTTP响应返回。二是动态请求，客户端所需请求的页面需要在服务器端委托给一些服务器端技术进行处理，如CGI、JSP、ASP等，然后将处理结果形成的页面作为HTTP响应返回。静态请求的页面称为静态网页，动态请求的页面称为动态网页。</p>
+    <p>搭建一个Web服务器需要有一台安装网络操作系统的计算机，在系统上安装Web服务器软件，并将网站的内容存储在服务器上。</p>
+    <p>1.
+        Web服务器选择原则</p>
+    <p>
+        首先是响应能力，即Web服务器对多个用户浏览信息的响应速度，响应速度越快，单位时间内可以支持越多的访问量；其次是与后端服务器的集成，Web服务器除直接向用户提供Web信息外，还肩负服务器集成的任务；第三是管理的难易程度，一是管理Web服务器是否简单易行，二是是否利用Web界面进行管理；第四是系统的稳定可靠性，Web服务器的性能和运行都需要非常稳定；最后是安全性，要防止Web服务器的机密信息泄密，又要防止黑客的攻击。</p>
+    <p>2.
+        常用Web服务器</p>
+    <p>(1)&nbsp; Microsoft IIS</p>
+    <p>Microsoft的Web服务器软件为Internet Information
+        Server（IIS），IIS是允许在公共Intranet或Internet上发布信息的Web服务器。IIS是目前最流行的Web服务器产品之一，很多著名的网站都是建立在IIS的平台上。</p>
+    <p>(2)&nbsp; Apache</p>
+    <p>Apache是世界上用的最多的Web服务器，它的成功之处主要在于它的源代码开放、支持跨平台的应用（可以运行在几乎所有的Unix、Windows、Linux系统平台上）以及可移植性等方面。</p>
+    <p>(3)&nbsp; Tomcat</p>
+    <p>Tomcat是一个开放源代码、运行Servlet和JSP Web应用软件的基于Java的Web应用软件容器，是基于Apache许可证下开发的自由软件。</p>
+</div>
+</body>
+</html>

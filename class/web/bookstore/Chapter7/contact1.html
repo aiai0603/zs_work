@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="网上书店,IT图书,前端技术">
+    <meta name="description" content="叮叮书店是一个主要销售IT图书的垂直网站">
+    <meta name="robots" content="index,follow">
+    <title>联系我们</title>
+</head>
+<body>
+<section class="contacts">
+    <span class="icon-contact"></span>
+    <h2>联系我们</h2>
+    <p class="details">叮叮书店成立于2016年6月，是由教育部主管、清华大学主办的综合出版单位。植根于“清华”这座久负盛名的高等学府，秉承清华人“自强不息，厚德载物”的人文精神。</p>
+    <fieldset class="contact-form">
+        <legend class="form-subtitle">需要填写以下内容</legend>
+        <form action="index.html" method="get" id="contact">
+            <div class="form-row">
+                <label class="contact"><strong>姓名：</strong>
+                    <input type="text" name="name" id="name" required="required" placeholder="必填" autofocus="autofocus"
+                           class="contact-input"></label>
+            </div>
+            <div class="form-row">
+                <label class="contact"><strong>性别：</strong></label>
+                <label><input name="sex" type="radio" id="sex1" value="男" checked="checked">男</label>
+                <label><input name="sex" type="radio" id="sex2" value="女">女</label>
+            </div>
+            <div class="form-row">
+                <label class="contact"><strong>年龄范围：</strong>
+                    <select name="age" size="1" id="age">
+                        <option value="1">18岁以下</option>
+                        <option value="2" selected="selected">18-28岁</option>
+                        <option value="3">28-38岁</option>
+                        <option value="4">38-48岁</option>
+                        <option value="5">48岁以上</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-row">
+                <label class="contact"><strong>爱好：</strong></label>
+                <label><input type="checkbox" name="interest" value="网络" id="interest1"/>网络</label>
+                <label><input type="checkbox" name="interest" value="数据库" id="interest2"/>数据库</label>
+                <label><input type="checkbox" name="interest" value="编程" id="interest3"/>编程</label>
+            </div>
+            <div class="form-row">
+                <label class="contact"><strong>电子邮件：</strong>
+                    <input type="email" name="email" id="email" required="required" placeholder="必填"
+                           class="contact-input"></label>
+            </div>
+            <div class="form-row">
+                <label class="contact"><strong>固定电话：</strong>
+                    <input type="text" name="telephone" id="telephone" required="required" pattern="[0-9]"
+                           placeholder="必填" class="contact-input"></label>
+            </div>
+            <div class="form-row">
+                <label class="contact"><strong>公司：</strong>
+                    <input type="text" name="company" id="company" required="required" placeholder="必填"
+                           class="contact-input"></label>
+            </div>
+            <div class="form-row">
+                <label class="contact"><strong>内容：</strong>
+                    <textarea name="content" id="content" cols="20" rows="3" class="contact-input"></textarea></label>
+            </div>
+            <div class="form-row-button">
+                <input type="reset" value="取消" class="send">&nbsp;
+                <input type="submit" value="发送" class="send">
+            </div>
+        </form>
+    </fieldset>
+</section>
+</body>
+</html>

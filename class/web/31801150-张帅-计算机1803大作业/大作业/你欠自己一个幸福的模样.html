@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>你欠自己一个幸福的模样</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="keywords" content="美文，心灵鸡汤，励志">
+		<meta name="description" content="心情之旅是一个欣赏美文的放松心情的论坛">
+		<meta name="robots" content="index,follow">
+		<link rel="stylesheet" type="text/css" href="css/index2-文章2.css" id="style" />
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			text-decoration: none;
+		}
+	</style>
+	<script type="text/javascript">
+		var a = 121;
+		var b = 231;
+		var c = 765;
+
+		function check() {
+			if (document.pl.text.value == "") {
+				window.alert("评论为空！");
+				return false;
+			}
+		}
+
+		function showDate() {
+			var curDate = new Date();
+			var year = curDate.getFullYear();
+			var month = curDate.getMonth() + 1;
+			var date = curDate.getDate();
+			var day = curDate.getDay();
+			var week = ["日", "一", "二", "三", "四", "五", "六"];
+			var hours = curDate.getHours();
+			var mintues = curDate.getMinutes();
+			var seconds = curDate.getSeconds();
+			var str;
+			str = year + "年" + time(month) + "月" + time(date) + "日&nbsp;&nbsp;" + "星期" + week[day] + "&nbsp;&nbsp;" + time(hours) +
+				"时" + time(mintues) + "分" + time(seconds) + "秒";
+			//document.write(str);
+			document.getElementById("showtime").innerHTML = str;
+		}
+
+		function time(x) {
+			return x > 9 ? x : "0" + x;
+		}
+
+		function autoPlay() {
+			var myAuto = document.getElementById('myaudio');
+			if (!myAuto.paused) {
+				myAuto.pause();
+			} else {
+				myAuto.play();
+			}
+
+		}
+
+		window.onload = function() {
+
+			showDate();
+			setInterval(showDate, 1000);
+			var myAuto = document.getElementById('myaudio');
+			myAuto.play();
+
+			var kong=1;
+			var pl=document.getElementById("pl");
+			pl.onmouseover=function(){
+				if(kong==2)
+				{
+					pl.style.bottom="0px";
+					
+					
+				}
+				else if(kong==1)
+				{
+					pl.style.bottom="-50px";
+					
+				}
+			
+			}
+			pl.onmouseleave=function(){
+				if(kong==1)kong=2;
+				else kong=1;
+			}
+			
+
+
+
+
+
+			var zhuanfa = document.getElementById("zhuanfa");
+			zhuanfa.onmousedown = function() {
+				if (c % 2 == 1) {
+					this.style.color = "yellow";
+					window.alert("收藏成功！");
+					c += 1;
+					document.getElementById("zhuanfa1").innerHTML = c;
+
+				} else {
+					this.style.color = "#808080";
+					window.alert("取消收藏成功！");
+					c -= 1;
+					document.getElementById("zhuanfa1").innerHTML = c;
+				}
+			}
+			var zan = document.getElementById("zan");
+			zan.onmousedown = function() {
+
+				if (a % 2 == 1) {
+					this.style.color = "palevioletred";
+					window.alert("点赞成功！");
+					a += 1;
+					document.getElementById("zan1").innerHTML = a;
+				} else {
+					this.style.color = "#808080";
+					window.alert("取消点赞成功！");
+					a -= 1;
+					document.getElementById("zan1").innerHTML = a;
+				}
+			}
+			var gift = document.getElementById("gift");
+			var er=document.getElementById("erw");
+			
+			gift.onclick = function() {
+					this.style.color = "green";
+					er.style.opacity=1;
+					er.style.zIndex=100;
+				} 
+			
+			
+			er.onclick=function(){
+				er.style.opacity=0;
+				er.style.zIndex=-1;
+			}
+			var stylemood=1;
+			var changestyle=document.getElementById("night");
+			
+			changestyle.onmousedown=function(){
+				if(stylemood==1)
+				{
+					document.getElementById("style").href="css/index2-文章2夜间.css";
+					stylemood=0;
+					this.style.color="darkblue";
+				}
+				else{
+					document.getElementById("style").href="css/index2-文章2.css";
+					stylemood=1;
+					this.style.color="#808080";
+					
+				}
+			}
+
+		};
+	</script>
+	<body>
+		
+		<div id="erw" align="center">
+			<h2>支持作者</h2>
+			<img src="css/图片/二维码.png" style="width: 300px;height: 330px;">
+		</div>
+		
+		
+		<audio src="音乐/背景音乐2.mp3" id="myaudio" controls="controls" loop="true" hidden="true" autoplay="autoplay"></audio>
+		<div id="all" align="center">
+	
+	
+			<div class="nav">
+				<a href="主页.html" class="icon-1" title="返回主页">
+					&#xf015 &nbsp心情之旅
+				</a>
+				<ul>
+	
+					<li><a href="主页.html">首页</a></li>
+					<li><a href="心灵鸡汤.html">心灵鸡汤</a></li>
+					<li><a href="励志故事.html">励志故事</a></li>
+					<li><a href="注册表.html">注册会员</a></li>
+					<li>
+						<div id="showtime"></div>
+					</li>
+	
+				</ul>
+	
+				<a href="搜索.html" class="icon-2" title="站内搜索">&#xf002</a>
+				<a href="javascrip:void(0)" class="icon-3" title="背景音乐" onclick="autoPlay()">&#xf001</a>
+				<a href="登录.html" class="icon-4" title="会员登录">
+					&#xf007
+				</a>
+			</div>
+			
+			<div id="main">
+				
+				<div id="dilan">
+					<a href="javascript:void(0)" id="zan" title="点赞/取消点赞">
+						&#xf087
+					</a>
+					
+					<a href="javascript:void(0)" id="gift" title="打赏/取消打赏">
+						&#xf0d6
+					</a>
+				
+					<a href="javascript:void(0)" id="zhuanfa" title="收藏/取消收藏">
+						&#xf005
+					</a>
+					<a href="javascript:void(0)" id="night" title="夜间模式/取消夜间模式">
+						&#xf06e
+					</a>
+				</div>
+				
+				
+				
+				
+				<article id="zw">
+					<div id="biaoti" align="left">
+						你欠自己一个幸福的模样
+						<div id="bg">
+							<img src="css/图片/win.jpg" >
+							
+							<div> 
+							<h3>翁芳胜</h3> 
+							<article> 2019-12-5 &nbsp;阅读 &nbsp;120&nbsp;字数 &nbsp;762</article>
+							</div>
+						</div>
+					</div>
+
+					<div id="zhengwen">
+						<p>
+							我是女生，一个不漂亮，没有什么才华的普普通通的女生。<br />
+						</p>
+						<p>
+							今天，自己在考研的路上充满了迷茫，一切都无从下手，于是打电话给一个考研成功的学长，想听听他的指导。在一起聊了学习之后，我们开始聊了些别的。在我对他说：“好好努力，一定要考到自己心仪的学校！”时，他打趣的说：“你是女生呀，考不上还会有后路，找一个有钱的男朋友嫁了~”说到父母时，我对他说：“我希望自己能够给的起父母想要的生活，给的起自己想要的生活。”他对我说：“你是女生，不要把自己弄的这么累，找个好一点的男朋友，问题就解决了啊。”接连说了很多次后，我开始不知道该如何去接这个话题。
+						</p>
+						<p>
+							 诚然，找一个有钱的男朋友就解决了很多问题，不用担心以后自己的工作，不用担心自己的经济，不用盘算着过日子，甚至可以让父母享受享受。然而，万一那个人和你精神世界不相融合，他给的起你要的未来，却无法滋润你的精神世界，时间久了，我们得到的不过是华丽的外表空虚的皮囊而已。
+							 </p>
+								<img src="图片/w-1.jpg">
+						        <p>
+							 年少的我们，不止一次的幻想着那位白马王子，难道此刻你愿意屈服生活，做个懦夫吗？如果婚姻生活不幸福，难道你愿意后半生在悔恨中度过？也许很多人觉得我很夸张，他们也许会说，你愿意找一个和你精神世界相通的却不能给你未来的吗？
+						</p>
+					
+						<p>   
+							 对待婚姻，古人常说：“什么样的人找什么样的人”，这句话有几分道理。姑娘，因为你够优秀，所以你才能找到与之相配你的优秀的另一半，他不但能给你想要的经济生活，还能满足你的精神世界，同时长的也还不错。可是，这样的高富帅凭什么你能拥有？因此，我们每个女生更应该努力，努力使自己成为优秀的人，努力使自己变得更优秀，从而具有由内到外散发出醉人的美。同时，我觉得在努力的过程中，也是自己价值的升华的体现，我们更应该享受每个进步的瞬间，体会每个辛苦的滋味，才算真正来到人世间，才算一个真正的人。当然，这努力的过程中，必然会吃到很多苦，但是一想到这是修炼自己从丑小鸭到白天鹅的过程，内心还是充满了信心，毕竟没有人愿意自己永远是丑小鸭，没有人愿意通过卖掉自己的尊严换取所谓的经济生活。如果你足够努力，足够优秀，你想要的经济生活自然会有。所以，因为你是女生，才应该更努力的生活！姑娘，你那么努力，不是为了嫁给世俗传说的如意郎君；你那么优秀，不是为了给娃当个娘就算了，你从不欠别人一段恋爱，也不欠任何人一个孩子，你只欠自己一个幸福的模样
+							。
+						</p>
+						<img src="图片/w-2.jpg">
+						  <p>   
+							 我的好友A家境不是很好，父亲在她小时候去世，母亲一个人带大她和她妹妹。高考考的不理想，只能上三本，但是她对她母亲说：“她想去上大学”，母亲想了想对她说，：“你知道上大学需要多少钱吗？你知道我们家欠下多少钱吗？”母亲的话，使她放弃了上大学的机会。但是她拒绝了母亲给她安排的婚姻，独自一人来到北京。最后，靠着她自己的努力，在公司成为客户经理，工作之余一直保持着学习的状态。后来遇到了她生活的另一半，她的另一半有高学历，家境也很好，属于高富帅的那种，两个人现在已经有孩子，生活的很幸福。也许，如果当初她选择母亲安排的婚姻，或许她永远都不知道人生可以这么精彩！以她当时的条件，没有高学历，没有美丽的容貌，没有很好的家境，怎么可能找到高富帅？男生又不是傻瓜，他们也想要找到白富美。王子爱上灰姑娘的故事有多少，发生在普通人家的机率又有多少？我们无法选择自己的家庭，但是我们可以选择我们的人生，不努力一把，你永远都不知道自己有多优秀，永远不知道自己可以这样幸福的活着，更别提碰到比自己优秀百倍并爱上自己的人了。在我们平凡的交际圈里，我们认识的也是和我们同样平凡的人，毕竟物以类聚人以群分。所以，姑娘，你应该努力，不，你必须努力，这样才不会被社会打败，才不会人生充满抱怨与遗憾，才能给自己幸福。
+						</p>
+						
+					
+
+						</p>
+
+
+
+
+
+					</div>
+					
+
+				</article>
+				<div id="zp">
+				
+				
+					<h2> 热门文章：</h2>
+					<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="80%" color=#987cb9 SIZE=10>
+					<div id="more">
+						<ul>
+				
+							<li>
+								<a href="你欠自己一个幸福的模样.html">
+									<p>你欠自己一个幸福的模样</p>
+									<article class="ping"><img src="图片/幸福.jpg" class="ping">
+										<div>阅读全文
+				
+										</div>
+									</article>
+				
+								</a>
+				
+							</li>
+							<li>
+								<a href="#">
+									<p>不逼自己一把，命运就逼你一辈子</p>
+									<article class="ping"><img src="图片/逼自己.jpg" class="ping">
+										<div>阅读全文
+				
+										</div>
+									</article>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p>守一份安然，绘一段素年锦时</p>
+									<article class="ping"><img src="图片/素时.jpg" class="ping">
+										<div>阅读全文
+				
+										</div>
+									</article>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p>爱笑的人运气都不会太差</p>
+									<article class="ping"><img src="图片/爱笑.jpg" class="ping">
+										<div>阅读全文
+				
+										</div>
+									</article>
+				
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p>青春里的了不起与对不起</p>
+									<article class="ping"><img src="图片/x-5.jpg" class="ping">
+										<div>阅读全文
+				
+										</div>
+									</article>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p>是啊，我自卑</p>
+									<article class="ping"><img src="图片/x-6.jpg" class="ping">
+										<div>阅读全文
+											
+										</div>
+									</article>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p>相隔34年的雨季</p>
+									<article class="ping"><img src="图片/x-7.jpg" class="ping">
+										<div>阅读全文
+											
+										</div>
+									</article>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p>夏夜晚风</p>
+									<article class="ping"><img src="图片/夏夜晚风.jpg" class="ping">
+										<div>阅读全文
+											
+										</div>
+									</article>
+											
+								</a>
+											
+							</li>
+				
+						</ul>
+				
+				
+					</div>
+				</div>
+			</div>
+			
+			<form action="" method="get" id="pl" name="pl" onsubmit="return check()">
+						
+				<input type="text" name="text" placeholder="说点什么..." id="in"/>
+				<button type="submit">评论</button>
+				<button type="reset">取消</button>
+						
+			</form>
+					
+			<div id="low" align="left">
+				<div>
+					<h2>&nbsp;5条评论</h2> 
+					<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="80%" color=#987cb9 SIZE=10>
+				</div>
+				
+				
+				<ul>
+					<li>
+						<img src="css/图片/头像.jpg" >
+						<div id="cont">
+							<h3>匿名</h3>
+							<article>大大的文，一直在追，感觉很好亲切，都是发生在自己身边的事</article>
+							
+							<p>2019-12-19</p>
+						</div>
+					</li>
+					<li>
+						<img src="css/图片/头像.jpg" >
+						<div id="cont">
+							<h3>匿名</h3>
+							<article>读到现在，文笔最好的一篇，果然是名家的作品</article>
+							
+							<p>2019-12-13</p>
+						</div>
+					</li>
+					<li>
+						<img src="css/图片/头像.jpg" >
+						<div id="cont">
+							<h3>匿名</h3>
+							<article>大大的文啥都好，就是看不够！</article>
+							
+							<p>2019-12-9</p>
+						</div>
+					</li>
+					<li>
+						<img src="css/图片/xcx.jpg" >
+						<div id="cont">
+							<h3>Xiang</h3>
+							<article>楼下说得对！</article>
+							
+							<p>2019-12-3</p>
+						</div>
+					</li>
+					<li>
+						<img src="css/图片/谢健的.jpg" >
+						<div id="cont">
+							<h3>Ash</h3>
+							<article>我觉得小学生15分钟就可以写出来，希望作者再接再厉！</article>
+							
+							<p>2019-12-3</p>
+						</div>
+					</li>
+				</ul>
+				
+			</div>
+			
+			<div id="under">
+				<ul>
+
+					<li><a href="主页.html">返回首页&nbsp;|</a></li>
+					<li><a href="#">联系我们&nbsp;|</a></li>
+					<li><a href="#">服务条款&nbsp;|</a></li>
+					<li><a href="#">后台管理</a></li>
+
+				</ul>
+			</div>
+
+			<div id="copyright">
+				<div>Copyright (C) <a href="主页.html">心情之旅</a> 2016-2020, All Rights Reserved </div>
+				<address>通讯地址：************** 电话：***********网管信箱：1016868503@qq.com</address>
+			</div>
+		</div>
+
+
+</html>
