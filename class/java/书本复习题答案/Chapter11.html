@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'False. <br />\
+A subclass is an extension of a superclass and normally contains more details information than its superclass. \
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = 'The extends keyword is used to define a subclass that extends a superclass.\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = 'Single inheritance allows a subclass to extend only one superclass. Multiple inheritance allows a subclass to extend multiple classes. Java does not allow multiple inheritance.\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = '(a) The output is \
+            <pre>\n\
+A&#39;s no-arg constructor is invoked \n\
+            </pre>\n\
+(b) The default constructor of B attempts to invoke the default of constructor of A, but class A&#39;s default constructor is not defined.\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = 'A subclass can explicitly invoke a suplerclass&#39;s constructor using the super keyword.\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = 'False. <br />\
+ If a subclass&#39;s constructor explicitly invoke a superclass&#39;s constructor, the superclass&#39;s no-arg constructor is not invoked.\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'False. <br />\
+You can only override accessible instance methods.\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = 'False. <br />\
+You can only override accessible instance methods.\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'Use super() or super(args). This statement must be the first in the constructor in the subclass.\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = 'Use super.method() or super.method(args). \
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'The following lines are erroneous:\
+            <pre>\n\
+{  \n\
+  radius = radius; // Must use this.radius = radius\n\
+}\n\
+\n\
+class B extends Circle \n\
+{\n\
+  Circle(radius);  // Must use super(radius)\n\
+  length = length; // Must use this.length = length\n\
+}\n\
+\n\
+public double getArea()\n\
+{\n\
+  return getArea()*length; // super.getArea()\n\
+}\n\
+            </pre>\n\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'Method overloading defines methods of the same name in a class. Method overriding modifies the methods that are defined in the superclasses.\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = 'It is method overridden.\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'It will be a syntax error.\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'It is method overloading.\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = 'It forces the compiler to check the signature of the overridden method to ensure that the method is defined correctly. \
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = 'Polymorphism means that a variable of a supertype can refer to a subtype object. A method may be implemented in several classes along the inheritance chain. The JVM decides which method is invoked at runtime.  This is known as dynamic binding.\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = 'Matching a method signature and binding a method implementation are two separate issues. The declared type of the reference variable decides which method to match at compile time. The compiler finds a matching method according to parameter type, number of parameters, and order of the parameters at compile time. A method may be implemented in several subclasses. The JVM dynamically binds the implementation of the method at runtime, decided by the actual class of the object referenced by the variable.\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = 'new int[50] cannot be assigned to into a variable of Object[] type, but new Integer[50], new String[50], or new Object[50] are fine.\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = 'Line 8 causes a compile error, because int[] cannot be passed to Object[].\
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = '\
+<pre>\n\
+(a)\n\
+Person\n\
+Student\n\
+\n\
+(b)\n\
+Person\n\
+Person\n\
+</pre>\n\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = '\
+            <pre>\n\
+B&#39;s constructor is invoked\n\
+A&#39;s constructor is invoked\n\
+            </pre>\n\
+The default constructor of Object is invoked, when new A(3) is invoked. The Object&#39;s constructor is invoked before any statements in B&#39;s constructor are executed.\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = '\
+<pre>\n\
+i from A is 40\n\
+i from A is 60\n\
+i from B is 60\n\
+</pre>\n\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = '\
+• True. You can always successfully cast an instance of a subclass to a superclass. <br />\
+• False. You can always successfully cast an instance of a superclass to a subclass.\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+<script>var answer24 = '\
+<pre>\n\
+(a)\n\
+(circle instanceof GeometricObject1) => true\n\
+(object instanceof GeometricObject1) => true\n\
+(circle instanceof Circle1) => true\n\
+(object instanceof Circle1) => false\n\
+\n\
+(b)\n\
+Yes, because you can always cast from subclass to superclass.\n\
+	\n\
+(c)\n\
+Causing a runtime exception (ClassCastExcpetion)\n\
+            </pre>\n\
+';function submit24() {if (document.getElementById('b24').innerHTML == 'Show Answer') {document.getElementById('a24').innerHTML = answer24;document.getElementById('b24').style.background = 'gray'; document.getElementById('b24').innerHTML = 'Hide Answer'; }else {document.getElementById('a24').innerHTML = '';
+document.getElementById('b24').style.background = 'green'; document.getElementById('b24').innerHTML = 'Show Answer';} }</script>
+<script>var answer25 = '\
+            		Is fruit instanceof Fruit true?	true <br />\
+		Is fruit instanceof Orange true?	false <br />\
+		Is fruit instanceof Apple true?	true <br />\
+		Is fruit instanceof GoldDelicious true? true <br />\
+		Is fruit instanceof Macintosh true?	false <br />\
+		Is orange instanceof Orange true?	true <br />\
+		Is orange instanceof Fruit true?	true <br />\
+		Is orange instanceof Apple true?	false <br />\
+		Suppose the method makeApple is defined in the Apple class. Can fruit invoke this method? Yes <br />\
+		Can orange invoke this method? No <br />\
+		Suppose the method makeOrangeJuice is defined in the Orange class. Can orange invoke this method? Yes. <br />\
+		Can fruit invoke this method?	No. <br />\
+  Is the statement Orange p = new Apple() legal? No <br />\
+\
+			Is the statement Macintosh p = new Apple() legal? No <br />\
+\
+	Is the statement Apple p = new Macintosh() legal? Yes \
+';function submit25() {if (document.getElementById('b25').innerHTML == 'Show Answer') {document.getElementById('a25').innerHTML = answer25;document.getElementById('b25').style.background = 'gray'; document.getElementById('b25').innerHTML = 'Hide Answer'; }else {document.getElementById('a25').innerHTML = '';
+document.getElementById('b25').style.background = 'green'; document.getElementById('b25').innerHTML = 'Show Answer';} }</script>
+<script>var answer26 = '\
+<pre>\n\
+Object apple = (Apple)fruit;\n\
+</pre>\n\
+		Causes a runtime ClassCastingException.\
+';function submit26() {if (document.getElementById('b26').innerHTML == 'Show Answer') {document.getElementById('a26').innerHTML = answer26;document.getElementById('b26').style.background = 'gray'; document.getElementById('b26').innerHTML = 'Hide Answer'; }else {document.getElementById('a26').innerHTML = '';
+document.getElementById('b26').style.background = 'green'; document.getElementById('b26').innerHTML = 'Show Answer';} }</script>
+<script>var answer27 = 'Yes, because these two methods are defined in the Object class; therefore, they are available to all Java classes. The subclasses usually override these methods to provide specific information for these methods.\
+<br /> <br />\
+            The toString() method returns a string representation of the object; the equals() method compares the contents of two objects to determine whether they are the same.\
+';function submit27() {if (document.getElementById('b27').innerHTML == 'Show Answer') {document.getElementById('a27').innerHTML = answer27;document.getElementById('b27').style.background = 'gray'; document.getElementById('b27').innerHTML = 'Hide Answer'; }else {document.getElementById('a27').innerHTML = '';
+document.getElementById('b27').style.background = 'green'; document.getElementById('b27').innerHTML = 'Show Answer';} }</script>
+<script>var answer28 = 'The output is false if the Circle class in (a) is used. The Circle class has two overloaded methods: equals(Circle circle) defined in the Circle class and equals(Object circle) defined in the Object class, inherited by the Circle class. At compilation time, circle1.equals(circle2) is matched to equals(Object circle), because the declared type for circle1 and circle2 is Object. (Note that either the declared type for circle1 and circle2 is Object would cause circle1.equals(circle2) to match circle1.equals(Object circle) by the compiler.\
+The output is true if the Circle class in (b) is used. The Circle class overrides the equals(Object circle) method defined in the Object class. At compilation time, circle1.equals(circle2) is matched to equals(Object circle) and at runtime the equals(Object circle) method implemented in the Circle class is invoked. <br /> <br />\
+In (a), method equals(Object c) is used at both compilation time and run time. circle1 and circle2 have different addresses, leading to "false" output. Method overriding follows dynamic binding (determined by the actual type), but method overloading is always determined by the declared type. <br /> <br />\
+	What would be the output if Object is replaced by Circle in the Test class using the Circle class in (a) and (b), respectively? The output would be true for (a), because circle1.equals(circle2) matches circle1.equals(Circle object) exactly in this case. The output would be true for (b) because equals(Object c) is overridden in the Circle class.\
+';function submit28() {if (document.getElementById('b28').innerHTML == 'Show Answer') {document.getElementById('a28').innerHTML = answer28;document.getElementById('b28').style.background = 'gray'; document.getElementById('b28').innerHTML = 'Hide Answer'; }else {document.getElementById('a28').innerHTML = '';
+document.getElementById('b28').style.background = 'green'; document.getElementById('b28').innerHTML = 'Show Answer';} }</script>
+<script>var answer29 = '\
+            (a)\
+ArrayList&lt;Double> list = new ArrayList&lt;Double>(); <br />\
+\
+(b)\
+list.add(object); <br />\
+\
+(c)\
+list.add(0, object); <br />\
+\
+(d) \
+list.size(); <br />\
+\
+(e)\
+list.remove(object); <br />\
+\
+(f)\
+list.remove(list.size() - 1); <br />\
+\
+(g)\
+list.contains(object); <br />\
+\
+(h)\
+list.get(index); <br />\
+';function submit29() {if (document.getElementById('b29').innerHTML == 'Show Answer') {document.getElementById('a29').innerHTML = answer29;document.getElementById('b29').style.background = 'gray'; document.getElementById('b29').innerHTML = 'Hide Answer'; }else {document.getElementById('a29').innerHTML = '';
+document.getElementById('b29').style.background = 'green'; document.getElementById('b29').innerHTML = 'Show Answer';} }</script>
+<script>var answer30 = 'Error 1:\
+list.add(new java.util.Date());\
+	is wrong, because it is an array list of strings. You cannot add Date objects to this list.\
+	<br />\
+	Error 2:\
+list.set(3, "Dallas");\
+is wrong because there is no element at index 3 in the list. <br />\
+\
+Error 3:\
+list.get(3)\
+is wrong because there is no element at index 3 in the list.\
+';function submit30() {if (document.getElementById('b30').innerHTML == 'Show Answer') {document.getElementById('a30').innerHTML = answer30;document.getElementById('b30').style.background = 'gray'; document.getElementById('b30').innerHTML = 'Hide Answer'; }else {document.getElementById('a30').innerHTML = '';
+document.getElementById('b30').style.background = 'green'; document.getElementById('b30').innerHTML = 'Show Answer';} }</script>
+<script>var answer31 = 'After list.remove("Dallas"), \
+            the list becomes {"Dallas", "Houston", "Dallas"}. No. Here is the reason: Suppose the list contains two string elements “red” and “red”. You want to remove “red” from the list. After the first “red” is removed, i becomes 1 and  the list becomes {“red”}. i &lt; list.size() is false. So the loop ends. The correct code should be \
+<pre>\n\
+for (int i = 0; i &lt; list.size(); i++) {\n\
+  if (list.remove(element))\n\
+    i--;\n\
+}\n\
+</pre>\n\
+';function submit31() {if (document.getElementById('b31').innerHTML == 'Show Answer') {document.getElementById('a31').innerHTML = answer31;document.getElementById('b31').style.background = 'gray'; document.getElementById('b31').innerHTML = 'Hide Answer'; }else {document.getElementById('a31').innerHTML = '';
+document.getElementById('b31').style.background = 'green'; document.getElementById('b31').innerHTML = 'Show Answer';} }</script>
+<script>var answer32 = 'The ArrayList class has two overloaded remove method remove(Object) and remove(int index). The latter is invoked for list.remove(1) to remove the element in the list at index 1.\
+';function submit32() {if (document.getElementById('b32').innerHTML == 'Show Answer') {document.getElementById('a32').innerHTML = answer32;document.getElementById('b32').style.background = 'gray'; document.getElementById('b32').innerHTML = 'Hide Answer'; }else {document.getElementById('a32').innerHTML = '';
+document.getElementById('b32').style.background = 'green'; document.getElementById('b32').innerHTML = 'Show Answer';} }</script>
+<script>var answer33 = 'list consists of Double objects. list.add(1) automatically converts 1 into an Integer object. It will work if you change it to list.add(1.0).\
+';function submit33() {if (document.getElementById('b33').innerHTML == 'Show Answer') {document.getElementById('a33').innerHTML = answer33;document.getElementById('b33').style.background = 'gray'; document.getElementById('b33').innerHTML = 'Hide Answer'; }else {document.getElementById('a33').innerHTML = '';
+document.getElementById('b33').style.background = 'green'; document.getElementById('b33').innerHTML = 'Show Answer';} }</script>
+<script>var answer34 = 'To use asList(array), array must be an array of objects.\
+';function submit34() {if (document.getElementById('b34').innerHTML == 'Show Answer') {document.getElementById('a34').innerHTML = answer34;document.getElementById('b34').style.background = 'gray'; document.getElementById('b34').innerHTML = 'Hide Answer'; }else {document.getElementById('a34').innerHTML = '';
+document.getElementById('b34').style.background = 'green'; document.getElementById('b34').innerHTML = 'Show Answer';} }</script>
+<script>var answer35 = 'To use Collections.max(array), array must be an ArrayList, not an array.\
+';function submit35() {if (document.getElementById('b35').innerHTML == 'Show Answer') {document.getElementById('a35').innerHTML = answer35;document.getElementById('b35').style.background = 'gray'; document.getElementById('b35').innerHTML = 'Hide Answer'; }else {document.getElementById('a35').innerHTML = '';
+document.getElementById('b35').style.background = 'green'; document.getElementById('b35').innerHTML = 'Show Answer';} }</script>
+<script>var answer36 = 'default visibility modifier.\
+';function submit36() {if (document.getElementById('b36').innerHTML == 'Show Answer') {document.getElementById('a36').innerHTML = answer36;document.getElementById('b36').style.background = 'gray'; document.getElementById('b36').innerHTML = 'Hide Answer'; }else {document.getElementById('a36').innerHTML = '';
+document.getElementById('b36').style.background = 'green'; document.getElementById('b36').innerHTML = 'Show Answer';} }</script>
+<script>var answer37 = 'protected\
+';function submit37() {if (document.getElementById('b37').innerHTML == 'Show Answer') {document.getElementById('a37').innerHTML = answer37;document.getElementById('b37').style.background = 'gray'; document.getElementById('b37').innerHTML = 'Hide Answer'; }else {document.getElementById('a37').innerHTML = '';
+document.getElementById('b37').style.background = 'green'; document.getElementById('b37').innerHTML = 'Show Answer';} }</script>
+<script>var answer38 = 'If the question marks are replaced by blanks, can class B be compiled? Yes. <br />\
+If the question marks are replaced by private, can class B be compiled? No. <br />\
+If the question marks are replaced by protected, can class B be compiled? Yes.\
+';function submit38() {if (document.getElementById('b38').innerHTML == 'Show Answer') {document.getElementById('a38').innerHTML = answer38;document.getElementById('b38').style.background = 'gray'; document.getElementById('b38').innerHTML = 'Hide Answer'; }else {document.getElementById('a38').innerHTML = '';
+document.getElementById('b38').style.background = 'green'; document.getElementById('b38').innerHTML = 'Show Answer';} }</script>
+<script>var answer39 = 'If the question marks are replaced by blanks, can class B be compiled? No. <br />\
+If the question marks are replaced by private, can class B be compiled? No. <br />\
+If the question marks are replaced by protected, can class B be compiled? Yes.\
+';function submit39() {if (document.getElementById('b39').innerHTML == 'Show Answer') {document.getElementById('a39').innerHTML = answer39;document.getElementById('b39').style.background = 'gray'; document.getElementById('b39').innerHTML = 'Hide Answer'; }else {document.getElementById('a39').innerHTML = '';
+document.getElementById('b39').style.background = 'green'; document.getElementById('b39').innerHTML = 'Show Answer';} }</script>
+<script>var answer40 = 'Use the final keyword.\
+';function submit40() {if (document.getElementById('b40').innerHTML == 'Show Answer') {document.getElementById('a40').innerHTML = answer40;document.getElementById('b40').style.background = 'gray'; document.getElementById('b40').innerHTML = 'Hide Answer'; }else {document.getElementById('a40').innerHTML = '';
+document.getElementById('b40').style.background = 'green'; document.getElementById('b40').innerHTML = 'Show Answer';} }</script>
+<script>var answer41 = '	a.	True. <br />\
+b.	False. (But yes in a subclass that extends the class where the protected datum is defined.) <br />\
+c.	True. <br />\
+d.	Answer: True <br />\
+		e.	\
+			Answer: False <br />\
+		f.	\
+			Answer: False <br />\
+';function submit41() {if (document.getElementById('b41').innerHTML == 'Show Answer') {document.getElementById('a41').innerHTML = answer41;document.getElementById('b41').style.background = 'gray'; document.getElementById('b41').innerHTML = 'Hide Answer'; }else {document.getElementById('a41').innerHTML = '';
+document.getElementById('b41').style.background = 'green'; document.getElementById('b41').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 11 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.1</span>
+
+True or false? A subclass is a subset of a superclass.        
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.2</span>
+What keyword do you use to define a subclass?
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.3</span>
+What is single inheritance? What is multiple inheritance? Does Java support multiple inheritance?
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.4</span>
+What is the output of running the class C in (a)? What problem arises in compiling the program in (b)?
+<pre>
+    (a)
+    <span class = "keyword">class</span> A {
+      <span class = "keyword">public</span> A() {
+        System.out.println(
+          <span class = "literal">"A's no-arg constructor is invoked"</span>);
+      }
+    }
+
+    <span class = "keyword">class</span> B <span class = "keyword">extends</span> A {
+    }
+
+    <span class = "keyword">public</span> <span class = "keyword">class</span> C {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        B b = <span class = "keyword">new</span> B();
+      }
+    }
+
+    (b)
+    <span class = "keyword">class</span> A {
+      <span class = "keyword">public</span> A(<span class = "keyword">int</span> x) {
+      }
+    }
+    (b)
+    <span class = "keyword">class</span> B <span class = "keyword">extends</span> A {
+      <span class = "keyword">public</span> B() {
+      }
+    }
+
+    <span class = "keyword">public</span> <span class = "keyword">class</span> C {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        B b = <span class = "keyword">new</span> B();
+      }
+    }
+</pre>
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.5</span>
+How does a subclass invoke its superclass's constructor?
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.6</span>
+True or false? When invoking a constructor from a subclass, its superclass's no-arg constructor is always invoked.
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.7</span>
+True or false? You can override a private method defined in a superclass.
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.8</span>
+True or false? You can override a static method defined in a superclass.
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.9</span>
+How do you explicitly invoke a superclass's constructor from a subclass?
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.10</span>
+How do you invoke an overridden superclass method from a subclass?
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.11</span>
+Identify the problems in the following code:
+<pre>
+ 1  <span class = "keyword">public</span> <span class = "keyword">class</span> Circle {
+ 2    <span class = "keyword">private</span> <span class = "keyword">double</span> radius;
+ 3
+ 4    <span class = "keyword">public</span> Circle(<span class = "keyword">double</span> radius) {
+ 5      radius = radius;
+ 6    }
+ 7
+ 8    <span class = "keyword">public</span> <span class = "keyword">double</span> getRadius() {
+ 9      <span class = "keyword">return</span> radius;
+10    }
+11
+12    <span class = "keyword">public</span> <span class = "keyword">double</span> getArea() {
+13      <span class = "keyword">return</span> radius * radius * Math.PI;
+14    }
+15  }
+16
+17  <span class = "keyword">class</span> B <span class = "keyword">extends</span> Circle {
+18    <span class = "keyword">private</span> <span class = "keyword">double</span> length;
+19
+20    B(<span class = "keyword">double</span> radius, <span class = "keyword">double</span> length) {
+21      Circle(radius);
+22      length = length;
+23    }
+24
+25    @Override
+26    <span class = "keyword">public</span> <span class = "keyword">double</span> getArea() {
+27      <span class = "keyword">return</span> getArea() * length;
+28    }
+29  }
+</pre>
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.12</span>
+Explain the difference between method overloading and method overriding.
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.13</span>
+If a method in a subclass has the same signature as a method in its superclass with the same return type, is the method overridden or overloaded?
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.14</span>
+If a method in a subclass has the same signature as a method in its superclass with a different return type, will this be a problem?
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.15</span>
+If a method in a subclass has the same name as a method in its superclass with different parameter types, is the method overridden or overloaded?
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.16</span>
+What is the benefit of using the @Override annotation?
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.17</span>
+What is polymorphism? What is dynamic binding?
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.18</span>
+Describe the difference between method matching and method binding.
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.19</span>
+Can you assign new int[50], new Integer[50], new String[50], or new Object[50], into a variable of Object[] type?
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.20</span>
+What is wrong in the following code?
+<pre>
+    1  <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+    2    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+    3      Integer[] list1 = {<span class = "constant">12</span>, <span class = "constant">24</span>, <span class = "constant">55</span>, <span class = "constant">1</span>};
+    4      Double[] list2 = {<span class = "constant">12</span><span class = "literal">.</span><span class = "constant">4</span>, <span class = "constant">24</span><span class = "literal">.</span><span class = "constant">0</span>, <span class = "constant">55</span><span class = "literal">.</span><span class = "constant">2</span>, <span class = "constant">1</span><span class = "literal">.</span><span class = "constant">0</span>};
+    5      <span class = "keyword">int</span>[] list3 = {<span class = "constant">1</span>, <span class = "constant">2</span>, <span class = "constant">3</span>};
+    6      printArray(list1);
+    7      printArray(list2);
+    8      printArray(list3);
+    9    }
+   10
+   11    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> printArray(Object[] list) {
+   12      <span class = "keyword">for</span> (Object o: list)
+   13        System.out.print(o + <span class = "literal">" "</span>);
+   14      System.out.println();
+   15    }
+   16  }
+</pre>
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.21</span>
+Show the output of the following code:
+<pre>
+    (a)
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        <span class = "keyword">new</span> Person().printPerson();
+        <span class = "keyword">new</span> Student().printPerson();
+      }
+    }
+
+    <span class = "keyword">class</span> Student <span class = "keyword">extends</span> Person {
+      @Override
+      <span class = "keyword">public</span> String getInfo() {
+        <span class = "keyword">return</span> <span class = "literal">"Student"</span>;
+      }
+    }
+
+    <span class = "keyword">class</span> Person {
+      <span class = "keyword">public</span> String getInfo() {
+        <span class = "keyword">return</span> <span class = "literal">"Person"</span>;
+      }
+
+      <span class = "keyword">public</span> <span class = "keyword">void</span> printPerson() {
+        System.out.println(getInfo());
+      }
+    }
+
+    (b)
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        <span class = "keyword">new</span> Person().printPerson();
+        <span class = "keyword">new</span> Student().printPerson();
+      }
+    }
+
+    <span class = "keyword">class</span> Student <span class = "keyword">extends</span> Person {
+      <span class = "keyword">private</span> String getInfo() {
+        <span class = "keyword">return</span> <span class = "literal">"Student"</span>;
+      }
+    }
+
+    <span class = "keyword">class</span> Person {
+      <span class = "keyword">private</span> String getInfo() {
+        <span class = "keyword">return</span> <span class = "literal">"Person"</span>;
+      }
+
+      <span class = "keyword">public</span> <span class = "keyword">void</span> printPerson() {
+        System.out.println(getInfo());
+      }
+    }
+</pre>
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.22</span>
+Show the output of following program:
+<pre>
+    1  <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+    2    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+    3      A a = <span class = "keyword">new</span> A(<span class = "constant">3</span>);
+    4    }
+    5  }
+    6
+    7  <span class = "keyword">class</span> A <span class = "keyword">extends</span> B {
+    8    <span class = "keyword">public</span> A(<span class = "keyword">int</span> t) {
+    9      System.out.println(<span class = "literal">"A's constructor is invoked"</span>);
+   10    }
+   11  }
+   12
+   13  <span class = "keyword">class</span> B {
+   14    <span class = "keyword">public</span> B() {
+   15      System.out.println(<span class = "literal">"B's constructor is invoked"</span>);
+   16    }
+   17  }
+</pre>
+            Is the no-arg constructor of Object invoked when new A(3) is invoked?
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.23</span>
+Show the output of following program:
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        <span class = "keyword">new</span> A();
+        <span class = "keyword">new</span> B();
+      }
+    }
+
+    <span class = "keyword">class</span> A {
+      <span class = "keyword">int</span> i = <span class = "constant">7</span>;
+
+      <span class = "keyword">public</span> A() {
+        setI(<span class = "constant">20</span>);
+        System.out.println(<span class = "literal">"i from A is "</span> + i);
+      }
+
+      <span class = "keyword">public</span> <span class = "keyword">void</span> setI(<span class = "keyword">int</span> i) {
+        <span class = "keyword">this</span>.i = <span class = "constant">2</span> * i;
+      }
+    }
+
+    <span class = "keyword">class</span> B <span class = "keyword">extends</span> A {
+      <span class = "keyword">public</span> B() {
+        System.out.println(<span class = "literal">"i from B is "</span> + i);    
+      }
+
+      <span class = "keyword">public</span> <span class = "keyword">void</span> setI(<span class = "keyword">int</span> i) {
+        <span class = "keyword">this</span>.i = <span class = "constant">3</span> * i;
+      }
+    }
+</pre>
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.24</span>
+Indicate true or false for the following statements: <br />
+	You can always successfully cast an instance of a subclass to a superclass. <br />
+	You can always successfully cast an instance of a superclass to a subclass.
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.25</span>
+For the GeometricObject and Circle classes in 
+                </div>
+                <div id = "a24" class="answer"></div>
+                <button id = "b24" type="button" class = "button" onclick="submit24()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.26</span>
+Suppose that Fruit, Apple, Orange, GoldenDelicious, and McIntosh are defined in the following inheritance hierarchy:
+<br />
+            <img src="IMAGE11_26.png" height="138" width="202"/>
+            <br />
+Assume that the following code is given:
+<pre>
+    Fruit fruit = <span class = "keyword">new</span> GoldenDelicious();
+    Orange orange = <span class = "keyword">new</span> Orange();
+</pre>
+Answer the following questions: <br />
+a.	Is fruit instanceof Fruit? <br />
+b.	Is fruit instanceof Orange? <br />
+c.	Is fruit instanceof Apple? <br />
+d.	Is fruit instanceof GoldenDelicious? <br />
+e.	Is fruit instanceof McIntosh? <br />
+f.	Is orange instanceof Orange? <br />
+g.	Is orange instanceof Fruit? <br />
+h.	Is orange instanceof Apple? <br />
+i.	Suppose the method makeAppleCider is defined in the Apple class. Can fruit invoke this method? Can orange invoke this method? <br />
+j.	Suppose the method makeOrangeJuice is defined in the Orange class. Can orange invoke this method? Can fruit invoke this method? <br />
+k.	Is the statement Orange p = new Apple() legal? <br />
+l.	Is the statement McIntosh p = new Apple() legal? <br />
+m.	Is the statement Apple p = new McIntosh() legal? 
+                </div>
+                <div id = "a25" class="answer"></div>
+                <button id = "b25" type="button" class = "button" onclick="submit25()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.27</span>
+What is wrong in the following code?
+<pre>
+ 1  <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+ 2    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+ 3      Object fruit = <span class = "keyword">new</span> Fruit();
+ 4      Object apple = (Apple)fruit;
+ 5    }
+ 6  }
+ 7
+ 8  <span class = "keyword">class</span> Apple <span class = "keyword">extends</span> Fruit {
+ 9  }
+10
+11  <span class = "keyword">class</span> Fruit {
+12  }
+</pre>
+                </div>
+                <div id = "a26" class="answer"></div>
+                <button id = "b26" type="button" class = "button" onclick="submit26()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.28</span>
+Does every object have a toString method and an equals method? 
+            Where do they come from? How are they used? Is it appropriate to override these methods?
+                </div>
+                <div id = "a27" class="answer"></div>
+                <button id = "b27" type="button" class = "button" onclick="submit27()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.29</span>
+When overriding the equals method, a common mistake is mistyping its signature in the subclass. For example, the equals method is incorrectly written as equals(Circle circle), as shown in (a) in following the code; instead, it should be equals(Object circle), as shown in (b). Show the output of running class Test with the Circle class in (a) and in (b), respectively.
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        Object circle1 = <span class = "keyword">new</span> Circle();
+        Object circle2 = <span class = "keyword">new</span> Circle();
+        System.out.println(circle1.equals(circle2));
+      }
+    }
+
+    (a)
+    <span class = "keyword">class</span> Circle {
+      <span class = "keyword">double</span> radius;
+
+      <span class = "keyword">public</span> <span class = "keyword">boolean</span> equals(Circle circle) {
+        <span class = "keyword">return</span> <span class = "keyword">this</span>.radius == circle.radius;    
+      }
+    }
+
+    (b)
+    <span class = "keyword">class</span> Circle {
+      <span class = "keyword">double</span> radius;
+
+      <span class = "keyword">public</span> <span class = "keyword">boolean</span> equals(Object circle) {
+        <span class = "keyword">return</span> <span class = "keyword">this</span>.radius == 
+          ((Circle)circle).radius;    
+      }
+    }
+</pre>
+If Object is replaced by Circle in the Test class, what would be the output to run Test using the Circle class in (a) and (b), respectively?
+                </div>
+                <div id = "a28" class="answer"></div>
+                <button id = "b28" type="button" class = "button" onclick="submit28()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.30</span>
+How do you do the following? <br />
+a.	Create an ArrayList for storing double values? <br />
+b.	Append an object to a list? <br />
+c.	Insert an object at the beginning of a list? <br />
+d.	Find the number of objects in a list? <br />
+e.	Remove a given object from a list?  <br />
+f.	Remove the last object from the list? <br />
+g.	Check whether a given object is in a list?  <br />
+h.	Retrieve an object at a specified index from a list?
+                </div>
+                <div id = "a29" class="answer"></div>
+                <button id = "b29" type="button" class = "button" onclick="submit29()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.31</span>
+Identify the errors in the following code. 
+<pre>
+    ArrayList&lt;String> list = <span class = "keyword">new</span> ArrayList&lt;>();
+    list.add(<span class = "literal">"Denver"</span>);
+    list.add(<span class = "literal">"Austin"</span>);
+    list.add(<span class = "keyword">new</span> java.util.Date());
+    String city = list.get(<span class = "constant">0</span>);
+    list.set(<span class = "constant">3</span>, <span class = "literal">"Dallas"</span>);
+    System.out.println(list.get(<span class = "constant">3</span>));
+</pre>
+                </div>
+                <div id = "a30" class="answer"></div>
+                <button id = "b30" type="button" class = "button" onclick="submit30()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.32</span>
+Suppose the ArrayList list contains {"Dallas", "Dallas", "Houston", "Dallas"}. What is the list after invoking list.remove("Dallas") one time? Does the following code correctly remove all elements with value "Dallas" from the list? If not, correct the code.
+<pre>
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; list.size(); i++)
+      list.remove(<span class = "literal">"Dallas"</span>);
+</pre>
+                </div>
+                <div id = "a31" class="answer"></div>
+                <button id = "b31" type="button" class = "button" onclick="submit31()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.33</span>
+Explain why the following code displays [1, 3] rather than [2, 3].
+<pre>
+    ArrayList&lt;Integer> list = <span class = "keyword">new</span> ArrayList&lt;>();
+    list.add(<span class = "constant">1</span>);
+    list.add(<span class = "constant">2</span>);
+    list.add(<span class = "constant">3</span>);
+    list.remove(<span class = "constant">1</span>);
+    System.out.println(list);
+</pre>
+    How do you remove integer value 3 from the list? 
+                </div>
+                <div id = "a32" class="answer"></div>
+                <button id = "b32" type="button" class = "button" onclick="submit32()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.34</span>
+Explain why the following code is wrong.
+<pre>
+    ArrayList&lt;Double> list = <span class = "keyword">new</span> ArrayList&lt;>();
+    list.add(<span class = "constant">1</span>);
+</pre>
+                </div>
+                <div id = "a33" class="answer"></div>
+                <button id = "b33" type="button" class = "button" onclick="submit33()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.35</span>
+Correct errors in the following statements:
+<pre>
+<pre>
+                </div>
+                <div id = "a34" class="answer"></div>
+                <button id = "b34" type="button" class = "button" onclick="submit34()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.36</span>
+Correct errors in the following statements:
+<pre>
+    <span class = "keyword">int</span>[] array = {<span class = "constant">3</span>, <span class = "constant">5</span>, <span class = "constant">95</span>, <span class = "constant">4</span>, <span class = "constant">15</span>, <span class = "constant">34</span>, <span class = "constant">3</span>, <span class = "constant">6</span>, <span class = "constant">5</span>};
+    System.out.println(java.util.Collections.max(array));
+</pre>
+                </div>
+                <div id = "a35" class="answer"></div>
+                <button id = "b35" type="button" class = "button" onclick="submit35()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.37</span>
+What modifier should you use on a class so that a class in the same package can access it, but a class in a different package cannot access it?
+                </div>
+                <div id = "a36" class="answer"></div>
+                <button id = "b36" type="button" class = "button" onclick="submit36()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.38</span>
+What modifier should you use so that a class in a different package cannot access the class, but its subclasses in any package can access it?
+                </div>
+                <div id = "a37" class="answer"></div>
+                <button id = "b37" type="button" class = "button" onclick="submit37()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.39</span>
+In the following code, the classes A and B are in the same package. If the question marks in (a) are replaced by blanks, can class B be compiled? If the question marks are replaced by private, can class B be compiled? If the question marks are replaced by protected, can class B be compiled?
+<pre>
+    (a)
+    <span class = "keyword">package</span> p1;
+
+    <span class = "keyword">public</span> <span class = "keyword">class</span> A {
+        ?   <span class = "keyword">int</span> i;
+
+        ?   <span class = "keyword">void</span> m() {
+        ...
+      }
+    }
+
+    (b)
+    <span class = "keyword">package</span> p1;
+
+    <span class = "keyword">public</span> <span class = "keyword">class</span> B <span class = "keyword">extends</span> A {
+      <span class = "keyword">public</span> <span class = "keyword">void</span> m1(String[] args) {
+        System.out.println(i);
+        m();
+      }
+    }
+</pre>
+                </div>
+                <div id = "a38" class="answer"></div>
+                <button id = "b38" type="button" class = "button" onclick="submit38()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.40</span>
+In the following code, the classes A and B are in different packages. If the question marks in (a) are replaced by blanks, can class B be compiled? If the question marks are replaced by private, can class B be compiled? If the question marks are replaced by protected, can class B be compiled?
+<pre>
+    (a)
+    <span class = "keyword">package</span> p1;
+
+    <span class = "keyword">public</span> <span class = "keyword">class</span> A {
+        ?   <span class = "keyword">int</span> i;
+
+        ?   <span class = "keyword">void</span> m() {
+        ...
+      }
+    }
+
+    (b)
+    <span class = "keyword">package</span> p2;
+
+    <span class = "keyword">public</span> <span class = "keyword">class</span> B <span class = "keyword">extends</span> A {
+      <span class = "keyword">public</span> <span class = "keyword">void</span> m1(String[] args) {
+        System.out.println(i);
+        m();
+      }
+    }
+</pre>
+                </div>
+                <div id = "a39" class="answer"></div>
+                <button id = "b39" type="button" class = "button" onclick="submit39()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.41</span>
+How do you prevent a class from being extended? How do you prevent a method from being overridden?
+                </div>
+                <div id = "a40" class="answer"></div>
+                <button id = "b40" type="button" class = "button" onclick="submit40()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">11.42</span>
+Indicate true or false for the following statements: <br />
+a.	A protected datum or method can be accessed by any class in the same package. <br />
+b.	A protected datum or method can be accessed by any class in different packages. <br />
+c.	A protected datum or method can be accessed by its subclasses in any package. <br />
+d.	A final class can have instances. <br />
+e.	A final class can be extended. <br />
+f.	A final method can be overridden. 
+                </div>
+                <div id = "a41" class="answer"></div>
+                <button id = "b41" type="button" class = "button" onclick="submit41()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = '\
+<pre>\n\
+&lt;, &lt;=, ==, !=, >, >=\n\
+</pre>\n\
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = '\
+<pre>\n\
+true\n\
+false\n\
+true\n\
+true\n\
+false\n\
+</pre>\n\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = 'No. Boolean values cannot be cast to other types.\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = '\
+<pre>	\n\
+if (y > 0)\n\
+  x = 1;\n\
+</pre>\n\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = '\
+<pre>\n\
+if (score > 90)\n\
+  pay *= 1.03;\n\
+</pre>\n\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = '\
+<pre>\n\
+if (score > 90)\n\
+  pay *= 1.03;\n\
+else\n\
+  pay *= 1.01;\n\
+</pre>\n\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = '\
+<pre>\n\
+If number is 30, (a) displays \n\
+30 is even\n\
+30 is odd\n\
+\n\
+(b) displays \n\
+30 is even\n\
+\n\
+If number is 35, (a) displays \n\
+35 is odd\n\
+\n\
+(b) displays \n\
+35 is odd\n\
+</pre>\n\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = 'Note: else matches the first if clause. No output if x = 3 and y = 2. Output is “z is 7” if if x = 3 and y = 4. Output is “x is 2” if if x = 2 and y = 2.\
+        <img src="IMAGE3_8.png" height="338" width="502"/>\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'No output if x = 2 and y = 3. Output is “x is 3” if x = 3 and y = 2. Output is “z is 6” if x = 3 and y = 3.\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = 'Consider score 90, what will be the grade? It will be D.\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'a, c, and d are the same. (B) and (C) are correctly indented.\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'newLine = (count % 10 == 0);\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = 'Both are correct. (b) is better.\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'For (a) if number is 14, the output is \
+<pre>\n\
+            14 is even\n\
+</pre>\n\
+   if number is 15, the output is\
+<pre>\n\
+            15 is multiple of 5\n\
+</pre>\n\
+            if number is 30, the output is\
+<pre>\n\
+            30 is even\n\
+            30 is multiple of 5\n\
+</pre>\n\
+\
+For (b) if number is 14, the output is \
+<pre>\n\
+            14 is even\n\
+</pre>\n\
+            If number is 15, the output is\
+<pre>\n\
+            15 is multiple of 5\n\
+</pre>\n\
+            if number is 30, the output is\
+<pre>\n\
+            30 is even\n\
+            </pre>\n\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = '0.5, 0.0, 0.234\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = '(a) (int)(Math.random() * 20) <br />\
+(b) 10 + (int)(Math.random() * 10) <br />\
+(c) 10 + (int)(Math.random() * 41) <br />\
+(d)  (int)(Math.random() * 2) <br />\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = 'Yes\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = '(true) && (3 > 4) is\
+		false <br />\
+\
+!(x > 0) && (x > 0) is\
+		false <br />\
+\
+(x > 0) || (x &lt; 0) is\
+		true <br />\
+\
+(x != 0) || (x == 0) is\
+		true <br />\
+\
+(x >= 0) || (x &lt; 0) is\
+		true <br />\
+\
+(x != 1) == !(x == 1) is\
+		true\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = '(a) (x > 1) && (x &lt; 100) <br />\
+            (b) (num > 1) && (num &lt; 100) || num &lt; 0\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = '(a) (x - 5) &lt; 4.5 && (x - 5) > -4.5 <br />\
+            (b) (x - 5) > 4.5 || (x - 5) &lt; -4.5\
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = '\
+            x > y > 0 is\
+		incorrect <br />\
+\
+x = y && y is\
+		incorrect <br />\
+\
+x /= y is\
+		correct <br />\
+\
+x or y is \
+		incorrect <br />\
+\
+x and y is\
+		incorrect <br />\
+(x != 0) || (x = 0) is\
+		incorrect on x = 0\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = 'Yes\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = 'If x is 45, the expression is false. <br />\
+If x is 67, the expression is true. <br />\
+If x is 101, the expression is false.\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = '(x &lt; y && y &lt; z) is true <br />\
+(x &lt; y || y &lt; z) is true <br />\
+!(x &lt; y) is false <br />\
+(x + y &lt; z) is true <br />\
+(x + y > z) is false \
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+<script>var answer24 = 'age > 13 && age &lt; 18\
+';function submit24() {if (document.getElementById('b24').innerHTML == 'Show Answer') {document.getElementById('a24').innerHTML = answer24;document.getElementById('b24').style.background = 'gray'; document.getElementById('b24').innerHTML = 'Hide Answer'; }else {document.getElementById('a24').innerHTML = '';
+document.getElementById('b24').style.background = 'green'; document.getElementById('b24').innerHTML = 'Show Answer';} }</script>
+<script>var answer25 = 'weight > 50 || height > 60.\
+';function submit25() {if (document.getElementById('b25').innerHTML == 'Show Answer') {document.getElementById('a25').innerHTML = answer25;document.getElementById('b25').style.background = 'gray'; document.getElementById('b25').innerHTML = 'Hide Answer'; }else {document.getElementById('a25').innerHTML = '';
+document.getElementById('b25').style.background = 'green'; document.getElementById('b25').innerHTML = 'Show Answer';} }</script>
+<script>var answer26 = 'weight > 50 && height > 60.\
+';function submit26() {if (document.getElementById('b26').innerHTML == 'Show Answer') {document.getElementById('a26').innerHTML = answer26;document.getElementById('b26').style.background = 'gray'; document.getElementById('b26').innerHTML = 'Hide Answer'; }else {document.getElementById('a26').innerHTML = '';
+document.getElementById('b26').style.background = 'green'; document.getElementById('b26').innerHTML = 'Show Answer';} }</script>
+<script>var answer27 = 'weight > 50 ^ height > 60.\
+';function submit27() {if (document.getElementById('b27').innerHTML == 'Show Answer') {document.getElementById('a27').innerHTML = answer27;document.getElementById('b27').style.background = 'gray'; document.getElementById('b27').innerHTML = 'Hide Answer'; }else {document.getElementById('a27').innerHTML = '';
+document.getElementById('b27').style.background = 'green'; document.getElementById('b27').innerHTML = 'Show Answer';} }</script>
+<script>var answer28 = 'Switch variables must be of char, byte, short, int, or String types. If a break statement is not used, the next case statement is performed. You can always convert a switch statement to an equivalent if statement, but not an if statement to a switch statement. The use of the switch statement can improve readability of the program in some cases. The compiled code for the switch statement is also more efficient than its corresponding if statement.\
+';function submit28() {if (document.getElementById('b28').innerHTML == 'Show Answer') {document.getElementById('a28').innerHTML = answer28;document.getElementById('b28').style.background = 'gray'; document.getElementById('b28').innerHTML = 'Hide Answer'; }else {document.getElementById('a28').innerHTML = '';
+document.getElementById('b28').style.background = 'green'; document.getElementById('b28').innerHTML = 'Show Answer';} }</script>
+<script>var answer29 = 'y is 2. <br />\
+            <pre>\n\
+x = 3; y = 3;\n\
+if (x + 3 == 6) {\n\
+  y = 1;\n\
+}\n\
+y += 1;\n\
+</pre>\n\
+';function submit29() {if (document.getElementById('b29').innerHTML == 'Show Answer') {document.getElementById('a29').innerHTML = answer29;document.getElementById('b29').style.background = 'gray'; document.getElementById('b29').innerHTML = 'Hide Answer'; }else {document.getElementById('a29').innerHTML = '';
+document.getElementById('b29').style.background = 'green'; document.getElementById('b29').innerHTML = 'Show Answer';} }</script>
+<script>var answer30 = 'x is 17\
+<pre>\n\
+switch (a) { \n\
+  case 1: x += 5; break;\n\
+  case 2: x += 10; break;\n\
+  case 3: x += 16; break;\n\
+  case 4: x += 34;\n\
+}\n\
+</pre>\n\
+        <img src="IMAGE3_31.png" height="338" width="302"/>\
+';function submit30() {if (document.getElementById('b30').innerHTML == 'Show Answer') {document.getElementById('a30').innerHTML = answer30;document.getElementById('b30').style.background = 'gray'; document.getElementById('b30').innerHTML = 'Hide Answer'; }else {document.getElementById('a30').innerHTML = '';
+document.getElementById('b30').style.background = 'green'; document.getElementById('b30').innerHTML = 'Show Answer';} }</script>
+<script>var answer31 = '\
+<pre>\n\
+switch (day) { \n\
+  case 0: System.out.println("Sunday”); break;\n\
+  case 1: System.out.println("Monday”); break;\n\
+  case 2: System.out.println("Tuesday”); break;\n\
+  case 3: System.out.println("Wednesday”); break;\n\
+  case 4: System.out.println("Thurday”); break;\n\
+  case 5: System.out.println("Friday”); break;\n\
+  case 6: System.out.println("Saturday”); break;\n\
+}\n\
+</pre>\n\
+';function submit31() {if (document.getElementById('b31').innerHTML == 'Show Answer') {document.getElementById('a31').innerHTML = answer31;document.getElementById('b31').style.background = 'gray'; document.getElementById('b31').innerHTML = 'Hide Answer'; }else {document.getElementById('a31').innerHTML = '';
+document.getElementById('b31').style.background = 'green'; document.getElementById('b31').innerHTML = 'Show Answer';} }</script>
+<script>var answer32 = 'Sorted\
+';function submit32() {if (document.getElementById('b32').innerHTML == 'Show Answer') {document.getElementById('a32').innerHTML = answer32;document.getElementById('b32').style.background = 'gray'; document.getElementById('b32').innerHTML = 'Hide Answer'; }else {document.getElementById('a32').innerHTML = '';
+document.getElementById('b32').style.background = 'green'; document.getElementById('b32').innerHTML = 'Show Answer';} }</script>
+<script>var answer33 = '\
+            <pre>\n\
+ticketPrice = (ages >= 16) ? 20 : 10;\n\
+        </pre>\n\
+';function submit33() {if (document.getElementById('b33').innerHTML == 'Show Answer') {document.getElementById('a33').innerHTML = answer33;document.getElementById('b33').style.background = 'gray'; document.getElementById('b33').innerHTML = 'Hide Answer'; }else {document.getElementById('a33').innerHTML = '';
+document.getElementById('b33').style.background = 'green'; document.getElementById('b33').innerHTML = 'Show Answer';} }</script>
+<script>var answer34 = '\
+<pre>\n\
+(a) \n\
+if (x > 10) \n\
+  score = 3 * scale;\n\
+else\n\
+  score = 4 * scale;\n\
+\n\
+(b)\n\
+if (income > 10000) \n\
+  tax = income * 0.2;\n\
+else\n\
+  tax = income * 0.17 + 1000;\n\
+\n\
+(c)\n\
+if (number % 3 == 0) \n\
+      System.out.println(i);\n\
+else\n\
+      System.out.println(j);\n\
+</pre>\n\
+';function submit34() {if (document.getElementById('b34').innerHTML == 'Show Answer') {document.getElementById('a34').innerHTML = answer34;document.getElementById('b34').style.background = 'gray'; document.getElementById('b34').innerHTML = 'Hide Answer'; }else {document.getElementById('a34').innerHTML = '';
+document.getElementById('b34').style.background = 'green'; document.getElementById('b34').innerHTML = 'Show Answer';} }</script>
+<script>var answer35 = '\
+        <pre>\n\
+(int)(Math.random() * 2) == 0 ? -1 : 1;\n\
+        </pre>\n\
+';function submit35() {if (document.getElementById('b35').innerHTML == 'Show Answer') {document.getElementById('a35').innerHTML = answer35;document.getElementById('b35').style.background = 'gray'; document.getElementById('b35').innerHTML = 'Hide Answer'; }else {document.getElementById('a35').innerHTML = '';
+document.getElementById('b35').style.background = 'green'; document.getElementById('b35').innerHTML = 'Show Answer';} }</script>
+<script>var answer36 = '\
+The precedence order for boolean operators is  !, ^, &&, and ||  <br />\
+true || true && false is true <br />\
+true && true || false is true \
+';function submit36() {if (document.getElementById('b36').innerHTML == 'Show Answer') {document.getElementById('a36').innerHTML = answer36;document.getElementById('b36').style.background = 'gray'; document.getElementById('b36').innerHTML = 'Hide Answer'; }else {document.getElementById('a36').innerHTML = '';
+document.getElementById('b36').style.background = 'green'; document.getElementById('b36').innerHTML = 'Show Answer';} }</script>
+<script>var answer37 = 'True\
+';function submit37() {if (document.getElementById('b37').innerHTML == 'Show Answer') {document.getElementById('a37').innerHTML = answer37;document.getElementById('b37').style.background = 'gray'; document.getElementById('b37').innerHTML = 'Hide Answer'; }else {document.getElementById('a37').innerHTML = '';
+document.getElementById('b37').style.background = 'green'; document.getElementById('b37').innerHTML = 'Show Answer';} }</script>
+<script>var answer38 = 'Both are false\
+';function submit38() {if (document.getElementById('b38').innerHTML == 'Show Answer') {document.getElementById('a38').innerHTML = answer38;document.getElementById('b38').style.background = 'gray'; document.getElementById('b38').innerHTML = 'Hide Answer'; }else {document.getElementById('a38').innerHTML = '';
+document.getElementById('b38').style.background = 'green'; document.getElementById('b38').innerHTML = 'Show Answer';} }</script>
+<script>var answer39 = 'Yes. Yes. Yes. \
+';function submit39() {if (document.getElementById('b39').innerHTML == 'Show Answer') {document.getElementById('a39').innerHTML = answer39;document.getElementById('b39').style.background = 'gray'; document.getElementById('b39').innerHTML = 'Hide Answer'; }else {document.getElementById('a39').innerHTML = '';
+document.getElementById('b39').style.background = 'green'; document.getElementById('b39').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 3 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.1</span>
+List six relational operators.
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.2</span>
+Assuming that x is 1, show the result of the following Boolean expressions:
+<pre>
+    x > <span class = "constant">0</span>
+    x &lt; <span class = "constant">0</span>
+    x != <span class = "constant">0</span>
+    x >= <span class = "constant">0</span>
+    x != <span class = "constant">1</span>
+</pre>
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.3</span>
+Can the following conversions involving casting be allowed? Write a test program to verify it.
+<pre>
+    <span class = "keyword">boolean</span> b = <span class = "keyword">true</span>;
+    i = (<span class = "keyword">int</span>)b;
+
+    <span class = "keyword">int</span> i = <span class = "constant">1</span>;
+    <span class = "keyword">boolean</span> b = (<span class = "keyword">boolean</span>)i;
+</pre>
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.4</span>
+Write an if statement that assigns 1 to x if y is greater than 0.
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.5</span>
+Write an if statement that increases pay by 3% if score is greater than 90.
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.6</span>
+Write an if statement that increases pay by 3% if score is greater than 90, otherwise increases pay by 1%.
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.7</span>
+What is the output of the code in (a) and (b) 
+            if number is 30? What if number is 35?
+<pre>
+(a)
+    <span class = "keyword">if</span> (number % <span class = "constant">2</span> == <span class = "constant">0</span>) 
+      System.out.println(number + <span class = "literal">" is even."</span>);
+
+    System.out.println(number + <span class = "literal">" is odd."</span>);
+
+    (b)
+    <span class = "keyword">if</span> (number % <span class = "constant">2</span> == <span class = "constant">0</span>) 
+      System.out.println(number + <span class = "literal">" is even."</span>);
+    <span class = "keyword">else</span>   
+      System.out.println(number + <span class = "literal">" is odd."</span>); 
+</pre>
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.8</span>
+Suppose x = 3 and y = 2; show the output, if any, of the following code. What is the output if x = 3 and y = 4? What is the output if x = 2 and y = 2? Draw a flowchart of the code.
+<pre>
+    <span class = "keyword">if</span> (x > <span class = "constant">2</span>) {
+      <span class = "keyword">if</span> (y > <span class = "constant">2</span>) {
+        z = x + y;
+        System.out.println(<span class = "literal">"z is "</span> + z);
+      }
+    }
+    <span class = "keyword">else</span>
+      System.out.println(<span class = "literal">"x is "</span> + x);
+</pre>
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.9</span>
+Suppose x = 2 and y = 3. Show the output, if any, of the following code. What is the output if x = 3 and y = 2? What is the output if x = 3 and y = 3?
+<pre>
+    <span class = "keyword">if</span> (x > <span class = "constant">2</span>)
+      <span class = "keyword">if</span> (y > <span class = "constant">2</span>) {
+        <span class = "keyword">int</span> z = x + y;
+        System.out.println(<span class = "literal">"z is "</span> + z);
+      }
+      <span class = "keyword">else</span>
+      System.out.println(<span class = "literal">"x is "</span> + x);
+</pre>
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.10</span>
+What is wrong in the following code?
+<pre>
+    <span class = "keyword">if</span> (score >= <span class = "constant">60</span><span class = "literal">.</span><span class = "constant">0</span>)
+      System.out.println(<span class = "literal">"D"</span>);
+    <span class = "keyword">else</span> <span class = "keyword">if</span> (score >= <span class = "constant">70</span><span class = "literal">.</span><span class = "constant">0</span>)
+      System.out.println(<span class = "literal">"C"</span>);
+    <span class = "keyword">else</span> <span class = "keyword">if</span> (score >= <span class = "constant">80</span><span class = "literal">.</span><span class = "constant">0</span>)
+      System.out.println(<span class = "literal">"B"</span>);
+    <span class = "keyword">else</span> <span class = "keyword">if</span> (score >= <span class = "constant">90</span><span class = "literal">.</span><span class = "constant">0</span>)
+      System.out.println(<span class = "literal">"A"</span>);
+    <span class = "keyword">else</span>
+      System.out.println(<span class = "literal">"F"</span>);
+</pre>
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.11</span>
+Which of the following statements are equivalent? Which ones are correctly indented?
+<pre>
+    (a)
+    <span class = "keyword">if</span> (i > <span class = "constant">0</span>) <span class = "keyword">if</span> 
+    (j > <span class = "constant">0</span>) 
+    x = <span class = "constant">0</span>; <span class = "keyword">else</span> 
+    <span class = "keyword">if</span> (k > <span class = "constant">0</span>) y = <span class = "constant">0</span>; 
+    <span class = "keyword">else</span> z = <span class = "constant">0</span>;
+
+    (b)            
+    <span class = "keyword">if</span> (i > <span class = "constant">0</span>) {
+      <span class = "keyword">if</span> (j > <span class = "constant">0</span>)
+        x = <span class = "constant">0</span>;
+      <span class = "keyword">else</span> <span class = "keyword">if</span> (k > <span class = "constant">0</span>)
+        y = <span class = "constant">0</span>;
+    }
+    <span class = "keyword">else</span> 
+      z = <span class = "constant">0</span>;
+
+    (c)
+    <span class = "keyword">if</span> (i > <span class = "constant">0</span>)
+      <span class = "keyword">if</span> (j > <span class = "constant">0</span>)
+        x = <span class = "constant">0</span>;
+      <span class = "keyword">else</span> <span class = "keyword">if</span> (k > <span class = "constant">0</span>)
+        y = <span class = "constant">0</span>;
+      <span class = "keyword">else</span> 
+        z = <span class = "constant">0</span>;
+
+    (d)
+    <span class = "keyword">if</span> (i > <span class = "constant">0</span>)
+      <span class = "keyword">if</span> (j > <span class = "constant">0</span>)
+        x = <span class = "constant">0</span>;
+      <span class = "keyword">else</span> <span class = "keyword">if</span> (k > <span class = "constant">0</span>)
+        y = <span class = "constant">0</span>;
+    <span class = "keyword">else</span> 
+      z = <span class = "constant">0</span>;
+</pre>
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.12</span>
+Rewrite the following statement using a Boolean expression:
+<pre>
+    <span class = "keyword">if</span> (count % <span class = "constant">10</span> == <span class = "constant">0</span>)
+      newLine = <span class = "keyword">true</span>;
+    <span class = "keyword">else</span> 
+      newLine = <span class = "keyword">false</span>;
+</pre>
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.13</span>
+Are the following statements correct? Which one is better?
+<pre>
+    (a)
+    <span class = "keyword">if</span> (age &lt; <span class = "constant">16</span>) 
+      System.out.println
+        (<span class = "literal">"Cannot get a driver's license"</span>); 
+    <span class = "keyword">if</span> (age >= <span class = "constant">16</span>) 
+      System.out.println
+        (<span class = "literal">"Can get a driver's license"</span>); 
+
+    (b)
+    <span class = "keyword">if</span> (age &lt; <span class = "constant">16</span>) 
+      System.out.println
+        (<span class = "literal">"Cannot get a driver's license"</span>); 
+    <span class = "keyword">else</span> 
+      System.out.println
+        (<span class = "literal">"Can get a driver's license"</span>);         
+</pre>
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.14</span>
+What is the output of the following code if number is 14, 15, or 30?
+<pre>
+    (a)
+    <span class = "keyword">if</span> (number % <span class = "constant">2</span> == <span class = "constant">0</span>) 
+      System.out.println
+        (number + <span class = "literal">" is even"</span>); 
+    <span class = "keyword">if</span> (number % <span class = "constant">5</span> == <span class = "constant">0</span>)
+      System.out.println
+        (number + <span class = "literal">" is multiple of 5"</span>); 
+
+    (b)
+    <span class = "keyword">if</span> (number % <span class = "constant">2</span> == <span class = "constant">0</span>) 
+      System.out.println
+        (number + <span class = "literal">" is even"</span>); 
+    <span class = "keyword">else</span> <span class = "keyword">if</span> (number % <span class = "constant">5</span> == <span class = "constant">0</span>)
+      System.out.println
+        (number + <span class = "literal">" is multiple of 5"</span>);        
+</pre>
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.15</span>
+Which of the following is a possible output from invoking Math.random()?
+<pre>
+            323<span class = "literal">.</span><span class = "constant">4</span>, <span class = "constant">0</span><span class = "literal">.</span><span class = "constant">5</span>, <span class = "constant">34</span>, <span class = "constant">1</span><span class = "literal">.</span><span class = "constant">0</span>, <span class = "constant">0</span><span class = "literal">.</span><span class = "constant">0</span>, <span class = "constant">0</span><span class = "literal">.</span><span class = "constant">234</span>
+</pre>
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.16</span>
+a.	How do you generate a random integer i such that 0 &lt;= i &lt; 20 ? <br />
+	b.	How do you generate a random integer i such that 10 &lt;= i &lt; 20  <br />
+	c.	How do you generate a random integer i such that 10 &lt;= i &lt;= 50  <br />
+	d.	Write an expression that returns 0 or 1 randomly.
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.17</span>
+Are the following two statements equivalent?
+<pre>
+    (a)
+    <span class = "keyword">if</span> (income &lt;= <span class = "constant">10000</span>) 
+      tax = income * <span class = "constant">0</span><span class = "literal">.</span><span class = "constant">1</span>; 
+    <span class = "keyword">else</span> <span class = "keyword">if</span> (income &lt;= <span class = "constant">20000</span>) 
+      tax = <span class = "constant">1000</span> + 
+        (income – <span class = "constant">10000</span>) * <span class = "constant">0</span><span class = "literal">.</span><span class = "constant">15</span>; 
+
+    (b)
+    <span class = "keyword">if</span> (income &lt;= <span class = "constant">10000</span>) 
+      tax = income * <span class = "constant">0</span><span class = "literal">.</span><span class = "constant">1</span>; 
+    <span class = "keyword">else</span> <span class = "keyword">if</span> (income > <span class = "constant">10000</span> &&
+             income &lt;= <span class = "constant">20000</span>) 
+      tax = <span class = "constant">1000</span> + 
+        (income – <span class = "constant">10000</span>) * <span class = "constant">0</span><span class = "literal">.</span><span class = "constant">15</span>; 
+</pre>
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.18</span>
+Assuming that x is 1, show the result of the following Boolean expressions.
+<pre>
+    (<span class = "keyword">true</span>) && (<span class = "constant">3</span> > <span class = "constant">4</span>)
+    !(x > <span class = "constant">0</span>) && (x > <span class = "constant">0</span>)
+    (x > <span class = "constant">0</span>) || (x &lt; <span class = "constant">0</span>)
+    (x != <span class = "constant">0</span>) || (x == <span class = "constant">0</span>)
+    (x >= <span class = "constant">0</span>) || (x &lt; <span class = "constant">0</span>)
+    (x != <span class = "constant">1</span>) == !(x == <span class = "constant">1</span>)
+</pre>
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.19</span>
+(a) Write a Boolean expression that evaluates to true if a number stored in variable num is between 1 and 100. <br />
+            (b) Write a Boolean expression that evaluates to true if a number stored in variable num is between 1 and 100 or the number is negative.
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.20</span>
+ (a) Write a Boolean expression for |x - 5| &lt; 4.5. <br />
+            (b)  Write a Boolean expression for |x - 5| > 4.5.
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.21</span>
+Assume that x and y are int type. Which of the following are legal Java expressions?
+<pre>
+    x > y > <span class = "constant">0</span>
+    x = y && y
+    x /= y
+    x or y
+    x and y
+    (x != <span class = "constant">0</span>) || (x = <span class = "constant">0</span>)
+</pre>
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.22</span>
+Are the following two expressions the same?
+<pre>
+    (a) x % <span class = "constant">2</span> == <span class = "constant">0</span> && x % <span class = "constant">3</span> == <span class = "constant">0</span> 
+    (b) x % <span class = "constant">6</span> == <span class = "constant">0</span> 
+</pre>
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.23</span>
+What is the value of the expression x >= 50 && x &lt;= 100 if x is 45, 67, or 101?
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.24</span>
+Suppose, when you run the following program, you enter the input 2 3 6 from the console. What is the output?
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        java.util.Scanner input = <span class = "keyword">new</span> java.util.Scanner(System.in);
+        <span class = "keyword">double</span> x = input.nextDouble();
+        <span class = "keyword">double</span> y = input.nextDouble();
+        <span class = "keyword">double</span> z = input.nextDouble();
+
+        System.out.println(<span class = "literal">"(x &lt; y && y &lt; z) is "</span> + (x &lt; y && y &lt; z));
+        System.out.println(<span class = "literal">"(x &lt; y || y &lt; z) is "</span> + (x &lt; y || y &lt; z));
+        System.out.println(<span class = "literal">"!(x &lt; y) is "</span> + !(x &lt; y));
+        System.out.println(<span class = "literal">"(x + y &lt; z) is "</span> + (x + y &lt; z));
+        System.out.println(<span class = "literal">"(x + y > z) is "</span> + (x + y > z));
+      }
+    }
+</pre>
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.25</span>
+Write a Boolean expression that evaluates to true if age is greater than 13 and less than 18.
+                </div>
+                <div id = "a24" class="answer"></div>
+                <button id = "b24" type="button" class = "button" onclick="submit24()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.26</span>
+Write a Boolean expression that evaluates to true if weight is greater than 50 pounds or height is greater than 60 inches.
+                </div>
+                <div id = "a25" class="answer"></div>
+                <button id = "b25" type="button" class = "button" onclick="submit25()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.27</span>
+Write a Boolean expression that evaluates to true if weight is greater than 50 pounds and height is greater than 60 inches.
+                </div>
+                <div id = "a26" class="answer"></div>
+                <button id = "b26" type="button" class = "button" onclick="submit26()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.28</span>
+Write a Boolean expression that evaluates to true if either weight is greater than 50 pounds or height is greater than 60 inches, but not both.
+                </div>
+                <div id = "a27" class="answer"></div>
+                <button id = "b27" type="button" class = "button" onclick="submit27()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.29</span>
+What data types are required for a switch variable? If the keyword break is not used after a case is processed, what is the next statement to be executed? Can you convert a switch statement to an equivalent if statement, or vice versa? What are the advantages of using a switch statement?
+                </div>
+                <div id = "a28" class="answer"></div>
+                <button id = "b28" type="button" class = "button" onclick="submit28()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.30</span>
+What is y after the following switch statement is executed? Rewrite the code using an if-else statement.
+<pre>
+    x = <span class = "constant">3</span>; y = <span class = "constant">3</span>;
+    <span class = "keyword">switch</span> (x + <span class = "constant">3</span>) {  
+      <span class = "keyword">case</span> 6:  y = <span class = "constant">1</span>;
+      default: y += <span class = "constant">1</span>;
+    }
+</pre>
+                </div>
+                <div id = "a29" class="answer"></div>
+                <button id = "b29" type="button" class = "button" onclick="submit29()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.31</span>
+What is x after the following if-else statement is executed? Use a switch statement to rewrite it and draw the flowchart for the new switch statement.
+<pre>
+    <span class = "keyword">int</span> x = <span class = "constant">1</span>, a = <span class = "constant">3</span>;
+    <span class = "keyword">if</span> (a == <span class = "constant">1</span>)
+      x += <span class = "constant">5</span>;
+    <span class = "keyword">else</span> <span class = "keyword">if</span> (a == <span class = "constant">2</span>)
+      x += <span class = "constant">10</span>;
+    <span class = "keyword">else</span> <span class = "keyword">if</span> (a == <span class = "constant">3</span>)
+      x += <span class = "constant">16</span>;
+    <span class = "keyword">else</span> <span class = "keyword">if</span> (a == <span class = "constant">4</span>)
+      x += <span class = "constant">34</span>;
+</pre>
+                </div>
+                <div id = "a30" class="answer"></div>
+                <button id = "b30" type="button" class = "button" onclick="submit30()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.32</span>
+Write a switch statement that displays Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, if day is 0, 1, 2, 3, 4, 5, 6, accordingly.
+                </div>
+                <div id = "a31" class="answer"></div>
+                <button id = "b31" type="button" class = "button" onclick="submit31()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.33</span>
+Suppose that, when you run the following program, you enter the input 2 3 6 from the console. What is the output?
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        java.util.Scanner input = <span class = "keyword">new</span> java.util.Scanner(System.in);
+        <span class = "keyword">double</span> x = input.nextDouble();
+        <span class = "keyword">double</span> y = input.nextDouble();
+        <span class = "keyword">double</span> z = input.nextDouble();
+
+        System.out.println((x &lt; y && y &lt; z) ? <span class = "literal">"sorted"</span> : <span class = "literal">"not sorted"</span>);
+      }
+    }
+</pre>
+                </div>
+                <div id = "a32" class="answer"></div>
+                <button id = "b32" type="button" class = "button" onclick="submit32()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.34</span>
+Rewrite the following if statements using the conditional operator.
+<pre>
+    <span class = "keyword">if</span> (ages >= <span class = "constant">16</span>)
+      ticketPrice = <span class = "constant">20</span>;
+    <span class = "keyword">else</span> 
+      ticketPrice = <span class = "constant">10</span>;
+</pre>
+                </div>
+                <div id = "a33" class="answer"></div>
+                <button id = "b33" type="button" class = "button" onclick="submit33()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.35</span>
+Rewrite the following conditional expressions using if-else statements. <br />
+a. score = (x > 10) ? 3 * scale : 4 * scale; <br />
+b. tax = (income > 10000) ? income * 0.2 : income * 0.17 + 1000; <br />
+c. System.out.println((number % 3 == 0) ? i : j);
+                </div>
+                <div id = "a34" class="answer"></div>
+                <button id = "b34" type="button" class = "button" onclick="submit34()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.36</span>
+Write conditional expression that returns -1 or 1 randomly.
+                </div>
+                <div id = "a35" class="answer"></div>
+                <button id = "b35" type="button" class = "button" onclick="submit35()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.37</span>
+List the precedence order of the Boolean operators. Evaluate the following expressions:
+<pre>
+    <span class = "keyword">true</span> || <span class = "keyword">true</span> && <span class = "keyword">false</span>
+    <span class = "keyword">true</span> && <span class = "keyword">true</span> || <span class = "keyword">false</span>
+</pre>
+                </div>
+                <div id = "a36" class="answer"></div>
+                <button id = "b36" type="button" class = "button" onclick="submit36()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.38</span>
+True or false? All the binary operators except = are left associative.
+                </div>
+                <div id = "a37" class="answer"></div>
+                <button id = "b37" type="button" class = "button" onclick="submit37()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.39</span>
+Evaluate the following expressions:
+<pre>
+    2 * <span class = "constant">2</span> - <span class = "constant">3</span> > <span class = "constant">2</span> && <span class = "constant">4</span> – <span class = "constant">2</span> > <span class = "constant">5</span>
+    2 * <span class = "constant">2</span> - <span class = "constant">3</span> > <span class = "constant">2</span> || <span class = "constant">4</span> – <span class = "constant">2</span> > <span class = "constant">5</span>
+</pre>
+                </div>
+                <div id = "a38" class="answer"></div>
+                <button id = "b38" type="button" class = "button" onclick="submit38()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">3.40</span>
+Is x > 0 && x &lt; 10 the 
+            same as x > 0 && x &lt; 10? <br />
+            Is x > 0 || x &lt; 10 the same as x > 0 || x &lt; 10? <br />
+            Is (x > 0 || x &lt; 10) && y &lt; 0 
+            the same as (x > 0 || (x &lt; 10 && y &lt; 0))?
+                </div>
+                <div id = "a39" class="answer"></div>
+                <button id = "b39" type="button" class = "button" onclick="submit39()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

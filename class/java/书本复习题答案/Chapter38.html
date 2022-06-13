@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'A JSP page must first be processed by a Web server before it can be displayed in a Web browser. The Web server must support JSP, and the JSP page must be stored in a file with a .jsp extension. The Web server translates the .jsp file into a Java servlet, compiles the servlet, and executes it. The result of the execution is sent to the browser for display. Figure 35.2 shows how a JSP page is processed by a Web server.\
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = 'For a JSP file to run from Tomcat, it must be placed in the Tomcat jsp directory such as c:\jakarta-tomcat-8.0.15\wepapps\examples\jsp (or you can specify another location in the Tomcat configuration file.)\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = 'You cannot display a JSP file by simply typing the file name, because JSP must be compiled into servlets and executed by a JSP-enabled Web server. \
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = 'A JSP expression is used to insert a Java expression directly into the output. It has the following form: \
+<pre>\n\
+    &lt;%= Java-expression %>\n\
+    </pre>\n\
+The expression is evaluated, converted into a string, and sent to the output stream of the servlet.\
+A JSP scriptlet enables you to insert a Java statement into the servlet’s jspService method, which is invoked by the service method. A JSP scriptlet has the following form:\
+<pre>\n\
+    &lt;% Java statement %> \n\
+</pre>\n\
+A JSP declaration is for declaring methods or fields into the servlet. It has the following form:\
+<pre>\n\
+    &lt;%! Java declaration %> \n\
+</pre>\n\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = 'Three errors: <br />\
+(1) &lt;%! int k %> must have a semicolon for Java statement to end <br />\
+(2) should have braces to enclose the statement inside the loop body even \
+            though there is only one statement. <br />\
+(3) &lt;%= j; %> &lt;br> should have no semicolon for JSP expression. <br />\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = '&lt;%! int k; %>  k is an instance variable because it is defined in the declaration\
+<pre>\n\
+    &lt;%! int i; %>  i is an instance variable \n\
+            because it is defined in the declaration\n\
+    &lt;% for (int j = 1; j &lt;= 9; j++) k += 1;%> \n\
+            k is a local variable because it is defined in the statement tag.\n\
+    &lt;%= k>&lt;br> &lt;%= i>&lt;br> &lt;%= getTime()>&lt;br>\n\
+    &lt;% private long getTime() { \n\
+         long time = System.currentTimeMillis();  time is a local variable\n\
+         return time; } %>\n\
+</pre>\n\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'You can use variables in JSP. For convenience, JSP provides eight predefined variables from the servlet environment that can be used with JSP expressions and scriptlets. These variables are also known as JSP implicit objects. The predefined variables are request, response, out, session, application, config, and page.\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = 'No. Because they are local variables in the service method. \
+            The predefined variables (e.g., request, response, out) correspond to local \
+            variables defined in the servlet methods doGet and doPost. They must appear in\
+            JSP scriplet, not in JSP declaration.\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'Same reason as in 8.\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = 'A JSP directive is a statement that gives the JSP engine information \
+            about the JSP page. The page directive lets you provide information for the page,\
+            such as importing classes and setting up content type. The page directive can appear\
+            anywhere in the JSP file.\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'No. JDK 1.2 or higher requires a class to be in a package for it to be imported.\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'If you use a custom class from a JSP, it should be placed in c:\jakarta-tomcat-8.0.15\wepapps\examples\WEB-INF\classes\packageNameOfTheClass (or you may reconfigure Tomcat to specify a new location for class files).\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = 'The difference lies in the scope. JSP allows you to share the object of a class among different pages. However, the scope of object created using the new operator is limited to the page only.\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'The scope attribute specifies the scope of the object. Four scopes are page, application, session, and request.\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'When &lt;jsp:useBean id="objectName" scope="scopeAttribute" class="ClassName" /> is processed, the JSP engine first searches for the object of the class with the same id and scope. If found, the preexisting bean is used; otherwise, a new bean is created. \
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = 'Use &lt;jsp:setProperty name="beanId" property="*" /> for example.\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = 'Web applications developed using JSP generally consist of many pages linked together. JSP provides a forwarding tag in the following syntax that can be used to forward a page to another page.\
+<pre>\n\
+    &lt;jsp:forward page="destination" />\n\
+</pre>\n\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 38 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.1</span>
+What is the file-name extension of a JavaServer page? How is a JSP page processed?
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.2</span>
+Can you create a .war that contains JSP in NetBeans? Where should the .war be placed in a Java application server?
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.3</span>
+You can display an HTML file (e.g., c:\test.html) by typing the complete file name in the Address field of Internet Explorer. Why can’t you display a JSP file by simply typing the file name?
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.4</span>
+What are a JSP expression, a JSP scriptlet, and a JSP declaration? How do you write these constructs in JSP?
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.5</span>
+Find three syntax errors in the following JSP code:
+<pre>
+    &lt;%! <span class = "keyword">int</span> k %>
+    &lt;% <span class = "keyword">for</span> (<span class = "keyword">int</span> j = <span class = "constant">1</span>; j &lt;= <span class = "constant">9</span>; j++) %>
+       &lt;%= j; %> &lt;br />
+</pre>
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.6</span>
+In the following JSP, which variables are instance variables and which are local variables when it is translated into in the servlet?
+<pre>
+    &lt;%! <span class = "keyword">int</span> k; %>
+    &lt;%! <span class = "keyword">int</span> i; %>
+    &lt;% <span class = "keyword">for</span> (<span class = "keyword">int</span> j = <span class = "constant">1</span>; j &lt;= <span class = "constant">9</span>; j++) k += <span class = "constant">1</span>;%>
+    &lt;%= k>&lt;br /> &lt;%= i>&lt;br /> &lt;%= getTime()>&lt;br />
+    &lt;% <span class = "keyword">private</span> <span class = "keyword">long</span> getTime() { 
+         <span class = "keyword">long</span> time = System.currentTimeMillis();
+         <span class = "keyword">return</span> time; 
+       } %>
+</pre>
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.7</span>
+Describe the predefined variables in JSP.
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.8</span>
+What is wrong if the JSP scriptlet &lt;% in line 7 in ComputeLoan.jsp (Listing 38.3) is replaced by JSP declaration &lt;%!?
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.9</span>
+Can you use predefined variables (e.g., request, response, out) in JSP declarations?
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.10</span>
+Describe the JSP directives and attributes for the page directive.
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.11</span>
+If a class does not have a package statement, can you import it?
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.12</span>
+If you use a custom class from a JSP, where should the class be placed?
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.13</span>
+You can create an object in a JSP scriptlet. What is the difference between 
+an object created using the new operator and a bean created using the &lt;jsp:useBean ... > tag?
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.14</span>
+What is the scope attribute for? Describe four scope attributes.
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.15</span>
+Describe how a &lt;jsp:useBean ... > statement is processed by the JSP engine.
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.16</span>
+How do you associate bean properties with input parameters?
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">38.17</span>
+How do you write a statement to forward requests to another JSP page?
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

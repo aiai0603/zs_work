@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'See the section "Array Basics."\
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = 'The memory is allocated when an array is created.\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = '\
+<pre>\n\
+x is 60\n\
+The size of numbers is 30\n\
+</pre>\n\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = '(a)\
+			Answer: True <br />\
+\
+		(b) Answer: False <br />\
+ \
+		(c) Answer: True <br />\
+\
+		(d) Answer: False \
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = '<pre>\n\
+int i = new int(30);\n\
+Answer: Invalid\n\
+\n\
+double d[] = new double[30];\n\
+Answer: Valid\n\
+\n\
+char[] r = new char(1..30);\n\
+Answer: Invalid\n\
+\n\
+int i[] = (3, 4, 3, 2);\n\
+Answer: Invalid\n\
+\n\
+float f[] = {2.3, 4.5, 5.6};\n\
+Answer: Valid\n\
+\n\
+char[] c = new char();\n\
+Answer: Invalid\n\
+            </pre>\n\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = 'You access an array using its index. arrayRefVar[index] is known as an array indexed variable.\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'The array index type is int and its lowest index is 0. \
+ 	<pre>\n\
+a[2]\n\
+            </pre>\n\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = '<pre>\n\
+(a)  	double[] list = new double[10];\n\
+(b)  	list[list.length – 1] = 5.5;\n\
+(c)  	System.out.println(list[0] + list[1]);\n\
+(d)  	double sum = 0;\n\
+        for (int i = 0; i &lt; list.length; i++)\n\
+          sum += list[i];\n\
+(e)     double min = list[0];\n\
+        for (int i = 1; i &lt; list.length; i++)\n\
+           if (min > list[i])  min = list[i];\n\
+(f)     System.out.println(list[(int)(Math.random() * list.length)]);\n\
+(g)     double[] list = {3.5, 5.5, 4.52, 5.6};\n\
+                </pre>\n\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'A runtime exception ArrayIndexOutOfBounds occurs.\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = '\
+Line 3: the array declaration is wrong. It should be double[]. The array needs to be created before its been used. e.g. new double[10] <br />\
+Line 5: The semicolon (;) at the end of the for loop heading should be removed.  <br />\
+Line 5: r.length() should be r.length. <br />\
+Line 6: random should be random()  <br />\
+Line 6: r(i) should be r[i].\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = '<pre>\n\
+1 1 1 1 1 1 \n\
+</pre>\n\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'No. You may the same card more than once. \
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = '\
+<pre>\n\
+System.arraycopy(source, 0, t, 0, source.length);\n\
+</pre>\n\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'The second assignment statement myList = new int[20] creates a new array and assigns its reference to myList. <br />\
+<img src="IMAGE7_14.png" height="138" width="402"/>\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'It swaps the elements twice. For example, the first element is swapped with the last element once and then the last element is swapped with the first element another time. In effect, the elements are not swapped. Here is the fix:\
+<pre>\n\
+  int[] list = {1, 2, 3, 5, 4};\n\
+\n\
+  for (int i = 0, j = list.length - 1; i &lt; list.length / 2; i++, j--) {\n\
+    // Swap list[i] with list[j]\n\
+    int temp = list[i];\n\
+    list[i] = list[j];\n\
+    list[j] = temp;\n\
+  }\n\
+</pre>\n\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = 'False. When an array is passed to a method, the reference value of the array is passed. No new array is created. Both argument and parameter point to the same array.\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = '(a)	number is 0 and numbers[0] is 3 <br />\
+(b)	1 2 3 4 5\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = '<img src="IMAGE7_18.png" height="438" width="502"/>\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = 'Only one variable-length parameter may be specified in a method and this parameter must be the last parameter. The method return type cannot be a variable-length parameter.\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = 'The last one \
+    <pre>\n\
+printMax(new int[]{1, 2, 3});\n\
+            </pre>\n\
+    is incorrect, because the array must of the double[] type.\
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = 'Replace (low + high) / 2 with (-low + high) / 2 + low\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = 'Omitted\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = 'The key is not in the list. The key should be inserted at –(-4 + 1) = 3.\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = 'Omitted\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+<script>var answer24 = 'Omitted\
+';function submit24() {if (document.getElementById('b24').innerHTML == 'Show Answer') {document.getElementById('a24').innerHTML = answer24;document.getElementById('b24').style.background = 'gray'; document.getElementById('b24').innerHTML = 'Hide Answer'; }else {document.getElementById('a24').innerHTML = '';
+document.getElementById('b24').style.background = 'green'; document.getElementById('b24').innerHTML = 'Show Answer';} }</script>
+<script>var answer25 = 'You can sort an array of any primitive types except boolean. The sort method is void, so it does not return a new array.\
+';function submit25() {if (document.getElementById('b25').innerHTML == 'Show Answer') {document.getElementById('a25').innerHTML = answer25;document.getElementById('b25').style.background = 'gray'; document.getElementById('b25').innerHTML = 'Hide Answer'; }else {document.getElementById('a25').innerHTML = '';
+document.getElementById('b25').style.background = 'green'; document.getElementById('b25').innerHTML = 'Show Answer';} }</script>
+<script>var answer26 = 'To apply java.util.Arrays.binarySearch(array, key), the array must be sorted in increasing order.\
+';function submit26() {if (document.getElementById('b26').innerHTML == 'Show Answer') {document.getElementById('a26').innerHTML = answer26;document.getElementById('b26').style.background = 'gray'; document.getElementById('b26').innerHTML = 'Hide Answer'; }else {document.getElementById('a26').innerHTML = '';
+document.getElementById('b26').style.background = 'green'; document.getElementById('b26').innerHTML = 'Show Answer';} }</script>
+<script>var answer27 = '\
+<pre>\n\
+[7, 7, 7, 7]\n\
+[2, 4, 7, 10]\n\
+False\n\
+            </pre>\n\
+';function submit27() {if (document.getElementById('b27').innerHTML == 'Show Answer') {document.getElementById('a27').innerHTML = answer27;document.getElementById('b27').style.background = 'gray'; document.getElementById('b27').innerHTML = 'Hide Answer'; }else {document.getElementById('a27').innerHTML = '';
+document.getElementById('b27').style.background = 'green'; document.getElementById('b27').innerHTML = 'Show Answer';} }</script>
+<script>var answer28 = '<pre>\n\
+public static void main(String[] args)\n\
+</pre>\n\
+can be replaced by \
+<pre>\n\
+public static void main(String args[])\n\
+\n\
+public static void main(String[] x)\n\
+\n\
+public static void main(String x[])\n\
+</pre>\n\
+but not\
+<pre>\n\
+static void main(String x[])\n\
+</pre>\n\
+because it is not public.\
+';function submit28() {if (document.getElementById('b28').innerHTML == 'Show Answer') {document.getElementById('a28').innerHTML = answer28;document.getElementById('b28').style.background = 'gray'; document.getElementById('b28').innerHTML = 'Hide Answer'; }else {document.getElementById('a28').innerHTML = '';
+document.getElementById('b28').style.background = 'green'; document.getElementById('b28').innerHTML = 'Show Answer';} }</script>
+<script>var answer29 = '\
+<pre>\n\
+(1) \n\
+Number of strings is 4\n\
+I\n\
+have\n\
+a\n\
+dream\n\
+\n\
+(2) \n\
+Number of strings is 1\n\
+1 2 3\n\
+\n\
+(3) \n\
+Number of strings is 0\n\
+</pre>\n\
+';function submit29() {if (document.getElementById('b29').innerHTML == 'Show Answer') {document.getElementById('a29').innerHTML = answer29;document.getElementById('b29').style.background = 'gray'; document.getElementById('b29').innerHTML = 'Hide Answer'; }else {document.getElementById('a29').innerHTML = '';
+document.getElementById('b29').style.background = 'green'; document.getElementById('b29').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 7 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.1</span>
+How do you declare an array reference variable and how do you create an array?
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.2</span>
+When is the memory allocated for an array?
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.3</span>
+What is the output of the following code?
+<pre>
+    <span class = "keyword">int</span> x = <span class = "constant">30</span>;
+    <span class = "keyword">int</span>[] numbers = <span class = "keyword">new</span> <span class = "keyword">int</span>[x];
+    x = <span class = "constant">60</span>;
+    System.out.println(<span class = "literal">"x is "</span> + x);
+    System.out.println(<span class = "literal">"The size of numbers is "</span> + numbers.length);
+</pre>
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.4</span>
+Indicate true or false for the following statements: <br />
+(a) Every element in an array has the same type. <br />
+(b) The array size is fixed after an array reference variable is declared. <br />
+(c) The array size is fixed after it is created. <br />
+(d) The elements in an array must be a primitive data type.
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.5</span>
+Which of the following statements are valid?
+<pre>
+    <span class = "keyword">int</span> i = <span class = "keyword">new</span> <span class = "keyword">int</span>(<span class = "constant">30</span>);
+    <span class = "keyword">double</span> d[] = <span class = "keyword">new</span> <span class = "keyword">double</span>[<span class = "constant">30</span>];
+    <span class = "keyword">char</span>[] r = <span class = "keyword">new</span> <span class = "keyword">char</span>(<span class = "constant">1</span>.<span class = "literal">.</span><span class = "constant">30</span>);
+    <span class = "keyword">int</span> i[] = (<span class = "constant">3</span>, <span class = "constant">4</span>, <span class = "constant">3</span>, <span class = "constant">2</span>);
+    <span class = "keyword">float</span> f[] = {<span class = "constant">2</span><span class = "literal">.</span><span class = "constant">3</span>, <span class = "constant">4</span><span class = "literal">.</span><span class = "constant">5</span>, <span class = "constant">6</span><span class = "literal">.</span><span class = "constant">6</span>};
+    <span class = "keyword">char</span>[] c = <span class = "keyword">new</span> <span class = "keyword">char</span>();
+</pre>
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.6</span>
+How do you access elements in an array? 
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.7</span>
+What is the array index type? What is the lowest index? What is the representation of the third element in an array named a?
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.8</span>
+Write statements to do the following: <br />
+a. Create an array to hold 10 double values. <br />
+b. Assign the value 5.5 to the last element in the array. <br />
+c. Display the sum of the first two elements. <br />
+d. Write a loop that computes the sum of all elements in the array. <br />
+e. Write a loop that finds the minimum element in the array. <br />
+f. Randomly generate an index and display the element of this index in the array. <br />
+g. Use an array initializer to create another array with the initial values 3.5, 5.5, 4.52, and 5.6. 
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.9</span>
+What happens when your program attempts to access an array element with an invalid index?
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.10</span>
+Identify and fix the errors in the following code:
+<pre>
+ 1  <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+ 2    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+ 3      <span class = "keyword">double</span>[<span class = "constant">100</span>] r;
+ 4
+ 5      <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; r.length(); i++);
+ 6        r(i) = Math.random * <span class = "constant">100</span>;
+ 7    }
+ 8  }
+</pre>
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.11</span>
+What is the output of the following code?
+<pre>
+ 1  <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+ 2    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+ 3      <span class = "keyword">int</span> list[] = {<span class = "constant">1</span>, <span class = "constant">2</span>, <span class = "constant">3</span>, <span class = "constant">4</span>, <span class = "constant">5</span>, <span class = "constant">6</span>};
+ 4      <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">1</span>; i &lt; list.length; i++)
+ 5        list[i] = list[i - <span class = "constant">1</span>];
+ 6
+ 7      <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; list.length; i++)
+ 8        System.out.print(list[i] + <span class = "literal">" "</span>);
+ 9    }
+10  }
+</pre>
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.12</span>
+Will the program pick four random cards if you replace 
+            lines 22–27 in Listing 7.2 DeckOfCards.java with the following code? 
+<pre>
+      <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; <span class = "constant">4</span>; i++) {
+        <span class = "keyword">int</span> cardNumber = (<span class = "keyword">int</span>)(Math.random() * deck.length);
+        String suit = suits[cardNumber / <span class = "constant">13</span>]; 
+        String rank = ranks[cardNumber % <span class = "constant">13</span>]; 
+        System.out.println(<span class = "literal">"Card number "</span> + cardNumber + <span class = "literal">": "</span> 
+          + rank + <span class = "literal">" of "</span> + suit);
+      }
+</pre>
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.13</span>
+Use the arraycopy method to copy the following array to a target array t:
+<pre>
+            <span class = "keyword">int</span>[] source = {<span class = "constant">3</span>, <span class = "constant">4</span>, <span class = "constant">5</span>};
+</pre>
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.14</span>
+Once an array is created, its size cannot be changed. Does the following code resize the array?
+<pre>
+    <span class = "keyword">int</span>[] myList;
+    myList = <span class = "keyword">new</span> <span class = "keyword">int</span>[<span class = "constant">10</span>];
+    <span class = "comment">// Sometime later you want to assign a new array to myList</span>
+    myList = <span class = "keyword">new</span> <span class = "keyword">int</span>[<span class = "constant">20</span>];
+</pre>
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.15</span>
+Suppose the following code is written to reverse the contents in an array, explain why it is wrong. How do you fix it?
+<pre>
+  <span class = "keyword">int</span>[] list = {<span class = "constant">1</span>, <span class = "constant">2</span>, <span class = "constant">3</span>, <span class = "constant">5</span>, <span class = "constant">4</span>};
+
+  <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>, j = list.length - <span class = "constant">1</span>; i &lt; list.length; i++, j--) {
+    <span class = "comment">// Swap list[i] with list[j]</span>
+    <span class = "keyword">int</span> temp = list[i];
+    list[i] = list[j];
+    list[j] = temp;
+  }
+</pre>
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.16</span>
+True or false? When an array is passed to a method, a new array is created and passed to the method.
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.17</span>
+Show the output of the following two programs:
+<pre>
+(a)
+<span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+    <span class = "keyword">int</span> number = <span class = "constant">0</span>;
+    <span class = "keyword">int</span>[] numbers = <span class = "keyword">new</span> <span class = "keyword">int</span>[<span class = "constant">1</span>];
+
+    m(number, numbers);
+
+    System.out.println(<span class = "literal">"number is "</span> + number
+      + <span class = "literal">" and numbers[<span class = "constant">0</span>] is "</span> + numbers[<span class = "constant">0</span>]);
+  }
+
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> m(<span class = "keyword">int</span> x, <span class = "keyword">int</span>[] y) {
+    x = <span class = "constant">3</span>;
+    y[<span class = "constant">0</span>] = <span class = "constant">3</span>;
+  }
+} 
+
+(b)
+<span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+    <span class = "keyword">int</span>[] list = {<span class = "constant">1</span>, <span class = "constant">2</span>, <span class = "constant">3</span>, <span class = "constant">4</span>, <span class = "constant">5</span>};
+    reverse(list);
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; list.length; i++)
+      System.out.print(list[i] + <span class = "literal">" "</span>);
+  }
+
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> reverse(<span class = "keyword">int</span>[] list) {
+    <span class = "keyword">int</span>[] newList = <span class = "keyword">new</span> <span class = "keyword">int</span>[list.length];
+
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; list.length; i++)
+      newList[i] = list[list.length - <span class = "constant">1</span> - i];
+
+    list = newList;
+  }
+}
+</pre>
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.18</span>
+Where are the arrays stored during execution? Show the contents of the stack and heap during and after executing displayArray, 
+            countLetters, displayCounts in Listing 7.4.
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.19</span>
+What is wrong with each of the following method headers?
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> print(String... strings, <span class = "keyword">double</span>... numbers)
+    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> print(<span class = "keyword">double</span>... numbers, String name)
+    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">double</span>... print(<span class = "keyword">double</span> d1, <span class = "keyword">double</span> d2)
+</pre>
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.20</span>
+Can you invoke the printMax method in Listing 7.5 using the following statements?
+<pre>
+    printMax(<span class = "constant">1</span>, <span class = "constant">2</span>, <span class = "constant">2</span>, <span class = "constant">1</span>, <span class = "constant">4</span>);
+    printMax(<span class = "keyword">new</span> <span class = "keyword">double</span>[]{<span class = "constant">1</span>, <span class = "constant">2</span>, <span class = "constant">3</span>});
+    printMax(<span class = "keyword">new</span> <span class = "keyword">int</span>[]{<span class = "constant">1</span>, <span class = "constant">2</span>, <span class = "constant">3</span>});
+</pre>
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.21</span>
+If high is a very large integer such as the maximum int value 2147483647, 
+            (low + high) / 2 may cause overflow. How do you fix it to avoid overflow?
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.22</span>
+Use Figure 7.9 as an example to show how to apply 
+            the binary search approach to a search for key 10 and key 12 in list {2, 4, 7, 10, 11, 45, 50, 59, 60, 66, 69, 70, 79}.
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.23</span>
+If the binary search method returns -4, is the key in the list? 
+            Where should the key be inserted if you wish to insert the key into the list?
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.24</span>
+Use Figure 7.11 as an example to show how to apply 
+            the selection-sort approach to sort {3.4, 5, 3, 3.5, 2.2, 1.9, 2}.
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.25</span>
+How do you modify the selectionSort method in 
+            Listing 7.8 to sort numbers in decreasing order?
+                </div>
+                <div id = "a24" class="answer"></div>
+                <button id = "b24" type="button" class = "button" onclick="submit24()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.26</span>
+What types of array can be sorted using 
+            the java.util.Arrays.sort method? Does this sort method create a new array?
+                </div>
+                <div id = "a25" class="answer"></div>
+                <button id = "b25" type="button" class = "button" onclick="submit25()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.27</span>
+To apply java.util.Arrays.binarySearch(array, key), 
+            should the array be sorted in increasing order, in decreasing order, or neither?
+                </div>
+                <div id = "a26" class="answer"></div>
+                <button id = "b26" type="button" class = "button" onclick="submit26()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.28</span>
+Show the output of the following code:
+<pre>
+    <span class = "keyword">int</span>[] list1 = {<span class = "constant">2</span>, <span class = "constant">4</span>, <span class = "constant">7</span>, <span class = "constant">10</span>};
+    java.util.Arrays.fill(list1, <span class = "constant">7</span>);
+    System.out.println(java.util.Arrays.toString(list1));
+
+    <span class = "keyword">int</span>[] list2 = {<span class = "constant">2</span>, <span class = "constant">4</span>, <span class = "constant">7</span>, <span class = "constant">10</span>};
+    System.out.println(java.util.Arrays.toString(list2));
+    System.out.print(java.util.Arrays.equals(list1, list2));
+</pre>
+                </div>
+                <div id = "a27" class="answer"></div>
+                <button id = "b27" type="button" class = "button" onclick="submit27()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.29</span>
+This book text declares the main method as
+<pre>
+        <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args)
+</pre>
+Can it be replaced by one of the following lines?
+<pre>
+        <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String args[])
+        <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] x)
+        <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String x[])
+        <span class = "keyword">static</span> <span class = "keyword">void</span> main(String x[])
+</pre>
+                </div>
+                <div id = "a28" class="answer"></div>
+                <button id = "b28" type="button" class = "button" onclick="submit28()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">7.30</span>
+Show the output of the following program when invoked using <br />
+1. java Test I have a dream  <br />
+2. java Test “1 2 3”  <br />
+3. java Test
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {  
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        System.out.println(<span class = "literal">"Number of strings is "</span> + args.length);
+        <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; args.length; i++) 
+          System.out.println(args[i]);
+      }
+    }
+</pre>
+                </div>
+                <div id = "a29" class="answer"></div>
+                <button id = "b29" type="button" class = "button" onclick="submit29()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

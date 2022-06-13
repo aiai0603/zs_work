@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'AVL trees are well-balanced. In an AVL tree, the difference between the \
+            heights of two subtrees for every node is 0 or 1. <br />\
+        The balance factor of a node is the height of its right subtree minus the height of its left subtree. A node is said to be balanced if its balance factor is -1, 0, or 1. A node is said to be left-heavy if its balance factor is -1. A node is said to be right-heavy if its balance factor is +1.\
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = '<img src="IMAGE26_2.png" height="200" width="400"/>\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = 'If a node is not balanced after an insertion or deletion operation, you need to rebalance it. The process of rebalancing a node is called a rotation. There are four possible rotations: LL, LR, RR, and RL.\
+<br />\
+            An LL imbalance occurs at a node A such that A has a balance factor -2 and a left child B with a balance factor -1 or 0. This type of imbalance can be fixed by performing a single right rotation at A.\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = 'AVLTreeNode inherits from TreeNode. The height is a new data field defined in AVLTreeNode. The data fields in TreeNode are left and right, pointing to the left and right subtree.\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = 'True\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = 'True\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'After inserting 40, node 55 is unbalanced, perform LL rotation. The resulting tree is\
+        <br />\
+        <img src="IMAGE26_7.png" height="200" width="200"/>\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = 'After inserting 50, node 55 is unbalanced, perform LR rotation. The resulting tree is <br />\
+            <img src="IMAGE26_8.png" height="200" width="200"/>\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'After inserting 80, node 67 is unbalanced, perform RL rotation. \
+            The resulting tree is <br />\
+            <img src="IMAGE26_9.png" height="200" width="200"/>\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = 'After inserting 89, node 67 is unbalanced, perform RR rotation. \
+            The resulting tree is <br />\
+               <img src="IMAGE26_10.png" height="200" width="200"/>\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'After deleting 107, node 100 is unbalanced, perform LR rotation. The resulting tree is <br />\
+        <img src="IMAGE26_11.png" height="200" width="200"/>\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'After deleting 60, node 55 is unbalanced, perform RL rotation. The resulting tree is <br />\
+        <img src="IMAGE26_12.png" height="400" width="400"/>\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = 'After deleting 55, node 60 is unbalanced, perform LR rotation. The resulting tree is\
+        <br />\
+        <img src="IMAGE26_13.png" height="400" width="400"/>\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'After deleting 67 and 87 in Figure 29.6b, node 100 is unbalanced, perform RR rotation. The resulting tree is\
+        <br />\
+        <img src="IMAGE26_14.png" height="400" width="400"/>\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'In the BSTree class, the createNewNode() method creates a TreeNode object. This method is defined protected in BinaryTree. It is overridden in the AVLTree class to create an AVLTreeNode. \
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = 'updateHeight(AVLTreeNode&lt;E>) is invoked to update the height of a node. It is invoked to rebalance the tree. balanceFactor is invoked to check the balance factor of a node. It is invoked when a path is rebalanced. balancePath is invoked along the path where a new node is inserted or a node is deleted.\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = 'All data fields defined in the BST class are inherited in the AVLTree class. The AVLTree class does not define new data fields.\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = 'No.\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = '<img src="IMAGE26_19.png" height="800" width="500"/>\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = '<img src="IMAGE26_2.png" height="200" width="400"/>0\
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = 'Yes.\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = 'What is the maximum/minimum height for an AVL tree of 3 nodes is 2/2, for 5 nodes is 3/3, for 7 nodes is 4/3?\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = 'If an AVL tree has a height of 3, what maximum number of nodes can the tree have? 7. What minimum number of nodes can the tree have? 4\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = 'If an AVL tree has a height of 4, what maximum number of nodes can the tree have? 15. What minimum number of nodes can the tree have? 7\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 26 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.1</span>
+What is an AVL tree? Describe the following terms: balance factor, left-heavy, and right-heavy.
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.2</span>
+Show the balance factor of each node in the trees shown in Figure 26.6.
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.3</span>
+Describe LL rotation, RR rotation, LR rotation, and RL rotation for an AVL tree.
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.4</span>
+What are the data fields in the AVLTreeNode class?
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.5</span>
+True or false: AVLTreeNode is a subclass of TreeNode?
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.6</span>
+True or false: AVLTree is a subclass of BST.
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.7</span>
+For the AVL tree in Figure 26.6a, show the new AVL tree after adding element 40. What rotation do you perform in order to rebalance the tree? Which node was unbalanced?
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.8</span>
+For the AVL tree in Figure 26.6a, show the new AVL tree after adding element 50. What rotation do you perform in order to rebalance the tree? Which node was unbalanced?
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.9</span>
+For the AVL tree in Figure 26.6a, show the new AVL tree after adding element 80. What rotation do you perform in order to rebalance the tree? Which node was unbalanced?
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.10</span>
+For the AVL tree in Figure 26.6a, show the new AVL tree after adding element 89. What rotation do you perform in order to rebalance the tree? Which node was unbalanced?
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.11</span>
+For the AVL tree in Figure 26.6a, show the new AVL tree after deleting element 107. What rotation do you perform in order to rebalance the tree? Which node was unbalanced?
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.12</span>
+For the AVL tree in Figure 26.6a, show the new AVL tree after deleting element 60. What rotation do you perform in order to rebalance the tree? Which node was unbalanced?
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.13</span>
+For the AVL tree in Figure 26.6a, show the new AVL tree after deleting element 55. What rotation did you perform in order to rebalance the tree? Which node was unbalanced?
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.14</span>
+For the AVL tree in Figure 26.6b, show the new AVL tree after deleting elements 67 and 87. What rotation did you perform in order to rebalance the tree? Which node was unbalanced?
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.15</span>
+Why is the createNewNode method defined protected?
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.16</span>
+When is the updateHeight method invoked? When is the balanceFactor method invoked? When is the balancePath method invoked?
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.17</span>
+What are data fields in the AVLTree class?
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.18</span>
+In the insert and delete methods, once you have performed a rotation to balance a node in the tree, is it possible that there are still unbalanced nodes?
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.19</span>
+Show the change of an AVL tree when inserting 1, 2, 3, 4, 10, 9, 7, 5, 8, 6 into the tree, in this order.
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.20</span>
+For the tree built in the preceding question, show its change after 1, 2, 3, 4, 10, 9, 7, 5, 8, 6 are deleted from the tree in this order.
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.21</span>
+Can you traverse the elements in an AVL tree using a foreach loop?
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.22</span>
+What is the maximum/minimum height for an AVL tree of 3 nodes, 5 nodes, and 7 nodes?
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.23</span>
+If an AVL tree has a height of 3, what maximum number of nodes can the tree have? What minimum number of nodes can the tree have?
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">26.24</span>
+If an AVL tree has a height of 4, what maximum number of nodes can the tree have? What minimum number of nodes can the tree have?
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

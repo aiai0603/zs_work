@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = '\
+Line 2: Missing static for the main method. <br />\
+Line 2: string should be String. <br />\
+Lines 7-8: The string cannot be broken into two lines. \
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = 'Use \
+            <pre>\n\
+Scanner input = new Scanner(System.in);\n\
+double value = input.nextDouble();\n\
+            </pre>\n\
+A runtime error will occur if you entered 5a when executing the following code:\
+            <pre>\n\
+double radius = input.nextDouble();\n\
+            </pre>\n\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = 'No\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = 'Valid identifiers:\
+<pre>\n\
+miles, Test, $4, apps, x, y, radius\n\
+</pre>\n\
+Invalid identifiers: \
+<pre>\n\
+a++, --a, 4#R, #44, class, public, int\n\
+</pre>\n\
+Keywords: \
+<pre>\n\
+class, public, int \n\
+</pre>\n\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = 'Line 3: k is undefined.\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = 'Note that the statement int i = j = k = 2 in line 3 only declares i.\
+            j and k are not declared. The following \
+            line would declare i, j, and k:\
+          <pre>\n\
+int i, j, k;\n\
+</pre>  \n\
+            \
+To fix the error, change line 3 to \
+<pre>\n\
+int j, k;\n\
+int i = j = k = 2;\n\
+</pre>\n\
+\
+            or                   \
+<pre>\n\
+int i = 2;\n\
+int j = 2;\n\
+int k = 2;\n\
+</pre>\n\
+            or\
+<pre>\n\
+int i = 2, j = 2, k = 2;\n\
+</pre>\n\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'There are three benefits of using constants: <br />\
+            (1) you don&#39;t have to repeatedly type the same value; <br />\
+            (2) the value can be changed in a single location, if necessary; <br />\
+            (3) the program is easy to read.\
+            <pre>\n\
+final int SIZE = 20;\n\
+            </pre>\n\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = 'Class names: Capitalize the first letter in each name.<br />\
+Variables and method names: Lowercase the first word, capitalize the first letter in all subsequent words.<br />\
+		Constants: Capitalize all letters.<br />\
+Constant: <span class="code"> MAX_VALUE </span> <br />\
+Method or variable: <span class="code"> read </span>, <span class="code"> readDouble </span> <br />\
+Class name: <span class="code"> Test </span> \
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = '<pre>\n\
+double miles = 100;\n\
+final double KILOMETERS_PER MILE = 1.609;\n\
+double kilometers = KILOMETERS_PER MILE * miles;\n\
+System.out.println(kilometers);\n\
+</pre>\n\
+The value of kilometers is 160.9.\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = 'For byte, from -128 to 127, inclusive. <br />\
+For short, from -32768 to 32767, inclusive. <br />\
+For int, from -2147483648 to 2147483647, inclusive. <br />\
+For long, from -9223372036854775808 to 9223372036854775807. <br />\
+For float, the smallest positive float is 1.40129846432481707e-45 and the largest float is 3.40282346638528860e+38. <br />\
+For double, the smallest positive double is 4.94065645841246544e-324 and the largest double is 1.79769313486231570e+308d. \
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = '\
+<pre>\n\
+2\n\
+2\n\
+-4\n\
+-4\n\
+0\n\
+1\n\
+            </pre>\n\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = '(2 + 100) % 7 = 4. So it is Thursday.\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = '25 / 4 is 6. If you want the quotient to be a floating-point number, rewrite it as 25.0 / 4.0, 25.0 / 4, or 25 / 4.0.\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = '\
+<pre>\n\
+8\n\
+10\n\
+4\n\
+5\n\
+</pre>\n\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'Yes, the statements are correct. The output is \
+<pre>\n\
+25 / 4 is 6\n\
+25 / 4.0 is 6.25\n\
+3 * 2 / 4 is 1\n\
+3.0 * 2 / 4 is 1.5\n\
+</pre>\n\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = 'Math.pow(2, 3.5)\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = '1.0 * m * (r * r)\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = 'A float value has 7-8 number of accurate digits and a double value has 15-17 number of accurate digits.\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = 'All can be used as literals for floating-point numbers.\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = '5.2534e+1, 0.52534e+2, 525.34e-1 are the same as 52.534.\
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = '5_2534e+1, and 5_2, are correct.\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = '(a)	4.0 / (3 * (r + 34)) – 9.0 / (a + b * c) + (3 + d * (2 + a) )/ (a + b * d)  <br />\
+(b) 5.5 * Math.pow(r + 2.5, 2.5 + t)\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = '	long totalMills = System.currentTimeMillis() returns the milliseconds since Jan 1, 1970.  <br />\
+	long totalSeconds = totalMills / 1000 returns the total seconds.  <br />\
+	long totalMinutes = totalSeconds / 60 returns the total minutes.   <br />\
+	totalSeconds % 60 returns the current second. <br />\
+	totalMinutes % 60 returns the current minute. <br />\
+	totalMinutes / 60 % 24 returns the current hour.\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = '\
+<pre>\n\
+14.0\n\
+3.0\n\
+</pre>\n\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+<script>var answer24 = 'b and c are true.\
+';function submit24() {if (document.getElementById('b24').innerHTML == 'Show Answer') {document.getElementById('a24').innerHTML = answer24;document.getElementById('b24').style.background = 'gray'; document.getElementById('b24').innerHTML = 'Hide Answer'; }else {document.getElementById('a24').innerHTML = '';
+document.getElementById('b24').style.background = 'green'; document.getElementById('b24').innerHTML = 'Show Answer';} }</script>
+<script>var answer25 = '\
+<pre>\n\
+7\n\
+6\n\
+7\n\
+7\n\
+</pre>\n\
+';function submit25() {if (document.getElementById('b25').innerHTML == 'Show Answer') {document.getElementById('a25').innerHTML = answer25;document.getElementById('b25').style.background = 'gray'; document.getElementById('b25').innerHTML = 'Hide Answer'; }else {document.getElementById('a25').innerHTML = '';
+document.getElementById('b25').style.background = 'green'; document.getElementById('b25').innerHTML = 'Show Answer';} }</script>
+<script>var answer26 = 'Yes. Different types of numeric values can be used in the same computation through numeric conversions referred to as casting.\
+';function submit26() {if (document.getElementById('b26').innerHTML == 'Show Answer') {document.getElementById('a26').innerHTML = answer26;document.getElementById('b26').style.background = 'gray'; document.getElementById('b26').innerHTML = 'Hide Answer'; }else {document.getElementById('a26').innerHTML = '';
+document.getElementById('b26').style.background = 'green'; document.getElementById('b26').innerHTML = 'Show Answer';} }</script>
+<script>var answer27 = 'The fractional part is truncated. Casting does not change the variable being cast.\
+';function submit27() {if (document.getElementById('b27').innerHTML == 'Show Answer') {document.getElementById('a27').innerHTML = answer27;document.getElementById('b27').style.background = 'gray'; document.getElementById('b27').innerHTML = 'Hide Answer'; }else {document.getElementById('a27').innerHTML = '';
+document.getElementById('b27').style.background = 'green'; document.getElementById('b27').innerHTML = 'Show Answer';} }</script>
+<script>var answer28 = '\
+<pre>\n\
+f is 12.5\n\
+i is 12\n\
+</pre>\n\
+';function submit28() {if (document.getElementById('b28').innerHTML == 'Show Answer') {document.getElementById('a28').innerHTML = answer28;document.getElementById('b28').style.background = 'gray'; document.getElementById('b28').innerHTML = 'Hide Answer'; }else {document.getElementById('a28').innerHTML = '';
+document.getElementById('b28').style.background = 'green'; document.getElementById('b28').innerHTML = 'Show Answer';} }</script>
+<script>var answer29 = '    \
+The answer is 11 <br />\
+\
+Here is the reason: <br />\
+<pre>\n\
+tax = purchaseAmount * 0.06 = 197.556 * 0.06 = 11.85336\n\
+tax * 100 = 1185.336 \n\
+(int)(tax * 100) = 1185\n\
+1185/ 100 = 11\n\
+</pre>\n\
+';function submit29() {if (document.getElementById('b29').innerHTML == 'Show Answer') {document.getElementById('a29').innerHTML = answer29;document.getElementById('b29').style.background = 'gray'; document.getElementById('b29').innerHTML = 'Hide Answer'; }else {document.getElementById('a29').innerHTML = '';
+document.getElementById('b29').style.background = 'green'; document.getElementById('b29').innerHTML = 'Show Answer';} }</script>
+<script>var answer30 = '\
+<pre>\n\
+2.5\n\
+2\n\
+</pre>\n\
+';function submit30() {if (document.getElementById('b30').innerHTML == 'Show Answer') {document.getElementById('a30').innerHTML = answer30;document.getElementById('b30').style.background = 'gray'; document.getElementById('b30').innerHTML = 'Hide Answer'; }else {document.getElementById('a30').innerHTML = '';
+document.getElementById('b30').style.background = 'green'; document.getElementById('b30').innerHTML = 'Show Answer';} }</script>
+<script>var answer31 = '(b + Math.pow(b * b – 4 * a * c, 0.5)) / (2 * a)\
+';function submit31() {if (document.getElementById('b31').innerHTML == 'Show Answer') {document.getElementById('a31').innerHTML = answer31;document.getElementById('b31').style.background = 'gray'; document.getElementById('b31').innerHTML = 'Hide Answer'; }else {document.getElementById('a31').innerHTML = '';
+document.getElementById('b31').style.background = 'green'; document.getElementById('b31').innerHTML = 'Show Answer';} }</script>
+<script>var answer32 = '\
+<pre>\n\
+Enter an amount in double, for example 11.56: 1.99 \n\
+Your amount 1.99 consists of \n\
+    1 dollars\n\
+    3 quarters \n\
+    2 dimes\n\
+    0 nickels\n\
+    4 pennies\n\
+</pre>\n\
+';function submit32() {if (document.getElementById('b32').innerHTML == 'Show Answer') {document.getElementById('a32').innerHTML = answer32;document.getElementById('b32').style.background = 'gray'; document.getElementById('b32').innerHTML = 'Hide Answer'; }else {document.getElementById('a32').innerHTML = '';
+document.getElementById('b32').style.background = 'green'; document.getElementById('b32').innerHTML = 'Show Answer';} }</script>
+<script>var answer33 = 'No.\
+';function submit33() {if (document.getElementById('b33').innerHTML == 'Show Answer') {document.getElementById('a33').innerHTML = answer33;document.getElementById('b33').style.background = 'gray'; document.getElementById('b33').innerHTML = 'Hide Answer'; }else {document.getElementById('a33').innerHTML = '';
+document.getElementById('b33').style.background = 'green'; document.getElementById('b33').innerHTML = 'Show Answer';} }</script>
+<script>var answer34 = 'Numbers are stored with a limited numbers of digits. \
+            When a variable is assigned a value that is too large (in size) \
+            to be stored, it causes overflow. \
+Overflow is for integer operations. \
+            Floating-point operations will not cause overflow.\
+';function submit34() {if (document.getElementById('b34').innerHTML == 'Show Answer') {document.getElementById('a34').innerHTML = answer34;document.getElementById('b34').style.background = 'gray'; document.getElementById('b34').innerHTML = 'Hide Answer'; }else {document.getElementById('a34').innerHTML = '';
+document.getElementById('b34').style.background = 'green'; document.getElementById('b34').innerHTML = 'Show Answer';} }</script>
+<script>var answer35 = 'No.\
+';function submit35() {if (document.getElementById('b35').innerHTML == 'Show Answer') {document.getElementById('a35').innerHTML = answer35;document.getElementById('b35').style.background = 'gray'; document.getElementById('b35').innerHTML = 'Hide Answer'; }else {document.getElementById('a35').innerHTML = '';
+document.getElementById('b35').style.background = 'green'; document.getElementById('b35').innerHTML = 'Show Answer';} }</script>
+<script>var answer36 = 'A round-off error, also called a rounding error, is the difference between the calculated approximation of a number and its exact mathematical value. Integer operations will not cause rounding error. \
+            Floating-point operations may cause rounding error.   \
+';function submit36() {if (document.getElementById('b36').innerHTML == 'Show Answer') {document.getElementById('a36').innerHTML = answer36;document.getElementById('b36').style.background = 'gray'; document.getElementById('b36').innerHTML = 'Hide Answer'; }else {document.getElementById('a36').innerHTML = '';
+document.getElementById('b36').style.background = 'green'; document.getElementById('b36').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 2 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.1</span>
+Identify and fix the errors in the following code:
+<pre>
+ 1  <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+ 2    <span class = "keyword">public</span> <span class = "keyword">void</span> main(string[] args) {
+ 3      <span class = "keyword">double</span> i = <span class = "constant">50</span><span class = "literal">.</span><span class = "constant">0</span>;
+ 4      <span class = "keyword">double</span> k = i + <span class = "constant">50</span><span class = "literal">.</span><span class = "constant">0</span>;
+ 5      <span class = "keyword">double</span> j = k + <span class = "constant">1</span>;
+ 6
+ 7      System.out.println(<span class = "literal">"j is "</span> + j + <span class = "literal">" and
+ 8        k is "</span> + k);
+ 9    }
+10  }
+</pre>
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.2</span>
+How do you write a statement to let the user enter a double value from the keyboard? What happens if you entered 5a when executing the following code?
+<pre>
+    <span class = "keyword">double</span> radius = input.nextDouble();
+</pre>
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.3</span>
+Are there any performance differences between the following two import statements?
+<pre>
+<span class = "keyword">import</span> java.util.Scanner; 
+<span class = "keyword">import</span> java.util.*;
+</pre>
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.4</span>
+Which of the following identifiers are valid? Which are Java keywords?
+<pre>
+miles, Test, a++, --a, 4#R, $4, #44, apps
+<span class = "keyword">class</span>, <span class = "keyword">public</span>, <span class = "keyword">int</span>, x, y, radius
+</pre>
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.5</span>
+Identify and fix the errors in the following code:
+<pre>
+  1  <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+  2    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+  3      <span class = "keyword">int</span> i = k + <span class = "constant">2</span>;
+  4      System.out.println(i);
+  5    }
+  6  }
+</pre>
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.6</span>
+Identify and fix the errors in the following code:
+<pre>
+  1  <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+  2    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+  3      <span class = "keyword">int</span> i = j = k = <span class = "constant">2</span>;
+  4      System.out.println(i + <span class = "literal">" "</span> + j + <span class = "literal">" "</span> + k);
+  5    }
+  6  }
+</pre>
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.7</span>
+What are the benefits of using constants? Declare an int constant SIZE with value 20.
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.8</span>
+What are the naming conventions for class names, method names, constants, and variables? Which of the following items can be a constant, a method, a variable, or a class according to the Java naming conventions?
+<pre>
+            MAX_VALUE, Test, read, readDouble
+</pre>
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.9</span>
+Translate the following algorithm into Java code:<br />
+Step 1: Declare a double variable named miles with initial value 100.<br />
+Step 2: Declare a double constant named KILOMETERS_PER_MILE with value 1.609.<br />
+Step 3: Declare a double variable named kilometers, multiply miles and KILOMETERS_PER_MILE, and assign the result to kilometers.<br />
+Step 4: Display kilometers to the console.<br />
+	What is kilometers after Step 4?
+</pre>
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.10</span>
+Find the largest and smallest byte, short, int, long, float, and double. Which of these data types requires the least amount of memory?
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.11</span>
+Show the result of the following remainders.
+<pre>
+    56 % <span class = "constant">6</span>
+    78 % <span class = "literal">-</span><span class = "constant">4</span>
+    <span class = "literal">-</span><span class = "constant">34</span> % <span class = "constant">5</span>
+    <span class = "literal">-</span><span class = "constant">34</span> % <span class = "literal">-</span><span class = "constant">5</span>
+    5 % <span class = "constant">1</span>
+    1 % <span class = "constant">5</span>
+</pre>
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.12</span>
+If today is Tuesday, what will be the day in 100 days?
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.13</span>
+What is the result of 25 / 4? How would you rewrite the expression if you wished the result to be a floating-point number?
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.14</span>
+Show the result of the following code:
+<pre>
+    System.out.println(<span class = "constant">2</span> * (<span class = "constant">5</span> / <span class = "constant">2</span> + <span class = "constant">5</span> / <span class = "constant">2</span>));
+    System.out.println(<span class = "constant">2</span> * <span class = "constant">5</span> / <span class = "constant">2</span> + <span class = "constant">2</span> * <span class = "constant">5</span> / <span class = "constant">2</span>);
+    System.out.println(<span class = "constant">2</span> * (<span class = "constant">5</span> / <span class = "constant">2</span>));
+    System.out.println(<span class = "constant">2</span> * <span class = "constant">5</span> / <span class = "constant">2</span>);
+</pre>
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.15</span>
+Are the following statements correct? If so, show the output.
+<pre>
+    System.out.println(<span class = "literal">"25 / <span class = "constant">4</span> is "</span> + <span class = "constant">25</span> / <span class = "constant">4</span>);
+    System.out.println(<span class = "literal">"25 / <span class = "constant">4</span><span class = "literal">.</span><span class = "constant">0</span> is "</span> + <span class = "constant">25</span> / <span class = "constant">4</span><span class = "literal">.</span><span class = "constant">0</span>);
+    System.out.println(<span class = "literal">"3 * <span class = "constant">2</span> / <span class = "constant">4</span> is "</span> + <span class = "constant">3</span> * <span class = "constant">2</span> / <span class = "constant">4</span>);
+    System.out.println(<span class = "literal">"3<span class = "literal">.</span><span class = "constant">0</span> * <span class = "constant">2</span> / <span class = "constant">4</span> is "</span> + <span class = "constant">3</span><span class = "literal">.</span><span class = "constant">0</span> * <span class = "constant">2</span> / <span class = "constant">4</span>);
+</pre>
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.16</span>
+Write a statement to display the result of 2<sup> 3.5 </sup>.
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.17</span>
+Suppose m and r are integers. Write a Java expression for mr<sup> 2 </sup> to obtain a floating-point result.
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.18</span>
+How many accurate digits are stored in a float or double type variable?
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.19</span>
+Which of the following are correct literals for floating-point numbers?
+<span class="code">
+            12.3, 12.3e+2, 23.4e-2, –334.4, 20.5, 39F, 40D
+</span>
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.20</span>
+Which of the following are the same as 52.534? <br />
+<span class="code">
+            5.2534e+1, 0.52534e+2, 525.34e-1, 5.2534e+0
+</span>
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.21</span>
+Which of the following are correct literals? <br />
+<span class="code">           
+    5_2534e+1, _2534, 5_2, 5_
+</span>
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.22</span>
+How would you write the following arithmetic expression in Java?<br />
+            a. <img src="IMAGE2_22.png" height="32" width="342"/> <br />
+        b.  5.5 × (r + 2.5)<sup> 2.5 + t </sup>
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.23</span>
+How do you obtain the current second, minute, and hour?
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.24</span>
+Show the output of the following code:
+<pre>
+    <span class = "keyword">double</span> a = <span class = "constant">6</span><span class = "literal">.</span><span class = "constant">5</span>;
+    a += a + <span class = "constant">1</span>;
+    System.out.println(a);
+    a = <span class = "constant">6</span>;
+    a /= <span class = "constant">2</span>;
+    System.out.println(a);
+</pre>
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.25</span>
+Which of these statements are true? <br />
+a.	Any expression can be used as a statement. <br />
+b.	The expression x++ can be used as a statement. <br />
+c.	The statement x = x + 5 is also an expression. <br />
+d.	The statement x = y = x = 0 is illegal. 
+                </div>
+                <div id = "a24" class="answer"></div>
+                <button id = "b24" type="button" class = "button" onclick="submit24()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.26</span>
+Show the output of the following code:
+<pre>
+    <span class = "keyword">int</span> a = <span class = "constant">6</span>;
+    <span class = "keyword">int</span> b = a++;
+    System.out.println(a);
+    System.out.println(b);
+    a = <span class = "constant">6</span>;
+    b = ++a;
+    System.out.println(a);
+    System.out.println(b);
+</pre>
+                </div>
+                <div id = "a25" class="answer"></div>
+                <button id = "b25" type="button" class = "button" onclick="submit25()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.27</span>
+Can different types of numeric values be used together in a computation?
+                </div>
+                <div id = "a26" class="answer"></div>
+                <button id = "b26" type="button" class = "button" onclick="submit26()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.28</span>
+What does an explicit casting from a double to an int do with the fractional part of the double value? Does casting change the variable being cast?
+                </div>
+                <div id = "a27" class="answer"></div>
+                <button id = "b27" type="button" class = "button" onclick="submit27()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.29</span>
+Show the output of the following code:
+<pre>
+    <span class = "keyword">float</span> f = <span class = "constant">12</span><span class = "literal">.</span><span class = "constant">5F</span>;
+    <span class = "keyword">int</span> i = (<span class = "keyword">int</span>)f;
+    System.out.println(<span class = "literal">"f is "</span> + f);
+    System.out.println(<span class = "literal">"i is "</span> + i);
+</pre>
+                </div>
+                <div id = "a28" class="answer"></div>
+                <button id = "b28" type="button" class = "button" onclick="submit28()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.30</span>
+If you change (int)(tax * 100) / 100.0 to (int)(tax * 100) / 100 in line 11 
+            in Listing 2.8, 
+            what will be the output for the input purchase amount of 197.556? 
+                </div>
+                <div id = "a29" class="answer"></div>
+                <button id = "b29" type="button" class = "button" onclick="submit29()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.31</span>
+Show the output of the following code:
+<pre>
+    <span class = "keyword">double</span> amount = <span class = "constant">5</span>;
+    System.out.println(amount / <span class = "constant">2</span>);
+    System.out.println(<span class = "constant">5</span> / <span class = "constant">2</span>);
+</pre>
+                </div>
+                <div id = "a30" class="answer"></div>
+                <button id = "b30" type="button" class = "button" onclick="submit30()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.32</span>
+How would you write the following arithmetic expression?<br />
+        <img src="IMAGE2_32.png" height="38" width="102"/>
+                </div>
+                <div id = "a31" class="answer"></div>
+                <button id = "b31" type="button" class = "button" onclick="submit31()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.33</span>
+Show the output with the input value 1.99.
+                </div>
+                <div id = "a32" class="answer"></div>
+                <button id = "b32" type="button" class = "button" onclick="submit32()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.34</span>
+Can you declare a variable as int and later redeclare it as double?
+                </div>
+                <div id = "a33" class="answer"></div>
+                <button id = "b33" type="button" class = "button" onclick="submit33()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.35</span>
+What is an integer overflow? Can floating-point operations cause overflow?
+                </div>
+                <div id = "a34" class="answer"></div>
+                <button id = "b34" type="button" class = "button" onclick="submit34()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.36</span>
+Will overflow cause a runtime error? 
+                </div>
+                <div id = "a35" class="answer"></div>
+                <button id = "b35" type="button" class = "button" onclick="submit35()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">2.37</span>
+What is a round-off error? Can integer operations cause round-off errors? Can floating-point operations cause round-off errors?
+                </div>
+                <div id = "a36" class="answer"></div>
+                <button id = "b36" type="button" class = "button" onclick="submit36()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

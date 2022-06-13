@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'See the text for a brief discussion from AWT to Swing, and to JavaFX.\
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = 'This book teaches Java GUI programming using JavaFX for three reasons. <br />\
+            First, JavaFX is much simpler to learn and use for new Java programmers. <br />\
+            Second, JavaFX is a better pedagogical tool for demonstrating object-oriented \
+            programming than Swing. <br />\
+            Third, Swing is essentially dead, \
+            because it will not receive any further enhancement. JavaFX is the new GUI tool for developing cross-platform-rich Internet applications on desktop computers, on hand-held devices, and on the Web.\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = 'You define a JavaFX main class by extending the Application class. \
+            The signature of the start method is \
+<pre>\n\
+public void start(Stage primaryStage)\n\
+</pre>\n\
+            A stage is a window to holding a scene. An application may have multiple stages. The primary stage is automatically created when a JavaFX program is launched. To display a stage, invoke its show() method. <br />\
+You can prevent the user from resizing the stage by invoking stage.setResizable(false). <br />\
+You can replace Application.launch(args) by launch(args), because the JavaFX main class is a subtype of Application.\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = 'The output of the program is:\
+            <pre>\n\
+launch application\n\
+Test constructor is invoked\n\
+Start method is invoked\n\
+            </pre>\n\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = 'To create a Scene, use new Scene(parent, width, height) or new Scene(parent). To set a scene in a stage, invoke Stage&#39;s setScene(scene) method. To place a circle to a scene, first place the circle into a pane, and then place the pane into the scene.\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = 'A pane is used to hold and organize nodes. A node is a visual component that can be displayed. You can place a node into a pane using the pane.getChildren().add(node). You cannot directly place a Shape or an ImageView into a scene. You can directly place a Control or a Pane into a scene when constructing a Scene using new Scene(Parent, width, height) or new Scene(Parent). Parent is the superclass for Control and Pane.\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'You can create a Circle using its no-arg constructor and use its setCenterX, setCenterY methods to set its center location and use its setRadius to set its radius. To set the stroke color, use setStroke(color) method. To set the color, use the setFill(color) method.\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = 'A binding property is the one that binds with a source object. When the contents in the source changes, the binding property values change too. A binding property is an instance of Property and a source object is an instance of ObservableValue. The binding object types for int, long, float, double, and boolean are IntegerProperty, LongProperty, DoubleProperty, and BooleanProperty. Integer and Double are not subtypes of ObservableValue. Hence, they cannot be used as a source object in a binding.\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'The getter method is \
+            <pre>\n\
+public int getAge()\n\
+            </pre>\n\
+The setter method is \
+            <pre>\n\
+public void setAge(int age)\n\
+            </pre>\n\
+The property getter is \
+            <pre>\n\
+public IntegerProperty ageProperty()\n\
+            </pre>\n\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = 'No. IntegerProperty is an abstract class. You have to use new SimpleIntegerProperty(4) to create an instance of IntegerProperty.\
+			What will the output if line 8 is replaced by d1.bind(d2.multiply(2)) in Listing 14.6?\
+<pre>\n\
+d1 is 2.0 and d2 is 2.0\n\
+d1 is 140.4 and d2 is 70.2\n\
+            </pre>\n\
+	What will the output if line 8 is replaced by d1.bind(d2.add(2)) in Listing 14.6?\
+<pre>\n\
+d1 is 2.0 and d2 is 2.0\n\
+d1 is 72.4 and d2 is 70.2\n\
+            </pre>\n\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'A unidirectional binding binds a target with a source. A bidirectional binding binds two objects together. Changes in one object affects the other. Not all binding properties can be bidirectional. The statement to bind d1 with d2 is d1.bindBidirectional(d2).\
+	12.\
+            <pre>\n\
+node.setStyle("-fx-border: red");\n\
+text.setStyle("-fx-fill: red");\n\
+            </pre>\n\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = '\
+<pre>\n\
+node.setStyle("-fx-border: red");\n\
+text.setStyle("-fx-fill: red");\n\
+</pre>\n\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = '\
+<pre>\n\
+Yes.\n\
+button.setRotate(-15);\n\
+</pre>\n\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'You can use the Color constructor or static methods in the Color class to create Color objects. new Color(1.2, 2.3, 3.5, 4)is wrong because the parameter values must be between 0 and 1. new Color(0, 0, 0, 1) is darker than new Color(1, 1, 1, 1). Invoking c.darker() returns a new Color. Color is immutable.\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = '\
+<pre>\n\
+new Color(Math.random(), Math.random(), Math.random(), 1)\n\
+</pre>\n\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = '\
+<pre>\n\
+c.setFill(Color.BLUE)\n\
+c.setStyle("-fx-fill: blue")\n\
+</pre>\n\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = 'new Font("Courier", Weight.BOLD, 20) \
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = 'Use Font.getFamilies() to return a list of strings for font names.\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = 'Use new Image(filename) or new Image(url)\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = 'Use new ImageView(image) \
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = 'You can set an Image to multiple ImageView, but you cannot display one ImageView multiple times.\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = 'To add a node to a Pane, StackPane, FlowPane, HBox, and VBox, use pane.getChildren().add(node). To add node to a BorderPane, use the setTop, setBottom, setLeft, setRight, and setCenter methods. To remove a node from these panes, use pane.getChildren().remove(node).\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = 'pane.setAlignment(Pos.RIGHT)\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = 'For a FlowPane and a GridPane, pane.setHGap(8) and pane.setVGap(8). For an HBox and VBox, use pane.setSpacing(8).\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+<script>var answer24 = 'pane.getRowIndex(node) and pane.getColumnIndex(node). To reposition a node in a GridPane, use pane.setRowIndex(node, rowIndex) and pane.setColumnIndex(node, columnIndex).\
+';function submit24() {if (document.getElementById('b24').innerHTML == 'Show Answer') {document.getElementById('a24').innerHTML = answer24;document.getElementById('b24').style.background = 'gray'; document.getElementById('b24').innerHTML = 'Hide Answer'; }else {document.getElementById('a24').innerHTML = '';
+document.getElementById('b24').style.background = 'green'; document.getElementById('b24').innerHTML = 'Show Answer';} }</script>
+<script>var answer25 = 'FlowPane can have multiple rows and columns. The nodes in a FlowPane can be placed horizontally or vertically. An HBox can have only one row and an VBox can have only one column.\
+';function submit25() {if (document.getElementById('b25').innerHTML == 'Show Answer') {document.getElementById('a25').innerHTML = answer25;document.getElementById('b25').style.background = 'gray'; document.getElementById('b25').innerHTML = 'Hide Answer'; }else {document.getElementById('a25').innerHTML = '';
+document.getElementById('b25').style.background = 'green'; document.getElementById('b25').innerHTML = 'Show Answer';} }</script>
+<script>var answer26 = 'To display a text, line, rectangle, circle, ellipse, arc, polygon, and polyline, create an instance of the Text, Line, Rectangle, Circle, Ellipse, Arc, Polygon, and Polyline and add it to a pane and place the pane into a scene.\
+';function submit26() {if (document.getElementById('b26').innerHTML == 'Show Answer') {document.getElementById('a26').innerHTML = answer26;document.getElementById('b26').style.background = 'gray'; document.getElementById('b26').innerHTML = 'Hide Answer'; }else {document.getElementById('a26').innerHTML = '';
+document.getElementById('b26').style.background = 'green'; document.getElementById('b26').innerHTML = 'Show Answer';} }</script>
+<script>var answer27 = '\
+<pre>\n\
+Text text = new Text("Welcome");\n\
+StackPane pane = new StackPane();\n\
+pane.getChildren().add(text);\n\
+text.setRotate(15);\n\
+</pre>\n\
+';function submit27() {if (document.getElementById('b27').innerHTML == 'Show Answer') {document.getElementById('a27').innerHTML = answer27;document.getElementById('b27').style.background = 'gray'; document.getElementById('b27').innerHTML = 'Hide Answer'; }else {document.getElementById('a27').innerHTML = '';
+document.getElementById('b27').style.background = 'green'; document.getElementById('b27').innerHTML = 'Show Answer';} }</script>
+<script>var answer28 = '\
+<pre>\n\
+Line line = new Line(10, 10, 70, 30);\n\
+line.setStrokeWidth(10);\n\
+</pre>\n\
+';function submit28() {if (document.getElementById('b28').innerHTML == 'Show Answer') {document.getElementById('a28').innerHTML = answer28;document.getElementById('b28').style.background = 'gray'; document.getElementById('b28').innerHTML = 'Hide Answer'; }else {document.getElementById('a28').innerHTML = '';
+document.getElementById('b28').style.background = 'green'; document.getElementById('b28').innerHTML = 'Show Answer';} }</script>
+<script>var answer29 = '\
+<pre>\n\
+Rectangle rectangle = new Rectangle(10, 10, 100, 50);\n\
+rectangle.setFill(Color.RED);\n\
+</pre>\n\
+';function submit29() {if (document.getElementById('b29').innerHTML == 'Show Answer') {document.getElementById('a29').innerHTML = answer29;document.getElementById('b29').style.background = 'gray'; document.getElementById('b29').innerHTML = 'Hide Answer'; }else {document.getElementById('a29').innerHTML = '';
+document.getElementById('b29').style.background = 'green'; document.getElementById('b29').innerHTML = 'Show Answer';} }</script>
+<script>var answer30 = '\
+<pre>\n\
+Rectangle rectangle = new Rectangle(10, 10, 100, 200);\n\
+rectangle.setArcWidth(40);\n\
+rectangle.setArcHeight(20);\n\
+</pre>\n\
+';function submit30() {if (document.getElementById('b30').innerHTML == 'Show Answer') {document.getElementById('a30').innerHTML = answer30;document.getElementById('b30').style.background = 'gray'; document.getElementById('b30').innerHTML = 'Hide Answer'; }else {document.getElementById('a30').innerHTML = '';
+document.getElementById('b30').style.background = 'green'; document.getElementById('b30').innerHTML = 'Show Answer';} }</script>
+<script>var answer31 = '\
+<pre>\n\
+Ellipse ellipse = new Ellipse();\n\
+ellipse.setRadiusX(50); ellipse.setRadiusY(100);\n\
+</pre>\n\
+';function submit31() {if (document.getElementById('b31').innerHTML == 'Show Answer') {document.getElementById('a31').innerHTML = answer31;document.getElementById('b31').style.background = 'gray'; document.getElementById('b31').innerHTML = 'Hide Answer'; }else {document.getElementById('a31').innerHTML = '';
+document.getElementById('b31').style.background = 'green'; document.getElementById('b31').innerHTML = 'Show Answer';} }</script>
+<script>var answer32 = '\
+<pre>\n\
+Arc arc = new Arc();\n\
+arc.setRadiusX(50); arc.setRadiusY(50);\n\
+arc.setFill(null);\n\
+arc.setStartAngle(0); arc.setLength(180);\n\
+arc.setType(ArcType.OPEN);\n\
+</pre>\n\
+';function submit32() {if (document.getElementById('b32').innerHTML == 'Show Answer') {document.getElementById('a32').innerHTML = answer32;document.getElementById('b32').style.background = 'gray'; document.getElementById('b32').innerHTML = 'Hide Answer'; }else {document.getElementById('a32').innerHTML = '';
+document.getElementById('b32').style.background = 'green'; document.getElementById('b32').innerHTML = 'Show Answer';} }</script>
+<script>var answer33 = '\
+<pre>\n\
+Arc arc = new Arc();\n\
+arc.setRadiusX(50); arc.setRadiusY(50);\n\
+arc.setStartAngle(180); arc.setLength(180);\n\
+arc.setFill(Color.RED);\n\
+arc.setType(ArcType.ROUND);\n\
+</pre>\n\
+';function submit33() {if (document.getElementById('b33').innerHTML == 'Show Answer') {document.getElementById('a33').innerHTML = answer33;document.getElementById('b33').style.background = 'gray'; document.getElementById('b33').innerHTML = 'Hide Answer'; }else {document.getElementById('a33').innerHTML = '';
+document.getElementById('b33').style.background = 'green'; document.getElementById('b33').innerHTML = 'Show Answer';} }</script>
+<script>var answer34 = '\
+<pre>\n\
+Polygon p = new Polygon();\n\
+g.getPoints().addAll(20.0, 40.0, 30.0, \n\
+  50.0, 40.0, 90.0, 90.0, 10.0, 10.0, 30.0);\n\
+p.setFill(Color.GREEN);\n\
+</pre>\n\
+';function submit34() {if (document.getElementById('b34').innerHTML == 'Show Answer') {document.getElementById('a34').innerHTML = answer34;document.getElementById('b34').style.background = 'gray'; document.getElementById('b34').innerHTML = 'Hide Answer'; }else {document.getElementById('a34').innerHTML = '';
+document.getElementById('b34').style.background = 'green'; document.getElementById('b34').innerHTML = 'Show Answer';} }</script>
+<script>var answer35 = '\
+<pre>\n\
+Polyline p = new Polyline();\n\
+p.getPoints().addAll(20.0, 40.0, 30.0, \n\
+  50.0, 40.0, 90.0, 90.0, 10.0, 10.0, 30.0);\n\
+</pre>\n\
+';function submit35() {if (document.getElementById('b35').innerHTML == 'Show Answer') {document.getElementById('a35').innerHTML = answer35;document.getElementById('b35').style.background = 'gray'; document.getElementById('b35').innerHTML = 'Hide Answer'; }else {document.getElementById('a35').innerHTML = '';
+document.getElementById('b35').style.background = 'green'; document.getElementById('b35').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 14 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.1</span>
+Explain the evolution of Java GUI technologies. 
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.2</span>
+Explain why this book teaches Java GUI using JavaFX.
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.3</span>
+How do you define a JavaFX main class? What is the signature of 
+            the start method? What is a stage? What is a primary stage? Is a primary stage automatically created? How do you display a stage? Can you prevent the user from resizing the stage? Can you replace 
+            Application.launch(args) by launch(args) in line 22 in Listing 14.1?
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.4</span>
+Show the output of the following JavaFX program.
+<pre>
+    <span class = "keyword">import</span> javafx.application.Application;
+    <span class = "keyword">import</span> javafx.stage.Stage;
+
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test <span class = "keyword">extends</span> Application {      
+      <span class = "keyword">public</span> Test() {
+        System.out.println(<span class = "literal">"Test constructor is invoked"</span>);
+      }
+
+      @Override <span class = "comment">// Override the start method in the Application class</span>
+      <span class = "keyword">public</span> <span class = "keyword">void</span> start(Stage primaryStage) {
+        System.out.println(<span class = "literal">"start method is invoked"</span>);
+      }
+
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        System.out.println(<span class = "literal">"launch application"</span>);
+        Application.launch(args);
+      }
+    }
+</pre>
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.5</span>
+How do you create a Scene object? How do you set a scene in a stage? 
+            How do you place a circle into a scene? 
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.6</span>
+What is a pane? What is a node? How do you place a node in a pane? 
+            Can you directly place a Shape or an ImageView into a Scene? 
+            Can you directly place a Control or a Pane into a Scene?
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.7</span>
+How do you create a Circle? 
+            How do you set its center location and radius? How do you set its stroke 
+            color and fill color? 
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.8</span>
+What is a binding property? What interface defines a binding property? 
+            What interface defines a source object? What are the binding object types 
+            for int, long, float, double, and boolean? 
+            Are Integer and Double binding properties? 
+            Can Integer and Double be used as source objects in a binding?
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.9</span>
+Following the JavaFX binding property naming convention, 
+            for a binding property named age of the IntegerProperty type, 
+            what is its value getter method, 
+            value setter method, and property getter method?
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.10</span>
+Can you create an object of IntegerProperty using new IntegerProperty(3)? 
+            If not, what is the correct way to create it? What will the output if line 8 is replaced by d1.bind(d2.multiply(2)) in Listing 14.6? 
+            What will the output if line 8 is replaced by d1.bind(d2.add(2)) in Listing 14.6?
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.11</span>
+What is a unidirectional binding and what is bidirectional binding? 
+            Are all binding properties capable of bidirectional binding? 
+            Write a statement to bind property d1 with property d2 bidirectionally.
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.12</span>
+How do you set a style of a node with border color red? 
+            Modify the code to set the text color for the button to red.
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.13</span>
+Can you rotate a pane, a text, or a button? 
+            Modify the code to rotate the button 15 degrees counterclockwise? 
+            How do you test if a point is inside a node? How do you scale up or down a node?
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.14</span>
+How do you create a color? What is wrong about creating a Color 
+            using new Color(1.2, 2.3, 3.5, 4)? Which of two colors is darker, 
+            new Color(0, 0, 0, 1) or new Color(1, 1, 1, 1)? 
+            Does invoking c.darker() change the color value in c?
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.15</span>
+How do you create a Color object with a random color? 
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.16</span>
+How do you set a circle object c with blue fill color 
+            using the setFill method and using the setStyle method?
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.17</span>
+How do you create a Font object with font name Courier, 
+            size 20, and weight bold?
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.18</span>
+How do you find all available fonts on your system?
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.19</span>
+How do you create an Image from a URL or a filename?
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.20</span>
+How do you create an ImageView from an Image, or directly from a file or a URL?
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.21</span>
+Can you set an Image to multiple ImageView? Can you display the same ImageView multiple times?
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.22</span>
+How do you add a node to a Pane, StackPane, FlowPane, GridPane, BorderPane, HBox, and VBox? How do you remove a node from these panes?
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.23</span>
+How do you set the alignment to right for nodes in a FlowPane, GridPane, HBox, and VBox?
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.24</span>
+How do you set the horizontal gap and vertical hap between nodes in 8 pixels in a FlowPane and GridPane and set spacing in 8 pixels in an HBox and VBox?
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.25</span>
+How do you get the column and row index of a node in a GridPane? How do you reposition a node in a GridPane?
+                </div>
+                <div id = "a24" class="answer"></div>
+                <button id = "b24" type="button" class = "button" onclick="submit24()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.26</span>
+What are the differences between a FlowPane and an HBox or a VBox?
+                </div>
+                <div id = "a25" class="answer"></div>
+                <button id = "b25" type="button" class = "button" onclick="submit25()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.27</span>
+How do you display a text, line, rectangle, circle, ellipse, arc, polygon, and polyline?
+                </div>
+                <div id = "a26" class="answer"></div>
+                <button id = "b26" type="button" class = "button" onclick="submit26()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.28</span>
+Write code fragments to display a string rotated 45 degrees in the center of the pane.
+                </div>
+                <div id = "a27" class="answer"></div>
+                <button id = "b27" type="button" class = "button" onclick="submit27()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.29</span>
+Write code fragments to display a thick line of 10 pixels from (10, 10) to (70, 30). 
+                </div>
+                <div id = "a28" class="answer"></div>
+                <button id = "b28" type="button" class = "button" onclick="submit28()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.30</span>
+Write code fragments to fill red color in a rectangle of width 100 and height 50 with the upper-left corner at (10, 10).
+                </div>
+                <div id = "a29" class="answer"></div>
+                <button id = "b29" type="button" class = "button" onclick="submit29()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.31</span>
+Write code fragments to display a round-cornered rectangle with width 100, height 200with the upper-left corner at (10, 10), 
+            corner horizontal diameter 40, and corner vertical diameter 20.
+                </div>
+                <div id = "a30" class="answer"></div>
+                <button id = "b30" type="button" class = "button" onclick="submit30()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.32</span>
+Write code fragments to display an ellipse with horizontal radius 50 and vertical radius 100.
+                </div>
+                <div id = "a31" class="answer"></div>
+                <button id = "b31" type="button" class = "button" onclick="submit31()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.33</span>
+Write code fragments to display the outline of the upper half of a circle with radius 50.
+                </div>
+                <div id = "a32" class="answer"></div>
+                <button id = "b32" type="button" class = "button" onclick="submit32()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.34</span>
+Write code fragments to display the lower half of a circle with radius 50 filled with the red color.
+                </div>
+                <div id = "a33" class="answer"></div>
+                <button id = "b33" type="button" class = "button" onclick="submit33()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.35</span>
+Write code fragments to display a polygon connecting the following points: 
+            (20, 40), (30, 50), (40, 90), (90, 10), (10, 30), 
+            and fill the polygon with green color.
+                </div>
+                <div id = "a34" class="answer"></div>
+                <button id = "b34" type="button" class = "button" onclick="submit34()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">14.36</span>
+Write code fragments to display a polyline connecting the following points: 
+            (20, 40), (30, 50), (40, 90), (90, 10), (10, 30).
+                </div>
+                <div id = "a35" class="answer"></div>
+                <button id = "b35" type="button" class = "button" onclick="submit35()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'count &lt; 100 is always true at Point A. <br />\
+            count &lt; 100 always false at Point C. <br />\
+            count &lt; 100 is sometimes true or sometimes false \
+            at Point B.\
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = 'It would be wrong if it is initialized to a value between 0 and 100, because it could be the number you attempt to guess.\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = '(a) Infinite number of times.<br />\
+(b) Infinite number of times.<br />\
+(c) The loop body is executed nine times. \
+            The output is 3, 5, 7, 9 on separate lines.\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = '\
+<pre>\n\
+max is 5 \n\
+number 0 \n\
+</pre>\n\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = 'x is -2147483648 <br />\
+The reason: When a variable is assigned a value \
+            that is too large (in size) to be stored, it causes overflow. <br />\
+2147483647 + 1 is actually -2147483648\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = '\
+<pre>\n\
+max is 5 \n\
+number 0\n\
+</pre>\n\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'The difference between a do-while loop and a while loop is the order of evaluating the continuation-condition and executing the loop body. In a while loop, the continuation-condition is checked and then, if true, the loop body is executed. In a do-while loop, the loop body is executed for the first time before the continuation-condition is evaluated.\
+<pre> \n\
+Scanner input = new Scanner(System.in); \n\
+int sum = 0; \n\
+int number; \n\
+do { \n\
+  System.out.println("Enter an integer " + \n\
+    "(the input ends if it is 0)"); \n\
+  number = input.nextInt(); \n\
+  sum += number; \n\
+} while (number != 0); \n\
+        </pre>\n\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = 'Same. When the i++ and ++i are used in isolation, their effects are same.\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'The three parts in a for loop control are as follows: The first part initializes the control variable. The second part is a Boolean expression that determines whether the loop will repeat. The third part is the adjustment statement, which adjusts the control variable.\
+<pre> \n\
+for (int i = 1; i &lt;= 100; i++) \n\
+  System.out.println(i); \n\
+</pre>\n\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = '\
+<pre>\n\
+sum is 14 \n\
+count is 5 \n\
+</pre>\n\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'The loop keeps doing something indefinitely.\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'No. The scope of the variable is inside the loop.\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = 'while loop:\
+<pre>\n\
+    long sum = 0; \n\
+    int i=0; \n\
+    while (i &lt;= 1000) {  \n\
+      sum += i++; \n\
+    }\n\
+    </pre>\n\
+do-while loop:\
+ <pre>\n\
+    do-while loop:\n\
+    long sum = 0;\n\
+    int i = 0;\n\
+    do { \n\
+      sum += i++;\n\
+    }\n\
+    while (i &lt;= 1000);\n\
+</pre>\n\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = '\
+<pre>\n\
+(a)\n\
+n times\n\
+\n\
+(b)\n\
+n+1 times\n\
+\n\
+(b)\n\
+n-5 times\n\
+\n\
+(d)\n\
+The ceiling of (n-5)/3 times\n\
+            </pre>\n\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'Yes. The advantages of for loops are simplicity and readability. Compilers can produce more efficient code for the for loop than for the corresponding while loop.\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = 'Yes.\
+ <pre>\n\
+for (int i=1; sum &lt; 10000; i++) \n\
+   sum = sum + i; \n\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = 'Line 2: missing static. <br />\
+Line 3: The semicolon (;) at the end of the for \
+            loop heading should be removed. <br />\
+Line 4: sum not defined. <br />\
+Line 6: the semicolon (;) at the end of the if \
+            statement should be removed. <br />\
+Line 6: j not defined. <br />\
+Line 7: Missing a semicolon for the first println statement. <br />\
+Line 11: The semicolon (;) at the end of the while heading\
+            should be removed. <br />\
+Line 18: Missing a semicolon at the end of the do-while loop.\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = '(a) Line 8: Missing ; at the end of this line. <br />\
+(b) Line 3: The ; at the end of for loop should be removed. \
+            <pre>\n\
+    for (int i = 0; i &lt; 10; i++);\n\
+</pre>\n\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = 'When i is 0, the println statement is not executed. <br />\
+When i is 1, the println statement is executed once. <br />\
+When i is 2, the println statement is executed two times. <br />\
+When i is 3, the println statement is executed three times. <br />\
+When i is 9, the println statement is executed nine times. <br />\
+\
+So, the total is 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45 \
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = 'Tip for tracing programs: Draw a table to see how variables change in the program. Consider (a) for example.\
+  <pre>\n\
+i      j          output \n\
+1      0          0 \n\
+1      1           \n\
+2      0          0           \n\
+2      1          1           \n\
+2      2                    \n\
+3      0          0           \n\
+3      1          1           \n\
+3      2          2          \n\
+3      3                    \n\
+4      0          0           \n\
+4      1          1           \n\
+4      2          2          \n\
+4      3          3         \n\
+4      4                   \n\
+ \n\
+(a). \n\
+0 0 1 0 1 2 0 1 2 3  \n\
+ \n\
+(b).  \n\
+**** \n\
+**** \n\
+2 **** \n\
+3 2 **** \n\
+4 3 2 ****  \n\
+(c).  \n\
+1xxx2xxx4xxx8xxx16xxx  \n\
+1xxx2xxx4xxx8xxx1xxx2xxx4xxx\n\
+1xxx2xxx \n\
+1xxx  \n\
+(d).  \n\
+1G  \n\
+1G3G  \n\
+1G3G5G  \n\
+1G3G5G7G  \n\
+1G3G5G7G9G\n\
+        </pre>\n\
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = 'No. Try n1 = 3 and n2 =3.\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = 'Possible loss of precision for int to char.\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = 'The number of digits in the hex number determines the number of times the loop is executed. 245 is F5 in hex. So the loop body is executed 2 times. 3245 is CAD in hex. So, So the loop body is executed 3 times.\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = 'The keyword break is used to exit the current loop. The program in (A) will terminate. \
+            The output is Balance is 1. <br />\
+The keyword continue causes the rest of the loop body to be skipped for the current iteration.\
+<br />\
+The while loop will not terminate in (B).\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+<script>var answer24 = 'If a continue statement is executed inside a for loop, the rest of the iteration is skipped, then the action-after-each-iteration is performed and the loop-continuation-condition is checked. If a continue statement is executed inside a while loop, the rest of the iteration is skipped, then the loop-continuation-condition is checked.\
+Here is the fix:\
+\
+ <pre>\n\
+    int i = 0; \n\
+    while (i &lt; 4) {\n\
+      if (i % 3 == 0) {\n\
+        i++; \n\
+        continue;\n\
+      } \n\
+      sum += i;\n\
+      i++;\n\
+    }\n\
+</pre>\n\
+';function submit24() {if (document.getElementById('b24').innerHTML == 'Show Answer') {document.getElementById('a24').innerHTML = answer24;document.getElementById('b24').style.background = 'gray'; document.getElementById('b24').innerHTML = 'Hide Answer'; }else {document.getElementById('a24').innerHTML = '';
+document.getElementById('b24').style.background = 'green'; document.getElementById('b24').innerHTML = 'Show Answer';} }</script>
+<script>var answer25 = '\
+<pre>\n\
+class TestBreak {\n\
+  public static void main(string[]args) {\n\
+    int sum = 0;\n\
+    int number = 0;\n\
+    \n\
+    while (number &lt; 20 && sum &lt; 100) { \n\
+      number++;\n\
+      sum += number;\n\
+    }\n\
+    \n\
+    System.out.println("The sum is " + sum);\n\
+  }\n\
+}\n\
+\n\
+class TestContinue { \n\
+  public static void main(String[] args) { \n\
+    int sum = 0;\n\
+    int number = 0;\n\
+\n\
+    while (number &lt; 20) { \n\
+      number++;\n\
+      if (number != 10 && number != 11) \n\
+        sum += number;\n\
+    } \n\
+\n\
+    System.out.println("The sum is " + sum);\n\
+  }\n\
+}\n\
+</pre>\n\
+';function submit25() {if (document.getElementById('b25').innerHTML == 'Show Answer') {document.getElementById('a25').innerHTML = answer25;document.getElementById('b25').style.background = 'gray'; document.getElementById('b25').innerHTML = 'Hide Answer'; }else {document.getElementById('a25').innerHTML = '';
+document.getElementById('b25').style.background = 'green'; document.getElementById('b25').innerHTML = 'Show Answer';} }</script>
+<script>var answer26 = '(a) After the break statement is executed, the last println statement is executed. The output of this fragment is\
+\
+<pre>\n\
+1\n\
+2\n\
+1\n\
+2\n\
+2\n\
+3\n\
+</pre>\n\
+(b) After the continue statement is executed, the statement \
+\
+<pre>\n\
+  j++\n\
+\<pre>\n\
+will be executed. The output of this fragment is\n\
+<pre>\n\
+1\n\
+2\n\
+1\n\
+2\n\
+2\n\
+3\n\
+        </pre>\n\
+';function submit26() {if (document.getElementById('b26').innerHTML == 'Show Answer') {document.getElementById('a26').innerHTML = answer26;document.getElementById('b26').style.background = 'gray'; document.getElementById('b26').innerHTML = 'Hide Answer'; }else {document.getElementById('a26').innerHTML = '';
+document.getElementById('b26').style.background = 'green'; document.getElementById('b26').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 5 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.1</span>
+Analyze the following code. 
+            Is count &lt; 100 always true, always false, or sometimes true or sometimes false at Point A, Point B, and Point C?
+<pre>
+  <span class = "keyword">int</span> count = <span class = "constant">0</span>;
+  <span class = "keyword">while</span> (count &lt; <span class = "constant">100</span>) {
+    <span class = "comment">// Point A</span>
+    System.out.println(<span class = "literal">"Welcome to Java!"</span>);
+    count++;
+    <span class = "comment">// Point B</span>
+  }
+  <span class = "comment">// Point C</span>
+</pre>
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.2</span>
+What is wrong if guess is initialized to 0 in line 11 in Listing 5.3?
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.3</span>
+How many times are the following loop bodies repeated? What is the output of each loop?
+<pre>
+    (a)
+    <span class = "keyword">int</span> i = <span class = "constant">1</span>;
+    <span class = "keyword">while</span> (i &lt; <span class = "constant">10</span>)
+      <span class = "keyword">if</span> (i % <span class = "constant">2</span> == <span class = "constant">0</span>)
+        System.out.println(i);
+
+    (b)
+    <span class = "keyword">int</span> i = <span class = "constant">1</span>;
+    <span class = "keyword">while</span> (i &lt; <span class = "constant">10</span>)
+      <span class = "keyword">if</span> (i % <span class = "constant">2</span> == <span class = "constant">0</span>)
+        System.out.println(i++);
+
+    (c)
+    <span class = "keyword">int</span> i = <span class = "constant">1</span>;
+    <span class = "keyword">while</span> (i &lt; <span class = "constant">10</span>)
+      <span class = "keyword">if</span> ((i++) % <span class = "constant">2</span> == <span class = "constant">0</span>)
+        System.out.println(i); 
+</pre>
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.4</span>
+Suppose the input is 2 3 4 5 0. What is the output of the following code?
+<pre>
+    <span class = "keyword">import</span> java.util.Scanner;
+
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        Scanner input = <span class = "keyword">new</span> Scanner(System.in);
+
+        <span class = "keyword">int</span> number, max;
+        number = input.nextInt();
+        max = number;
+
+        <span class = "keyword">while</span> (number != <span class = "constant">0</span>) {
+          number = input.nextInt();
+          <span class = "keyword">if</span> (number > max)
+            max = number; 
+        }
+
+        System.out.println(<span class = "literal">"max is "</span> + max);
+        System.out.println(<span class = "literal">"number "</span> + number);
+      }
+    }
+</pre>
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.5</span>
+What is the output of the following code? Explain the reason.
+<pre>
+    <span class = "keyword">int</span> x = <span class = "constant">80000000</span>;
+
+    <span class = "keyword">while</span> (x > <span class = "constant">0</span>) 
+      x++;
+
+    System.out.println(<span class = "literal">"x is "</span> + x);
+</pre>
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.6</span>
+Suppose the input is 2 3 4 5 0. What is the output of the following code?
+<pre>
+  <span class = "keyword">import</span> java.util.Scanner;
+
+  <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+      Scanner input = <span class = "keyword">new</span> Scanner(System.in);
+
+      <span class = "keyword">int</span> number, max;
+      number = input.nextInt(); 
+      max = number;
+
+      <span class = "keyword">do</span> {
+        number = input.nextInt();
+        <span class = "keyword">if</span> (number > max)
+          max = number;
+      } <span class = "keyword">while</span> (number != <span class = "constant">0</span>);
+
+      System.out.println(<span class = "literal">"max is "</span> + max);
+      System.out.println(<span class = "literal">"number "</span> + number); 
+    }
+  }
+</pre>
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.7</span>
+What are the differences between a while loop and a do-while loop? Convert the following while loop into a do-while loop.
+<pre>
+    Scanner input = <span class = "keyword">new</span> Scanner(System.in);
+    <span class = "keyword">int</span> sum = <span class = "constant">0</span>;
+    System.out.println(<span class = "literal">"Enter an integer "</span> + 
+      <span class = "literal">"(the input ends if it is <span class = "constant">0</span>)"</span>);
+    <span class = "keyword">int</span> number = input.nextInt();
+    <span class = "keyword">while</span> (number != <span class = "constant">0</span>) {
+      sum += number; 
+      System.out.println(<span class = "literal">"Enter an integer "</span> + 
+        <span class = "literal">"(the input ends if it is <span class = "constant">0</span>)"</span>);
+      number = input.nextInt();
+    }
+</pre>
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.8</span>
+Do the following two loops result in the same value in sum?
+<pre>
+    (a)
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; <span class = "constant">10</span>; ++i) {  
+      sum += i;
+    }
+                  
+    (b)
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; <span class = "constant">10</span>; i++) {  
+      sum += i;
+    }
+</pre>
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.9</span>
+What are the three parts of a for loop control? Write a for loop that prints the numbers from 1 to 100.
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.10</span>
+Suppose the input is 2 3 4 5 0. What is the output of the following code?
+<pre>
+    <span class = "keyword">import</span> java.util.Scanner;
+
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        Scanner input = <span class = "keyword">new</span> Scanner(System.in); 
+        <span class = "keyword">int</span> number, sum = <span class = "constant">0</span>, count;
+
+        <span class = "keyword">for</span> (count = <span class = "constant">0</span>; count &lt; <span class = "constant">5</span>; count++) {
+          number = input.nextInt();
+          sum += number;
+        }
+
+        System.out.println(<span class = "literal">"sum is "</span> + sum);
+        System.out.println(<span class = "literal">"count is "</span> + count);
+      }
+    }
+</pre>
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.11</span>
+What does the following statement do?
+<pre>
+    <span class = "keyword">for</span> ( ; ; ) {
+      <span class = "comment">// Do something</span>
+    }
+</pre>
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.12</span>
+If a variable is declared in a for loop control, can it be used after the loop exits?
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.13</span>
+Convert the following for loop statement to a while loop and to a do-while loop:
+<pre>
+    <span class = "keyword">long</span> sum = <span class = "constant">0</span>;
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt;= <span class = "constant">1000</span>; i++)
+      sum = sum + i;
+</pre>
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.14</span>
+Count the number of iterations in the following loops.
+<pre>
+    (a)
+    <span class = "keyword">int</span> count = <span class = "constant">0</span>;
+    <span class = "keyword">while</span> (count &lt; n) {
+      count++;
+    }
+
+    (b)
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> count = <span class = "constant">0</span>;
+      count &lt;= n; count++) {
+    }
+
+    (c)
+    <span class = "keyword">int</span> count = <span class = "constant">5</span>;
+    <span class = "keyword">while</span> (count &lt; n) {
+      count++;
+    }
+
+    (d)
+    <span class = "keyword">int</span> count = <span class = "constant">5</span>;
+    <span class = "keyword">while</span> (count &lt; n) {
+      count = count + <span class = "constant">3</span>;
+    }
+</pre>
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.15</span>
+Can you convert a for loop to a while loop? List the advantages of using for loops.
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.16</span>
+Can you always convert a while loop into a for loop? Convert the following while loop into a for loop.
+<pre>
+    <span class = "keyword">int</span> i = <span class = "constant">1</span>;
+    <span class = "keyword">int</span> sum = <span class = "constant">0</span>;
+    <span class = "keyword">while</span> (sum &lt; <span class = "constant">10000</span>) {
+      sum = sum + i;
+      i++;
+    }
+</pre>
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.17</span>
+Identify and fix the errors in the following code:
+<pre>
+    1  <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+    2    <span class = "keyword">public</span> <span class = "keyword">void</span> main(String[] args) {
+    3      <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; <span class = "constant">10</span>; i++);
+    4        sum += i;
+    5
+    6      <span class = "keyword">if</span> (i &lt; j);
+    7        System.out.println(i)
+    8      <span class = "keyword">else</span>
+    9        System.out.println(j);
+   10
+   11      <span class = "keyword">while</span> (j &lt; <span class = "constant">10</span>);
+   12      {
+   13        j++;
+   14      }
+   15
+   16      <span class = "keyword">do</span> {
+   17        j++;
+   18      } <span class = "keyword">while</span> (j &lt; <span class = "constant">10</span>)
+   19    }
+   20  }
+</pre>
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.18</span>
+What is wrong with the following programs?
+<pre>
+   (a)
+    1 <span class = "keyword">public</span> <span class = "keyword">class</span> ShowErrors {
+    2   <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+    3     <span class = "keyword">int</span> i = <span class = "constant">0</span>;
+    4     <span class = "keyword">do</span> {
+    5       System.out.println(i + <span class = "constant">4</span>);
+    6       i++;
+    7     }
+    8     <span class = "keyword">while</span> (i &lt; <span class = "constant">10</span>)
+    8   }
+    9 }
+
+    (b)
+    1 <span class = "keyword">public</span> <span class = "keyword">class</span> ShowErrors {
+    2   <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+    3     <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; <span class = "constant">10</span>; i++);
+    4       System.out.println(i + <span class = "constant">4</span>);
+    5   }
+    6 }
+</pre>
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.19</span>
+How many times is the println statement executed?
+<pre>
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; <span class = "constant">10</span>; i++) 
+      <span class = "keyword">for</span> (<span class = "keyword">int</span> j = <span class = "constant">0</span>; j &lt; i; j++)
+        System.out.println(i * j)
+</pre>
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.20</span>
+Show the output of the following programs. (Hint: Draw a table and list the variables in the columns to trace these programs.)
+<pre>
+    (a)
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">1</span>; i &lt; <span class = "constant">5</span>; i++) {
+          <span class = "keyword">int</span> j = <span class = "constant">0</span>;
+          <span class = "keyword">while</span> (j &lt; i) {
+            System.out.print(j + <span class = "literal">" "</span>);
+            j++;
+          }
+        }
+      }
+    }
+
+    (b)
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        <span class = "keyword">int</span> i = <span class = "constant">0</span>;
+        <span class = "keyword">while</span> (i &lt; <span class = "constant">5</span>) {
+          <span class = "keyword">for</span> (<span class = "keyword">int</span> j = i; j > <span class = "constant">1</span>; j--)
+            System.out.print(j + <span class = "literal">" "</span>);
+          System.out.println(<span class = "literal">"****"</span>);
+          i++;
+        }
+      }
+    }
+
+    (c)
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        <span class = "keyword">int</span> i = <span class = "constant">5</span>;
+        <span class = "keyword">while</span> (i >= <span class = "constant">1</span>) {
+          <span class = "keyword">int</span> num = <span class = "constant">1</span>;
+          <span class = "keyword">for</span> (<span class = "keyword">int</span> j = <span class = "constant">1</span>; j &lt;= i; j++) {
+            System.out.print(num + <span class = "literal">"xxx"</span>);
+            num *= <span class = "constant">2</span>;
+          }
+
+          System.out.println();
+          i--;
+        }
+      }
+    }
+
+    (d)
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        <span class = "keyword">int</span> i = <span class = "constant">1</span>;
+        <span class = "keyword">do</span> {
+          <span class = "keyword">int</span> num = <span class = "constant">1</span>;
+          <span class = "keyword">for</span> (<span class = "keyword">int</span> j = <span class = "constant">1</span>; j &lt;= i; j++) {
+            System.out.print(num + <span class = "literal">"G"</span>);
+            num += <span class = "constant">2</span>;
+          }
+
+          System.out.println();
+          i++;
+        } <span class = "keyword">while</span> (i &lt;= <span class = "constant">5</span>);
+      }
+    } 
+</pre>
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.21</span>
+Will the program work if n1 and n2 are replaced by n1 / 2 and n2 / 2 in line 17 in Listing 5.9?
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.22</span>
+In Listing 5.11, why is it wrong if you change the code (char)(hexValue + '0') to hexValue + '0' in line 21?
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.23</span>
+	In Listing 5.11, how many times the loop body is executed for a decimal number 245 and how many times the loop body is executed for a decimal number 3245?
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.24</span>
+What is the keyword break for? What is the keyword continue for? Will the following programs terminate? If so, give the output.
+<pre>
+  (a)
+  <span class = "keyword">int</span> balance = <span class = "constant">10</span>;
+  <span class = "keyword">while</span> (<span class = "keyword">true</span>) {
+    <span class = "keyword">if</span> (balance &lt; <span class = "constant">9</span>)
+      <span class = "keyword">break</span>;
+    balance = balance - <span class = "constant">9</span>;
+  }
+
+  System.out.println(<span class = "literal">"Balance is "</span> 
+    + balance);
+
+  (b)
+  <span class = "keyword">int</span> balance = <span class = "constant">10</span>;
+  <span class = "keyword">while</span> (<span class = "keyword">true</span>) {
+    <span class = "keyword">if</span> (balance &lt; <span class = "constant">9</span>)
+      <span class = "keyword">continue</span>;
+    balance = balance - <span class = "constant">9</span>;
+  }
+
+  System.out.println(<span class = "literal">"Balance is "</span> 
+    + balance);
+</pre>
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.25</span>
+The for loop in (a) is converted into the while loop in (b). What is wrong? Correct it.
+<pre>
+    (a)
+    <span class = "keyword">int</span> sum = <span class = "constant">0</span>; 
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; <span class = "constant">4</span>; i++) {
+      <span class = "keyword">if</span> (i % <span class = "constant">3</span> == <span class = "constant">0</span>) <span class = "keyword">continue</span>;
+      sum += i;
+    }
+
+    (b)
+    <span class = "keyword">int</span> i = <span class = "constant">0</span>, sum = <span class = "constant">0</span>; 
+    <span class = "keyword">while</span> (i &lt; <span class = "constant">4</span>) {
+      <span class = "keyword">if</span> (i % <span class = "constant">3</span> == <span class = "constant">0</span>) <span class = "keyword">continue</span>;
+      sum += i;
+      i++;
+    }
+</pre>
+                </div>
+                <div id = "a24" class="answer"></div>
+                <button id = "b24" type="button" class = "button" onclick="submit24()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.26</span>
+Rewrite the programs TestBreak and TestContinue in Listings 5.12 and 5.13 without using break and continue.
+                </div>
+                <div id = "a25" class="answer"></div>
+                <button id = "b25" type="button" class = "button" onclick="submit25()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">5.27</span>
+After the break statement in (a) is executed in the following loop, which statement is executed? Show the output. After the continue statement in (b) is executed in the following loop, which statement is executed? Show the output.
+<pre>
+    (a)
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">1</span>; i &lt; <span class = "constant">4</span>; i++) {
+      <span class = "keyword">for</span> (<span class = "keyword">int</span> j = <span class = "constant">1</span>; j &lt; <span class = "constant">4</span>; j++) {
+        <span class = "keyword">if</span> (i * j > <span class = "constant">2</span>) 
+          <span class = "keyword">break</span>;
+
+        System.out.println(i * j);
+      }
+
+      System.out.println(i);
+    }  
+
+    (b)
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">1</span>; i &lt; <span class = "constant">4</span>; i++) {
+      <span class = "keyword">for</span> (<span class = "keyword">int</span> j = <span class = "constant">1</span>; j &lt; <span class = "constant">4</span>; j++) {
+        <span class = "keyword">if</span> (i * j > <span class = "constant">2</span>) 
+          <span class = "keyword">continue</span>;
+
+        System.out.println(i * j);
+      }
+
+      System.out.println(i);
+    }  
+</pre>
+                </div>
+                <div id = "a26" class="answer"></div>
+                <button id = "b26" type="button" class = "button" onclick="submit26()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'Using aggregate operations on collection streams simplifies coding and improves performance.\
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = '\
+<pre>\n\
+A\n\
+D\n\
+B\n\
+C\n\
+D\n\
+A\n\
+D\n\
+true\n\
+false\n\
+true\n\
+d\n\
+b\n\
+a\n\
+c\n\
+[ay, by, cy, dy]\n\
+</pre>\n\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = 'A stream can only have one terminal operation. Once you apply stream.findFirst() . the stream is destroyed.\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = '\
+<pre>\n\
+(a)\n\
+Use a method reference: \n\
+  sorted(String::compareToIgnoreCase);\n\
+Use an anonymous inner class: \n\
+sorted(new Comparator&lt;String>() {\n\
+  @Override\n\
+  public int compare(String s1, String s2) {\n\
+    return s1.compareToIgnoreCase(s2);\n\
+  }\n\
+}); \n\
+    \n\
+(b)\n\
+Use a lambda expression:\n\
+ 		forEach(e -> System.out.println())\n\
+\n\
+Use an anonymous inner class:\n\
+forEach(\n\
+   new java.util.function.Consumer&lt;String>() {\n\
+     public void accept(String e) {\n\
+       System.out.println();\n\
+     }\n\
+   }\n\
+ )\n\
+</pre>\n\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = 'map.entrySet().stream().mapToDouble(e -> e.getValue()).sum()\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = '\
+<pre>\n\
+    1\n\
+    1\n\
+    7\n\
+    3.5\n\
+    4\n\
+    4\n\
+    4\n\
+    true\n\
+    false\n\
+    true\n\
+    3\n\
+    6\n\
+    4\n\
+    5\n\
+    3\n\
+    [B, E, C, D, B]\n\
+</pre>\n\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'numbers is an int array, you have to use IntStream.of(numbers) rather than DoubleStream.of(numbers).\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = '\
+<pre>\n\
+    mapToObj(\n\
+      new java.util.function.IntFunction&lt;Character>() {\n\
+        public Character apply(int e) {\n\
+          return (char)(e + 50);\n\
+        }\n\
+      }\n\
+    )\n\
+</pre>\n\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = '21\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = '\
+<pre>\n\
+    System.out.println("The number of characters in array names is " +\n\
+        Stream.of(names).mapToInt(e -> e.length()).sum());\n\
+</pre>\n\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'A stateless method can apply to the elements in the stream independent from the others. A stateful method must consider all the elements in order to produce a result.\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'You can create a parallel stream by invoking the parallel() method on a stream or invoking the parallelStream() method from a collection object such as a list or a set.\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = 'The former is better than the latter because the stream size is smaller after applying the filter method. This will make the sorted() method to run faster.\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'The values are 3 4 1 5 20 1 3 3 4 6\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'The output is unpredictable due to using a parallel stream with forEach method.\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = '\
+<pre>\n\
+    Random r = new Random();\n\
+    double[] numbers = r.doubles(1000, 0.0, 1.0).toArray();\n\
+</pre>\n\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = '\
+<pre>\n\
+10\n\
+24\n\
+30\n\
+1 2 3 4\n\
+1, 2, 3, 4\n\
+</pre>\n\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = '720\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = '1 2 3 4 5 6\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = '1, 2, 3, 4, 5, 6, 1, 3\
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = '\
+<pre>\n\
+[1, 2, 3, 4, 1]\n\
+[1, 2, 3, 4]\n\
+{1=1, 2=2, 3=3, 4=4}\n\
+11\n\
+2.2\n\
+</pre>\n\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = '\
+<pre>\n\
+1 occurs 2 times \n\
+2 occurs 3 times \n\
+3 occurs 1 time \n\
+4 occurs 1 time \n\
+1: 2\n\
+2: 6\n\
+3: 3\n\
+4: 4\n\
+Johnson, Jeff\n\
+Johnson, John\n\
+Johnson, Susan\n\
+Peterson, John\n\
+Yao, Kim\n\
+        21     90.70\n\
+        22     87.30\n\
+        23     83.85\n\
+</pre>\n\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = 'No. You have to use:\
+<pre>\n\
+DoubleStream.of(numbers).filter(e -> e >          \n\
+  DoubleStream.of(numbers).average().getAsDouble()).count());\n\
+</pre>\n\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = 'No. count will always be 0.\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+<script>var answer24 = 'ABC\
+';function submit24() {if (document.getElementById('b24').innerHTML == 'Show Answer') {document.getElementById('a24').innerHTML = answer24;document.getElementById('b24').style.background = 'gray'; document.getElementById('b24').innerHTML = 'Hide Answer'; }else {document.getElementById('a24').innerHTML = '';
+document.getElementById('b24').style.background = 'green'; document.getElementById('b24').innerHTML = 'Show Answer';} }</script>
+<script>var answer25 = '\
+<pre>\n\
+A\n\
+B\n\
+C\n\
+</pre>\n\
+';function submit25() {if (document.getElementById('b25').innerHTML == 'Show Answer') {document.getElementById('a25').innerHTML = answer25;document.getElementById('b25').style.background = 'gray'; document.getElementById('b25').innerHTML = 'Hide Answer'; }else {document.getElementById('a25').innerHTML = '';
+document.getElementById('b25').style.background = 'green'; document.getElementById('b25').innerHTML = 'Show Answer';} }</script>
+<script>var answer26 = '\
+<pre>\n\
+String[] list = Stream.of(m).map(e -> Stream.of(e)).\n\
+  reduce((e1, e2) -> Stream.concat(e1, e2)).get().toArray();\n\
+</pre>\n\
+';function submit26() {if (document.getElementById('b26').innerHTML == 'Show Answer') {document.getElementById('a26').innerHTML = answer26;document.getElementById('b26').style.background = 'gray'; document.getElementById('b26').innerHTML = 'Hide Answer'; }else {document.getElementById('a26').innerHTML = '';
+document.getElementById('b26').style.background = 'green'; document.getElementById('b26').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 43 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.1</span>
+What are the benefits of using aggregate operations on collection streams for processing data?
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.2</span>
+Show the output of the following code?
+<pre>
+    Character[] chars = {<span class = "literal">'D'</span>, <span class = "literal">'B'</span>, <span class = "literal">'A'</span>, <span class = "literal">'C'</span>};
+    System.out.println(Stream.of(chars).sorted().findFirst().get());
+    System.out.println(Stream.of(chars).sorted(
+      java.util.Comparator.reverseOrder()).findFirst().get());
+    System.out.println(Stream.of(chars)
+      .limit(<span class = "constant">2</span>).sorted().findFirst().get());
+    System.out.println(Stream.of(chars).distinct()
+      .skip(<span class = "constant">2</span>).filter(e -> e > <span class = "literal">'A'</span>).findFirst().get());
+    System.out.println(Stream.of(chars)
+      .max(Character::compareTo).get());
+    System.out.println(Stream.of(chars)
+      .max(java.util.Comparator.reverseOrder()).get());
+    System.out.println(Stream.of(chars)
+      .filter(e -> e > <span class = "literal">'A'</span>).findFirst().get());
+    System.out.println(Stream.of(chars)
+      .allMatch(e -> e >= <span class = "literal">'A'</span>));
+    System.out.println(Stream.of(chars)
+      .anyMatch(e -> e > <span class = "literal">'F'</span>));
+    System.out.println(Stream.of(chars)
+      .noneMatch(e -> e > <span class = "literal">'F'</span>));
+    Stream.of(chars).map(e -> e + <span class = "literal">""</span>).map(e -> e.toLowerCase())
+      .forEach(System.out::println);
+
+    Object[] temp = Stream.of(chars).map(e -> e + <span class = "literal">"Y"</span>)
+      .map(e -> e.toLowerCase()).sorted().toArray();
+    System.out.println(java.util.Arrays.toString(temp));
+</pre>
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.3</span>
+What is wrong in the following code?
+<pre>
+    Character[] chars = {<span class = "literal">'D'</span>, <span class = "literal">'B'</span>, <span class = "literal">'A'</span>, <span class = "literal">'C'</span>};
+    Stream&lt;Character> stream = Stream.of(chars).sorted();
+    System.out.println(stream.findFirst());
+    System.out.println(stream.skip(<span class = "constant">2</span>).findFirst());
+</pre>
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.4</span>
+Rewrite the following code using a method reference and an anonymous inner class?
+<pre>
+(a) sorted((s1, s2) -> s1.compareToIgnoreCase(s2))
+(b) forEach(System.out::println)
+</pre>
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.5</span>
+Given a map of the type Map&lt;String, Double>, write an expression that returns the sum of all the values in map. For example, if the map contains {"john", 1.5} and {"Peter", 1.1}, the sum is 2.6.
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.6</span>
+Show the output of the following code?
+<pre>
+    <span class = "keyword">int</span>[] numbers = {<span class = "constant">1</span>, <span class = "constant">4</span>, <span class = "constant">2</span>, <span class = "constant">3</span>, <span class = "constant">1</span>};
+    System.out.println(IntStream.of(numbers)
+      .sorted().findFirst().getAsInt());
+    System.out.println(IntStream.of(numbers)
+      .limit(<span class = "constant">2</span>).sorted().findFirst().getAsInt());
+    System.out.println(IntStream.of(numbers).distinct()
+      .skip(<span class = "constant">1</span>).filter(e -> e > <span class = "constant">2</span>).sum());
+    System.out.println(IntStream.of(numbers).distinct()
+      .skip(<span class = "constant">1</span>).filter(e -> e > <span class = "constant">2</span>).average().getAsDouble());
+    System.out.println(IntStream.of(numbers).max().getAsInt());
+    System.out.println(IntStream.of(numbers).max().getAsInt());
+    System.out.println(IntStream.of(numbers)
+      .filter(e -> e > <span class = "constant">1</span>).findFirst().getAsInt());
+    System.out.println(IntStream.of(numbers)
+      .allMatch(e -> e >= <span class = "constant">1</span>));
+    System.out.println(IntStream.of(numbers)
+      .anyMatch(e -> e > <span class = "constant">4</span>));
+    System.out.println(IntStream.of(numbers).noneMatch(e -> e > <span class = "constant">4</span>));
+    IntStream.of(numbers).mapToObj(e -> (<span class = "keyword">char</span>)(e + <span class = "constant">50</span>))
+      .forEach(System.out::println);
+
+    Object[] temp = IntStream.of(numbers)
+      .mapToObj(e -> (<span class = "keyword">char</span>)(e + <span class = "literal">'A'</span>)).toArray();
+    System.out.println(java.util.Arrays.toString(temp));
+</pre>
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.7</span>
+What is wrong in the following code?
+<pre>
+    <span class = "keyword">int</span>[] numbers = {<span class = "constant">1</span>, <span class = "constant">4</span>, <span class = "constant">2</span>, <span class = "constant">3</span>, <span class = "constant">1</span>};  
+    DoubleSummaryStatistics stats = 
+      DoubleStream.of(numbers).summaryStatistics();
+    System.out.printf(<span class = "literal">"The summary of the stream is\n%<span class = "literal">-</span>10s%10d\n"</span> +
+      <span class = "literal">"%<span class = "literal">-</span>10s%<span class = "constant">10</span><span class = "literal">.</span>2f\n%<span class = "literal">-</span>10s%<span class = "constant">10</span><span class = "literal">.</span>2f\n%<span class = "literal">-</span>10s%<span class = "constant">10</span><span class = "literal">.</span>2f\n%<span class = "literal">-</span>10s%<span class = "constant">10</span><span class = "literal">.</span>2f\n"</span>,
+      <span class = "literal">"  Count:"</span>, stats.getCount(), <span class = "literal">"  Max:"</span>, stats.getMax(),
+      <span class = "literal">"  Min:"</span>, stats.getMin(), <span class = "literal">"  Sum:"</span>, stats.getSum(),
+      <span class = "literal">"  Average:"</span>, stats.getAverage());
+</pre>
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.8</span>
+Rewrite the following code that maps an int to a Character using an anonymous inner class?
+<pre>
+    mapToObj(e -> (<span class = "keyword">char</span>)(e + <span class = "constant">50</span>))
+</pre>
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.9</span>
+Show the output of the following code.
+<pre>
+    <span class = "keyword">int</span>[][] m = {{<span class = "constant">1</span>, <span class = "constant">2</span>}, {<span class = "constant">3</span>, <span class = "constant">4</span>}, {<span class = "constant">5</span>, <span class = "constant">6</span>}};
+    System.out.println(Stream.of(m)
+      .mapToInt(e -> IntStream.of(e).sum()).sum());
+</pre>
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.10</span>
+Given an array names in Listing 43.1, write the code to display the total number of characters in names.
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.11</span>
+What is a stateless method? What is a stateful method?
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.12</span>
+How do you create a parallel stream?
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.13</span>
+Suppose names is a set of strings, which of the following two streams is better?
+<pre>
+    Object[] s = set.parallelStream().filter(e -> e.length() > <span class = "constant">3</span>)
+      .sorted().toArray();
+
+    Object[] s = set.parallelStream().sorted()
+      .filter(e -> e.length() > <span class = "constant">3</span>).toArray();
+</pre>
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.14</span>
+What will be the output of the following code?
+<pre>
+    <span class = "keyword">int</span>[] values = {<span class = "constant">3</span>, <span class = "constant">4</span>, <span class = "constant">1</span>, <span class = "constant">5</span>, <span class = "constant">20</span>, <span class = "constant">1</span>, <span class = "constant">3</span>, <span class = "constant">3</span>, <span class = "constant">4</span>, <span class = "constant">6</span>};
+    System.out.print(<span class = "literal">"The values are "</span>);
+      IntStream.of(values)
+        .forEach(e -> System.out.print(e + <span class = "literal">" "</span>));
+</pre>
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.15</span>
+What will be the output of the following code?
+<pre>
+    <span class = "keyword">int</span>[] values = {<span class = "constant">3</span>, <span class = "constant">4</span>, <span class = "constant">1</span>, <span class = "constant">5</span>, <span class = "constant">20</span>, <span class = "constant">1</span>, <span class = "constant">3</span>, <span class = "constant">3</span>, <span class = "constant">4</span>, <span class = "constant">6</span>};
+    System.out.print(<span class = "literal">"The values are "</span>);
+      IntStream.of(values).parallel()
+        .forEach(e -> System.out.print(e + <span class = "literal">" "</span>));
+</pre>
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.16</span>
+Write a statement to obtain an array of 1000 random double values between 0.0 and 1.0, excluding 1.0.
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.17</span>
+Show the output of the following code.
+<pre>
+    <span class = "keyword">int</span>[] values = {<span class = "constant">1</span>, <span class = "constant">2</span>, <span class = "constant">3</span>, <span class = "constant">4</span>};
+    System.out.println(IntStream.of(values)
+      .reduce(<span class = "constant">0</span>, (e1, e2) -> e1 + e2));
+    System.out.println(IntStream.of(values)
+      .reduce(<span class = "constant">1</span>, (e1, e2) -> e1 * e2));
+    System.out.println(IntStream.of(values).map(e -> e * e)
+      .reduce(<span class = "constant">0</span>, (e1, e2) -> e1 + e2));
+    System.out.println(IntStream.of(values).mapToObj(e -> <span class = "literal">""</span> + e)
+      .reduce((e1, e2) -> e1  + <span class = "literal">" "</span> + e2).get());    
+    System.out.println(IntStream.of(values).mapToObj(e -> <span class = "literal">""</span> + e)
+      .reduce((e1, e2) -> e1  + <span class = "literal">", "</span> + e2).get());      
+</pre>
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.18</span>
+Show the output of the following code.
+<pre>
+    <span class = "keyword">int</span>[][] m = {{<span class = "constant">1</span>, <span class = "constant">2</span>}, {<span class = "constant">3</span>, <span class = "constant">4</span>}, {<span class = "constant">5</span>, <span class = "constant">6</span>}};
+    System.out.println(Stream.of(m)
+      .map(e -> IntStream.of(e).reduce(<span class = "constant">1</span>, (e1, e2) -> e1 * e2))
+      .reduce(<span class = "constant">1</span>, (e1, e2) -> e1 * e2));
+</pre>
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.19</span>
+Show the output of the following code.
+<pre>
+    <span class = "keyword">int</span>[][] m = {{<span class = "constant">1</span>, <span class = "constant">2</span>}, {<span class = "constant">3</span>, <span class = "constant">4</span>}, {<span class = "constant">5</span>, <span class = "constant">6</span>}, {<span class = "constant">1</span>, <span class = "constant">3</span>}};
+    Stream.of(m).map(e -> IntStream.of(e))
+      .reduce((e1, e2) -> IntStream.concat(e1, e2))
+      .get().distinct()
+      .forEach(e -> System.out.print(e + <span class = "literal">" "</span>));
+</pre>
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.20</span>
+Show the output of the following code.
+<pre>
+    <span class = "keyword">int</span>[][] m = {{<span class = "constant">1</span>, <span class = "constant">2</span>}, {<span class = "constant">3</span>, <span class = "constant">4</span>}, {<span class = "constant">5</span>, <span class = "constant">6</span>}, {<span class = "constant">1</span>, <span class = "constant">3</span>}};
+    System.out.println(
+      Stream.of(m).map(e -> IntStream.of(e))
+        .reduce((e1, e2) -> IntStream.concat(e1, e2))
+        .get().distinct().mapToObj(e -> e + <span class = "literal">""</span>)
+        .reduce((e1, e2) -> e1 + <span class = "literal">", "</span> + e2).get());
+</pre>
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.21</span>
+Show the output of the following code.
+<pre>
+    <span class = "keyword">int</span>[] values = {<span class = "constant">1</span>, <span class = "constant">2</span>, <span class = "constant">3</span>, <span class = "constant">4</span>, <span class = "constant">1</span>};
+    List&lt;Integer> list = IntStream.of(values).mapToObj(e -> e)
+      .collect(Collectors.toList());
+    System.out.println(list);
+    
+    Set&lt;Integer> set = IntStream.of(values).mapToObj(e -> e)
+      .collect(Collectors.toSet());
+    System.out.println(set);
+    
+    Map&lt;Integer, Integer> map = IntStream.of(values).distinct()
+      .mapToObj(e -> e)
+      .collect(Collectors.toMap(e -> e, e -> e.hashCode()));
+    System.out.println(map);
+    
+    System.out.println(
+      IntStream.of(values).mapToObj(e -> e)
+        .collect(Collectors.summingInt(e -> e)));
+    
+    System.out.println(
+      IntStream.of(values).mapToObj(e -> e)
+        .collect(Collectors.averagingDouble(e -> e)));
+</pre>
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.22</span>
+Show the output of the following code.
+<pre>
+    <span class = "keyword">int</span>[] values = {<span class = "constant">1</span>, <span class = "constant">2</span>, <span class = "constant">2</span>, <span class = "constant">3</span>, <span class = "constant">4</span>, <span class = "constant">2</span>, <span class = "constant">1</span>};
+    IntStream.of(values).mapToObj(e -> e).collect(
+      Collectors.groupingBy(e -> e, TreeMap::new,
+        Collectors.counting())).
+      forEach((k, v) -> System.out.println(k + <span class = "literal">" occurs "</span> + v
+          + (v > <span class = "constant">1</span> ? <span class = "literal">" times "</span> : <span class = "literal">" time "</span>)));
+
+    IntStream.of(values).mapToObj(e -> e).collect(
+      Collectors.groupingBy(e -> e, TreeMap::new,
+        Collectors.summingInt(e -> e))).
+      forEach((k, v) -> System.out.println(k + <span class = "literal">": "</span> + v));
+
+    MyStudent[] students = {
+      <span class = "keyword">new</span> MyStudent(<span class = "literal">"John"</span>, <span class = "literal">"Johnson"</span>, <span class = "literal">"CS"</span>, <span class = "constant">23</span>, <span class = "constant">89</span><span class = "literal">.</span><span class = "constant">2</span>),
+      <span class = "keyword">new</span> MyStudent(<span class = "literal">"Susan"</span>, <span class = "literal">"Johnson"</span>, <span class = "literal">"Math"</span>, <span class = "constant">21</span>, <span class = "constant">89</span><span class = "literal">.</span><span class = "constant">1</span>),
+      <span class = "keyword">new</span> MyStudent(<span class = "literal">"John"</span>, <span class = "literal">"Peterson"</span>, <span class = "literal">"CS"</span>, <span class = "constant">21</span>, <span class = "constant">92</span><span class = "literal">.</span><span class = "constant">3</span>),
+      <span class = "keyword">new</span> MyStudent(<span class = "literal">"Kim"</span>, <span class = "literal">"Yao"</span>, <span class = "literal">"Math"</span>, <span class = "constant">22</span>, <span class = "constant">87</span><span class = "literal">.</span><span class = "constant">3</span>),
+      <span class = "keyword">new</span> MyStudent(<span class = "literal">"Jeff"</span>, <span class = "literal">"Johnson"</span>, <span class = "literal">"CS"</span>, <span class = "constant">23</span>, <span class = "constant">78</span><span class = "literal">.</span><span class = "constant">5</span>)};
+
+    Stream.of(students)
+      .sorted(Comparator.comparing(MyStudent::getLastName)
+        .thenComparing(MyStudent::getFirstName))
+      .forEach(e -> System.out.println(e.getLastName() + <span class = "literal">", "</span> +        
+                    e.getFirstName()));
+
+    Stream.of(students).collect(Collectors.
+      groupingBy(MyStudent::getAge, TreeMap::new,
+        Collectors.averagingDouble(MyStudent::getScore))).
+      forEach((k, v) -> System.out.printf(<span class = "literal">"%10s%<span class = "constant">10</span><span class = "literal">.</span>2f\n"</span>, k, v));
+</pre>
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.23</span>
+Can the following code be used to replace line 19 in Listing 43.7?
+<pre>
+    DoubleStream.of(numbers).filter(e -> e >          
+      DoubleStream.of(numbers).average()).count());
+</pre>
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.24</span>
+Can the following code be used to replace lines 15-16 in Listing 43.8?
+<pre>
+      Stream.of(chars).forEach(e -> {
+        <span class = "keyword">int</span> count = <span class = "constant">0</span>;
+        System.out.print(e + (++count % <span class = "constant">20</span> == <span class = "constant">0</span> ? <span class = "literal">"\n"</span> : <span class = "literal">" "</span>)); });
+</pre>
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.25</span>
+Show the output of the following code?
+<pre>
+      String s = <span class = "literal">"ABC"</span>; 
+      Stream.of(s.toCharArray()).forEach(ch -> 
+        System.out.println(ch));
+</pre>
+                </div>
+                <div id = "a24" class="answer"></div>
+                <button id = "b24" type="button" class = "button" onclick="submit24()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.26</span>
+Show the output of the following code? (The toCharacterArray method is presented in Listing 43.9)
+<pre>
+      String s = <span class = "literal">"ABC"</span>; 
+      Stream.of(toCharacterArray(s.toCharArray())).forEach(ch -> 
+        System.out.println(ch));
+</pre>
+                </div>
+                <div id = "a25" class="answer"></div>
+                <button id = "b25" type="button" class = "button" onclick="submit25()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">43.27</span>
+Write the code to obtain a one-dimensional array list of strings from a two-dimensional array matrix of strings.
+                </div>
+                <div id = "a26" class="answer"></div>
+                <button id = "b26" type="button" class = "button" onclick="submit26()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

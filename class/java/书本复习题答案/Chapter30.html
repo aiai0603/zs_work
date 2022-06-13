@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'Multithreading can make your program more responsive and interactive, and enhance the performance. Multithreading is needed in many situations, such as animation and client/server computing. Because most of time the CPU is idle--for example, the CPU is doing nothing while the user enters data--it is practical for multiple threads to share the CPU time in single-processor systems.\
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = 'An instance of Runnable is a runnable object. A thread is wrapper object for a runnable object for executing a runnable task.\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = 'You can create a task classes by implementing the Runnable interface and create a thread for a task using the constructor new Thread(task).\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = 'If you replace the start() method by the run() method in Lines 11-13 in Example 19.1, the run() method are executed in sequence. The threads are not executed concurrently.\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = '(a) new Test() is recursively called inside the constructor. \
+            To fix it, delete the highlighted line and use new Thread(this).start(). <br />\
+            (b) An illegal java.lang.IllegalThreadStateException may be thrown because you just started thread and thread might have not yet finished before you start it again. To fix it, delete one t.start().\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = 'All of the methods shown in Figure 23.4 except yield() and sleep(long) are instance methods. sleep()  and join() may throw an InterruptedException. The methods stop(), suspend() and resume() are deprecated in JDK 1.2.\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'If the loop is outside the try-catch block, the thread may continue to execute even though it is being interrupted.\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = 'You use the setPriority() method to set the priority for a thread. The default priority of the thread is Thread.NORM_PRIORITY (5).\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'You see the text flashing, because the program displays a text on the label and then display nothing on the label. This alternates to cause the flashing effect.\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = 'No.\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'Invoking Platform.runLater(Runnable r) tells the system to run a task in the JavaFX application thread.\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'Yes.\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = 'The while loop will get all the time. It starves all other tasks. \
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'You can create a thread for each task.  This approach is convenient for a single task execution, but it is not efficient for a large number of tasks, because you have to create a thread for each task. Starting a new thread for each task could limit throughput and cause poor performance. A thread pool is ideal to manage the number of tasks executing concurrently.\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'To create a thread pool with three threads, use\
+<pre>\n\
+    ExecutorService executor = Executors.newFixedThreadPool(3);\n\
+</pre>\n\
+	To submit a task, use\
+<pre>\n\
+    executor.execute(task);\n\
+</pre>\n\
+To check whether all tasks in a the pool are finished, invoke isTerminated() method.\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = 'See the section "Synchronization" for examples and solutions.\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = 'No. synchronized (this) acquires a lock on a thread (an instance of AddAPennyThread). Each thread still can access the object bank concurrently. To fix the problem, acquire the lock on bank using synchronized (bank).\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = 'To create a lock, use the new ReentrantLock(). To acquire the lock, invoke its lock() method and to release it, invoke its unlock() method.\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = 'A condition on a lock can be created using lock.newCondition(). The await() method causes the current thread to wait until the condition is signaled. The signal() method wakes up one waiting thread, and the signalAll() method wakes up all waiting threads.\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = 'When a thread notify a waiting thread, you cannot assume the balance >= amount for the waiting thread. The condition (balance &lt; amount) may be still true when the thread is awakened.\
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = 'To override the init() method defined in the Applet class, you have to use the exact signature. The init() method does not claim throwing exceptions.\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = 'If you invoke the methods on a condition without first acquiring a lock for the condition, an IllegalMonitorStateException would be thrown.\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = 'Yes. These methods are defined in the Object class and they are used for thread communication.\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = 'object1 and object2 are not the same. A lock must be acquired on the receiving object of the wait(), notify(), and notifyAll() methods before invoking these methods.\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+<script>var answer24 = 'No.\
+';function submit24() {if (document.getElementById('b24').innerHTML == 'Show Answer') {document.getElementById('a24').innerHTML = answer24;document.getElementById('b24').style.background = 'gray'; document.getElementById('b24').innerHTML = 'Hide Answer'; }else {document.getElementById('a24').innerHTML = '';
+document.getElementById('b24').style.background = 'green'; document.getElementById('b24').innerHTML = 'Show Answer';} }</script>
+<script>var answer25 = 'It will wait for a signal for the queue to be not empty.\
+';function submit25() {if (document.getElementById('b25').innerHTML == 'Show Answer') {document.getElementById('a25').innerHTML = answer25;document.getElementById('b25').style.background = 'gray'; document.getElementById('b25').innerHTML = 'Hide Answer'; }else {document.getElementById('a25').innerHTML = '';
+document.getElementById('b25').style.background = 'green'; document.getElementById('b25').innerHTML = 'Show Answer';} }</script>
+<script>var answer26 = 'It will wait for a signal for the queue to be not full.\
+';function submit26() {if (document.getElementById('b26').innerHTML == 'Show Answer') {document.getElementById('a26').innerHTML = answer26;document.getElementById('b26').style.background = 'gray'; document.getElementById('b26').innerHTML = 'Hide Answer'; }else {document.getElementById('a26').innerHTML = '';
+document.getElementById('b26').style.background = 'green'; document.getElementById('b26').innerHTML = 'Show Answer';} }</script>
+<script>var answer27 = 'The ArrayBlockingQueue, LinkedBlockingQueue, and PriorityBlockingQueue are supported in JDK 1.5. All are concrete classes of the BlockingQueue interface.\
+';function submit27() {if (document.getElementById('b27').innerHTML == 'Show Answer') {document.getElementById('a27').innerHTML = answer27;document.getElementById('b27').style.background = 'gray'; document.getElementById('b27').innerHTML = 'Hide Answer'; }else {document.getElementById('a27').innerHTML = '';
+document.getElementById('b27').style.background = 'green'; document.getElementById('b27').innerHTML = 'Show Answer';} }</script>
+<script>var answer28 = 'Use put(element) method to add an element to the queue. If the queue is full, the thread is blocked.\
+';function submit28() {if (document.getElementById('b28').innerHTML == 'Show Answer') {document.getElementById('a28').innerHTML = answer28;document.getElementById('b28').style.background = 'gray'; document.getElementById('b28').innerHTML = 'Hide Answer'; }else {document.getElementById('a28').innerHTML = '';
+document.getElementById('b28').style.background = 'green'; document.getElementById('b28').innerHTML = 'Show Answer';} }</script>
+<script>var answer29 = 'Use take() method to retrieve an element from the queue. If the queue is empty, the thread is blocked.\
+';function submit29() {if (document.getElementById('b29').innerHTML == 'Show Answer') {document.getElementById('a29').innerHTML = answer29;document.getElementById('b29').style.background = 'gray'; document.getElementById('b29').innerHTML = 'Hide Answer'; }else {document.getElementById('a29').innerHTML = '';
+document.getElementById('b29').style.background = 'green'; document.getElementById('b29').innerHTML = 'Show Answer';} }</script>
+<script>var answer30 = 'Lock and semaphore can both be used to restrict access to a shared resource. Using a lock on a resource ensures only one thread can access it. Using a semaphore on a resource allows one or more specified number of threads to access a resource.\
+';function submit30() {if (document.getElementById('b30').innerHTML == 'Show Answer') {document.getElementById('a30').innerHTML = answer30;document.getElementById('b30').style.background = 'gray'; document.getElementById('b30').innerHTML = 'Hide Answer'; }else {document.getElementById('a30').innerHTML = '';
+document.getElementById('b30').style.background = 'green'; document.getElementById('b30').innerHTML = 'Show Answer';} }</script>
+<script>var answer31 = 'Use new Semaphore(numberOfPermits) to create a semaphore. Invoking aquire() to get a semaphore and invoking release() to release a semaphore.\
+';function submit31() {if (document.getElementById('b31').innerHTML == 'Show Answer') {document.getElementById('a31').innerHTML = answer31;document.getElementById('b31').style.background = 'gray'; document.getElementById('b31').innerHTML = 'Hide Answer'; }else {document.getElementById('a31').innerHTML = '';
+document.getElementById('b31').style.background = 'green'; document.getElementById('b31').innerHTML = 'Show Answer';} }</script>
+<script>var answer32 = 'Deadlock occurs in the case that two or more threads acquire locks on multiple objects and each has the lock on one object and is waiting for the lock on the other object. The resource ordering technique can be used to avoid deadlock.\
+';function submit32() {if (document.getElementById('b32').innerHTML == 'Show Answer') {document.getElementById('a32').innerHTML = answer32;document.getElementById('b32').style.background = 'gray'; document.getElementById('b32').innerHTML = 'Hide Answer'; }else {document.getElementById('a32').innerHTML = '';
+document.getElementById('b32').style.background = 'green'; document.getElementById('b32').innerHTML = 'Show Answer';} }</script>
+<script>var answer33 = 'See the text.\
+';function submit33() {if (document.getElementById('b33').innerHTML == 'Show Answer') {document.getElementById('a33').innerHTML = answer33;document.getElementById('b33').style.background = 'gray'; document.getElementById('b33').innerHTML = 'Hide Answer'; }else {document.getElementById('a33').innerHTML = '';
+document.getElementById('b33').style.background = 'green'; document.getElementById('b33').innerHTML = 'Show Answer';} }</script>
+<script>var answer34 = 'A synchronized collection is thread-safe, i.e., it can be accessed by multiple threads concurrently without being corrupted. ArrayList is not thread-safe. There are several ways to make it safe. You may obtain a lock before accessing it, or use the Collections.synchronizedList(list) to return a synchronized list.\
+';function submit34() {if (document.getElementById('b34').innerHTML == 'Show Answer') {document.getElementById('a34').innerHTML = answer34;document.getElementById('b34').style.background = 'gray'; document.getElementById('b34').innerHTML = 'Hide Answer'; }else {document.getElementById('a34').innerHTML = '';
+document.getElementById('b34').style.background = 'green'; document.getElementById('b34').innerHTML = 'Show Answer';} }</script>
+<script>var answer35 = 'An iterator is fail-fast. This means that if you are using an iterator to traverse a collection while the underlying collection is being modified by another thread, then the iterator will immediately fail by throwing java.util.ConcurrentModificationException.\
+';function submit35() {if (document.getElementById('b35').innerHTML == 'Show Answer') {document.getElementById('a35').innerHTML = answer35;document.getElementById('b35').style.background = 'gray'; document.getElementById('b35').innerHTML = 'Hide Answer'; }else {document.getElementById('a35').innerHTML = '';
+document.getElementById('b35').style.background = 'green'; document.getElementById('b35').innerHTML = 'Show Answer';} }</script>
+<script>var answer36 = 'To define a ForkJoinTask, define a class that extends RecursiveAction or RecursiveTask. RecursiveAction is for a task that doesn’t return a value and RecursiveTask is for a task that returns a value. \
+';function submit36() {if (document.getElementById('b36').innerHTML == 'Show Answer') {document.getElementById('a36').innerHTML = answer36;document.getElementById('b36').style.background = 'gray'; document.getElementById('b36').innerHTML = 'Hide Answer'; }else {document.getElementById('a36').innerHTML = '';
+document.getElementById('b36').style.background = 'green'; document.getElementById('b36').innerHTML = 'Show Answer';} }</script>
+<script>var answer37 = 'Invoke the invoke method on a ForkJoinTask object to execute a task.\
+';function submit37() {if (document.getElementById('b37').innerHTML == 'Show Answer') {document.getElementById('a37').innerHTML = answer37;document.getElementById('b37').style.background = 'gray'; document.getElementById('b37').innerHTML = 'Hide Answer'; }else {document.getElementById('a37').innerHTML = '';
+document.getElementById('b37').style.background = 'green'; document.getElementById('b37').innerHTML = 'Show Answer';} }</script>
+<script>var answer38 = 'Invoke the isDone method to test if the task is completed.\
+';function submit38() {if (document.getElementById('b38').innerHTML == 'Show Answer') {document.getElementById('a38').innerHTML = answer38;document.getElementById('b38').style.background = 'gray'; document.getElementById('b38').innerHTML = 'Hide Answer'; }else {document.getElementById('a38').innerHTML = '';
+document.getElementById('b38').style.background = 'green'; document.getElementById('b38').innerHTML = 'Show Answer';} }</script>
+<script>var answer39 = 'You can create a fork join pool using new ForkJoinPool(). To place a task to the pool, use the invoke method to add a task.\
+';function submit39() {if (document.getElementById('b39').innerHTML == 'Show Answer') {document.getElementById('a39').innerHTML = answer39;document.getElementById('b39').style.background = 'gray'; document.getElementById('b39').innerHTML = 'Hide Answer'; }else {document.getElementById('a39').innerHTML = '';
+document.getElementById('b39').style.background = 'green'; document.getElementById('b39').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 30 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.1</span>
+Why is multithreading needed? How can multiple threads run simultaneously in a single-processor system?
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.2</span>
+What is a runnable object? What is a thread?
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.3</span>
+How do you define a task class? How do you create a thread for a task?
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.4</span>
+What would happen if you replace the start() method with the run() method in lines 14–16 in Listing 30.1?    
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.5</span>
+What is wrong in the following two programs? Correct the errors.
+<pre>
+    (a)
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test <span class = "keyword">implements</span> Runnable { 
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        <span class = "keyword">new</span> Test();
+      }
+
+      <span class = "keyword">public</span> Test() {
+        Test task = <span class = "keyword">new</span> Test();
+        <span class = "keyword">new</span> Thread(task).start();
+      }
+
+      <span class = "keyword">public</span> <span class = "keyword">void</span> run() {
+        System.out.println(<span class = "literal">"test"</span>);
+      }
+    }
+
+    (b)
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test <span class = "keyword">implements</span> Runnable { 
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        <span class = "keyword">new</span> Test();
+      }
+
+      <span class = "keyword">public</span> Test() {
+        Thread t = <span class = "keyword">new</span> Thread(<span class = "keyword">this</span>);
+        t.start();
+        t.start();
+      }
+
+      <span class = "keyword">public</span> <span class = "keyword">void</span> run() {
+        System.out.println(<span class = "literal">"test"</span>);
+      }
+    }
+</pre>
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.6</span>
+Which of the following methods are instance methods in java.lang.Thread? Which method may throw an InterruptedException? Which of them are deprecated in Java?
+<br />
+    run, start, stop, suspend, resume, sleep, interrupt, yield, join 
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.7</span>
+If a loop contains a method that throws an InterruptedException, why should the loop be placed inside a try-catch block?
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.8</span>
+How do you set a priority for a thread? What is the default priority?
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.9</span>
+What causes the text to flash?
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.10</span>
+Is an instance of FlashText a runnable object? 
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.11</span>
+What is the purpose of using Platform.runLater? 
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.12</span>
+Can you replace the code in lines 27–32 using the following code?
+<pre>
+    Platform.runLater(e -> lblText.setText(text));
+</pre>
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.13</span>
+What happens if line 34 (Thread.sleep(200)) is not used?
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.14</span>
+What are the benefits of using a thread pool?
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.15</span>
+How do you create a thread pool with three fixed threads? How do you submit a task to a thread pool? How do you know that all the tasks are finished?
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.16</span>
+Give some examples of possible resource corruption when running multiple threads. How do you synchronize conflicting threads?
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.17</span>
+Suppose you place the statement in line 26 of Listing 30.4 inside a synchronized block to avoid race conditions, as follows:
+<pre>
+    <span class = "keyword">synchronized</span> (<span class = "keyword">this</span>) {
+      account.deposit(<span class = "constant">1</span>);
+    }
+</pre>
+	Will it work?
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.18</span>
+How do you create a lock object? How do you acquire a lock and release a lock?
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.19</span>
+How do you create a condition on a lock? What are the await(), signal(), and signalAll() methods for?
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.20</span>
+What would happen if the while loop in line 58 of Listing 30.6 was changed to an if statement?
+<pre>
+  <span class = "keyword">if</span> (balance &lt; amount)
+</pre>
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.21</span>
+Why does the following class have a syntax error?
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test <span class = "keyword">implements</span> Runnable {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        <span class = "keyword">new</span> Test();
+      }
+
+      <span class = "keyword">public</span> Test() <span class = "keyword">throws</span> InterruptedException {
+        Thread thread = <span class = "keyword">new</span> Thread(<span class = "keyword">this</span>);
+        thread.sleep(<span class = "constant">1000</span>);
+      }
+
+      <span class = "keyword">public</span> <span class = "keyword">synchronized</span> <span class = "keyword">void</span> run() {
+      }
+    }
+</pre>
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.22</span>
+What is a possible cause for IllegalMonitorStateException?
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.23</span>
+Can the wait(), notify(), and notifyAll() be invoked from any object? What is the purpose of these methods?
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.24</span>
+What is wrong in the following code?
+<pre>
+    <span class = "keyword">synchronized</span> (object1) {
+      <span class = "keyword">try</span> {
+        <span class = "keyword">while</span> (!condition) object2.wait();
+      }
+      <span class = "keyword">catch</span> (InterruptedException ex) {
+      }
+    }
+</pre>
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.25</span>
+Can the read and write methods in the Buffer class be executed concurrently? 
+                </div>
+                <div id = "a24" class="answer"></div>
+                <button id = "b24" type="button" class = "button" onclick="submit24()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.26</span>
+When invoking the read method, what happens if the queue is empty? 
+                </div>
+                <div id = "a25" class="answer"></div>
+                <button id = "b25" type="button" class = "button" onclick="submit25()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.27</span>
+When invoking the write method, what happens if the queue is full? 
+                </div>
+                <div id = "a26" class="answer"></div>
+                <button id = "b26" type="button" class = "button" onclick="submit26()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.28</span>
+What is a blocking queue? What blocking queues are supported in Java?
+                </div>
+                <div id = "a27" class="answer"></div>
+                <button id = "b27" type="button" class = "button" onclick="submit27()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.29</span>
+What method do you use to add an element to an ArrayBlockingQueue? What happens if the queue is full?
+                </div>
+                <div id = "a28" class="answer"></div>
+                <button id = "b28" type="button" class = "button" onclick="submit28()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.30</span>
+What method do you use to retrieve an element from an ArrayBlockingQueue? What happens if the queue is empty?
+                </div>
+                <div id = "a29" class="answer"></div>
+                <button id = "b29" type="button" class = "button" onclick="submit29()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.31</span>
+What are the similarities and differences between a lock and a semaphore?
+                </div>
+                <div id = "a30" class="answer"></div>
+                <button id = "b30" type="button" class = "button" onclick="submit30()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.32</span>
+How do you create a semaphore that allows three concurrent threads? How do you acquire a semaphore? How do you release a semaphore?
+                </div>
+                <div id = "a31" class="answer"></div>
+                <button id = "b31" type="button" class = "button" onclick="submit31()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.33</span>
+What is a deadlock? How can you avoid deadlock?
+                </div>
+                <div id = "a32" class="answer"></div>
+                <button id = "b32" type="button" class = "button" onclick="submit32()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.34</span>
+What is a thread state? Describe the states for a thread.
+                </div>
+                <div id = "a33" class="answer"></div>
+                <button id = "b33" type="button" class = "button" onclick="submit33()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.35</span>
+What is a synchronized collection? Is ArrayList synchronized? How do you make it synchronized?
+                </div>
+                <div id = "a34" class="answer"></div>
+                <button id = "b34" type="button" class = "button" onclick="submit34()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.36</span>
+Explain why an iterator is fail-fast.
+                </div>
+                <div id = "a35" class="answer"></div>
+                <button id = "b35" type="button" class = "button" onclick="submit35()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.37</span>
+How do you define a ForkJoinTask? What are the differences between RecursiveAction and RecursiveTask?
+                </div>
+                <div id = "a36" class="answer"></div>
+                <button id = "b36" type="button" class = "button" onclick="submit36()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.38</span>
+How do you tell the system to execute a task?
+                </div>
+                <div id = "a37" class="answer"></div>
+                <button id = "b37" type="button" class = "button" onclick="submit37()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.39</span>
+What method can you use to test if a task has been completed?
+                </div>
+                <div id = "a38" class="answer"></div>
+                <button id = "b38" type="button" class = "button" onclick="submit38()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">30.40</span>
+How do you create a ForkJoinPool? How do you place a task into a ForkJoinPool?
+                </div>
+                <div id = "a39" class="answer"></div>
+                <button id = "b39" type="button" class = "button" onclick="submit39()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

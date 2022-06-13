@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'No. The Loan class has the getLoanDate() method that returns loanDate. loanDate is an object of the Date class. Since Date is mutable, the contents of loanDate can be changed. So, the Loan class is not immutable.\
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = 'Yes\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = 'The common relationships among classes are association, aggregation, composition, and inheritance.\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = 'Association is a general binary relationship that describes an activity between two classes. Aggregation is a special form of association that represents an ownership relationship between two objects. Aggregation models has-a relationships. An object can be owned by several other aggregating objects. If an object is exclusively owned by an aggregating object, the relationship between the object and its aggregating object is referred to as a composition.\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = 'Aggregation: empty diamond on the aggregating class. Composition: Solid diamond on the aggregating class.\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = 'Since aggregation and composition relationships are represented using classes in the same way, we will not differentiate them and call both \
+            compositions for simplicity.\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'Omitted\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = 'a. Correct <br />\
+\
+b. Correct <br />\
+\
+c. Correct  <br />\
+\
+d. 19 <br />\
+\
+e. Incorrect, no default constructor in Double <br />\
+\
+f. Correct <br />\
+\
+g. Correct <br />\
+\
+h. Correct <br />\
+\
+i. Correct <br />\
+\
+j. Correct \
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'You can simply use number + "" to convert an integer to a string. Alternatively use new Integer(int).toString() to convert an integer to a string. To convert a numeric string into an integer, use Integer.parseInt(s). Use new Double(double).toString() to convert a double to a string. To convert a numeric string into a double, use Double.parseDouble(s).\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = '\
+<pre>\n\
+3\n\
+-1\n\
+</pre>\n\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = '\
+<pre>\n\
+10\n\
+10\n\
+16\n\
+11\n\
+11\n\
+17\n\
+</pre>\n\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = '\
+a. Correct, this is same as x = new Integer(3 + 5); <br />\
+b. Correct <br />\
+c. Wrong, this is same as Double x = new Integer(3); <br />\
+d. Correct <br />\
+e. Correct <br />\
+f. Correct\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = '\
+<pre>\n\
+3\n\
+-1\n\
+</pre>\n\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'The output is \
+<pre>\n\
+x is 3\n\
+y is 7\n\
+z is 10\n\
+</pre>\n\
+            Please note that BigInteger and BigDecimal are immutable.\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = '\
+a. true <br />\
+b. false <br />\
+c. true <br />\
+d. true <br />\
+e. true <br />\
+f. Welcome to HTML <br />\
+g. WelcTme tT Java <br />\
+h. WelcTme tT Java <br />\
+i. WelcTme to Java <br />\
+j. toCharArray() returns an array of characters consisting of W, e, l, c, o, m, e,   , t, o,  ,  J, a, v, a\
+</pre>\n\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = '\
+<pre>\n\
+String s = "Welcome to Java";\n\
+</pre>\n\
+is better, because this type of string is stored as an interned string. \
+            The interned strings of the same value share the same object.\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = '\
+            The output is\
+            <pre>\n\
+Welcome to Java\n\
+Welcabcme tabc Java\n\
+            </pre>\n\
+Hint: No method in the String class can change the content of the string. String is an immutable class.\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = '\
+            <pre>\n\
+a. \n\
+String s2 = s1.replaceAll(&#39;e&#39;, &#39;E&#39;); <br />\n\
+b. \n\
+String[] tokens = "Welcome to Java and HTML".split(&#39; &#39;);\n\
+s1 = tokens[0];\n\
+s2 = tokens[1];\n\
+            </pre>\n\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = 'No\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = '0\
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = 'Use the overloaded static valueOf method in the String class.\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = 'The text is declared in Line 2 as a data field, \
+            but redeclared in Line 5 as a local variable. The local variable is assigned with the string passed to the constructor, but the data field is still null. In Line 10, test.text is null, which causes NullPointerException when invoking the toLowerCase() method.\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = 'The constructor is defined incorrectly. It should not have void.\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = '\
+<pre>\n\
+false\n\
+true\n\
+A,B;C\n\
+A#B#C\n\
+A B C\n\
+</pre>\n\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+<script>var answer24 = '3\
+';function submit24() {if (document.getElementById('b24').innerHTML == 'Show Answer') {document.getElementById('a24').innerHTML = answer24;document.getElementById('b24').style.background = 'gray'; document.getElementById('b24').innerHTML = 'Hide Answer'; }else {document.getElementById('a24').innerHTML = '';
+document.getElementById('b24').style.background = 'green'; document.getElementById('b24').innerHTML = 'Show Answer';} }</script>
+<script>var answer25 = 'The StringBuilder class, introduced in JDK 1.5, is similar to StringBuffer except that the update methods in StringBuffer are synchronized.\
+';function submit25() {if (document.getElementById('b25').innerHTML == 'Show Answer') {document.getElementById('a25').innerHTML = answer25;document.getElementById('b25').style.background = 'gray'; document.getElementById('b25').innerHTML = 'Hide Answer'; }else {document.getElementById('a25').innerHTML = '';
+document.getElementById('b25').style.background = 'green'; document.getElementById('b25').innerHTML = 'Show Answer';} }</script>
+<script>var answer26 = 'Use the StringBuilder&#39;s constructor to create a string buffer for a string, and use the toString method in StringBuilder class to return a string from a StringBuilder.\
+';function submit26() {if (document.getElementById('b26').innerHTML == 'Show Answer') {document.getElementById('a26').innerHTML = answer26;document.getElementById('b26').style.background = 'gray'; document.getElementById('b26').innerHTML = 'Hide Answer'; }else {document.getElementById('a26').innerHTML = '';
+document.getElementById('b26').style.background = 'green'; document.getElementById('b26').innerHTML = 'Show Answer';} }</script>
+<script>var answer27 = '\
+            <pre>\n\
+StringBuilder sb = new StringBuilder(s); \n\
+sb.reverse();\n\
+s = sb.toString();\n\
+</pre>     \n\
+';function submit27() {if (document.getElementById('b27').innerHTML == 'Show Answer') {document.getElementById('a27').innerHTML = answer27;document.getElementById('b27').style.background = 'gray'; document.getElementById('b27').innerHTML = 'Hide Answer'; }else {document.getElementById('a27').innerHTML = '';
+document.getElementById('b27').style.background = 'green'; document.getElementById('b27').innerHTML = 'Show Answer';} }</script>
+<script>var answer28 = '\
+            <pre>\n\
+StringBuilder sb = new StringBuilder(s); \n\
+sb.delete(4, 10);\n\
+s = sb.toString();\n\
+</pre>\n\
+';function submit28() {if (document.getElementById('b28').innerHTML == 'Show Answer') {document.getElementById('a28').innerHTML = answer28;document.getElementById('b28').style.background = 'gray'; document.getElementById('b28').innerHTML = 'Hide Answer'; }else {document.getElementById('a28').innerHTML = '';
+document.getElementById('b28').style.background = 'green'; document.getElementById('b28').innerHTML = 'Show Answer';} }</script>
+<script>var answer29 = 'Both string and string buffer use arrays to hold characters. The array in a string is fixed once a string is created. The array in a string buffer may change if the buffer capacity is changed.\
+            To accommodate the change, a new array is created.\
+';function submit29() {if (document.getElementById('b29').innerHTML == 'Show Answer') {document.getElementById('a29').innerHTML = answer29;document.getElementById('b29').style.background = 'gray'; document.getElementById('b29').innerHTML = 'Hide Answer'; }else {document.getElementById('a29').innerHTML = '';
+document.getElementById('b29').style.background = 'green'; document.getElementById('b29').innerHTML = 'Show Answer';} }</script>
+<script>var answer30 = '\
+(a) Java is fun  <br />\
+(b) JavaHTML <br />\
+(c) Jais funva  <br />\
+(d) JHTMLava  <br />\
+(e) v  <br />\
+(f) 4  <br />\
+(g) Jav  <br />\
+(h) Ja <br />\
+(i) avaJ <br />\
+(j) JComputera <br />\
+(k) av <br />\
+(l) va \
+';function submit30() {if (document.getElementById('b30').innerHTML == 'Show Answer') {document.getElementById('a30').innerHTML = answer30;document.getElementById('b30').style.background = 'gray'; document.getElementById('b30').innerHTML = 'Hide Answer'; }else {document.getElementById('a30').innerHTML = '';
+document.getElementById('b30').style.background = 'green'; document.getElementById('b30').innerHTML = 'Show Answer';} }</script>
+<script>var answer31 = 'The output is\
+            <pre>\n\
+Java\n\
+Java and HTML\n\
+</pre>\n\
+NOTE: \
+Inside the method, the statement s = s + " and HTML" creates a new String object s, which is different from the original String object passed to the change(s, buffer)  method. The original String object has not been changed. Therefore, the output from the original string is Java.\
+Inside the method, the content of the StringBuilder object is changed to Java and HTML. Therefore, the output from buffer is Java and HTML.\
+';function submit31() {if (document.getElementById('b31').innerHTML == 'Show Answer') {document.getElementById('a31').innerHTML = answer31;document.getElementById('b31').style.background = 'gray'; document.getElementById('b31').innerHTML = 'Hide Answer'; }else {document.getElementById('a31').innerHTML = '';
+document.getElementById('b31').style.background = 'green'; document.getElementById('b31').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 10 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.1</span>
+If you redefine the Loan class in Listing 10.2 without setter methods, is the class immutable?
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.2</span>
+Is the BMI class defined in Listing 10.4 immutable?
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.3</span>
+What are common relationships among classes?  
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.4</span>
+What is association? What is aggregation? What is composition?
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.5</span>
+What is UML notation of aggregation and composition?
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.6</span>
+Why both aggregation and composition are together referred to as composition?
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.7</span>
+Describe primitive-type wrapper classes.
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.8</span>
+Can each of the following statements be compiled?
+<pre>
+a.	Integer i = <span class = "keyword">new</span> Integer(<span class = "literal">"23"</span>);
+b.	Integer i = <span class = "keyword">new</span> Integer(<span class = "constant">23</span>);
+c.	Integer i = Integer.valueOf(<span class = "literal">"23"</span>);
+d.	Integer i = Integer.parseInt(<span class = "literal">"23"</span>, <span class = "constant">8</span>);
+e.	Double d = <span class = "keyword">new</span> Double();
+f.	Double d = Double.valueOf(<span class = "literal">"23<span class = "literal">.</span>45"</span>);
+g.	<span class = "keyword">int</span> i = (Integer.valueOf(<span class = "literal">"23"</span>)).intValue();
+h.	<span class = "keyword">double</span> d = (Double.valueOf(<span class = "literal">"23<span class = "literal">.</span>4"</span>)).doubleValue();
+i.	<span class = "keyword">int</span> i = (Double.valueOf(<span class = "literal">"23<span class = "literal">.</span>4"</span>)).intValue();
+j.	String s = (Double.valueOf(<span class = "literal">"23<span class = "literal">.</span>4"</span>)).toString();
+</pre>
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.9</span>
+How do you convert an integer into a string? How do you convert a numeric string into an integer? How do you convert a double number into a string? How do you convert a numeric string into a double value?
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.10</span>
+Show the output of the following code.
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        Integer x = <span class = "keyword">new</span> Integer(<span class = "constant">3</span>);
+        System.out.println(x.intValue());
+        System.out.println(x.compareTo(<span class = "keyword">new</span> Integer(<span class = "constant">4</span>)));
+      }
+    }
+</pre>
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.11</span>
+
+What is the output of the following code?
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        System.out.println(Integer.parseInt(<span class = "literal">"10"</span>));
+        System.out.println(Integer.parseInt(<span class = "literal">"10"</span>, <span class = "constant">10</span>));
+        System.out.println(Integer.parseInt(<span class = "literal">"10"</span>, <span class = "constant">16</span>));
+        System.out.println(Integer.parseInt(<span class = "literal">"11"</span>));
+        System.out.println(Integer.parseInt(<span class = "literal">"11"</span>, <span class = "constant">10</span>));
+        System.out.println(Integer.parseInt(<span class = "literal">"11"</span>, <span class = "constant">16</span>));
+      }
+    }
+</pre>
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.12</span>
+
+What are autoboxing and autounboxing? Are the following statements correct?
+<pre>
+a.	Integer x = <span class = "constant">3</span> + <span class = "keyword">new</span> Integer(<span class = "constant">5</span>);
+b.	Integer x = <span class = "constant">3</span>;
+c.	Double x = <span class = "constant">3</span>;
+d.	Double x = <span class = "constant">3</span><span class = "literal">.</span><span class = "constant">0</span>;  
+e.	<span class = "keyword">int</span> x = <span class = "keyword">new</span> Integer(<span class = "constant">3</span>);
+f.	<span class = "keyword">int</span> x = <span class = "keyword">new</span> Integer(<span class = "constant">3</span>) + <span class = "keyword">new</span> Integer(<span class = "constant">4</span>);
+</pre>
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.13</span>
+
+Show the output of the following code?
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        Double x = <span class = "constant">3</span><span class = "literal">.</span><span class = "constant">5</span>;
+        System.out.println(x.intValue());
+        System.out.println(x.compareTo(<span class = "constant">4</span><span class = "literal">.</span><span class = "constant">5</span>));
+      }
+    }
+</pre>
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.14</span>
+
+What is the output of the following code?
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        java.math.BigInteger x = <span class = "keyword">new</span> java.math.BigInteger(<span class = "literal">"3"</span>);
+        java.math.BigInteger y = <span class = "keyword">new</span> java.math.BigInteger(<span class = "literal">"7"</span>);
+        java.math.BigInteger z = x.add(y);
+        System.out.println(<span class = "literal">"x is "</span> + x);
+        System.out.println(<span class = "literal">"y is "</span> + y);
+        System.out.println(<span class = "literal">"z is "</span> + z);
+      }
+    }
+</pre>
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.15</span>
+
+Suppose that s1, s2, s3, and s4 are four strings, given as follows:
+<pre>
+    String s1 = <span class = "literal">"Welcome to Java"</span>;
+    String s2 = s1;
+    String s3 = <span class = "keyword">new</span> String(<span class = "literal">"Welcome to Java"</span>); 
+    String s4 = <span class = "literal">"Welcome to Java"</span>;
+</pre>
+            What are the results of the following expressions?
+<pre>
+    a.	s1 == s2
+    b.	s1 == s3
+    c.	s1 == s4
+    d.	s1.equals(s3) 
+    e.	s1.equals(s4) 
+    f.	<span class = "literal">"Welcome to Java"</span>.replace(<span class = "literal">"Java"</span>, <span class = "literal">"HTML"</span>) 
+    g.	s1.replace(<span class = "literal">'o'</span>, <span class = "literal">'T'</span>)
+    h.	s1.replaceAll(<span class = "literal">"o"</span>, <span class = "literal">"T"</span>)
+    i.	s1.replaceFirst(<span class = "literal">"o"</span>, <span class = "literal">"T"</span>)
+    j.	s1.toCharArray()
+</pre>
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.16</span>
+
+To create the string Welcome to Java, you may use a statement like this:
+<pre>
+    String s = <span class = "literal">"Welcome to Java"</span>;
+</pre>
+or:
+<pre>
+    String s = <span class = "keyword">new</span> String(<span class = "literal">"Welcome to Java"</span>);
+</pre>
+	Which one is better? Why?
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.17</span>
+
+What is the output of the following code?
+<pre>
+    String s1 = <span class = "literal">"Welcome to Java"</span>;
+    String s2 = s1.replace(<span class = "literal">"o"</span>, <span class = "literal">"abc"</span>);
+    System.out.println(s1);
+    System.out.println(s2);
+</pre>
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.18</span>
+
+        Let s1 be " Welcome " and s2 be " welcome ". Write the code for the following statements: <br />
+a.	Replace all occurrences of the character e with E in s1 and assign the new string to s3. <br />
+b.	Split Welcome to Java and HTML into an array tokens delimited by a space and assign the first two tokens into s1 and s2.
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.19</span>
+
+Does any method in the String class change the contents of the string?
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.20</span>
+
+Suppose string s is created using new String(); what is s.length()?        
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.21</span>
+
+How do you convert a char, an array of characters, or a number to a string?        
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.22</span>
+
+Why does the following code cause a NullPointerException?
+<pre>
+ 1  <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+ 2    <span class = "keyword">private</span> String text;
+ 3
+ 4    <span class = "keyword">public</span> Test(String s) {
+ 5      String text  = s;
+ 6    }
+ 7
+ 8    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+ 9      Test test = <span class = "keyword">new</span> Test(<span class = "literal">"ABC"</span>);
+10      System.out.println(test.text.toLowerCase());
+11    }
+12  }
+</pre>
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.23</span>
+
+What is wrong in the following program?
+<pre>
+ 1  <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+ 2    String text;
+ 3
+ 4    <span class = "keyword">public</span> <span class = "keyword">void</span> Test(String s) {
+ 5      text = s;
+ 6    }
+ 7
+ 8    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+ 9      Test test = <span class = "keyword">new</span> Test(<span class = "literal">"ABC"</span>);
+10      System.out.println(test);
+11    }
+12  }
+</pre>
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.24</span>
+
+Show the output of the following code.
+<pre>
+ <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+   <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+     System.out.println(<span class = "literal">"Hi, ABC, good"</span>.matches(<span class = "literal">"ABC "</span>));
+     System.out.println(<span class = "literal">"Hi, ABC, good"</span>.matches(<span class = "literal">".*ABC.*"</span>));
+     System.out.println(<span class = "literal">"A,B;C"</span>.replaceAll(<span class = "literal">",;"</span>, <span class = "literal">"#"</span>));
+     System.out.println(<span class = "literal">"A,B;C"</span>.replaceAll(<span class = "literal">"[,;]"</span>, <span class = "literal">"#"</span>));
+  
+     String[] tokens = <span class = "literal">"A,B;C"</span>.split(<span class = "literal">"[,;]"</span>);
+     <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; tokens.length; i++)
+       System.out.print(tokens[i] +  <span class = "literal">" "</span>);
+   }
+ }
+</pre>
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.25</span>
+
+Show the output of the following code.
+<pre>
+ <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+   <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+     String s = <span class = "literal">"Hi, Good Morning"</span>;
+     System.out.println(m(s));
+   }
+      
+   <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">int</span> m(String s) {
+     <span class = "keyword">int</span> count = <span class = "constant">0</span>; 
+     <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; s.length(); i++)
+       <span class = "keyword">if</span> (Character.isUpperCase(s.charAt(i)))
+         count++;
+
+     <span class = "keyword">return</span> count;
+   }
+ }
+</pre>
+                </div>
+                <div id = "a24" class="answer"></div>
+                <button id = "b24" type="button" class = "button" onclick="submit24()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.26</span>
+
+What is the difference between StringBuilder and StringBuffer?        
+                </div>
+                <div id = "a25" class="answer"></div>
+                <button id = "b25" type="button" class = "button" onclick="submit25()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.27</span>
+
+How do you create a string builder from a string? How do you return a string from a string builder?        
+                </div>
+                <div id = "a26" class="answer"></div>
+                <button id = "b26" type="button" class = "button" onclick="submit26()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.28</span>
+
+Write three statements to reverse a string s using the reverse method in the StringBuilder class.        
+                </div>
+                <div id = "a27" class="answer"></div>
+                <button id = "b27" type="button" class = "button" onclick="submit27()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.29</span>
+
+Write three statements to delete a substring from a string s of 20 characters, starting at index 4 and ending with index 10. Use the delete method in the StringBuilder class.        
+                </div>
+                <div id = "a28" class="answer"></div>
+                <button id = "b28" type="button" class = "button" onclick="submit28()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.30</span>
+
+What is the internal storage for characters in a string and a string builder?        
+                </div>
+                <div id = "a29" class="answer"></div>
+                <button id = "b29" type="button" class = "button" onclick="submit29()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.31</span>
+
+Suppose that s1 and s2 are given as follows:
+<pre>
+    StringBuilder s1 = <span class = "keyword">new</span> StringBuilder(<span class = "literal">"Java"</span>);
+    StringBuilder s2 = <span class = "keyword">new</span> StringBuilder(<span class = "literal">"HTML"</span>);
+</pre>
+	Show the value of s1 after each of the following statements. 
+            Assume that the statements are independent. 
+<pre>
+a.	s1.append(<span class = "literal">" is fun"</span>);
+b.	s1.append(s2);
+c.	s1.insert(<span class = "constant">2</span>, <span class = "literal">"is fun"</span>);
+d.	s1.insert(<span class = "constant">1</span>, s2);
+e.	s1.charAt(<span class = "constant">2</span>);
+f.	s1.length();
+g.	s1.deleteCharAt(<span class = "constant">3</span>); 
+h.	s1.delete(<span class = "constant">1</span>, <span class = "constant">3</span>);
+i.	s1.reverse();
+j.	s1.replace(<span class = "constant">1</span>, <span class = "constant">3</span>, <span class = "literal">"Computer"</span>);
+k.	s1.substring(<span class = "constant">1</span>, <span class = "constant">3</span>);
+l.	s1.substring(<span class = "constant">2</span>);
+</pre>
+                </div>
+                <div id = "a30" class="answer"></div>
+                <button id = "b30" type="button" class = "button" onclick="submit30()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">10.32</span>
+
+Show the output of the following program:
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {  
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        String s = <span class = "literal">"Java"</span>;
+        StringBuilder builder = <span class = "keyword">new</span> StringBuilder(s);
+        change(s, builder);
+
+        System.out.println(s);
+        System.out.println(builder);
+      }
+
+      <span class = "keyword">private</span> <span class = "keyword">static</span> <span class = "keyword">void</span> change(String s, StringBuilder builder) {
+        s = s + <span class = "literal">" and HTML"</span>;
+        builder.append(<span class = "literal">" and HTML"</span>);
+      }
+    }
+</pre>
+                </div>
+                <div id = "a31" class="answer"></div>
+                <button id = "b31" type="button" class = "button" onclick="submit31()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

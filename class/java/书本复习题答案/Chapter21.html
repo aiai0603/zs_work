@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'The Set is an interface. To create an instance of Set, you need to use HashSet or TreeSet. To insert an element to a set, use the add method. To remove an element from a set, use the remove method. To find the size of a set, use the size() method. \
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = 'If two objects o1 and o2 are equal, o1.equals(o2) is true and o1.hashCode() == o1.hashCode() is true.\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = 'HashSet is unsorted, but TreeSet is sorted. HashSet is more efficient than TreeSet if you don’t want the elements in a set to be sorted. If you create a TreeSet using its default constructor, the compareTo method is used to compare the elements in the set, assuming that the class of the elements implements the Comparable interface. To use a comparator, you have to use the constructor TreeSet(Comparator comparator) to create a sorted set that uses the compare method in the comparator to order the elements in the set. A runtime error would occur if you add an element that cannot be compared with the existing elements in the tree set?\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = 'To traverse a set, use the iterator method to obtain an iterator. You can then traverse the set through the iterator. Using an iterator, you can traverse only sequentially from the beginning to the end.\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = 'To sort the elements in a set using the Comparable interface, there are two ways: (1) create a TreeSet using new TreeSet(), (2) create a TreeSet from a set using new TreeSet(set). To sort the elements in a set using the Comparator interface, create a TreeSet using new TreeSet(Comparator), then add the elements to the tree set.\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = 'set2 is not changed by all these methods. (If you use HashSet, the order of the elements in the set is unpredicatable.) <br />\
+What is set1 and set2 after executing set?; <br />\
+   set1 is [green, red, blue, yellow] <br />\
+            What is set1 and set2 after executing set1.add(set2)? <br /> \
+   set1 is [green, red, yellow, [red, blue, yellow]] \
+   Note set2 is added as a whole element into set1. <br />\
+            What is set1 and set2 after executing set1.removeAll(set2)? <br />\
+   set1 is [green] <br />\
+            What is set1 and set2 after executing set1.remove(set2)? <br />\
+   set1 is [green, red, yellow] <br />\
+            What is set1 and set2 after executing set1.retainAll(set2)? <br />\
+   set1 is [red, yellow] What is set1 after executing set1.clear(); \
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'set1 is [New York, Atlanta] <br />\
+set2 is [New York, Atlanta] <br />\
+set3 is [New York] <br />\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = '[New York, Atlanta] <br />\
+[New York]\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'It will display the area of three geometric objects in random order.\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = 'Suppose you need to write a program that stores non-duplicate elements, you should use a HashSet.\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'Use a LinkedHashSet.\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'Use a TreeSet.\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = 'Use an array.\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'Use an ArrayList.\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'Use a LinkedList.\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = 'Yes.\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = 'Yes.\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = 'Map is an interface. To create an instance of Map, you need to use the HashMap class or the TreeMap class. The HashMap and TreeMap have various constructors that you can use to create a HashMap or a TreeMap. You can use the put method to add an entry to a map, and the remove method to remove an entry with the specified key from the map. Use the size method to find the size of a map. \
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = 'The HashMap, LinkedHashMap, and TreeMap classes are three concrete implementations of the Map interface. The HashMap class is efficient for locating a value, inserting a mapping, and deleting a mapping. The entries in a HashMap are not ordered, but the entries in a LinkedHashMap can be retrieved in the order in which they were inserted into the map (known as the insertion order), or the order in which they were last accessed, from least recently accessed to most recently (access order). The TreeMap class, implementing SortedMap, is efficient for traversing the keys in a sorted order.\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = '(1) {123=Steve Yao, 111=George Smith, 222=Steve Yao}       <br />\
+(2) {111=George Smith, 123=Steve Yao, 222=Steve Yao} \
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = 'No. A concrete type must of an object type.\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = 'Yes. It will work.\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = 'No. You cannot iterate on keys in a map in Java.\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = 'The singleton set is immutable. You cannot add an element into the singleton set.\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+<script>var answer24 = 'The list created from the unmodifiableList method is immutable is an unmodifiable view of the list. You cannot modify the list through this view.\
+';function submit24() {if (document.getElementById('b24').innerHTML == 'Show Answer') {document.getElementById('a24').innerHTML = answer24;document.getElementById('b24').style.background = 'gray'; document.getElementById('b24').innerHTML = 'Hide Answer'; }else {document.getElementById('a24').innerHTML = '';
+document.getElementById('b24').style.background = 'green'; document.getElementById('b24').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 21 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.1</span>
+How do you create an instance of Set? How do you insert a new element in a set? How do you remove an element from a set? How do you find the size of a set?
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.2</span>
+If two objects o1 and o2 are equal, what is o1.equals(o2) and o1.hashCode() == o2.hashCode()?
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.3</span>
+What are the differences between HashSet, LinkedHashSet, and TreeSet?
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.4</span>
+How do you traverse the elements in a set?
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.5</span>
+How do you sort the elements in a set using the compareTo method in the Comparable interface? How do you sort the elements in a set using the Comparator interface? What would happen if you added an element that could not be compared with the existing elements in a tree set?
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.6</span>
+Suppose that set1 is a set that contains the strings red, yellow, and green, and that set2 is another set that contains the strings red, yellow, and blue. Answer the following questions:<br />
+(a)	What are in set1 and set2 after executing set1.addAll(set2)? <br />
+(b)	What are in set1 and set2 after executing set1.add(set2)? <br />
+(c)	What are in set1 and set2 after executing set1.removeAll(set2)? <br />
+(d)	What are in set1 and set2 after executing set1.remove(set2)? <br />
+(e)	What are in set1 and set2 after executing set1.retainAll(set2)? <br />
+(f)	What is in set1 after executing set1.clear()?
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.7</span>
+Show the output of the following code:
+<pre>
+    <span class = "keyword">import</span> java.util.*;
+
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        LinkedHashSet&lt;> set1 = <span class = "keyword">new</span> LinkedHashSet&lt;>();
+        set1.add(<span class = "literal">"New York"</span>);
+        LinkedHashSet&lt;> set2 = set1;
+        LinkedHashSet&lt;> set3 = 
+          (LinkedHashSet&lt;>)(set1.clone());
+        set1.add(<span class = "literal">"Atlanta"</span>);
+        System.out.println(<span class = "literal">"set1 is "</span> + set1);
+        System.out.println(<span class = "literal">"set2 is "</span> + set2);
+        System.out.println(<span class = "literal">"set3 is "</span> + set3);
+      }
+    }
+</pre>
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.8</span>
+Show the output of the following code:
+<pre>
+    <span class = "keyword">import</span> java.util.*;
+    <span class = "keyword">import</span> java.io.*;
+
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) <span class = "keyword">throws</span> Exception {
+        ObjectOutputStream output = <span class = "keyword">new</span> ObjectOutputStream(
+          <span class = "keyword">new</span> FileOutputStream(<span class = "literal">"c:\\test.dat"</span>));
+        LinkedHashSet&lt;> set1 = <span class = "keyword">new</span> LinkedHashSet&lt;>();
+        set1.add(<span class = "literal">"New York"</span>);
+        LinkedHashSet&lt;> set2 = 
+          (LinkedHashSet&lt;>)set1.clone();
+        set1.add(<span class = "literal">"Atlanta"</span>);
+        output.writeObject(set1);
+        output.writeObject(set2);
+        output.close();
+
+        ObjectInputStream input = <span class = "keyword">new</span> ObjectInputStream(
+          <span class = "keyword">new</span> FileInputStream(<span class = "literal">"c:\\test.dat"</span>));
+        set1 = (LinkedHashSet&lt;>)input.readObject();  
+        set2 = (LinkedHashSet&lt;>)input.readObject();  
+        System.out.println(set1);        
+        System.out.println(set2);        
+        input.close();
+      }
+    }
+</pre>
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.9</span>
+What will the output be if lines 6–7 in Listing 21.5 is replaced by the following code:
+<pre>
+    Set&lt;GeometricObject> set = <span class = "keyword">new</span> HashSet&lt;>();
+</pre>
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.10</span>
+Suppose you need to write a program that stores unordered, non-duplicate elements, what data structure should you use?
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.11</span>
+Suppose you need to write a program that stores non-duplicate elements in the order of insertion, what data structure should you use?
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.12</span>
+Suppose you need to write a program that stores non-duplicate elements in increasing order of the element values, what data structure should you use?
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.13</span>
+Suppose you need to write a program that stores a fixed number of the elements (possibly duplicates), what data structure should you use?
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.14</span>
+Suppose you need to write a program that stores the elements in a list with frequent operations to append and delete elements at the end of the list, what data structure should you use?
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.15</span>
+Suppose you need to write a program that stores the elements in a list with frequent operations to insert and delete elements at the beginning of the list, what data structure should you use?
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.16</span>
+Will the CountKeywords program work if lines 33–34 are changed to
+<pre>
+    Set&lt;> keywordSet = 
+      <span class = "keyword">new</span> LinkedHashSet&lt;>(Arrays.asList(keywordString));
+</pre>
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.17</span>
+Will the CountKeywords program work if lines 33–34 are changed to
+<pre>
+    List&lt;> keywordSet = 
+      <span class = "keyword">new</span> ArrayList&lt;>(Arrays.asList(keywordString));
+</pre>
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.18</span>
+How do you create an instance of Map? How do you add an entry to a map consisting of a key and a value? How do you remove an entry from a map? How do you find the size of a map? How do you traverse entries in a map?
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.19</span>
+Describe and compare HashMap, LinkedHashMap, and TreeMap.
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.20</span>
+Show the printout of the following code:
+<pre>
+    <span class = "keyword">import</span> java.util.*;
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        Map&lt;, String> map = <span class = "keyword">new</span> LinkedHashMap&lt;>();
+        map.put(<span class = "literal">"123"</span>, <span class = "literal">"John Smith"</span>);
+        map.put(<span class = "literal">"111"</span>, <span class = "literal">"George Smith"</span>);
+        map.put(<span class = "literal">"123"</span>, <span class = "literal">"Steve Yao"</span>);
+        map.put(<span class = "literal">"222"</span>, <span class = "literal">"Steve Yao"</span>);
+        System.out.println(<span class = "literal">"(<span class = "constant">1</span>) "</span> + map);
+        System.out.println(<span class = "literal">"(<span class = "constant">2</span>) "</span> + <span class = "keyword">new</span> TreeMap&lt;, String>(map));
+      }
+    }
+</pre>
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.21</span>
+Will the CountOccurrenceOfWords program work if line 10 is changed to
+<pre>
+    Map&lt;, int> map = <span class = "keyword">new</span> TreeMap&lt;>();
+</pre>
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.22</span>
+Will the CountOccurrenceOfWords program work if line 17 is changed to
+<pre>
+    <span class = "keyword">if</span> (map.get(key) == <span class = "keyword">null</span>) {
+</pre>
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.23</span>
+Will the CountOccurrenceOfWords program work if line s 32–33
+ are changed to
+<pre>
+    <span class = "keyword">for</span> (String key: map)
+      System.out.println(key + <span class = "literal">"\t"</span> + map.getValue(key));
+</pre>
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.24</span>
+What is wrong in the following code?
+<pre>
+    Set&lt;> set = Collections.singleton(<span class = "literal">"Chicago"</span>);
+    set.add(<span class = "literal">"Dallas"</span>);
+</pre>
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">21.25</span>
+What happens when you run the following code?
+<pre>
+    List list = Collections.unmodifiableList(Arrays.asList(<span class = "literal">"Chicago"</span>, 
+       <span class = "literal">"Boston"</span>));
+    list.remove(<span class = "literal">"Dallas"</span>);
+</pre>
+                </div>
+                <div id = "a24" class="answer"></div>
+                <button id = "b24" type="button" class = "button" onclick="submit24()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

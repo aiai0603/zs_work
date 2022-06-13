@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'The constant factor is ignored in big O notation, because it has no impact on the growth rate of the time complexity function. A nondominating term is ignored in Big O notation, because as the input size grows, the dominating term grows much faster than the nondominating term.\
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = '<pre>\n\
+(a) (n<sup>2</sup> + 1)<sup>2</sup>/n = O(n<sup>3</sup>)\n\
+(b) (n<sup>2</sup> + log<sup>2</sup>n)<sup>2</sup> / n = O(n<sup>3</sup>)\n\
+(c) n<sup>3</sup> + 100n<sup>2</sup> + n = O(n<sup>3</sup>)\n\
+(d) 2<sup>n</sup> + 100n<sup>2</sup> + 45n = O(2<sup>n</sup>)\n\
+(e) n2<sup>n</sup> + n<sup>2</sup>2<sup>n</sup> = O(n<sup>2</sup>2<sup>n</sup>)                 \n\
+</pre>\n\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = '(A)	5 <br />\
+(B)	1 <br />\
+(C)	The ceiling of log2n times <br />\
+(D)	The ceiling of log3(n/15) times <br />\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = 'if n is 10:  (a) 10  (b) 10^2 (c) 10^3 (d) 10*10^2 <br />\
+if n is 20:  (a) 20  (b) 20^2 (c) 20^3 (d) 20*20^2 <br />\
+\
+	Using Big-O notation: O(n),  O(n^2), O(n^3), O(n^2)\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = '(a): O(n) <br /> (b): O(n^2) <br /> (c): O(n) <br /> (d): O(n^2)\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = 'An O(n) time algorithm for this is\
+            <pre>\n\
+int sum = 0;\n\
+for (int i = n1; i &lt;=  n2; i++)\n\
+  sum += i;\n\
+          </pre>\n\
+An O(1) time algorithm for this is\
+<pre>\n\
+int sum = n2(n2 + 2) / 2 – n1(n1 + 2) / 2;\n\
+</pre>\n\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = '\
+<pre>\n\
+result = a;\n\
+i = 2;\n\
+\n\
+while (i &lt;=  n) {\n\
+  result = result * result;\n\
+  i *= 2;\n\
+}\n\
+\n\
+for (int j = i / 2 + 1; j &lt;=  n; j++)\n\
+  result = result * a;\n\
+</pre>\n\
+\
+Assume that 2<sup>k-1</sup> &lt;= n &lt; 2<sup>k</sup>. \
+The while loop is executed k-1 times. The for loop is executed at \
+most 2<sup>k</sup>-2<sup>k-1</sup>=2<sup>k-1</sup>\
+  times.  So, the total complexity is O(n). \
+\
+Consider another implementation:\
+<pre>\n\
+  public static int f(int a, int n) {\n\
+    if (n == 1) {\n\
+      return a; \n\
+    } \n\
+    else {\n\
+      int temp = f(a, n / 2);\n\
+      if (n % 2 == 0) {\n\
+        return temp * temp;\n\
+      }\n\
+      else {\n\
+        return a * temp * temp;\n\
+      }\n\
+    }  \n\
+  }\n\
+</pre>\n\
+This implementation results in O(logn) complexity.\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = '\
+500,\
+44logn,\
+3n,\
+10nlogn            \
+2n<sup>2</sup>,\
+5n<sup>3</sup>/4032,\
+2<sup>n</sup>/45\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'Adding two matrices: O(nm). Multiplying two matrices: O(nmk)\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = 'The algorithm can be designed as follows: Maintain two variables, max and count. max stores the current max number, and count stores its occurrences. Initially, assign the first number to max and 1 to count. Compare each subsequent number with max. If the number is greater than max, assign it to max and reset count to 1. If the number is equal to max, increment count by 1.  Since each element in the array is examined only once, the complexity of the algorithm is O(n).\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'The algorithm can be designed as follows:  For each element in the input array, store it to a new array if it is new. If the number is already in the array, ignore it. The time for checking whether an element is already in the new array is O(n), so the complexity of the algorithm is O(n^2).\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'This is similar to bubble sort. Whenever a swap is made, it goes back to the beginning of the loop. In the worst case, there will be O(n^2) of swaps. For each swap, O(n) number of comparisons may be made in the worst case. So, the total is O(n^3) in the worst case.\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = 'A brute-force for approach to evaluate a polynomial f(x) of degree n will take n+(n-1)+…+2+1=O(n^2) time. The Horner’s method takes O(n) time.\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'See the definition and example in the text.\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'The recursive Fibonacci algorithm is inefficient, because the subproblems in the recursive Fibonacci algorithm overlaps, which causes redundant work. The non- recursive Fibonacci algorithm is dynamic algorithm that avoids redundant work.\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = 'To prove this is wrong, all you need is to give a counter example to show the algorithm does not work. Try n = 64 and m = 48. The algorithm will produce the gcd 8, but the actual gcd is 16.\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = 'If n is not a prime, \
+then there exists two number n1 and n2 such that \
+n1 * n2 = n. Assume n1 &lt;=  n2, n1 &lt;=  srqt(n). If n1 is not a prime, you can continue the same process to find the factors of n1, until a factor is a prime.\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = 'See the text.\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = 'See the definition and example in the text.\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = 'See the text.\
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = 'Yes. Finding the minimum in the first half and the second half of the list and return the minimum of these two. So, the time complexity is O(n) = 2 * O(n/2) + O(1) = O(n).\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = 'See the definition and example in the text.\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = 'O(n!)\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = 'See the text.\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 22 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.1</span>
+Why is a constant factor ignored in the Big O notation? Why is a nondominating term ignored in the Big O notation?
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.2</span>
+What is the order of each of the following functions?
+<pre>
+(a) (n<sup>2</sup> + <span class = "constant">1</span>)<sup>2</sup>/n
+(b) (n<sup>2</sup> + log<sup>2</sup>n)<sup>2</sup> / n
+(c) n<sup>3</sup> + 100n<sup>2</sup> + n
+(d) 2<sup>n</sup> + 100n<sup>2</sup> + 45n 
+(e) n2<sup>n</sup> + n<sup>2</sup>2<sup>n</sup>                    
+</pre>
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.3</span>
+Count the number of iterations in the following loops.
+<pre>
+    (a)
+    <span class = "keyword">int</span> count = <span class = "constant">1</span>;
+    <span class = "keyword">while</span> (count &lt; <span class = "constant">30</span>) {
+      count = count * <span class = "constant">2</span>;
+    }
+
+    (b)
+    <span class = "keyword">int</span> count = <span class = "constant">15</span>;
+    <span class = "keyword">while</span> (count &lt; <span class = "constant">30</span>) {
+      count = count * <span class = "constant">3</span>;
+    }
+
+    (c)
+    <span class = "keyword">int</span> count = <span class = "constant">1</span>;
+    <span class = "keyword">while</span> (count &lt; n) {
+      count = count * <span class = "constant">2</span>;
+    }
+
+    (d)
+    <span class = "keyword">int</span> count = <span class = "constant">15</span>;
+    <span class = "keyword">while</span> (count &lt; n) {
+      count = count * <span class = "constant">3</span>;
+    }        
+</pre>
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.4</span>
+How many stars are displayed in the following code if n is 10? How many if n is 20? Use the Big O notation to estimate the time complexity.
+<pre>
+(a)
+<span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; n; i++) {
+  System.out.print(<span class = "literal">'*'</span>);
+}
+
+(b)
+<span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; n; i++) {
+  <span class = "keyword">for</span> (<span class = "keyword">int</span> j = <span class = "constant">0</span>; j &lt; n; j++) {
+    System.out.print(<span class = "literal">'*'</span>);
+  }
+}
+
+(c)
+<span class = "keyword">for</span> (<span class = "keyword">int</span> k = <span class = "constant">0</span>; k &lt; n; k++) {
+  <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; n; i++) {
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> j = <span class = "constant">0</span>; j &lt; n; j++) {
+      System.out.print(<span class = "literal">'*'</span>);
+    }
+  }
+}
+
+(d)
+<span class = "keyword">for</span> (<span class = "keyword">int</span> k = <span class = "constant">0</span>; k &lt; <span class = "constant">10</span>; k++) {
+  <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; n; i++) {
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> j = <span class = "constant">0</span>; j &lt; n; j++) {
+      System.out.print(<span class = "literal">'*'</span>);
+    }
+  }
+}
+</pre>
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.5</span>
+Use the Big O notation to estimate the time complexity of the following methods:
+<pre>
+(a)
+<span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> mA(<span class = "keyword">int</span> n) {   
+  <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; n; i++) {
+    System.out.print(Math.random());
+  }
+}
+
+(b)
+<span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> mB(<span class = "keyword">int</span> n) {   
+  <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; n; i++) {
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> j = <span class = "constant">0</span>; j &lt; i; j++)
+      System.out.print(Math.random());
+  }
+}
+
+(c)
+<span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> mC(<span class = "keyword">int</span>[] m) {   
+  <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; m.length; i++) {
+    System.out.print(m[i]);
+  }
+
+  <span class = "keyword">for</span> (<span class = "keyword">int</span> i = m.length - <span class = "constant">1</span>; i >= <span class = "constant">0</span>; )
+  {
+    System.out.print(m[i]);
+    i--;
+  } 
+}
+
+(d)
+<span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> mD(<span class = "keyword">int</span>[] m) {   
+  <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; m.length; i++) {
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> j = <span class = "constant">0</span>; j &lt; i; j++)
+      System.out.print(m[i] * m[j]);
+  }
+}
+</pre>
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.6</span>
+Design an O(n) time algorithm for computing the sum of numbers from n1 to n2 for   Can you design an O(1) for performing the same task?
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.7</span>
+Example 7 in Section 22.3 assumes n = 2<sup>k</sup>   Revise the algorithm for an arbitrary n and prove that the complexity is still O(logn).
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.8</span>
+Put the following growth functions in order:
+5n<sup>3</sup>/4032,
+44logn,
+10nlogn,
+500,
+2n<sup>2</sup>,
+2<sup>n</sup>/45,
+3n
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.9</span>
+Estimate the time complexity for adding two n by m  matrices, and for 
+multiplying an n by m  matrix by an m by k  matrix.
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.10</span>
+Describe an algorithm for finding the occurrence of the max element in an array. Analyze the complexity of the algorithm.
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.11</span>
+Describe an algorithm for removing duplicates from an array. Analyze the complexity of the algorithm.
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.12</span>
+Analyze the following sorting algorithm:
+<pre>
+<span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; list.length - <span class = "constant">1</span>; i++) {
+  <span class = "keyword">if</span> (list[i] > list[i + <span class = "constant">1</span>]) {
+    swap list[i] with list[i + <span class = "constant">1</span>];
+    i = <span class = "literal">-</span><span class = "constant">1</span>;
+  }
+}
+</pre>
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.13</span>
+Analyze the complexity for computing a polynomial f(x) of degree n for a given x value using a brute-force approach and the Horner’s approach, respectively. A brute-force approach is to compute each term in the polynomial and add them together. The Horner’s approach was introduced in Section 6.7. 
+<br />
+f(x) = a<sub>n</sub>x<sup>n</sup> +
+a<sub>n-1</sub>x<sup>n-1</sup> +
+a<sub>n-2</sub>x<sup>n-2</sup> +
+            ... +
+a<sub>1</sub>x<sup>1</sup>  +
+a<sub>0</sub>                      
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.14</span>
+What is dynamic programming? Give an example of dynamic programming.
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.15</span>
+Why is the recursive Fibonacci algorithm inefficient, but the nonrecursive Fibonacci algorithm efficient?
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.16</span>
+Prove that the following algorithm for finding the GCD of the two integers m and n is incorrect.
+<pre>
+    <span class = "keyword">int</span> gcd = <span class = "constant">1</span>;
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> k = Math.min(Math.sqrt(n), Math.sqrt(m)); k >= <span class = "constant">1</span>; k--) {
+      <span class = "keyword">if</span> (m % k == <span class = "constant">0</span> && n % k == <span class = "constant">0</span>) {
+        gcd = k;
+        <span class = "keyword">break</span>;
+      }
+    }
+</pre>
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.17</span>
+Prove that if n is not prime, 
+there must exist a prime number p such that p &lt;=  sqrt(n) and p is a factor of n.
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.18</span>
+Describe how the sieve of Eratosthenes is used to find the prime numbers.
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.19</span>
+What is the divide-and-conquer approach? Give an example.
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.20</span>
+What is the difference between divide-and-conquer and dynamic programming?
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.21</span>
+Can you design an algorithm for finding the minimum element in a list using divide-and-conquer? What is the complexity of this algorithm?
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.22</span>
+What is backtracking? Give an example.
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.23</span>
+If you generalize the Eight Queens problem to the n-Queens problem in an n-by-n chessboard, what will be the complexity of the algorithm?
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">22.24</span>
+What is a convex hull?
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

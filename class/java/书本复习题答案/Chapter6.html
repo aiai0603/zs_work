@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'At least three benefits: (1) Reuse code; (2) Reduce complexity; (3) Easy to maintain. \
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = 'See the Sections 6.2 and 6.3 on how to define and invoke methods.\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = '<pre>\n\
+            return (num1 > num2) ? num1 : num2;\n\
+        </pre>\n\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = 'True: a call to a method with a void return type is always a statement itself. <br />\
+ False: a call to a value-returning method is always a component of an expression.\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = 'void\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = 'A syntax error occurs if a return statement is not used to return a value in a value-returning method. You can have a return statement in a void method, which simply exits the method. \
+            But a return statement cannot return a value such as return x + y in a void method.\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'See Section 6.2.\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = '(a) \
+public static double getCommission(double salesAmount, double commissionRate) <br />\
+\
+(b) \
+public static void printCalendar(int month, int year) <br />\
+\
+(c) \
+public static double sqrt(double value) <br />\
+\
+(d) \
+public static boolean isEven(int value) <br />\
+\
+(e) \
+public static void printMessage(String message, int times) <br />\
+\
+(f) \
+public static double monthlyPayment(double loan, int numberOfYears, double annualInterestRate) <br />\
+(g) \
+public static char getUpperCase(char letter)\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'Line 2: method1 is not defined correctly. It does not have a return type or void. <br />\
+            Line 2: type int should be declared for parameter m. <br />\
+            Line 7: parameter type for n should be double to match method2(3.4). <br />\
+Line 11: if (n &lt; 0) should be removed in method, otherwise a compile error is reported. \
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = '\
+            <pre>\n\
+public class Test {\n\
+  public static double xMethod(double i, double j) {\n\
+    while (i &lt; j) {\n\
+      j--;\n\
+    } \n\
+\n\
+    return j;\n\
+  }\n\
+}\n\
+</pre>\n\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'You pass actual parameters by passing the right type of value in the right order. The actual parameter can have the same name as its formal parameter.\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'Two errors: 1. the arguments are not passed in the right order. 2. n is a parameter, but is redeclared in the nPrintln method in line 7. \
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = '"Pass by value" is to pass a copy of the value to the method. \
+<br />\
+(a) The output of the program is 0, because the variable max is not changed by invoking the method max.\
+<pre>\n\
+\n\
+(b)\n\
+2  2 4  2 4 8  2 4 8 16  2 4 8 16 32  2 4 8 16 32 64\n\
+\n\
+(c)\n\
+Before the call, variable times is 3\n\
+n = 3\n\
+Welcome to Java!\n\
+n = 2\n\
+Welcome to Java!\n\
+n = 1             \n\
+Welcome to Java!             \n\
+After the call, variable times is 3 \n\
+\n\
+(d)\n\
+1 \n\
+2 1 \n\
+2 1 \n\
+4 2 1 \n\
+i is 5 \n\
+</pre>\n\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = '<img src="IMAGE6_14.png" height="238" width="502"/>\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'Two methods with the same name, defined in the same class, is called method overloading. It is fine to have same method name, but different parameter types. You cannot overload methods based on return type, or modifiers.\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = 'Methods public static void method(int x) and public static int method(int y) have the same signature method(int). \
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = '(a) invokes the second method. (b) invokes the second. (c) invokes the first method.\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = 'A local variable is a variable declared inside a method.\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = 'The scope of a local variable starts from its declaration and continues to the end of the block that contains the variable.\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 6 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.1</span>
+What are the benefits of using a method?
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.2</span>
+How do you define a method? How do you invoke a method?
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.3</span>
+How do you simplify the max method in Listing 6.1 using the conditional operator?
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.4</span>
+True or false? A call to a method with a void return type is always a statement itself, but a call to a value-returning method cannot be a statement by itself.
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.5</span>
+What is the return type of a main method?
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.6</span>
+What would be wrong with not writing a return statement in a value-returning method? Can you have a return statement in a void method? Does the return statement in the following method cause syntax errors?
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> xMethod(<span class = "keyword">double</span> x, <span class = "keyword">double</span> y) {   
+      System.out.println(x + y);
+      <span class = "keyword">return</span> x + y;
+    }
+</pre>
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.7</span>
+Define the terms parameter, argument, and method signature.
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.8</span>
+Write method headers (not the bodies) for the following methods: <br />
+a.	Return a sales commission, given the sales amount and the commission rate. <br />
+b.	Display the calendar for a month, given the month and year. <br />
+c.	Return a square root of a number. <br />
+d.	Test whether a number is even, and returning true if it is. <br />
+e.	Display a message a specified number of times. <br />
+f.	Return the monthly payment, given the loan amount, number of years, and annual interest rate. <br />
+g.	Return the corresponding uppercase letter, given a lowercase letter.
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.9</span>
+Identify and correct the errors in the following program:
+<pre>
+    1  <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+    2    <span class = "keyword">public</span> <span class = "keyword">static</span> method1(<span class = "keyword">int</span> n, m) {
+    3      n += m;
+    4      method2(<span class = "constant">3</span><span class = "literal">.</span><span class = "constant">4</span>);
+    5    }
+    6
+    7    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">int</span> method2(<span class = "keyword">int</span> n) {
+    8      <span class = "keyword">if</span> (n > <span class = "constant">0</span>) <span class = "keyword">return</span> <span class = "constant">1</span>;
+    9      <span class = "keyword">else</span> <span class = "keyword">if</span> (n == <span class = "constant">0</span>) <span class = "keyword">return</span> <span class = "constant">0</span>;
+   10      <span class = "keyword">else</span> <span class = "keyword">if</span> (n &lt; <span class = "constant">0</span>) <span class = "keyword">return</span> –1;
+   11    }
+   12  }
+</pre>
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.10</span>
+Reformat the following program according to the 
+            programming style and documentation guidelines proposed in 
+            Section 1.9, Programming Style and Documentation. Use the next-line brace style.
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">double</span> method(<span class = "keyword">double</span> i, <span class = "keyword">double</span> j) 
+      {
+      <span class = "keyword">while</span> (i &lt; j) {
+        j--;
+      } 
+
+      <span class = "keyword">return</span> j;
+      }
+    }        
+</pre>
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.11</span>
+How is an argument passed to a method? Can the argument have the same name as its parameter?	
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.12</span>
+Identify and correct the errors in the following program:
+<pre>
+ 1   <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+ 2     <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+ 3       nPrintln(<span class = "constant">5</span>, <span class = "literal">"Welcome to Java!"</span>);
+ 4     }
+ 5
+ 6     <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> nPrintln(String message, <span class = "keyword">int</span> n) {
+ 7       <span class = "keyword">int</span> n = <span class = "constant">1</span>;
+ 8       <span class = "keyword">for</span> (<span class = "keyword">int</span> i = <span class = "constant">0</span>; i &lt; n; i++)
+ 9         System.out.println(message);
+10     }
+11  }
+</pre>
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.13</span>
+What is pass-by-value? Show the result of the following programs.
+<pre>
+(a)
+<span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+    <span class = "keyword">int</span> max = <span class = "constant">0</span>;
+    max(<span class = "constant">1</span>, <span class = "constant">2</span>, max);
+    System.out.println(max);
+  }
+
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> max(
+      <span class = "keyword">int</span> value1, <span class = "keyword">int</span> value2, <span class = "keyword">int</span> max) {
+    <span class = "keyword">if</span> (value1 > value2)
+      max = value1;
+    <span class = "keyword">else</span>
+      max = value2;
+  }
+}
+
+(b)
+<span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+    <span class = "keyword">int</span> i = <span class = "constant">1</span>;
+    <span class = "keyword">while</span> (i &lt;= <span class = "constant">6</span>) {
+      method1(i, <span class = "constant">2</span>);
+      i++;
+    }
+  }
+
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> method1(
+      <span class = "keyword">int</span> i, <span class = "keyword">int</span> num) {   
+    <span class = "keyword">for</span> (<span class = "keyword">int</span> j = <span class = "constant">1</span>; j &lt;= i; j++) {
+      System.out.print(num + <span class = "literal">" "</span>);
+      num *= <span class = "constant">2</span>;
+    }
+      
+    System.out.println();
+  }
+}
+
+(c)
+<span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+    <span class = "comment">// Initialize times</span>
+    <span class = "keyword">int</span> times = <span class = "constant">3</span>;
+    System.out.println(<span class = "literal">"Before the call,"</span>
+      + <span class = "literal">" variable times is "</span> + times);
+  
+    <span class = "comment">// Invoke nPrintln and display times </span>
+    nPrintln(<span class = "literal">"Welcome to Java!"</span>, times);
+    System.out.println(<span class = "literal">"After the call,"</span> 
+      + <span class = "literal">" variable times is "</span> + times);
+  }
+
+  <span class = "comment">// Print the message n times</span>
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> nPrintln(
+      String message, <span class = "keyword">int</span> n) {
+    <span class = "keyword">while</span> (n > <span class = "constant">0</span>) {
+      System.out.println(<span class = "literal">"n = "</span> + n);
+      System.out.println(message);
+      n--;
+    }
+  }
+}
+
+(d)
+<span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+    <span class = "keyword">int</span> i = <span class = "constant">0</span>;
+    <span class = "keyword">while</span> (i &lt;= <span class = "constant">4</span>) {
+      method1(i);
+      i++;
+    }
+
+    System.out.println(<span class = "literal">"i is "</span> + i);
+  }
+
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> method1(<span class = "keyword">int</span> i) {
+    <span class = "keyword">do</span> {
+      <span class = "keyword">if</span> (i % <span class = "constant">3</span> != <span class = "constant">0</span>)
+        System.out.print(i + <span class = "literal">" "</span>);
+      i--;
+    }
+    <span class = "keyword">while</span> (i >= <span class = "constant">1</span>);
+
+    System.out.println();
+  }
+}
+</pre>
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.14</span>
+For (a) in the preceding question, show the contents of the activation records in the call stack just before the method max is invoked, just as max is entered, just before max is returned, and right after max is returned.
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.15</span>
+What is method overloading? Is it permissible to define two methods that have the same name but different parameter types? Is it permissible to define two methods in a class that have identical method names and parameter lists but different return value types or different modifiers?
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.16</span>
+What is wrong in the following program?
+<pre>
+<span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> method(<span class = "keyword">int</span> x) {
+  }
+ 
+  <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">int</span> method(<span class = "keyword">int</span> y) {
+    <span class = "keyword">return</span> y;
+  }
+}
+</pre>
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.17</span>
+Given two method definitions,
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">double</span> m(<span class = "keyword">double</span> x, <span class = "keyword">double</span> y)
+    <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">double</span> m(<span class = "keyword">int</span> x, <span class = "keyword">double</span> y)
+</pre>
+            tell which of the two methods is invoked for:
+<pre>
+a.	<span class = "keyword">double</span> z = m(<span class = "constant">4</span>, <span class = "constant">5</span>);
+b.	<span class = "keyword">double</span> z = m(<span class = "constant">4</span>, <span class = "constant">5</span><span class = "literal">.</span><span class = "constant">4</span>);
+c.	<span class = "keyword">double</span> z = m(<span class = "constant">4</span><span class = "literal">.</span><span class = "constant">5</span>, <span class = "constant">5</span><span class = "literal">.</span><span class = "constant">4</span>);
+</pre>
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.18</span>
+What is a local variable?
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">6.19</span>
+What is the scope of a local variable?
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

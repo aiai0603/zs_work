@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'Although it is not technically precise, a text file consists of a sequence of characters and a binary file consists of a sequence of bits. You can use a text editor to view a text file, \
+            but not a binary file.\
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = 'You have to use Java I/O classes to create objects and use the methods in the objects to perform I/O. A Java I/O object is called a stream. An object for reading data is called an input stream and an object for writing data is called an output stream.\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = 'Binary I/O reads a byte from a file and copies it directly to the memory with any conversion, vice versa. Text I/O requires encoding and decoding. The JVM converts a Unicode to a file specific encoding when writing a character and coverts a file specific encoding to a Unicode when reading a character.\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = 'Characters are represented using Unicode in the memory and characters are represented in a file using a specified encoding scheme. If no encoding scheme is specified, the system’s default encoding scheme is used.\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = 'The values stored in the text file are 0x41 0x42 0x43.\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = 'If you write string "100" to an ASCII text file, the values stored are 0x31 0x30 0x30. If you write a numeric byte-type value 100 using binary I/O, the value stored in the file is 0x64.\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'The encoding scheme for representing a character in a Java program is the Unicode. By default, a text file is encoded using ASCII.\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = 'Almost all the methods and constructors in Java I/O classes, because there are always some unexpected situation may arise during I/O.\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'Two reasons: (1) closing a stream ensures that data will be written to the file. (2) closing a stream releases resource acquired by the stream object.\
+<br />\
+            Two ways to close a stream: 1. Invoking the close() method. 2. Using the try-catch-resource to automatically close the stream.\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = 'The value of a byte is returned as an int in the range 0 to 255. If no byte is available because the end of the stream has been reached, the value -1 is returned. The only abstract method in InputStream is read() and the only abstract \
+            method in OutputStream is write(int).\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'All the methods in FileInputStream/FileOutputStream are inherited from InputStream/OutputStream. Use new FileInputStream(filename) or new FileInputStream(File) to create a new FileInputStream and use new FileOutputStream(filename), new FileOutputStream(File), new FileOutputStream(filename, true) or \
+            new FileOutputStream(File, true) to create a FileOutputStream.\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'A FileNotFoundException would occur if you attempt to create an input stream for a nonexistent file. You can append data in an existent file if the output stream is created using new FileOutputStream(filename, true) or new FileOutputStream(File, true). Otherwise, the file is overridden if it already exists.\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = 'An instance of FileInputStream can be used as an argument to construct a Scanner and an instance of FileOutputStream can be used as an argument to construct a Formatter. So you can create a Formatter to append text into a file using\
+<pre>\n\
+    new Formatter(new FileOutputStream("temp.txt", true));\n\
+</pre>\n\
+\
+If temp.txt does not exist, it is created. If temp.txt already exists, new data is appended to the file.\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'You can use the readDouble method in the DataInputSteam to read double values and use the EOFException to detect the end of the file.\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'writeByte(91) writes one byte for number 91 (0x5B in hex, 01011011 in binary) is written to a file using FileOutputStream.\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = 'If the read() method in InputStream returns -1, it is at the end of the file.\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = 'Since java.io.FileNotFoundException is a subclass of IOException, the catch clause for java.io.FileNotFoundException should be put before the catch clause for java.io.IOException.\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = 'Java uses Unicode, but Windows uses ASCII. The Unicode is converted to \
+            ASCII code when writing a character. After the program is finished, \
+            the file will contain eight bytes, each represents an ASCII code. \
+            So, the values are\
+<pre>\n\
+31 32 33 34 35 36 37 38 \n\
+</pre>\n\
+            Note the ASCII code in hex for character 1 is 31.\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = 'Each int value takes four bytes. Since two int values are written into the file, the file contains eight bytes. The values are\
+<pre>\n\
+00 00 04 D2 00 00 16 2E \n\
+</pre>\n\
+The first four bytes are for 1234, which equals to 4D2 in hex, and the second byte is for 5678, which equals to 2246 in hex.\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = '\
+output.writeChar(&#39;A&#39;);  => 2 bytes <br />\
+output.writeChars("BC"); => 4 bytes <br />\
+output.writeUTF("DEF"); => 2 + 3 bytes (the first two bytes store the number \
+           of characters in the string. Each ASCII character takes one byte in UTF)\
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = 'Since physical input and output involving I/O devices are typically very slow compared with CPU processing speeds, buffered input/output streams can be used to improve performance. You can create a buffered input stream by wrapping a BufferedInputStream/BufferedReader on any instance of InputStream/Reader, and create a buffered output stream by wrapping a BufferedOutputStream/BufferedWriter on any instance of BufferedOutputStream/Writer. \
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = 'Create a File object and use its exists() method to test if a file exists.\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = 'If the read() method returns -1, it indicates the end of file.\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = 'Every time a byte is read, numberOfBytesCopied is incremented by 1.\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+<script>var answer24 = 'Any objects that are instance of Serializable may be stored using the object stream. You use the writeObject method to write an object to the object output stream and use readObject to read an object from the object input stream. The readObject method returns a value of the Object type. \
+';function submit24() {if (document.getElementById('b24').innerHTML == 'Show Answer') {document.getElementById('a24').innerHTML = answer24;document.getElementById('b24').style.background = 'gray'; document.getElementById('b24').innerHTML = 'Hide Answer'; }else {document.getElementById('a24').innerHTML = '';
+document.getElementById('b24').style.background = 'green'; document.getElementById('b24').innerHTML = 'Show Answer';} }</script>
+<script>var answer25 = 'No. For example, two ArrayList objects may have different size, so they are serialized into different sizes. Consider two JButton objects. If one button has an icon, and the other does not, the one with an icon will require more space in the file when it is serialized.\
+';function submit25() {if (document.getElementById('b25').innerHTML == 'Show Answer') {document.getElementById('a25').innerHTML = answer25;document.getElementById('b25').style.background = 'gray'; document.getElementById('b25').innerHTML = 'Hide Answer'; }else {document.getElementById('a25').innerHTML = '';
+document.getElementById('b25').style.background = 'green'; document.getElementById('b25').innerHTML = 'Show Answer';} }</script>
+<script>var answer26 = 'An object may not be serialized even though its class implements java.io.Serializable, because it may contain non-serializable instance variables.  Implementing java.io.Serializable is a necessary requirement for serialization, but not sufficient. You still have to ensure that all the variables in the object are serializable. A static variable is not serialized. If you don’t want a variable to be serialized, mark it transient.\
+';function submit26() {if (document.getElementById('b26').innerHTML == 'Show Answer') {document.getElementById('a26').innerHTML = answer26;document.getElementById('b26').style.background = 'gray'; document.getElementById('b26').innerHTML = 'Hide Answer'; }else {document.getElementById('a26').innerHTML = '';
+document.getElementById('b26').style.background = 'green'; document.getElementById('b26').innerHTML = 'Show Answer';} }</script>
+<script>var answer27 = 'Yes. An array can be serialized if all its elements can be serialized.\
+';function submit27() {if (document.getElementById('b27').innerHTML == 'Show Answer') {document.getElementById('a27').innerHTML = answer27;document.getElementById('b27').style.background = 'gray'; document.getElementById('b27').innerHTML = 'Hide Answer'; }else {document.getElementById('a27').innerHTML = '';
+document.getElementById('b27').style.background = 'green'; document.getElementById('b27').innerHTML = 'Show Answer';} }</script>
+<script>var answer28 = 'Yes. Because ObjectInputStream/ObjectOutputStream contains all features and operations in DataInputStream/DataOutputStream.\
+';function submit28() {if (document.getElementById('b28').innerHTML == 'Show Answer') {document.getElementById('a28').innerHTML = answer28;document.getElementById('b28').style.background = 'gray'; document.getElementById('b28').innerHTML = 'Hide Answer'; }else {document.getElementById('a28').innerHTML = '';
+document.getElementById('b28').style.background = 'green'; document.getElementById('b28').innerHTML = 'Show Answer';} }</script>
+<script>var answer29 = 'A java.io.NotSerializableException would occur.\
+';function submit29() {if (document.getElementById('b29').innerHTML == 'Show Answer') {document.getElementById('a29').innerHTML = answer29;document.getElementById('b29').style.background = 'gray'; document.getElementById('b29').innerHTML = 'Hide Answer'; }else {document.getElementById('a29').innerHTML = '';
+document.getElementById('b29').style.background = 'green'; document.getElementById('b29').innerHTML = 'Show Answer';} }</script>
+<script>var answer30 = 'Yes, because they share the same interface for reading and writing data in the same format. No. Cannot write objects.\
+';function submit30() {if (document.getElementById('b30').innerHTML == 'Show Answer') {document.getElementById('a30').innerHTML = answer30;document.getElementById('b30').style.background = 'gray'; document.getElementById('b30').innerHTML = 'Hide Answer'; }else {document.getElementById('a30').innerHTML = '';
+document.getElementById('b30').style.background = 'green'; document.getElementById('b30').innerHTML = 'Show Answer';} }</script>
+<script>var answer31 = '\
+            <pre>\n\
+RandomAccessFile raf = new RandomAccessFile("address.dat", "rw");\n\
+DataOutputStream outfile = new DataOutputStream(new FileWriter("address.dat"));\n\
+</pre>\n\
+To create a RandomAccessFile stream, you simply use the RandomAccessFile constructor. To create a DataOutputStream, you use DataOutputStream wrapped on FileOutputStream.\
+';function submit31() {if (document.getElementById('b31').innerHTML == 'Show Answer') {document.getElementById('a31').innerHTML = answer31;document.getElementById('b31').style.background = 'gray'; document.getElementById('b31').innerHTML = 'Hide Answer'; }else {document.getElementById('a31').innerHTML = '';
+document.getElementById('b31').style.background = 'green'; document.getElementById('b31').innerHTML = 'Show Answer';} }</script>
+<script>var answer32 = 'It will compile fine, but raises a run time exception on invoking readInt() because nothing is in the file.\
+';function submit32() {if (document.getElementById('b32').innerHTML == 'Show Answer') {document.getElementById('a32').innerHTML = answer32;document.getElementById('b32').style.background = 'gray'; document.getElementById('b32').innerHTML = 'Hide Answer'; }else {document.getElementById('a32').innerHTML = '';
+document.getElementById('b32').style.background = 'green'; document.getElementById('b32').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 17 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.1</span>
+What is a text file and what is a binary file? Can you view a text file or a binary file using a text editor?
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.2</span>
+How do you read or write text data in Java? What is a stream?
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.3</span>
+What are the differences between text I/O and binary I/O?
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.4</span>
+How is a Java character represented in the memory, and how is a character represented in a text file?
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.5</span>
+If you write the string "ABC" to an ASCII text file, what values are stored in the file?
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.6</span>
+If you write the string "100" to an ASCII text file, what values are stored in the file? If you write a numeric byte-type value 100 using binary I/O, what values are stored in the file?
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.7</span>
+What is the encoding scheme for representing a character in a Java program? By default, what is the encoding scheme for a text file on Windows?
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.8</span>
+Why do you have to declare to throw IOException in the method or use a try-catch block to handle IOException for Java I/O programs?
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.9</span>
+Why should you always close streams? How do you close streams?
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.10</span>
+The read() method in InputStream reads a byte. Why does it return an int instead of a byte? Find the abstract methods in InputStream and OutputStream.
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.11</span>
+Does FileInputStream/FileOutputStream introduce any new methods beyond the methods inherited from InputStream/OutputStream? How do you create a FileInputStream/FileOutputStream?
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.12</span>
+What will happen if you attempt to create an input stream on a nonexistent file? What will happen if you attempt to create an output stream on an existing file? Can you append data to an existing file?
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.13</span>
+How do you append data to an existing text file using java.io.PrintWriter?
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.14</span>
+Suppose a file contains an unspecified number of double values that were written to the file using the writeDouble method using a DataOutputStream, how do you write a program to read all these values? How do you detect the end of a file?
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.15</span>
+What is written to a file using writeByte(91) on a FileOutputStream?
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.16</span>
+How do you check the end of a file in an input stream (FileInputStream, DataInputStream)?
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.17</span>
+What is wrong in the following code?
+<pre>
+    <span class = "keyword">import</span> java.io.*;
+
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        <span class = "keyword">try</span> (
+          FileInputStream fis = <span class = "keyword">new</span> FileInputStream(<span class = "literal">"test.dat"</span>); ) {
+        }
+        <span class = "keyword">catch</span> (IOException ex) {
+          ex.printStackTrace();
+        }
+        <span class = "keyword">catch</span> (FileNotFoundException ex) {
+          ex.printStackTrace();
+        }
+      }
+    }
+</pre>
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.18</span>
+Suppose you run the following program on Windows using the default ASCII encoding after the program is finished, how many bytes are there in the file t.txt? Show the contents of each byte.
+<pre>
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) 
+          <span class = "keyword">throws</span> java.io.IOException {
+        <span class = "keyword">try</span> (java.io.PrintWriter output = 
+            <span class = "keyword">new</span> java.io.PrintWriter(<span class = "literal">"t.txt"</span>); ) {
+          output.printf(<span class = "literal">"%s"</span>, <span class = "literal">"1234"</span>);
+          output.printf(<span class = "literal">"%s"</span>, <span class = "literal">"5678"</span>);
+          output.close();
+        }
+      }
+    }
+</pre>
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.19</span>
+After the following program is finished, how many bytes are there in the file t.dat? Show the contents of each byte.
+<pre>
+    <span class = "keyword">import</span> java.io.*;
+
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) <span class = "keyword">throws</span> IOException {
+        <span class = "keyword">try</span> (DataOutputStream output = <span class = "keyword">new</span> DataOutputStream(
+            <span class = "keyword">new</span> FileOutputStream(<span class = "literal">"t.dat"</span>)); ) {
+          output.writeInt(<span class = "constant">1234</span>);
+          output.writeInt(<span class = "constant">5678</span>);
+          output.close();
+        }
+      }
+    }
+</pre>
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.20</span>
+For each of the following statements on a DataOutputStream output, how many bytes are sent to the output?
+<pre>
+    output.writeChar(<span class = "literal">'A'</span>);
+    output.writeChars(<span class = "literal">"BC"</span>);
+    output.writeUTF(<span class = "literal">"DEF"</span>);
+</pre>
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.21</span>
+What are the advantages of using buffered streams? Are the following statements correct?
+<pre>
+    BufferedInputStream input1 = 
+      <span class = "keyword">new</span> BufferedInputStream(<span class = "keyword">new</span> FileInputStream(<span class = "literal">"t.dat"</span>));
+
+    DataInputStream input2 = <span class = "keyword">new</span> DataInputStream(
+      <span class = "keyword">new</span> BufferedInputStream(<span class = "keyword">new</span> FileInputStream(<span class = "literal">"t.dat"</span>)));
+
+    DataOutputStream output = <span class = "keyword">new</span> DataOutputStream(
+      <span class = "keyword">new</span> BufferedOutputStream(<span class = "keyword">new</span> FileOutnputStream(<span class = "literal">"t.dat"</span>)));
+</pre>
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.22</span>
+How does the program check if a file already exists?
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.23</span>
+How does the program detect the end of the file while reading data?
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.24</span>
+How does the program count the number of bytes read from the file?
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.25</span>
+What types of objects can be stored using the ObjectOutputStream? What is the method for writing an object? What is the method for reading an object? What is the return type of the method that reads an object from ObjectInputStream?
+                </div>
+                <div id = "a24" class="answer"></div>
+                <button id = "b24" type="button" class = "button" onclick="submit24()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.26</span>
+If you serialize two objects of the same type, will they take the same amount of space? If not, give an example.
+                </div>
+                <div id = "a25" class="answer"></div>
+                <button id = "b25" type="button" class = "button" onclick="submit25()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.27</span>
+Is it true that any instance of java.io.Serializable can be successfully serialized? Are the static variables in an object serialized? How do you mark an instance variable not to be serialized?
+                </div>
+                <div id = "a26" class="answer"></div>
+                <button id = "b26" type="button" class = "button" onclick="submit26()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.28</span>
+Can you write an array to an ObjectOutputStream?
+                </div>
+                <div id = "a27" class="answer"></div>
+                <button id = "b27" type="button" class = "button" onclick="submit27()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.29</span>
+Is it true that DataInputStream/DataOutputStream can always be replaced by ObjectInputStream/ObjectOutputStream?
+                </div>
+                <div id = "a28" class="answer"></div>
+                <button id = "b28" type="button" class = "button" onclick="submit28()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.30</span>
+What will happen when you attempt to run the following code?
+<pre>
+    <span class = "keyword">import</span> java.io.*;
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test {
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) <span class = "keyword">throws</span> IOException {
+        <span class = "keyword">try</span> ( ObjectOutputStream output = 
+            <span class = "keyword">new</span> ObjectOutputStream(<span class = "keyword">new</span> FileOutputStream(<span class = "literal">"object.dat"</span>)); ) {
+          output.writeObject(<span class = "keyword">new</span> A());
+        }
+      }
+    }
+
+    <span class = "keyword">class</span> A <span class = "keyword">implements</span> Serializable {
+      B b = <span class = "keyword">new</span> B();
+    }
+
+    <span class = "keyword">class</span> B { 
+    }
+</pre>
+                </div>
+                <div id = "a29" class="answer"></div>
+                <button id = "b29" type="button" class = "button" onclick="submit29()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.31</span>
+Can RandomAccessFile streams read and write a data file created by DataOutputStream? Can RandomAccessFile streams read and write objects?
+                </div>
+                <div id = "a30" class="answer"></div>
+                <button id = "b30" type="button" class = "button" onclick="submit30()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.32</span>
+Create a RandomAccessFile stream for the file address.dat to allow the updating of student information in the file. Create a DataOutputStream for the file address.dat. Explain the differences between these two statements.
+                </div>
+                <div id = "a31" class="answer"></div>
+                <button id = "b31" type="button" class = "button" onclick="submit31()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">17.33</span>
+What happens if the file test.dat does not exist when you attempt to compile and run the following code?
+<pre>
+    <span class = "keyword">import</span> java.io.*;
+    <span class = "keyword">public</span> <span class = "keyword">class</span> Test { 
+      <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[] args) {
+        <span class = "keyword">try</span> ( RandomAccessFile raf =
+            <span class = "keyword">new</span> RandomAccessFile(<span class = "literal">"test.dat"</span>, <span class = "literal">"r"</span>); ) {
+          <span class = "keyword">int</span> i = raf.readInt();
+        }
+        <span class = "keyword">catch</span> (IOException ex) {
+          System.out.println(<span class = "literal">"IO exception"</span>);
+        }
+      }
+    }
+</pre>
+                </div>
+                <div id = "a32" class="answer"></div>
+                <button id = "b32" type="button" class = "button" onclick="submit32()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

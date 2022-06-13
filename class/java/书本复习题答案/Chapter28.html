@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'See §28.1.\
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = 'See §28.2.\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = 'A complete graph of n vertices has 10 edges. A tree always has 4 edges.\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = 'A complete graph of n vertices has n(n-1)/2 edges. A tree always has n-1 edges.\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = 'See §28.3.\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = ' Edge array:\
+<pre>\n\
+int[][] edges = {\n\
+  {0, 1}, {0, 2}, {0, 3}, {0, 4}, {0, 5},\n\
+  {1, 0}, {1, 2}, {1, 3}, {1, 4},\n\
+  {2, 0}, {2, 1}, {2, 3}, {2, 4},\n\
+  {3, 0}, {3, 1}, {3, 2}, {3, 4}, {3, 5},\n\
+  {4, 0}, {4, 1}, {4, 2}, {4, 3},\n\
+  {5, 0}, {5, 3}\n\
+}\n\
+</pre>\n\
+List of edge objects:\
+<pre>\n\
+java.util.ArrayList&lt;Edge> list = new java.util.ArrayList&lt;Edge>();\n\
+list.add(new Edge(0, 1));\n\
+list.add(new Edge(0, 2));\n\
+list.add(new Edge(0, 3));  \n\
+list.add(new Edge(0, 4));  \n\
+list.add(new Edge(0, 5));  \n\
+…\n\
+…\n\
+…\n\
+</pre>\n\
+Adjacency matrix:\
+<pre>\n\
+int[][] adjacencyMatrix = {\n\
+  {0, 1, 1, 1, 1, 1}, // node 0\n\
+  {1, 0, 1, 1, 1, 0}, // node 1\n\
+  {1, 1, 0, 1, 1, 0}, // node 2\n\
+  {1, 1, 1, 0, 1, 1}, // node 3\n\
+  {1, 1, 1, 1, 0, 0}, // node 4\n\
+  {1, 0, 0, 1, 0, 0}  // node 5\n\
+};\n\
+</pre>\n\
+Adjacency list:\
+<pre>\n\
+LinkedList list[] = new LinkedList();\n\
+list[0].add(1); list[0].add(2); list[0].add(3); list[0].add(4); list[0].add(5); \n\
+list[1].add(0); list[1].add(2); list[1].add(3); list[1].add(4); \n\
+list[2].add(0); list[2].add(1); list[2].add(3); list[2].add(4); \n\
+list[3].add(0); list[3].add(1); list[3].add(2); list[3].add(4); list[3].add(5);\n\
+list[4].add(0); list[4].add(1); list[4].add(2); list[4].add(3); \n\
+list[5].add(0); list[4].add(3); \n\
+</pre>\n\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'Graph is an interface that defines the common features for graphs. AbstractGraph is an abstract class that partially implements Graph. UnweightedGraph is a concreate graph that represents unweighted graphs.\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = 'What is graph1.getIndex("Seattle")? 0 <br />\
+What is graph1.getDegree(5)? 5 <br />\
+What is graph1.getVertex(4)? Kansas City\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'Yes. Because the graph in Figure 18.1 is undirected. The edge from v to u and the edge from u to v are both contained in the graph. You need to draw just one such edge.\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = 'No, because graph1 is not an instance of Displayable. \
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'No.\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'The getParent(int index) method.\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = 'See the text.\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'See the text.\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'See the text.\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = 'The return is an instance of AbstractGraph.Tree.\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = 'There are several problems in this algorithm: 1. There is a possibility that a vertex may be pushed into the stack more than once. Can you give such an example? 2. The neighbors of a vertex is pushed into the stack. You should only push one neighbor into the stack and continue to search for the next vertex from this new vertex. The correct algorithm is given below:\
+<pre>\n\
+* Input: G = (V, E) and a starting vertex v\n\
+* Output: A DFS tree rooted at v\n\
+* \n\
+* Tree dfs(v) {\n\
+*   push v to the stack;\n\
+*   mark x visited;\n\
+*   while (the stack is not empty) {\n\
+*     peek a vertex from the stack, say x;\n\
+*     if (x still has an unvisited neighbor, say y) {\n\
+*       parent[y] = x;\n\
+*       push y into the stack;\n\
+*       mark y visited;\n\
+*     }\n\
+*     else {  \n\
+*       pop a vertex from the stack;\n\
+*     }\n\
+*   }\n\
+* }  \n\
+</pre>\n\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = 'Each circle corresponds to a vertex and the vertices are connected if the corresponding two circles overlap.\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = 'No.\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = 'This is done by performing a DFS. If the DFS tree contains the same number of vertices as the number of vertices, the graph is connected and all the circles are connected.\
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = 'The return is an instance of AbstractGraph.Tree.\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = 'See the text.\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = 'See the text.\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = 'See the text.\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+<script>var answer24 = 'You may prove it using induction on the path length.\
+';function submit24() {if (document.getElementById('b24').innerHTML == 'Show Answer') {document.getElementById('a24').innerHTML = answer24;document.getElementById('b24').style.background = 'gray'; document.getElementById('b24').innerHTML = 'Hide Answer'; }else {document.getElementById('a24').innerHTML = '';
+document.getElementById('b24').style.background = 'green'; document.getElementById('b24').innerHTML = 'Show Answer';} }</script>
+<script>var answer25 = 'See the text.\
+';function submit25() {if (document.getElementById('b25').innerHTML == 'Show Answer') {document.getElementById('a25').innerHTML = answer25;document.getElementById('b25').style.background = 'gray'; document.getElementById('b25').innerHTML = 'Hide Answer'; }else {document.getElementById('a25').innerHTML = '';
+document.getElementById('b25').style.background = 'green'; document.getElementById('b25').innerHTML = 'Show Answer';} }</script>
+<script>var answer26 = 'See the text.\
+';function submit26() {if (document.getElementById('b26').innerHTML == 'Show Answer') {document.getElementById('a26').innerHTML = answer26;document.getElementById('b26').style.background = 'gray'; document.getElementById('b26').innerHTML = 'Hide Answer'; }else {document.getElementById('a26').innerHTML = '';
+document.getElementById('b26').style.background = 'green'; document.getElementById('b26').innerHTML = 'Show Answer';} }</script>
+<script>var answer27 = 'getIndex("HTHTTTHHH".toCharArray()) returns 184.\
+<br />\
+getNode(46) returns HHHTHTTTH\
+';function submit27() {if (document.getElementById('b27').innerHTML == 'Show Answer') {document.getElementById('a27').innerHTML = answer27;document.getElementById('b27').style.background = 'gray'; document.getElementById('b27').innerHTML = 'Hide Answer'; }else {document.getElementById('a27').innerHTML = '';
+document.getElementById('b27').style.background = 'green'; document.getElementById('b27').innerHTML = 'Show Answer';} }</script>
+<script>var answer28 = 'It will not work, because node is changed in the getFlippedNode(node, k).\
+';function submit28() {if (document.getElementById('b28').innerHTML == 'Show Answer') {document.getElementById('a28').innerHTML = answer28;document.getElementById('b28').style.background = 'gray'; document.getElementById('b28').innerHTML = 'Hide Answer'; }else {document.getElementById('a28').innerHTML = '';
+document.getElementById('b28').style.background = 'green'; document.getElementById('b28').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 28 Check Point Questions</h3>
+          
+<div class='section'>Section 28.2</div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.2.1</span>
+<span id="question2">What is the famous Seven Bridges of &#214;K&#214;nigsberg problem?
+</span>
+                </div>
+                <div id = "a0" class="answer2"></div>
+                <button id = "b0" type="button" class = "button2" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.2.2</span>
+<span id="question2">What is a graph? Explain the following terms: undirected graph, directed graph, weighted graph, degree of a vertex, parallel edge, simple graph, complete graph, connected graph, cycle, subgraph, tree, and spanning tree.
+</span>
+                </div>
+                <div id = "a1" class="answer2"></div>
+                <button id = "b1" type="button" class = "button2" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.2.3</span>
+<span id="question2">How many edges are in a complete graph with 5 vertices? How many edges are in a tree of 5 vertices?
+</span>
+                </div>
+                <div id = "a2" class="answer2"></div>
+                <button id = "b2" type="button" class = "button2" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.2.4</span>
+<span id="question2">How many edges are in a complete graph with n vertices? How many edges are in a tree of n vertices?
+</span>
+                </div>
+                <div id = "a3" class="answer2"></div>
+                <button id = "b3" type="button" class = "button2" onclick="submit3()">Show Answer</button>
+            </div>
+<div class='section'>Section 28.3</div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.3.1</span>
+<span id="question2">How do you represent vertices in a graph? How do you represent edges using an edge array? How do you represent an edge using an edge object? How do you represent edges using an adjacency matrix? How do you represent edges using adjacency lists?
+</span>
+                </div>
+                <div id = "a4" class="answer2"></div>
+                <button id = "b4" type="button" class = "button2" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.3.2</span>
+<span id="question2">Represent the following graph using an edge array, a list of edge objects, an adjacency matrix, an adjacency vertex list, and an adjacency edge list, respectively.
+<br />
+<img src="IMAGE28_6.png" height="150" width="150"/>
+</span>
+                </div>
+                <div id = "a5" class="answer2"></div>
+                <button id = "b5" type="button" class = "button2" onclick="submit5()">Show Answer</button>
+            </div>
+<div class='section'>Section 28.4</div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.4.1</span>
+<span id="question2">Describe the relationships among Graph, AbstractGraph, and UnweightedGraph.
+</span>
+                </div>
+                <div id = "a6" class="answer2"></div>
+                <button id = "b6" type="button" class = "button2" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.4.2</span>
+<span id="question2">For the code in Listing 28.1, TestGraph.java, what is graph1.getIndex("Seattle")? What is graph1.getDegree(5)? What is graph1.getVertex(4)?
+</span>
+                </div>
+                <div id = "a7" class="answer2"></div>
+                <button id = "b7" type="button" class = "button2" onclick="submit7()">Show Answer</button>
+            </div>
+<div class='section'>Section 28.5</div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.5.1</span>
+<span id="question2">Will Listing 28.7 DisplayUSMap.java work, if the code in lines 30-34 in Listing 28.6 GraphView.java is replaced by the following code?
+<pre>
+    <span class = "keyword">if</span> (i &lt; v) {
+      <span class = "keyword">double</span> x2 = graph.getVertex(v).getX();
+      <span class = "keyword">double</span> y2 = graph.getVertex(v).getY();
+
+      <span class = "comment">// Draw an edge for (i, v)</span>
+      getChildren().add(<span class = "keyword">new</span> Line(x1, y1, x2, y2)); 
+    }
+</pre>
+</span>
+                </div>
+                <div id = "a8" class="answer2"></div>
+                <button id = "b8" type="button" class = "button2" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.5.2</span>
+<span id="question2">For the graph1 object created in Listing 28.1, TestGraph.java, can you create a GraphView object as follows?
+<pre>
+    GraphView view = <span class = "keyword">new</span> GraphView(graph1);
+</pre>
+</span>
+                </div>
+                <div id = "a9" class="answer2"></div>
+                <button id = "b9" type="button" class = "button2" onclick="submit9()">Show Answer</button>
+            </div>
+<div class='section'>Section 28.6</div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.6.1</span>
+<span id="question2">Does AbstractGraph&lt;V>.Tree implement the Tree interface defined in 
+Listing 25.3 Tree.java?
+</span>
+                </div>
+                <div id = "a10" class="answer2"></div>
+                <button id = "b10" type="button" class = "button2" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.6.2</span>
+<span id="question2">What method do you use to find the parent of a vertex in the tree?
+</span>
+                </div>
+                <div id = "a11" class="answer2"></div>
+                <button id = "b11" type="button" class = "button2" onclick="submit11()">Show Answer</button>
+            </div>
+<div class='section'>Section 28.7</div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.7.1</span>
+<span id="question2">What is depth-first search? 
+</span>
+                </div>
+                <div id = "a12" class="answer2"></div>
+                <button id = "b12" type="button" class = "button2" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.7.2</span>
+<span id="question2">Draw a DFS tree for the graph in Figure 28.3b starting from node A.
+</span>
+                </div>
+                <div id = "a13" class="answer2"></div>
+                <button id = "b13" type="button" class = "button2" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.7.3</span>
+<span id="question2">Draw a DFS tree for the graph in Figure 28.1 starting from vertex Atlanta.
+</span>
+                </div>
+                <div id = "a14" class="answer2"></div>
+                <button id = "b14" type="button" class = "button2" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.7.4</span>
+<span id="question2">What is the return type from invoking dfs(v)?
+</span>
+                </div>
+                <div id = "a15" class="answer2"></div>
+                <button id = "b15" type="button" class = "button2" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.7.5</span>
+<span id="question2">The depth-first search algorithm described in Listing 28.8 uses recursion. Alternatively, you can use a stack to implement it, as shown below. Point out the error in this algorithm and give a correct algorithm.
+<pre>
+<span class = "comment">// Wrong version </span>
+Tree dfs(vertex v) {
+  push v into the stack;
+  mark v visited;
+ 
+  <span class = "keyword">while</span> (the stack is not empty) {
+    pop a vertex, say u, from the stack
+    visit u;
+    <span class = "keyword">for</span> each neighbor w of u
+      <span class = "keyword">if</span> (w has not been visited)
+        push w into the stack; 
+  }
+}
+</pre>
+</span>
+                </div>
+                <div id = "a16" class="answer2"></div>
+                <button id = "b16" type="button" class = "button2" onclick="submit16()">Show Answer</button>
+            </div>
+<div class='section'>Section 28.8</div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.8.1</span>
+<span id="question2">How is a graph created for the connected circles problem?
+</span>
+                </div>
+                <div id = "a17" class="answer2"></div>
+                <button id = "b17" type="button" class = "button2" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.8.2</span>
+<span id="question2">When you click the mouse inside a circle, does the program create a new circle?
+</span>
+                </div>
+                <div id = "a18" class="answer2"></div>
+                <button id = "b18" type="button" class = "button2" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.8.3</span>
+<span id="question2">How does the program know if all circles are connected?
+</span>
+                </div>
+                <div id = "a19" class="answer2"></div>
+                <button id = "b19" type="button" class = "button2" onclick="submit19()">Show Answer</button>
+            </div>
+<div class='section'>Section 28.9</div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.9.1</span>
+<span id="question2">What is the return type from invoking bfs(v)?
+</span>
+                </div>
+                <div id = "a20" class="answer2"></div>
+                <button id = "b20" type="button" class = "button2" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.9.2</span>
+<span id="question2">What is breadth-first search? 
+</span>
+                </div>
+                <div id = "a21" class="answer2"></div>
+                <button id = "b21" type="button" class = "button2" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.9.3</span>
+<span id="question2">Draw a BFS tree for the graph in Figure 28.3b starting from node A.
+</span>
+                </div>
+                <div id = "a22" class="answer2"></div>
+                <button id = "b22" type="button" class = "button2" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.9.4</span>
+<span id="question2">Draw a BFS tree for the graph in Figure 28.1 starting from vertex Atlanta.
+</span>
+                </div>
+                <div id = "a23" class="answer2"></div>
+                <button id = "b23" type="button" class = "button2" onclick="submit23()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.9.5</span>
+<span id="question2">Prove that the path between the root and any node in the BFS tree is the shortest path between the root and the node.
+</span>
+                </div>
+                <div id = "a24" class="answer2"></div>
+                <button id = "b24" type="button" class = "button2" onclick="submit24()">Show Answer</button>
+            </div>
+<div class='section'>Section 28.10</div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.10.1</span>
+<span id="question2">How are the nodes created for the graph in NineTailModel?
+</span>
+                </div>
+                <div id = "a25" class="answer2"></div>
+                <button id = "b25" type="button" class = "button2" onclick="submit25()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.10.2</span>
+<span id="question2">How are the edges created for the graph in NineTailModel?
+</span>
+                </div>
+                <div id = "a26" class="answer2"></div>
+                <button id = "b26" type="button" class = "button2" onclick="submit26()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.10.3</span>
+<span id="question2">What is returned after invoking getIndex("HTHTTTHHH".toCharArray()) in Listing 28.13? What is returned after invoking getNode(46) in Listing 28.13?
+</span>
+                </div>
+                <div id = "a27" class="answer2"></div>
+                <button id = "b27" type="button" class = "button2" onclick="submit27()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement2">
+              <span id="questionnumber2">28.10.4</span>
+<span id="question2">If lines 26 and 27 are swapped in Listing 28.13, NineTailModel.java, will the program work? Why not?
+</span>
+                </div>
+                <div id = "a28" class="answer2"></div>
+                <button id = "b28" type="button" class = "button2" onclick="submit28()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

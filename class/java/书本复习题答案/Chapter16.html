@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Java Programming, 10E, Y. Daniel Liang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" type="text/css" href="checkpoint.css" />
+    <script type="text/javascript" src="jquery-latest.js"></script>
+
+<script>var answer0 = 'First create a Label using its no-arg constructor and then set its graphic property to a node.\
+';function submit0() {if (document.getElementById('b0').innerHTML == 'Show Answer') {document.getElementById('a0').innerHTML = answer0;document.getElementById('b0').style.background = 'gray'; document.getElementById('b0').innerHTML = 'Hide Answer'; }else {document.getElementById('a0').innerHTML = '';
+document.getElementById('b0').style.background = 'green'; document.getElementById('b0').innerHTML = 'Show Answer';} }</script>
+<script>var answer1 = 'Use label.setContentDisplay(ContentDisplay.LEFT).\
+';function submit1() {if (document.getElementById('b1').innerHTML == 'Show Answer') {document.getElementById('a1').innerHTML = answer1;document.getElementById('b1').style.background = 'gray'; document.getElementById('b1').innerHTML = 'Hide Answer'; }else {document.getElementById('a1').innerHTML = '';
+document.getElementById('b1').style.background = 'green'; document.getElementById('b1').innerHTML = 'Show Answer';} }</script>
+<script>var answer2 = 'Use &#39;\n&#39; character in the text. For example, label.setText("Welcome\nto\nJava").\
+';function submit2() {if (document.getElementById('b2').innerHTML == 'Show Answer') {document.getElementById('a2').innerHTML = answer2;document.getElementById('b2').style.background = 'gray'; document.getElementById('b2').innerHTML = 'Hide Answer'; }else {document.getElementById('a2').innerHTML = '';
+document.getElementById('b2').style.background = 'green'; document.getElementById('b2').innerHTML = 'Show Answer';} }</script>
+<script>var answer3 = 'Yes. Use label.setUnderline(true).\
+';function submit3() {if (document.getElementById('b3').innerHTML == 'Show Answer') {document.getElementById('a3').innerHTML = answer3;document.getElementById('b3').style.background = 'gray'; document.getElementById('b3').innerHTML = 'Hide Answer'; }else {document.getElementById('a3').innerHTML = '';
+document.getElementById('b3').style.background = 'green'; document.getElementById('b3').innerHTML = 'Show Answer';} }</script>
+<script>var answer4 = 'Use the constructor new Button(text, graphic) to create a button with text and node. You can apply the methods for Labelled in Button, because Button is a subclass of Labelled.\
+';function submit4() {if (document.getElementById('b4').innerHTML == 'Show Answer') {document.getElementById('a4').innerHTML = answer4;document.getElementById('b4').style.background = 'gray'; document.getElementById('b4').innerHTML = 'Hide Answer'; }else {document.getElementById('a4').innerHTML = '';
+document.getElementById('b4').style.background = 'green'; document.getElementById('b4').innerHTML = 'Show Answer';} }</script>
+<script>var answer5 = 'They are declared protected for use in the subclasses of ButtonDemo later in the chapter.\
+';function submit5() {if (document.getElementById('b5').innerHTML == 'Show Answer') {document.getElementById('a5').innerHTML = answer5;document.getElementById('b5').style.background = 'gray'; document.getElementById('b5').innerHTML = 'Hide Answer'; }else {document.getElementById('a5').innerHTML = '';
+document.getElementById('b5').style.background = 'green'; document.getElementById('b5').innerHTML = 'Show Answer';} }</script>
+<script>var answer6 = 'Use button.setOnAction(handler).\
+';function submit6() {if (document.getElementById('b6').innerHTML == 'Show Answer') {document.getElementById('a6').innerHTML = answer6;document.getElementById('b6').style.background = 'gray'; document.getElementById('b6').innerHTML = 'Hide Answer'; }else {document.getElementById('a6').innerHTML = '';
+document.getElementById('b6').style.background = 'green'; document.getElementById('b6').innerHTML = 'Show Answer';} }</script>
+<script>var answer7 = 'Use chk.isSelected().\
+';function submit7() {if (document.getElementById('b7').innerHTML == 'Show Answer') {document.getElementById('a7').innerHTML = answer7;document.getElementById('b7').style.background = 'gray'; document.getElementById('b7').innerHTML = 'Hide Answer'; }else {document.getElementById('a7').innerHTML = '';
+document.getElementById('b7').style.background = 'green'; document.getElementById('b7').innerHTML = 'Show Answer';} }</script>
+<script>var answer8 = 'You can apply all the methods in Labelled to CheckBox, because CheckBox is a subclass of Labelled.\
+';function submit8() {if (document.getElementById('b8').innerHTML == 'Show Answer') {document.getElementById('a8').innerHTML = answer8;document.getElementById('b8').style.background = 'gray'; document.getElementById('b8').innerHTML = 'Hide Answer'; }else {document.getElementById('a8').innerHTML = '';
+document.getElementById('b8').style.background = 'green'; document.getElementById('b8').innerHTML = 'Show Answer';} }</script>
+<script>var answer9 = 'Yes\
+';function submit9() {if (document.getElementById('b9').innerHTML == 'Show Answer') {document.getElementById('a9').innerHTML = answer9;document.getElementById('b9').style.background = 'gray'; document.getElementById('b9').innerHTML = 'Hide Answer'; }else {document.getElementById('a9').innerHTML = '';
+document.getElementById('b9').style.background = 'green'; document.getElementById('b9').innerHTML = 'Show Answer';} }</script>
+<script>var answer10 = 'Use rb.isSelected().\
+';function submit10() {if (document.getElementById('b10').innerHTML == 'Show Answer') {document.getElementById('a10').innerHTML = answer10;document.getElementById('b10').style.background = 'gray'; document.getElementById('b10').innerHTML = 'Hide Answer'; }else {document.getElementById('a10').innerHTML = '';
+document.getElementById('b10').style.background = 'green'; document.getElementById('b10').innerHTML = 'Show Answer';} }</script>
+<script>var answer11 = 'You can apply all the methods in Labelled to RadioButton, because RadioButton is a subclass of Labelled.\
+';function submit11() {if (document.getElementById('b11').innerHTML == 'Show Answer') {document.getElementById('a11').innerHTML = answer11;document.getElementById('b11').style.background = 'gray'; document.getElementById('b11').innerHTML = 'Hide Answer'; }else {document.getElementById('a11').innerHTML = '';
+document.getElementById('b11').style.background = 'green'; document.getElementById('b11').innerHTML = 'Show Answer';} }</script>
+<script>var answer12 = 'Yes\
+';function submit12() {if (document.getElementById('b12').innerHTML == 'Show Answer') {document.getElementById('a12').innerHTML = answer12;document.getElementById('b12').style.background = 'gray'; document.getElementById('b12').innerHTML = 'Hide Answer'; }else {document.getElementById('a12').innerHTML = '';
+document.getElementById('b12').style.background = 'green'; document.getElementById('b12').innerHTML = 'Show Answer';} }</script>
+<script>var answer13 = 'Create a ToggleGroup tg and set radio button’s toggleGroup property to tg.\
+';function submit13() {if (document.getElementById('b13').innerHTML == 'Show Answer') {document.getElementById('a13').innerHTML = answer13;document.getElementById('b13').style.background = 'gray'; document.getElementById('b13').innerHTML = 'Hide Answer'; }else {document.getElementById('a13').innerHTML = '';
+document.getElementById('b13').style.background = 'green'; document.getElementById('b13').innerHTML = 'Show Answer';} }</script>
+<script>var answer14 = 'Yes. Use tf.setEditable(false).\
+';function submit14() {if (document.getElementById('b14').innerHTML == 'Show Answer') {document.getElementById('a14').innerHTML = answer14;document.getElementById('b14').style.background = 'gray'; document.getElementById('b14').innerHTML = 'Hide Answer'; }else {document.getElementById('a14').innerHTML = '';
+document.getElementById('b14').style.background = 'green'; document.getElementById('b14').innerHTML = 'Show Answer';} }</script>
+<script>var answer15 = 'You can apply all the methods in TextInputControl to TextField, because TextField is a subclass of TextInputControl.\
+';function submit15() {if (document.getElementById('b15').innerHTML == 'Show Answer') {document.getElementById('a15').innerHTML = answer15;document.getElementById('b15').style.background = 'gray'; document.getElementById('b15').innerHTML = 'Hide Answer'; }else {document.getElementById('a15').innerHTML = '';
+document.getElementById('b15').style.background = 'green'; document.getElementById('b15').innerHTML = 'Show Answer';} }</script>
+<script>var answer16 = 'No.\
+';function submit16() {if (document.getElementById('b16').innerHTML == 'Show Answer') {document.getElementById('a16').innerHTML = answer16;document.getElementById('b16').style.background = 'gray'; document.getElementById('b16').innerHTML = 'Hide Answer'; }else {document.getElementById('a16').innerHTML = '';
+document.getElementById('b16').style.background = 'green'; document.getElementById('b16').innerHTML = 'Show Answer';} }</script>
+<script>var answer17 = 'Use tf.setAlignment(Pos.BASELINE_RIGHT).\
+';function submit17() {if (document.getElementById('b17').innerHTML == 'Show Answer') {document.getElementById('a17').innerHTML = answer17;document.getElementById('b17').style.background = 'gray'; document.getElementById('b17').innerHTML = 'Hide Answer'; }else {document.getElementById('a17').innerHTML = '';
+document.getElementById('b17').style.background = 'green'; document.getElementById('b17').innerHTML = 'Show Answer';} }</script>
+<script>var answer18 = 'Create a TextArea using new TextArea and then set its prefColumnCount to 10 and prefRowCount to 20.\
+';function submit18() {if (document.getElementById('b18').innerHTML == 'Show Answer') {document.getElementById('a18').innerHTML = answer18;document.getElementById('b18').style.background = 'gray'; document.getElementById('b18').innerHTML = 'Hide Answer'; }else {document.getElementById('a18').innerHTML = '';
+document.getElementById('b18').style.background = 'green'; document.getElementById('b18').innerHTML = 'Show Answer';} }</script>
+<script>var answer19 = 'Use ta.getText().\
+';function submit19() {if (document.getElementById('b19').innerHTML == 'Show Answer') {document.getElementById('a19').innerHTML = answer19;document.getElementById('b19').style.background = 'gray'; document.getElementById('b19').innerHTML = 'Hide Answer'; }else {document.getElementById('a19').innerHTML = '';
+document.getElementById('b19').style.background = 'green'; document.getElementById('b19').innerHTML = 'Show Answer';} }</script>
+<script>var answer20 = 'Yes. Use ta.setEditable(false).\
+';function submit20() {if (document.getElementById('b20').innerHTML == 'Show Answer') {document.getElementById('a20').innerHTML = answer20;document.getElementById('b20').style.background = 'gray'; document.getElementById('b20').innerHTML = 'Hide Answer'; }else {document.getElementById('a20').innerHTML = '';
+document.getElementById('b20').style.background = 'green'; document.getElementById('b20').innerHTML = 'Show Answer';} }</script>
+<script>var answer21 = 'Use ta.setWrapText(true).\
+';function submit21() {if (document.getElementById('b21').innerHTML == 'Show Answer') {document.getElementById('a21').innerHTML = answer21;document.getElementById('b21').style.background = 'gray'; document.getElementById('b21').innerHTML = 'Hide Answer'; }else {document.getElementById('a21').innerHTML = '';
+document.getElementById('b21').style.background = 'green'; document.getElementById('b21').innerHTML = 'Show Answer';} }</script>
+<script>var answer22 = 'Use new ComboBox&lt;>(). Use cbo.getItems().addAll(item1, item2, item3).\
+';function submit22() {if (document.getElementById('b22').innerHTML == 'Show Answer') {document.getElementById('a22').innerHTML = answer22;document.getElementById('b22').style.background = 'gray'; document.getElementById('b22').innerHTML = 'Hide Answer'; }else {document.getElementById('a22').innerHTML = '';
+document.getElementById('b22').style.background = 'green'; document.getElementById('b22').innerHTML = 'Show Answer';} }</script>
+<script>var answer23 = 'Use cbo.getItems() to return a list of values in the combo box. Use cbo.getValue() to get selected value.\
+';function submit23() {if (document.getElementById('b23').innerHTML == 'Show Answer') {document.getElementById('a23').innerHTML = answer23;document.getElementById('b23').style.background = 'gray'; document.getElementById('b23').innerHTML = 'Hide Answer'; }else {document.getElementById('a23').innerHTML = '';
+document.getElementById('b23').style.background = 'green'; document.getElementById('b23').innerHTML = 'Show Answer';} }</script>
+<script>var answer24 = 'Use cbo.getItems().size() to return the number of items in a combo box and use cbo.getItems().get(i) to get the item at the specified index in a combo box.\
+';function submit24() {if (document.getElementById('b24').innerHTML == 'Show Answer') {document.getElementById('a24').innerHTML = answer24;document.getElementById('b24').style.background = 'gray'; document.getElementById('b24').innerHTML = 'Hide Answer'; }else {document.getElementById('a24').innerHTML = '';
+document.getElementById('b24').style.background = 'green'; document.getElementById('b24').innerHTML = 'Show Answer';} }</script>
+<script>var answer25 = 'Upon selecting a new item, a combo box fires an ActionEvent.\
+';function submit25() {if (document.getElementById('b25').innerHTML == 'Show Answer') {document.getElementById('a25').innerHTML = answer25;document.getElementById('b25').style.background = 'gray'; document.getElementById('b25').innerHTML = 'Hide Answer'; }else {document.getElementById('a25').innerHTML = '';
+document.getElementById('b25').style.background = 'green'; document.getElementById('b25').innerHTML = 'Show Answer';} }</script>
+<script>var answer26 = 'To create an observable list with an array of strings, use \
+prepre\
+FXCollections.observableArrayList(arrayOfStrings);\
+            </pre>\n\
+';function submit26() {if (document.getElementById('b26').innerHTML == 'Show Answer') {document.getElementById('a26').innerHTML = answer26;document.getElementById('b26').style.background = 'gray'; document.getElementById('b26').innerHTML = 'Hide Answer'; }else {document.getElementById('a26').innerHTML = '';
+document.getElementById('b26').style.background = 'green'; document.getElementById('b26').innerHTML = 'Show Answer';} }</script>
+<script>var answer27 = 'Use lv.setOrientation(Orientation.HORIZONTAL) or lv.setOrientation(Orientation.VERITCAL).\
+';function submit27() {if (document.getElementById('b27').innerHTML == 'Show Answer') {document.getElementById('a27').innerHTML = answer27;document.getElementById('b27').style.background = 'gray'; document.getElementById('b27').innerHTML = 'Hide Answer'; }else {document.getElementById('a27').innerHTML = '';
+document.getElementById('b27').style.background = 'green'; document.getElementById('b27').innerHTML = 'Show Answer';} }</script>
+<script>var answer28 = 'Two selection modes can be used in a list view: SelectionMode.MULTIPLE and SelectionMode.SINGLE. To set a selection mode, use lv.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE).\
+';function submit28() {if (document.getElementById('b28').innerHTML == 'Show Answer') {document.getElementById('a28').innerHTML = answer28;document.getElementById('b28').style.background = 'gray'; document.getElementById('b28').innerHTML = 'Hide Answer'; }else {document.getElementById('a28').innerHTML = '';
+document.getElementById('b28').style.background = 'green'; document.getElementById('b28').innerHTML = 'Show Answer';} }</script>
+<script>var answer29 = 'Use lv.getSelectionModel().getSelectedItems() and lv.getSelectionModel().getSelectedIndices().\
+';function submit29() {if (document.getElementById('b29').innerHTML == 'Show Answer') {document.getElementById('a29').innerHTML = answer29;document.getElementById('b29').style.background = 'gray'; document.getElementById('b29').innerHTML = 'Hide Answer'; }else {document.getElementById('a29').innerHTML = '';
+document.getElementById('b29').style.background = 'green'; document.getElementById('b29').innerHTML = 'Show Answer';} }</script>
+<script>var answer30 = 'To create a horizontal scroll bar, create a ScrollBar using new ScrollBar() and then invoke its setOrientation(Orientation.HORIZONTAL) or setOrientation(Orientation.VERTICAL).\
+';function submit30() {if (document.getElementById('b30').innerHTML == 'Show Answer') {document.getElementById('a30').innerHTML = answer30;document.getElementById('b30').style.background = 'gray'; document.getElementById('b30').innerHTML = 'Hide Answer'; }else {document.getElementById('a30').innerHTML = '';
+document.getElementById('b30').style.background = 'green'; document.getElementById('b30').innerHTML = 'Show Answer';} }</script>
+<script>var answer31 = 'Use sb.valueProperty().addListener(ov -> statements) to respond to a change in the scroll bar value. \
+';function submit31() {if (document.getElementById('b31').innerHTML == 'Show Answer') {document.getElementById('a31').innerHTML = answer31;document.getElementById('b31').style.background = 'gray'; document.getElementById('b31').innerHTML = 'Hide Answer'; }else {document.getElementById('a31').innerHTML = '';
+document.getElementById('b31').style.background = 'green'; document.getElementById('b31').innerHTML = 'Show Answer';} }</script>
+<script>var answer32 = 'To get the value from a scroll bar, use sb.getValue(). To get the scroll bar’s maximum value, use sb.getMax().\
+';function submit32() {if (document.getElementById('b32').innerHTML == 'Show Answer') {document.getElementById('a32').innerHTML = answer32;document.getElementById('b32').style.background = 'gray'; document.getElementById('b32').innerHTML = 'Hide Answer'; }else {document.getElementById('a32').innerHTML = '';
+document.getElementById('b32').style.background = 'green'; document.getElementById('b32').innerHTML = 'Show Answer';} }</script>
+<script>var answer33 = 'To create a horizontal slider, create a Slider using new Slider() and then invoke its setOrientation(Orientation.HORIZONTAL) or setOrientation(Orientation.VERTICAL).\
+';function submit33() {if (document.getElementById('b33').innerHTML == 'Show Answer') {document.getElementById('a33').innerHTML = answer33;document.getElementById('b33').style.background = 'gray'; document.getElementById('b33').innerHTML = 'Hide Answer'; }else {document.getElementById('a33').innerHTML = '';
+document.getElementById('b33').style.background = 'green'; document.getElementById('b33').innerHTML = 'Show Answer';} }</script>
+<script>var answer34 = 'Use sl.valueProperty().addListener(ov -> statements) to respond to a change in the slider value.\
+';function submit34() {if (document.getElementById('b34').innerHTML == 'Show Answer') {document.getElementById('a34').innerHTML = answer34;document.getElementById('b34').style.background = 'gray'; document.getElementById('b34').innerHTML = 'Hide Answer'; }else {document.getElementById('a34').innerHTML = '';
+document.getElementById('b34').style.background = 'green'; document.getElementById('b34').innerHTML = 'Show Answer';} }</script>
+<script>var answer35 = 'To get the value from a slider, use sl.getValue(). To get the scroll bar’s maximum value, use sl.getMax().\
+';function submit35() {if (document.getElementById('b35').innerHTML == 'Show Answer') {document.getElementById('a35').innerHTML = answer35;document.getElementById('b35').style.background = 'gray'; document.getElementById('b35').innerHTML = 'Hide Answer'; }else {document.getElementById('a35').innerHTML = '';
+document.getElementById('b35').style.background = 'green'; document.getElementById('b35').innerHTML = 'Show Answer';} }</script>
+<script>var answer36 = 'When the game starts, the value for whoseTurn is &#39;X&#39;. When the game is over, the value is whoseTurn is the winner’s token.\
+';function submit36() {if (document.getElementById('b36').innerHTML == 'Show Answer') {document.getElementById('a36').innerHTML = answer36;document.getElementById('b36').style.background = 'gray'; document.getElementById('b36').innerHTML = 'Hide Answer'; }else {document.getElementById('a36').innerHTML = '';
+document.getElementById('b36').style.background = 'green'; document.getElementById('b36').innerHTML = 'Show Answer';} }</script>
+<script>var answer37 = 'If the game is not over and the user clicks on an empty cell, the current value from whoseTurn will be displayed in the cell. If the game is over and the user clicks on an empty cell, nothing will happen and the cell will still be empty.\
+';function submit37() {if (document.getElementById('b37').innerHTML == 'Show Answer') {document.getElementById('a37').innerHTML = answer37;document.getElementById('b37').style.background = 'gray'; document.getElementById('b37').innerHTML = 'Hide Answer'; }else {document.getElementById('a37').innerHTML = '';
+document.getElementById('b37').style.background = 'green'; document.getElementById('b37').innerHTML = 'Show Answer';} }</script>
+<script>var answer38 = 'The program checks if all rows/columns/diagonals have the same token by invoking the isWon(token) method and checks if all cells are occupied by invoking the isFull() method.\
+';function submit38() {if (document.getElementById('b38').innerHTML == 'Show Answer') {document.getElementById('a38').innerHTML = answer38;document.getElementById('b38').style.background = 'gray'; document.getElementById('b38').innerHTML = 'Hide Answer'; }else {document.getElementById('a38').innerHTML = '';
+document.getElementById('b38').style.background = 'green'; document.getElementById('b38').innerHTML = 'Show Answer';} }</script>
+<script>var answer39 = 'To create a Media from a URL, use new Media(url). To create a MediaPlayer, use new MediaPlayer(media). To create a MediaView, use new MediaView(mediaPlayer).\
+';function submit39() {if (document.getElementById('b39').innerHTML == 'Show Answer') {document.getElementById('a39').innerHTML = answer39;document.getElementById('b39').style.background = 'gray'; document.getElementById('b39').innerHTML = 'Hide Answer'; }else {document.getElementById('a39').innerHTML = '';
+document.getElementById('b39').style.background = 'green'; document.getElementById('b39').innerHTML = 'Show Answer';} }</script>
+<script>var answer40 = 'No.\
+';function submit40() {if (document.getElementById('b40').innerHTML == 'Show Answer') {document.getElementById('a40').innerHTML = answer40;document.getElementById('b40').style.background = 'gray'; document.getElementById('b40').innerHTML = 'Hide Answer'; }else {document.getElementById('a40').innerHTML = '';
+document.getElementById('b40').style.background = 'green'; document.getElementById('b40').innerHTML = 'Show Answer';} }</script>
+<script>var answer41 = 'You can place a Media in multiple MediaPlayer and a MediaPlayer in multiple MediaView, but cannot place a MediaView in multiple panes.\
+';function submit41() {if (document.getElementById('b41').innerHTML == 'Show Answer') {document.getElementById('a41').innerHTML = answer41;document.getElementById('b41').style.background = 'gray'; document.getElementById('b41').innerHTML = 'Hide Answer'; }else {document.getElementById('a41').innerHTML = '';
+document.getElementById('b41').style.background = 'green'; document.getElementById('b41').innerHTML = 'Show Answer';} }</script>
+<script>var answer42 = 'In Listing 16.15, the following code sets the initial image.\
+<pre>\n\
+ImageView imageView = new ImageView(images[currentIndex]);   \n\
+</pre>\n\
+            The following code plays the audio:\
+<pre>\n\
+mp[currentIndex].play();\n\
+            </pre>\n\
+';function submit42() {if (document.getElementById('b42').innerHTML == 'Show Answer') {document.getElementById('a42').innerHTML = answer42;document.getElementById('b42').style.background = 'gray'; document.getElementById('b42').innerHTML = 'Hide Answer'; }else {document.getElementById('a42').innerHTML = '';
+document.getElementById('b42').style.background = 'green'; document.getElementById('b42').innerHTML = 'Show Answer';} }</script>
+<script>var answer43 = 'In Listing 16.15, when a new nation is selected, the program stops the audio, sets a new image, and plays the new audio.\
+';function submit43() {if (document.getElementById('b43').innerHTML == 'Show Answer') {document.getElementById('a43').innerHTML = answer43;document.getElementById('b43').style.background = 'gray'; document.getElementById('b43').innerHTML = 'Hide Answer'; }else {document.getElementById('a43').innerHTML = '';
+document.getElementById('b43').style.background = 'green'; document.getElementById('b43').innerHTML = 'Show Answer';} }</script>
+</head>
+  <body>
+     <div style = "text-align: center; color: navy; ">Please send suggestions and errata to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. Indicate the book, edition, and question number in your email. Thanks!</div>    <div id="maincontentstyle">
+      <center>
+        <div id="boxstyle">
+          <h3 id="h3style">Chapter 16 Check Point Questions</h3>
+          
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.1</span>
+How do you create a label with a node without a text?
+                </div>
+                <div id = "a0" class="answer"></div>
+                <button id = "b0" type="button" class = "button" onclick="submit0()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.2</span>
+How do you place a text on the right of the node in a label?
+                </div>
+                <div id = "a1" class="answer"></div>
+                <button id = "b1" type="button" class = "button" onclick="submit1()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.3</span>
+Can you display multiple lines of text in a label? 
+                </div>
+                <div id = "a2" class="answer"></div>
+                <button id = "b2" type="button" class = "button" onclick="submit2()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.4</span>
+Can the text in a label be underlined?
+                </div>
+                <div id = "a3" class="answer"></div>
+                <button id = "b3" type="button" class = "button" onclick="submit3()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.5</span>
+How do you create a button with a text and a node? Can you apply all the methods for Labeled to Button?
+                </div>
+                <div id = "a4" class="answer"></div>
+                <button id = "b4" type="button" class = "button" onclick="submit4()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.6</span>
+Why is the getPane() method protected in Listing 16.2? Why is the data field text protected?
+                </div>
+                <div id = "a5" class="answer"></div>
+                <button id = "b5" type="button" class = "button" onclick="submit5()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.7</span>
+How do you set a handler for processing a button-clicked action?
+                </div>
+                <div id = "a6" class="answer"></div>
+                <button id = "b6" type="button" class = "button" onclick="submit6()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.8</span>
+How do you test if a check box is selected?
+                </div>
+                <div id = "a7" class="answer"></div>
+                <button id = "b7" type="button" class = "button" onclick="submit7()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.9</span>
+Can you apply all the methods for Labeled to CheckBox?
+                </div>
+                <div id = "a8" class="answer"></div>
+                <button id = "b8" type="button" class = "button" onclick="submit8()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.10</span>
+Can you set a node for the graphic property in a check box?
+                </div>
+                <div id = "a9" class="answer"></div>
+                <button id = "b9" type="button" class = "button" onclick="submit9()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.11</span>
+How do you test if a radio button is selected?
+                </div>
+                <div id = "a10" class="answer"></div>
+                <button id = "b10" type="button" class = "button" onclick="submit10()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.12</span>
+Can you apply all the methods for Labeled to RadioButton?
+                </div>
+                <div id = "a11" class="answer"></div>
+                <button id = "b11" type="button" class = "button" onclick="submit11()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.13</span>
+Can you set any node in the graphic property in a radio button?
+                </div>
+                <div id = "a12" class="answer"></div>
+                <button id = "b12" type="button" class = "button" onclick="submit12()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.14</span>
+How do you group radio buttons?
+                </div>
+                <div id = "a13" class="answer"></div>
+                <button id = "b13" type="button" class = "button" onclick="submit13()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.15</span>
+Can you disable editing of a text field?
+                </div>
+                <div id = "a14" class="answer"></div>
+                <button id = "b14" type="button" class = "button" onclick="submit14()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.16</span>
+Can you apply all the methods for TextInputControl to TextField?
+                </div>
+                <div id = "a15" class="answer"></div>
+                <button id = "b15" type="button" class = "button" onclick="submit15()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.17</span>
+Can you set a node as the graphic property in a text field?
+                </div>
+                <div id = "a16" class="answer"></div>
+                <button id = "b16" type="button" class = "button" onclick="submit16()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.18</span>
+How do you align the text in a text field to the right?
+                </div>
+                <div id = "a17" class="answer"></div>
+                <button id = "b17" type="button" class = "button" onclick="submit17()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.19</span>
+How do you create a text area with 10 rows and 20 columns? 
+                </div>
+                <div id = "a18" class="answer"></div>
+                <button id = "b18" type="button" class = "button" onclick="submit18()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.20</span>
+How do you obtain the text from a text area?
+                </div>
+                <div id = "a19" class="answer"></div>
+                <button id = "b19" type="button" class = "button" onclick="submit19()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.21</span>
+Can you disable editing of a text area?
+                </div>
+                <div id = "a20" class="answer"></div>
+                <button id = "b20" type="button" class = "button" onclick="submit20()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.22</span>
+What method do you use to wrap text to the next line in a text area?
+                </div>
+                <div id = "a21" class="answer"></div>
+                <button id = "b21" type="button" class = "button" onclick="submit21()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.23</span>
+How do you create a combo box and add three items to it?
+                </div>
+                <div id = "a22" class="answer"></div>
+                <button id = "b22" type="button" class = "button" onclick="submit22()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.24</span>
+How do you retrieve an item from a combo box? How do you retrieve a selected item from a combo box?
+                </div>
+                <div id = "a23" class="answer"></div>
+                <button id = "b23" type="button" class = "button" onclick="submit23()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.25</span>
+How do you get the number of items in a combo box? How do you retrieve an item at a specified index in a combo box?
+                </div>
+                <div id = "a24" class="answer"></div>
+                <button id = "b24" type="button" class = "button" onclick="submit24()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.26</span>
+What events would a ComboBox fire upon selecting a new item?
+                </div>
+                <div id = "a25" class="answer"></div>
+                <button id = "b25" type="button" class = "button" onclick="submit25()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.27</span>
+How do you create an observable list with an array of strings?
+                </div>
+                <div id = "a26" class="answer"></div>
+                <button id = "b26" type="button" class = "button" onclick="submit26()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.28</span>
+How do you set the orientation in a list view? 
+                </div>
+                <div id = "a27" class="answer"></div>
+                <button id = "b27" type="button" class = "button" onclick="submit27()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.29</span>
+What selection modes are available for a list view? What is the default selection mode? How do you set a selection mode?
+                </div>
+                <div id = "a28" class="answer"></div>
+                <button id = "b28" type="button" class = "button" onclick="submit28()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.30</span>
+How do you obtain the selected items and selected indices?
+                </div>
+                <div id = "a29" class="answer"></div>
+                <button id = "b29" type="button" class = "button" onclick="submit29()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.31</span>
+How do you create a horizontal scroll bar? How do you create a vertical scroll bar? 
+                </div>
+                <div id = "a30" class="answer"></div>
+                <button id = "b30" type="button" class = "button" onclick="submit30()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.32</span>
+How do you write the code to respond to the value property change of a scroll bar?
+                </div>
+                <div id = "a31" class="answer"></div>
+                <button id = "b31" type="button" class = "button" onclick="submit31()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.33</span>
+How do you get the value from a scroll bar? How do you get the maximum value from a scroll bar?
+                </div>
+                <div id = "a32" class="answer"></div>
+                <button id = "b32" type="button" class = "button" onclick="submit32()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.34</span>
+How do you create a horizontal slider? How do you create a vertical slider? 
+                </div>
+                <div id = "a33" class="answer"></div>
+                <button id = "b33" type="button" class = "button" onclick="submit33()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.35</span>
+How do you add a listener to handle the property value change of a slider?
+                </div>
+                <div id = "a34" class="answer"></div>
+                <button id = "b34" type="button" class = "button" onclick="submit34()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.36</span>
+How do you get the value from a slider? How do you get the maximum value from a slider?
+                </div>
+                <div id = "a35" class="answer"></div>
+                <button id = "b35" type="button" class = "button" onclick="submit35()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.37</span>
+When the game starts, what value is in whoseTurn? When the game is over, what value is in whoseTurn?
+                </div>
+                <div id = "a36" class="answer"></div>
+                <button id = "b36" type="button" class = "button" onclick="submit36()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.38</span>
+What happens when the user clicks on an empty cell if the game is not over? What happens when the user clicks on an empty cell if the game is over?
+                </div>
+                <div id = "a37" class="answer"></div>
+                <button id = "b37" type="button" class = "button" onclick="submit37()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.39</span>
+How does the program check whether a player wins? How does the program check whether all cells are filled? 
+                </div>
+                <div id = "a38" class="answer"></div>
+                <button id = "b38" type="button" class = "button" onclick="submit38()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.40</span>
+How do you create a Media from a URL?  How do you create a MediaPlayer?  How do you create a MediaView?  
+                </div>
+                <div id = "a39" class="answer"></div>
+                <button id = "b39" type="button" class = "button" onclick="submit39()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.41</span>
+If the URL is typed as cs.armstrong.edu/liang/common/sample.mp4 without http:// in front of it, will it work?
+                </div>
+                <div id = "a40" class="answer"></div>
+                <button id = "b40" type="button" class = "button" onclick="submit40()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.42</span>
+Can you place a Media in multiple MediaPlayers? Can you place a MediaPlayer in multiple MediaViews? Can you place a MediaView in multiple Panes? 
+                </div>
+                <div id = "a41" class="answer"></div>
+                <button id = "b41" type="button" class = "button" onclick="submit41()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.43</span>
+Can you place a Media in multiple MediaPlayers? Can you place a MediaPlayer in multiple MediaViews? Can you place a MediaView in multiple Panes? 
+                </div>
+                <div id = "a42" class="answer"></div>
+                <button id = "b42" type="button" class = "button" onclick="submit42()">Show Answer</button>
+            </div>
+<div id="question"><div id="questionstatement">
+              <span id="questionnumber">16.44</span>
+In Listing 16.15, what does the program do when a new nation is selected in the combo box?
+                </div>
+                <div id = "a43" class="answer"></div>
+                <button id = "b43" type="button" class = "button" onclick="submit43()">Show Answer</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
