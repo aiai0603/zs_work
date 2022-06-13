@@ -32,6 +32,12 @@ AI导论（ai by lizr 只有大作业，实验模型太大了传不了）
 
 web程序设计（web by huxq）
 
+java（java by sunl ，课本练习和测验答案）
+
+c（c by wangyw ，购票的大作业）
+
+boom（network by huomm，拆弹大作业）
+
 ### 随缘更新，不支持催更，懒癌晚期，考研为主
 
 当然，如果有dalao觉得其中不正确的地方，也欢迎批评指正！！！
