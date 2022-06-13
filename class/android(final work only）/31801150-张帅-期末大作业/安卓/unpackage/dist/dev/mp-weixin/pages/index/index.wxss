@@ -1,0 +1,168 @@
+
+.back{
+	width: 6%;
+	margin-right: 10rpx;
+}
+.title {
+	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: row;
+	        flex-flow: row;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	padding: 10px 0;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	right: 0;
+	/* #ifdef H5 /
+	top: 44px;//适配网页
+	/ #endif /
+	/ #ifndef H5 /
+	top: 0;//适配其他平台
+	/ #endif */
+	z-index: 1;
+	background-color: white;
+}
+.title-input {
+	width: 80%;
+	background-color: #eeeeee;
+	padding: 15rpx;
+	font-size: 24rpx;
+	margin-right: 20rpx;
+}
+.rank {
+	color: #FFA200;
+	font-weight: 800;
+}
+.imgad {
+	width: 100%;
+	height: 300rpx;
+	margin-top: 30rpx;
+}
+.new {
+	color: white;
+	background-color: #007AFF;
+	font-size: 24rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 40rpx;
+	height: 40rpx;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: row;
+	        flex-flow: row;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	margin-left: 20rpx;
+}
+.hot {
+	color: white;
+	background-color: #FFA200;
+	font-size: 24rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 40rpx;
+	height: 40rpx;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: row;
+	        flex-flow: row;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	margin-left: 20rpx;
+}
+.newsitem {
+	margin-top: 50rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: row;
+	        flex-flow: row;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.news {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 35%;
+	-webkit-box-pack: start;
+	-webkit-justify-content: start;
+	        justify-content: start;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: row;
+	        flex-flow: row;
+	margin: 20rpx 0rpx;
+	padding-left: 30rpx;
+	font-size: 30rpx;
+}
+.end-title {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	font-size: 32rpx;
+}
+.end-title view {
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	        flex-grow: 1;
+	text-align: center;
+}
+.end-cont {
+	display: none;
+}
+.btna {
+	font-weight: 800;
+}
+.dis {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.short{
+	width: 75%;
+}
+uni-page-body,
+#app {
+
+	width: 100%;
+	height: 100%;
+}
+

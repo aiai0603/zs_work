@@ -1,0 +1,136 @@
+{
+    "name" : "奔驰",
+    "appid" : "__UNI__13AB678",
+    "description" : "power by zs/hk/ysg",
+    "versionName" : "2.0",
+    "versionCode" : 312312,
+    "transformPx" : false,
+    "app-plus" : {
+        "nvueCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "modules" : {
+            "SQLite" : {},
+            "VideoPlayer" : {},
+            "Bluetooth" : {},
+            "FaceID" : {},
+            "Fingerprint" : {},
+            "iBeacon" : {},
+            "LivePusher" : {},
+            "Messaging" : {},
+            "Geolocation" : {},
+            "Maps" : {}
+        },
+        "distribute" : {
+            "android" : {
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_CHECKIN_PROPERTIES\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_LOCATION_EXTRA_COMMANDS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_MOCK_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_SURFACE_FLINGER\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCOUNT_MANAGER\"/>",
+                    "<uses-permission android:name=\"android.permission.ADD_VOICEMAIL\"/>",
+                    "<uses-permission android:name=\"android.permission.AUTHENTICATE_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.BATTERY_STATS\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_ACCESSIBILITY_SERVICE\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_APPWIDGET\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_CARRIER_MESSAGING_SERVICE\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_DEVICE_ADMIN\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_DREAM_SERVICE\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_INPUT_METHOD\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_NFC_SERVICE\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_NOTIFICATION_LISTENER_SERVICE\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_PRINT_SERVICE\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_REMOTEVIEWS\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_TEXT_SERVICE\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_TV_INPUT\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_VOICE_INTERACTION\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_VPN_SERVICE\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_WALLPAPER\"/>",
+                    "<uses-permission android:name=\"android.permission.BLUETOOTH\"/>",
+                    "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\"/>",
+                    "<uses-permission android:name=\"android.permission.BLUETOOTH_PRIVILEGED\"/>",
+                    "<uses-permission android:name=\"android.permission.BODY_SENSORS\"/>",
+                    "<uses-permission android:name=\"android.permission.BRICK\"/>",
+                    "<uses-permission android:name=\"android.permission.BROADCAST_PACKAGE_REMOVED\"/>",
+                    "<uses-permission android:name=\"android.permission.BROADCAST_SMS\"/>",
+                    "<uses-permission android:name=\"android.permission.BROADCAST_STICKY\"/>",
+                    "<uses-permission android:name=\"android.permission.BROADCAST_WAP_PUSH\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PRIVILEGED\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_SMS\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.SEND_SMS\"/>",
+                    "<uses-permission android:name=\"android.permission.USE_FINGERPRINT\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SMS\"/>",
+                    "<uses-permission android:name=\"android.permission.BLUETOOTH\"/>",
+                    "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\"/>"
+                ]
+            },
+            "ios" : {},
+            "sdkConfigs" : {
+                "push" : {},
+                "geolocation" : {
+                    "baidu" : {
+                        "__platform__" : [ "android" ],
+                        "appkey_ios" : "",
+                        "appkey_android" : "6vRisQTZB6uTGesmxA0pN0XOp5OKEGNO"
+                    }
+                },
+                "ad" : {},
+                "maps" : {
+                    "baidu" : {
+                        "appkey_ios" : "6vRisQTZB6uTGesmxA0pN0XOp5OKEGNO",
+                        "appkey_android" : "6vRisQTZB6uTGesmxA0pN0XOp5OKEGNO"
+                    }
+                },
+                "oauth" : {},
+                "share" : {}
+            },
+            "splashscreen" : {
+                "androidStyle" : "default",
+                "android" : {
+                    "hdpi" : "static/img/loading.png",
+                    "xhdpi" : "static/img/loading.png",
+                    "xxhdpi" : "static/img/loading.png"
+                },
+                "iosStyle" : "common"
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "static/img/benz1.png",
+                    "xhdpi" : "static/img/benz1.png",
+                    "xxhdpi" : "static/img/benz1.png",
+                    "xxxhdpi" : "static/img/benz1.png"
+                }
+            }
+        },
+        "splashscreen" : {
+            "waiting" : false,
+            "alwaysShowBeforeRender" : true
+        }
+    },
+    "quickapp" : {},
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : true
+        }
+    }
+}
