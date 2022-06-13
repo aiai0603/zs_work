@@ -1,0 +1,567 @@
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>登录AMG俱乐部</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+		 crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		 crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		 crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		 crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+	</head>
+	<script type="text/javascript">
+		var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
+		var emailReg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		$(
+		function() {
+			$(document).ready(
+				function() {
+					$(".hidden-msg").hide();
+
+				
+				}
+
+			)
+
+
+		$(".fa-question-circle-o").hover(
+			function() {
+				$(".hidden-msg").velocity("fadeIn", 500);
+			},
+			function() {
+				$(".hidden-msg").velocity("fadeOut", 500);
+			}
+		)
+
+
+		$("#validationServer01").blur(
+			function() {
+				$(this).removeClass("is-invalid");
+				$(this).removeClass("is-valid")
+				if ($(this).val().length >= 2)
+					$(this).addClass("is-valid");
+				else
+					$(this).addClass("is-invalid");
+			})
+
+
+		$("#validationServer02").blur(
+			function() {
+				$(this).removeClass("is-invalid");
+				$(this).removeClass("is-valid")
+				if ($(this).val().length == 11 && myreg.test($(this).val()))
+					$(this).addClass("is-valid");
+				else
+					$(this).addClass("is-invalid");
+			})
+
+
+		$("#validationServer03").blur(
+			function() {
+				$(this).removeClass("is-invalid");
+				$(this).removeClass("is-valid")
+				if (emailReg.test($(this).val()))
+					$(this).addClass("is-valid");
+				else
+					$(this).addClass("is-invalid");
+			})
+
+
+		$("#validationServer04").blur(
+			function() {
+				$(this).removeClass("is-invalid");
+				$(this).removeClass("is-valid")
+				if ($(this).val().length >= 6)
+					$(this).addClass("is-valid");
+				else
+					$(this).addClass("is-invalid");
+			})
+
+
+		$("#validationServer05").blur(
+			function() {
+				$(this).removeClass("is-invalid");
+				$(this).removeClass("is-valid")
+				if ($(this).val() == $("#validationServer04").val())
+					$(this).addClass("is-valid");
+				else
+					$(this).addClass("is-invalid");
+			})
+
+
+		$("#checked").change(
+			function() {
+				if ($(this).is(':checked'))
+					$("#submit").removeAttr("disabled");
+				else
+					$("#submit").attr("disabled", true);
+
+			})
+
+		$(".close").click(function() {
+			$(".policy").velocity({opacity:"0",zIndex:"-1"},200)
+		})
+
+
+
+		$("#policy").click(function() {
+			$(".policy").velocity({opacity:"100",zIndex:"100"},200)
+		})
+
+
+
+		})
+	</script>
+
+	<body>
+		<script src="./velocity/velocity.min.js"></script>
+
+		<div class="policy">
+			<div class="policyitem">
+				<button type="button" class="close my-close" aria-label="关闭">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4>Mercedes me ID (梅赛德斯-奔驰账户) 及梅赛德斯-奔驰平台服务协议</h4>
+				<div style="color: #9D9D9D;">
+					更新日期：2019年12月17日 生效日期：2019年12月23日 版本编号：2019.12.23.CN
+				</div>
+				<hr width="100%">
+				<div class="policy-page">
+					欢迎您注册Mercedes me ID（梅赛德斯-奔驰账户）并使用梅赛德斯-奔驰平台服务!
+					<br>
+					本《Mercedes me ID （梅赛德斯-奔驰账户）及梅赛德斯-奔驰平台服务协议》（以下简称“本协议”）是您与梅赛德斯-奔驰之间就注册Mercedes me ID
+					（梅赛德斯-奔驰账户）及使用梅赛德斯-奔驰平台服务等相关事宜所订立的协议。为使用梅赛德斯-奔驰平台服务，您应当仔细阅读并遵守本协议下的全部内容以及开通或使用某项服务的单独协议，特别是涉及免除或者责任限制的条款，该类条款可能以黑体加粗或加下划线的形式提示您重点注意，在确认充分理解并同意后再开始使用。如您对本协议的内容（特别是涉及免除或者责任限制的条款）有任何疑义，可随时按照本协议中列明的联系方式与我们联系，我们将根据您的要求为您进一步解释和说明相关内容。阅读本协议的过程中您不同意本协议或其中任何条款约定，您应立即停止注册程序。您的下载、安装、使用、登录等行为即视为您已阅读并同意受到本协议的约束。
+					<br>梅赛德斯-奔驰平台服务仅面向成人（车主或车辆授权使用人）。如果没有父母或其他监护人的同意，未满18周岁的未成年人不得创建自己的Mercedes me ID
+					（梅赛德斯-奔驰账户）。任何未满14周岁的儿童未经监护人明确同意之前，不得注册和使用梅赛德斯-奔驰平台服务。如果你未满18周岁，请在父母或其他监护人的陪同下阅读本协议，并特别注意未成年人使用条款。
+					<br>
+					一、定义
+					<br>
+					梅赛德斯-奔驰平台，是指梅赛德斯-奔驰（中国）汽车销售有限公司（以下简称“奔驰中国”）及其关联公司旗下运营的包括梅赛德斯-奔驰网站、移动客户端、应用程序、微信公众平台、小程序等在内的各种数字平台（包括未来技术发展出现的新的服务形态）。
+					Mercedes me ID （梅赛德斯-奔驰账户），是指在任一前述梅赛德斯-奔驰平台完成注册程序时，用户注册所使用的姓名和手机号码。
+					<br>梅赛德斯-奔驰平台服务，是指奔驰中国及其关联公司基于互联网和移动互联网，通过其运营的包括梅赛德斯-奔驰网站、移动客户端、应用程序、微信公众平台、小程序等在内的各种数字平台（包括未来技术发展出现的新的服务形态）来向用户提供的各项服务。
+					梅赛德斯-奔驰平台规则，包括但不限于在所有梅赛德斯-奔驰平台内已经发布及后续发布的各类规则、活动实施细则、产品流程说明、解读、公告等内容。
+					<br>用户，是指通过梅赛德斯-奔驰平台创建Mercedes me ID （梅赛德斯-奔驰账户）后，使用梅赛德斯-奔驰平台服务的自然人（包括在机动车所有人为法人或其他组织情况下，机动车的授权使用人），以下亦称为“您”。
+					协议方，本协议中协议双方合称“协议方”。奔驰中国及与运营梅赛德斯-奔驰平台有关的服务可能存在的关联公司在协议中统称为“梅赛德斯-奔驰”。
+					<br>同一用户：使用同一身份认证信息或经梅赛德斯-奔驰排查认定多个Mercedes me ID （梅赛德斯-奔驰账户）的实际控制人为同一人的，均视为同一用户。
+					<br>
+					二、本协议的说明
+					<br>（一）梅赛德斯-奔驰平台的服务只允许创建了Mercedes me
+					ID（梅赛德斯-奔驰账户）的用户使用。用户在使用梅赛德斯-奔驰平台服务的过程中，完全接受本协议项下的全部条款，本协议构成对梅赛德斯-奔驰和用户双方之间具有法律约束力的正式文件，并替代所有在用户创建Mercedes me
+					ID（梅赛德斯-奔驰账户）之前梅赛德斯-奔驰与用户之间就梅赛德斯-奔驰平台以及Mercedes me ID（梅赛德斯-奔驰账户）有关的其他任何形式的沟通、承诺和约定（但单独协议（定义见下文）的约定依旧适用）。
+					<br>（二）用户在使用梅赛德斯-奔驰平台前有义务仔细阅读本协议。用户在此不可撤销地承诺，若其使用梅赛德斯-奔驰平台服务，将视为用户同意并接受本协议全部条款的约束，此后用户不得以未阅读本协议或对本协议有任何误解为由，主张本协议无效或要求撤销本协议。
+					<br>（三）根据国家法律法规变化及平台的运营需求，梅赛德斯-奔驰可随时修改本协议的任何条款，并不定期更新梅赛德斯-奔驰平台规则。一旦梅赛德斯-奔驰修改了本协议的任何条款或梅赛德斯-奔驰平台规则（以下简称“条款更新”），梅赛德斯-奔驰会在梅赛德斯-奔驰平台上提前7日进行公示相应的最新版本（包括其生效日期）意在提前收集并合理采纳用户的意见和建议。用户有义务不时关注并阅读本协议及梅赛德斯-奔驰平台规则的最新版本。如果用户不接受前述条款更新，用户可立即停止使用梅赛德斯-奔驰平台服务。如果用户在前述条款更新生效后继续使用梅赛德斯-奔驰平台服务，则视为用户接受该等条款更新。
+					<br>（四）除非另有明确规定，增强或强化梅赛德斯-奔驰平台目前服务的任何新功能，以及新增加的产品以及服务，均无条件地适用本协议。
+					<br>（五）您理解并同意，梅赛德斯-奔驰基于经营策略的调整，可能会对服务内容进行变更，也可能会中断、中止或终止服务。
+					<br>（六）梅赛德斯-奔驰平台仅面向中国内地居民，因此梅赛德斯-奔驰平台上的所有信息仅适用于中国内地市场。
+					<br>（七）梅赛德斯-奔驰在梅赛德斯-奔驰平台对信息的展示，仅为梅赛德斯-奔驰为便利用户的目的提供，不构成梅赛德斯-奔驰或其关联公司的经营性互联网信息服务。
+					<br>（八）用户在梅赛德斯-奔驰平台上选择授权经销商、浏览与选择车辆及配置、浏览与选择用户所拥有或授权使用/实际使用车辆相关的服务、缴纳意向金的行为，仅代表用户的初步购买/使用相关服务的意向。具体交易细节的协商、最终交易的达成及产品与服务的交付与梅赛德斯-奔驰平台无关，请与所选授权经销商或实际服务提供方联系确定。
+					（九）您在使用梅赛德斯-奔驰平台的某一特定服务时，该服务可能会另有单独的协议、相关业务规则等（以下统称为“单独协议”），请您在使用该项服务前务必阅读并同意相关的单独协议；当您使用前述特定服务，即视为您已阅读并同意接受相关单独协议。
+					（十）如您对本协议的内容有任何疑义，或是您有任何事宜需通知梅赛德斯-奔驰平台，您可通过随时访问梅赛德斯-奔驰平台在线客服系统或拨打我们的客服电话400-818-1188等多种方式与我们联系。
+					三、注册及Mercedes me ID （梅赛德斯-奔驰账户）管理
+					（一）您确认，在您完成注册程序或以其他梅赛德斯-奔驰允许的方式实际使用梅赛德斯-奔驰平台服务时，您应当是具备相应民事行为能力的自然人。若您不具备前述主体资格，则您及您的父母或其他监护人（以下统称“监护人”）应承担因此而导致的一切后果，且梅赛德斯-奔驰有权注销您的Mercedes
+					me ID （梅赛德斯-奔驰账户），并向您及您的监护人索偿。
+					（二）梅赛德斯-奔驰非常重视对青少年个人信息收集和使用的安全性的保护。梅赛德斯-奔驰建议，任何未满18周岁的未成年人参加网上活动应事先取得其监护人可经查证的同意并遵守《全国青少年网络文明公约》。任何未满14周岁的儿童未经监护人明确同意之前，不得注册和使用梅赛德斯-奔驰平台服务。监护人应承担未成年人网络活动风险及保护未成年人相关网络隐私的首要责任。
+					（三）请您注意，您注册创建的 Mercedes me ID
+					（梅赛德斯-奔驰账户）是戴姆勒集团在全球统一适用的用户账户注册登录系统和中央访问服务。您可以通过该唯一账户在任意时间任意地点登录全球所有与戴姆勒集团及其品牌相关的网页和应用程序。因此，当您创建Mercedes me ID
+					（梅赛德斯-奔驰账户）时，请您务必仔细阅读戴姆勒集团的《Mercedes Me ID
+					服务协议》以及《CIAM访问条件》其中所规定的用户权利及信息安全保障措施亦适用于梅赛德斯-奔驰平台用户。如您不同意戴姆勒集团的《Mercedes me ID 服务协议》以及《CIAM访问条件》，请立即停止注册创建账户。
+					在完成注册程序时，您注册登记用的姓名和手机号码将是您的Mercedes me ID （梅赛德斯-奔驰账户）。您应对您的Mercedes me ID （梅赛德斯-奔驰账户）、登录密码、验证码的安全，以及对通过您的Mercedes
+					me ID （梅赛德斯-奔驰账户）和密码实施的行为负责；因此所衍生的任何损失或损害，梅赛德斯-奔驰无法也不承担任何责任。除非有法律规定或行政司法机关的指令，且事先征得梅赛德斯-奔驰的同意，否则您的Mercedes me ID
+					（梅赛德斯-奔驰账户）、登录密码和验证码不得以任何方式向第三者披露、与第三者共用、转让、借用、赠与、继承（与Mercedes me ID （梅赛德斯-奔驰账户）相关的财产权益除外）<或>在第三方平台上进行展示或售卖。否则，由此给您（或梅赛德斯-奔驰、任何第三方）造成的全部损失，概由您自行承担（或者负责赔偿）。
+						（四）除因历史原因、业务整合等梅赛德斯-奔驰所认可的特殊情况外，梅赛德斯-奔驰原则上只允许您使用一个Mercedes me ID
+						（梅赛德斯-奔驰账户）。如有证据证明或梅赛德斯-奔驰有理由相信您存在不当注册或不当使用多个Mercedes me ID （梅赛德斯-奔驰账户）的情形，梅赛德斯-奔驰可将相关Mercedes me ID
+						（梅赛德斯-奔驰账户）信息进行合并或采取其他合理措施，如因您不当注册或不当使用给梅赛德斯-奔驰及相关方造成损失的，您还应承担相应的赔偿责任。此外，出于相关业务需要并为了提供更好的用户体验，梅赛德斯-奔驰也可对同一用户的多个Mercedes
+						me ID （梅赛德斯-奔驰账户）或相关信息进行合并，若您在任一梅赛德斯-奔驰平台注册Mercedes me ID （梅赛德斯-奔驰账户）,该Mercedes me ID
+						（梅赛德斯-奔驰账户）即可用于登录所有梅赛德斯-奔驰平台，并且您在该Mercedes me ID
+						（梅赛德斯-奔驰账户）下绑定的个人信息、车辆信息、订单信息、卡券信息、活动信息、喜爱的授权经销商信息、会员信息也会同步显示在所有梅赛德斯-奔驰平台中。如该等Mercedes me ID
+						（梅赛德斯-奔驰账户）合并将对您的权益产生实质影响，梅赛德斯-奔驰将在进行上述合并前事先征得您的同意。
+						（五）梅赛德斯-奔驰承诺非因法定原因、本协议的约定或经您的事先同意，梅赛德斯-奔驰不会向任何第三方透露您的Mercedes me ID （梅赛德斯-奔驰账户）、手机号码等非公开信息。如果发现任何人不当使用您的Mercedes
+						me ID （梅赛德斯-奔驰账户）或有任何其他可能危及您的Mercedes me ID
+						（梅赛德斯-奔驰账户）安全的情形时，您应当立即以本协议中列明的联系方式通知梅赛德斯-奔驰，要求梅赛德斯-奔驰暂停相关服务。您理解梅赛德斯-奔驰对您的请求采取行动需要合理时间，梅赛德斯-奔驰对在采取行动前已经产生的后果（包括但不限于您的任何损失）不承担任何责任。
+						（六）您在注册Mercedes me ID
+						（梅赛德斯-奔驰账户）或使用梅赛德斯-奔驰平台服务的过程中，应提供合法、真实、准确的个人资料，您填写的个人资料有变动的，应及时进行更新。如果因您提供的个人资料不合法、不真实、不准确的，您需承担因此引起的相应责任及后果，并且梅赛德斯-奔驰保留终止您使用梅赛德斯-奔驰各项服务的权利。
+						（七）您了解并同意，如您同意并且遵守本协议条款，在通过梅赛德斯-奔驰平台完成注册程序之后，即可成为梅赛德斯-奔驰平台注册用户。对于您主动提交的相关信息，您授权梅赛德斯-奔驰及/或梅赛德斯-奔驰网站或移动应用运营者及关联服务提供方委托的第三方通过合法渠道（包括但不限于征信机构等）核实您的个人真实身份信息以满足相应的实名认证的法律要求。
+						（八）您不得通过任何手段恶意注册Mercedes me ID （梅赛德斯-奔驰账户），包括但不限于以牟利、炒作、套现等为目的注册多个Mercedes me ID （梅赛德斯-奔驰账户）。您亦不得盗用其他用户的Mercedes
+						me ID （梅赛德斯-奔驰账户）。
+						（九）您了解并同意，通过注册Mercedes me ID
+						（梅赛德斯-奔驰账户），您同意梅赛德斯-奔驰及/或其关联公司/或授权经销商/或被梅赛德斯-奔驰或其关联公司或授权经销商授权的第三方可以通过拨打电话、发送短信或者电子邮件等方式向您的Mercedes me ID
+						（梅赛德斯-奔驰账户）、注册时填写的手机号码、电子邮箱等发送、告知相应的戴姆勒股份公司及其关联公司产品服务广告信息、促销优惠等营销信息，以及邀请您参加版本测试、用户体验、回访等商业活动；您如果不同意接收相关商业信息，您可以通过相应的退订功能或相关提示进行退订。
+						（十）您理解并承诺，您所设置的Mercedes me ID
+						（梅赛德斯-奔驰账户）的个人资料信息不得出现违法和不良信息，未经相应权利人许可不得使用他人名义（包括但不限于冒用他人姓名、字号等或采取其它足以让人混淆的方式）设置注册名。梅赛德斯-奔驰有权对您提交的个人信息进行审核。
+						四、商品和服务信息
+						用户明确知悉并同意，梅赛德斯-奔驰平台上的商品/服务信息随时有可能发生变动，梅赛德斯-奔驰可对此不作特别通知。梅赛德斯-奔驰将尽合理的商业努力，使网站内展示的商品参数、说明、价格、库存等商品信息和/或服务信息尽可能准确、详尽、完整，但受限于互联网技术的发展水平及梅赛德斯-奔驰的业务经营趋势等因素的限制，梅赛德斯-奔驰平台的商品及服务信息可能会有一定的滞后性或误差，商品/服务信息以授权经销商/服务实际提供商确认为准，用户对此情形已充分知悉并完全理解。为避免误解，如果您下单所购买的商品或服务出现缺货、价格标识错误等情况，您有权取消订单，授权经销商/服务实际提供商亦有权自行取消订单，若您已经付款，则授权经销商/服务实际提供商将为您办理退款。
+						在仅为显示参考金额而非为直接出售目的进行金额显示的页面中，梅赛德斯-奔驰平台上显示的该等金额均为厂商建议零售价或特定授权经销商针对特定商品或服务在一定时期内的报价，不具有任何约束力。授权经销商自行决定商品和/或服务的实际售价，当用户到授权经销商店内接受服务或在经销商网站购买服务时，实际售价可能会有变化。具体的零售交易价格、产品配置、服务内容及交易细节请与相关授权经销商协商确定。梅赛德斯-奔驰平台在上述页面场景下不参与任何影响最终实际销售价格的制定或交涉。上述约定不适用于在为直接销售目的而进行金额显示的页面场景中。
+						五、意向金的使用
+						（一）意向金仅代表您的初步购买/使用相关服务的意向，不具有定金性质。
+						（二）若您最终与授权经销商确认签约，意向金可至授权经销商处核销并抵扣购车款和/或商品、服务等相关款项；若您未与授权经销商签约，意向金将向您退回。
+						六、用户的权利与义务
+						（一）用户同意在使用梅赛德斯-奔驰平台服务的过程中遵守所有适用法律法规，包括但不限于《中华人民共和国保守国家秘密法》、《中华人民共和国计算机信息系统安全保护条例》、《中华人民共和国网络安全法》、《计算机软件保护条例》、《互联网信息服务管理办法》等有关计算机及互联网规定的法律和法规。我们在此提请用户注意：在梅赛德斯-奔驰平台有合理理由认为用户的行为可能违反上述法律、法规的情况下，梅赛德斯-奔驰平台有权不经事先通知而终止向该用户提供服务或者取消其用户资格，在此情况下梅赛德斯-奔驰平台不承担任何违约及赔偿责任。用户可通过梅赛德斯-奔驰平台在线客服进行申诉。
+						（二）用户注册与获取用户权益时须提供完整、真实、准确的个人资料，资料如有变更，应及时更新。我们在此提请用户注意：用户违反本条规定，梅赛德斯-奔驰平台有权不经事先通知而暂停或终止向该用户提供服务或限制其登录权限以及相关用户权益，在此情况下梅赛德斯-奔驰平台不承担任何违约及赔偿责任。
+						（三）用户须妥善保管Mercedes me ID （梅赛德斯-奔驰账户）和密码，并对使用该Mercedes me ID （梅赛德斯-奔驰账户）所进行的一切活动负全部责任。为安全起见，Mercedes me ID
+						（梅赛德斯-奔驰账户）密码应避免与电子邮箱密码、个人网银密码、信用卡密码等相同。
+						（四）用户应确保Mercedes me ID （梅赛德斯-奔驰账户）仅由用户本人亲自使用，且不得滥用Mercedes me ID
+						（梅赛德斯-奔驰账户）获取不正当的利益，例如：冒领会员权益、未经梅赛德斯-奔驰事先同意而转让会员权益等。梅赛德斯-奔驰平台禁止使用非用户本人的Mercedes me ID
+						（梅赛德斯-奔驰账户）获取服务或者用户将本人的Mercedes me ID （梅赛德斯-奔驰账户）提供给他人使用。我们在此提请用户注意：如用户违反本条规定，梅赛德斯-奔驰平台有权暂停或终止所涉Mercedes me ID
+						（梅赛德斯-奔驰账户）的使用，并拒绝为所涉用户提供部份或全部服务，用户同意承担因此所产生的直接或间接的任何损失、支出、费用和罚金，在此情况下梅赛德斯-奔驰平台不承担任何违约及损失赔偿责任。如果梅赛德斯-奔驰发现或者有合理理由认为使用者并非Mercedes
+						me ID （梅赛德斯-奔驰账户）的初始注册人，为保障账户安全，梅赛德斯-奔驰有权不经事先通知而暂停或终止向该账户提供服务，并有权永久禁用该Mercedes me ID （梅赛德斯-奔驰账户）。
+						（五）用户不得对梅赛德斯-奔驰平台上不属于用户拥有完整权属的内容（定义见下文）以及提供的服务进行复制、出售或用作任何商业用途。
+						七、个人信息与隐私保护
+						我们非常重视保护您的数据安全和个人隐私，为此我们制定了相关隐私保护政策，并遵照执行。具体内容详见《Mercedes me ID
+						（梅赛德斯-奔驰账户）及梅赛德斯-奔驰平台服务隐私政策》。您理解并确认，该隐私政策是本协议的有效组成部分，且您同意并接受我们不时更新的隐私政策。如您不接受隐私政策，请立即停止使用梅赛德斯-奔驰平台服务。
+						八、用户发布内容的约定
+						（一）用户在梅赛德斯-奔驰平台服务中上传、张贴或传送的内容仅代表用户本人观点，与梅赛德斯-奔驰平台的立场无关，梅赛德斯-奔驰平台不保证该内容的正确性、完整性或可靠性。用户应对其发布的全部内容自行承担全部责任。因用户在梅赛德斯-奔驰平台服务中上传、张贴或传送的内容而导致任何损失或衍生的任何损害或损失，由用户承担全部责任。
+						（二）用户应确保在梅赛德斯-奔驰平台的注册信息（包括用户名和/或头像）、服务中发布的内容不包含以下内容:
+						政治宣传、封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；欺诈、虚假、不准确或存在误导性的；侵犯他人知识产权或涉及第三方商业秘密及其他专有权利的；侮辱、诽谤、恐吓、涉及他人隐私等侵害他人合法权益的；存在可能破坏、篡改、删除、影响梅赛德斯-奔驰平台任何系统正常运行或未经授权秘密获取梅赛德斯-奔驰及其他用户的数据、个人资料的病毒、木马、爬虫等恶意软件、程序代码的；其他违反国家法律法规禁止性规定，违背社会公共利益或公共道德、风俗习惯的内容。
+						（三）梅赛德斯-奔驰平台有权（但无义务）拒绝、删除或转移存储用户在梅赛德斯-奔驰平台服务中发布的任何内容，且无义务对因此产生的用户或第三方的任何损失承担责任。
+						（四）梅赛德斯-奔驰平台有权对用户在梅赛德斯-奔驰平台服务中发布的内容进行保存或依法披露。用户在梅赛德斯-奔驰平台的用户名和/或头像及发布的内容及注册使用的个人信息，视为用户拥有完整的所有权和知识产权的内容（“用户拥有完整权属的内容”），并由用户永久地、不可撤销地、无条件地授权梅赛德斯-奔驰及其关联公司为提供、宣传梅赛德斯-奔驰平台服务等目的在全球范围内免费使用，该等使用包括但不限于对上述内容进行复制、修改、出版、翻译、分发上述内容或制作派生作品，以已知或日后开发的形式、媒体或技术将上述信息纳入其它作品内等，及可再许可第三方使用的权利，以及可以自身名义对第三方侵权行为取证及提起诉讼的权利，且梅赛德斯-奔驰对上述内容进行使用时均不需另行向用户发出任何通知。
+						九、责任限制的说明
+						（一）不可抗力：
+						梅赛德斯-奔驰平台服务是基于互联网提供服务的，无法对信息网络设备维护、连接故障、电脑、通讯或其他系统的故障、电力故障，火灾、洪水、暴风、爆炸、战争、暴乱、罢工、政府行为、司法行政机关的命令或因第三方原因中断或终止梅赛德斯-奔驰平台服务而给用户造成的损害结果承担责任。
+						（二）商品和服务责任：对于授权经销商向用户提供的商品或服务存在问题以及因前述问题引发的任何损失，除非法律另有规定，梅赛德斯-奔驰平台不承担任何责任，由用户和授权经销商自行协商解决。
+						（三）梅赛德斯-奔驰平台出于用户便利的考虑而在梅赛德斯-奔驰平台中提供第三方链接或服务，用户如点击第三方链接或使用第三方提供的服务，应另行遵守第三方服务提供者相关的服务协议和规则，并承担可能存在的风险。梅赛德斯-奔驰对第三方链接或提供的服务不提供任何形式的保证和承担任何损害赔偿责任，因第三方链接或提供的服务产生的纠纷，由用户与第三方服务提供者自行协商解决。
+						（四）用户使用梅赛德斯-奔驰平台特定服务时，可能会调用第三方系统支持用户的使用或访问，使用或访问的结果由该第三方提供（包括但不限于通过第三方开放平台接入的内容等）。梅赛德斯-奔驰不保证通过第三方提供服务及内容的安全性、准确性、有效性及其他不确定的风险，由此若引发的任何争议及损害，梅赛德斯-奔驰不承担任何责任。
+						十、其他条款
+						（一）梅赛德斯-奔驰平台不保证（包括但不限于）：
+						1、梅赛德斯-奔驰平台服务适合用户的使用要求；
+						2、梅赛德斯-奔驰平台服务不受干扰、不会中断，及时、安全、可靠或不出现错误；
+						3、用户经由梅赛德斯-奔驰平台服务取得的任何产品、服务或资料符合用户的期望。
+						（二）就用户由于使用梅赛德斯-奔驰平台服务而造成的利润、商业信誉、资料损失或其他有形或无形损失，梅赛德斯-奔驰平台不承担任何直接、间接、附带、衍生或惩罚性的赔偿。
+						（三）就因梅赛德斯-奔驰平台中由授权经销商自行上传和编辑的内容信息给用户造成的有形或无形的损失，梅赛德斯-奔驰不承担任何直接、间接、附带、衍生或惩罚性的赔偿。
+						（四）在您使用梅赛德斯-奔驰平台服务过程中，基于为识别Mercedes me ID
+						（梅赛德斯-奔驰账户）异常状态、了解产品适配性、向您提供更契合您需求的页面展示和搜索结果等原因，或我们可能会对收集的信息进行去标识化地研究、统计分析和预测，为商业决策提供产品或服务支撑，以及改进我们的产品和服务（如将数据进行匿名化或脱敏处理后进行机器学习或模型算法训练等），您的使用情况可能会被自动收集并存储为网络日志信息，包括：
+						设备信息：根据您在软件安装及/或使用中的具体操作，您所使用的设备相关信息（例如包括设备型号、操作系统版本、设备设置、唯一设备标识符、设备环境在内的软硬件特征信息等）、设备所在位置相关信息（例如包括您授权的GPS位置、WLAN接入点等）可能会被接收并记录。
+						服务日志信息：当您使用网站或客户端提供的产品或服务时，您对平台服务的详细使用情况可能会被会自动收集，作为服务日志保存，包括浏览、点击查看、搜索查询、收藏、添加至购物车、交易、售后、关注分享信息、发布信息、IP地址、浏览器类型、电信运营商、使用语言、访问日期、时间等。
+						请注意，单独的设备信息、服务日志信息是无法识别特定自然人身份的信息。如果这类非个人信息与其他信息结合用于识别特定自然人身份，或者将其与个人信息结合使用，在结合使用期间，这类非个人信息将被视为个人信息，除取得您授权或法律法规另有规定外，这类信息将会进行匿名化、去标识化处理。
+						上述信息可能会用于为了不断改进和优化上述的功能之用途。为向您提供更便捷、更符合您个性化需求的信息展示、搜索及推送服务等，我们可能会根据相关的设备信息和服务日志信息，提取您的偏好特征，并基于特征标签产出人群画像等，用于展示、推送信息和可能的商业广告。如果您不想接受我们给您发送的商业广告，您可通过短信提示回复退订或我们提供的其他方式进行退订或关闭。在您使用我们提供的站内搜索服务时，我们也可能会提供并不针对您个人特征的选项。
+						十一、商标及版权声明
+						除非另有说明，梅赛德斯-奔驰平台上所有标识均在戴姆勒股份公司商标权的范围内，特别包括产品型号名称、公司标识、徽标及品牌和形象。
+						戴姆勒股份公司版权所有。梅赛德斯-奔驰平台上的文本、图像、图形、音频、动画、视频及其排列均受著作权和其他知识产权保护。不得复制前述内容用于商业用途，也不得修改或重新发布到其他网站、应用程序或其他数字内容。部分内容还包含著作权属于提供者的素材。
+						十二、法律的适用和管辖
+						本协议的生效、履行、解释及争议的解决均适用中华人民共和国法律。本协议无论因何种原因部分无效或不可执行，不影响其他部分的效力。与本协议有关的或因本协议而引起的任何争议，双方应尽量通过友好协商解决；如无法协商解决的，任何一方均有权向本协议签订地有管辖权的人民法院提起诉讼。本协议签订地为中华人民共和国北京市朝阳区。
+				</div>
+			</div>
+		</div>
+		<div id="main d-flex align-items-center flex-column justify-content-center">
+			<div class="d-flex align-items-center flex-column nav-bg ">
+				<ul class="nav justify-content-center my-nav align-items-end pt-5">
+
+					<a href="index.html"><img src="./img/logo.png" class="my-logo-img"></a>
+					<li class="nav-item "><a href="#" class=" nav-link">车型广场</a></li>
+					<li class=" nav-item "><a href="#" class=" nav-link  ">品牌天地</a></li>
+					<li class="nav-item "><a href="#" class=" nav-link  ">售后服务</a></li>
+				</ul>
+			</div>
+
+			<div class="signitem d-flex align-items-center flex-column justify-content-center">
+				<div class="my-bread">
+					<div>
+						<a href="index.html" class=" nav-link  ">首页 >></a>
+					</div>
+
+					<div>
+						<a href="#" class=" nav-link  ">车迷俱乐部 >></a>
+					</div>
+
+					<div><a href="#" class=" nav-link  ">
+							注册</a>
+					</div>
+				</div>
+				<div class="signintab">
+					<div class="d-flex align-items-center flex-row justify-content-center position-relative mb-4" id="title">
+						<b>Mercedes me ID</b>
+						<i class="fa fa-question-circle-o" aria-hidden="true">
+
+						</i>
+						<div class="hidden-msg">
+							mercedes ID 即为梅赛德斯的会员ID，由手机号或者邮箱组成，注册后可以在梅赛德斯的官网，美赛得斯数据平台登录，mercedes ID
+							即为梅赛德斯的会员ID，由手机号或者邮箱组成，注册后可以在梅赛德斯的官网，美赛得斯数据平台登录。
+						</div>
+					</div>
+
+					<form style="width: 60%;">
+						<div class="form-row ">
+							<label class="h-50 p-1 d-flex align-items-center flex-row justify-content-center">真实姓名：</label>
+							<div class=" mb-1 w-75 ">
+
+								<input type="text" class="form-control mb-2" id="validationServer01" placeholder="请输入2位以上真实姓名" required>
+
+								<div class="invalid-feedback">
+									请输入2位以上真实姓名
+								</div>
+
+							</div>
+
+						</div>
+
+
+						<div class="form-row  m">
+							<label class="h-50 p-1 d-flex align-items-center flex-row justify-content-center">手机号码：</label>
+							<div class=" mb-1  w-75">
+
+								<input type="text" class="form-control mb-2" id="validationServer02" required placeholder="请输入11位手机号码">
+								<div class="invalid-feedback">
+									请输入11位手机号
+								</div>
+							</div>
+						</div>
+						<div class="form-row  ">
+							<label class="h-50 p-1 d-flex align-items-center flex-row justify-content-center">电子邮箱：</label>
+							<div class=" mb-1  w-75">
+
+								<input type="email" class="form-control mb-2" id="validationServer03" placeholder="请输入有效的电子邮箱" required>
+								<div class="invalid-feedback">
+									请输入合法的电子邮箱
+								</div>
+							</div>
+
+						</div>
+
+
+						<div class="form-row">
+							<label class="h-50 p-1 d-flex align-items-center flex-row justify-content-center">输入密码：</label>
+							<div class=" mb-1  w-75">
+
+								<input type="password" class="form-control mb-2" id="validationServer04" required placeholder="请输入6位以上密码">
+								<div class="invalid-feedback">
+									请输入6位以上密码
+								</div>
+							</div>
+						</div>
+
+						<div class="form-row ">
+							<label class="h-50 p-1 d-flex align-items-center flex-row justify-content-center">确认密码：</label>
+							<div class=" mb-1  w-75">
+
+								<input type="password" class="form-control mb-2" id="validationServer05" required placeholder="请确认密码">
+								<div class="invalid-feedback">
+									两次密码不一致
+								</div>
+							</div>
+						</div>
+						<div class="form-row mb-4 mt-2 ">
+
+							<label class="w-75 d-flex align-items-center flex-row justify-content-center"><input type="checkbox" name="degree"
+								 value="0" class="mx-2" id="checked">我已经阅读并且同意<a style="color: #00BFFF;" id="policy">用户协议</a></label>
+
+
+						</div>
+
+						<button class="btn btn-primary w-100" id="submit" type="submit" disabled="disabled">提交</button>
+					</form>
+
+
+				</div>
+			</div>
+			<div class="d-flex flex-row justify-content-center align-items-end">
+				<div class="footleft">
+					<div class="d-flex align-items-center flex-row justify-content-center" style="width: 100%;">
+						<div class=" nav-link">网站地图</div>
+						<div class=" nav-link">隐私政策</div>
+						<div class=" nav-link">用户协议</div>
+						<div class=" nav-link">法律声明</div>
+						<div class=" nav-link">投诉电话</div>
+
+					</div>
+					<div class="d-flex align-items-center flex-row justify-content-center" style="width: 100%;">
+						<div class=" nav-link">京ICP备09046804号-2</div>
+						<div class=" nav-link">京公网安备 11010502035702号</div>
+					</div>
+				</div>
+			</div>
+
+
+	</body>
+
+</html>
+
+
+
+<style type="text/css">
+	.my-close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	.policy-page {
+		width: 100%;
+		height: 70%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		padding: 20px 10%;
+	}
+
+	.policyitem {
+		position: relative;
+		width: 60%;
+		height: 80%;
+		background-color: #ffffff;
+		border: #000000 1px saddlebrown;
+		box-shadow: 0 0 3px 3px #9D9D9D;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column;
+	}
+
+	.policy {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		
+		opacity: 0;
+	}
+
+	label {
+		font-size: 18px;
+	}
+
+	#title {
+		position: relative;
+		width: 80%;
+	}
+
+	.hidden-msg {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		box-shadow: 0 0 3px 3px #9D9D9D;
+		display: flex;
+		width: 100%;
+		padding: 20px;
+		background-color: #ffffff;
+		border: #000000 1px saddlebrown;
+	}
+
+	.my-bread {
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: flex;
+		flex-flow: row;
+		color: white;
+		font-size: 18px;
+		margin-top: 10px;
+
+	}
+
+
+	.signintab {
+		width: 50%;
+		height: 80%;
+		background-color: white;
+		box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.6);
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	.signintab b {
+		font-size: 36px;
+		margin: 10px;
+	}
+
+
+
+	.footleft {
+		display: flex;
+		flex-flow: column;
+		color: #FFFFFF;
+		justify-content: center;
+		align-items: flex-start;
+		width: 100%;
+		height: 120px;
+		background-color: #222222;
+	}
+
+
+
+	.service {
+		background-image: url(img/service.jpg);
+		background-size: cover;
+
+	}
+
+	.my-text {
+		width: 26%;
+	}
+
+	.take-more {
+		font-size: 20px;
+	}
+
+
+
+	.underline {
+		width: 0px;
+	}
+
+	.show-underline:hover .underline {
+		transition: 1s;
+		width: 90px;
+	}
+
+	.take-more {
+		width: 100px;
+		border: #9D9D9D 0px 0px 1px 0px solid;
+
+	}
+
+	.signitem {
+		background: url("img/signin.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+
+	.nav-bg {
+
+		width: 100%;
+
+	}
+
+
+
+	.my-logo-img {
+		height: 70px;
+	}
+
+	.my-nav {
+		width: 100%;
+		height: 100px;
+		display: flex;
+		flex-flow: row;
+		background-color: #000000;
+		align-items: flex-end;
+		justify-content: center;
+		padding-bottom: 10px;
+
+	}
+
+
+
+	.nav-link {
+		color: white;
+	}
+
+	.nav-link:hover {
+		color: deepskyblue;
+	}
+</style>

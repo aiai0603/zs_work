@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1029216",
+      "name": "列表",
+      "font_class": "list-2-copy",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "8351839",
+      "name": "闹钟",
+      "font_class": "naozhong",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    },
+    {
+      "icon_id": "17832811",
+      "name": "客户",
+      "font_class": "kehu-copy",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "梅赛德斯奔驰",
+  "usingComponents": {
+    "carousel": "/components/vear-carousel/vear-carousel"
+  }
+}

@@ -1,0 +1,1335 @@
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>长轴距A级车</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+		 crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		 crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		 crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		 crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+	</head>
+	<script type="text/javascript">
+		var flag = 1;
+		var flagCar = 1;
+		var search = 0;
+
+		$(
+			function() {
+				$(document).ready(
+					function() {
+							
+						$(".search").hide();
+						$(".login").hide();
+						$(".photo-show").hide();
+						$(".error-tips").hide();
+						
+						$("#reditem").hide();
+						$("#blackitem").hide();
+						$("#whiteitem").hide();
+						
+						$("#darkitem").hide();
+						
+						$("#main").velocity("fadeIn", 2000);
+					})
+					
+				$(".color-item").click(
+					function() {
+					if($(this).attr("id")=="light")
+					{
+						
+						$("#dark").removeClass("color-active");
+						$(this).addClass("color-active");
+						$("#darkitem").hide();
+						$("#lightitem").show();
+						
+						$(".inside").css("background-image","url(img/inside2.jpg)")
+						
+					}else if($(this).attr("id")=="dark"){
+						
+						$("#light").removeClass("color-active");
+						$(this).addClass("color-active");
+						$("#lightitem").hide();
+						$("#darkitem").show();
+						$(".inside").css("background-image","url(img/inside1.jpg)")
+					}
+					else{
+						$("#blue").removeClass("color-active");
+						$("#white").removeClass("color-active");
+						$("#red").removeClass("color-active");
+						$("#black").removeClass("color-active");
+						$(this).addClass("color-active");
+						$("#blueitem").hide();
+						$("#whiteitem").hide();
+						$("#reditem").hide();
+						$("#blackitem").hide();
+						
+						if($(this).attr("id")=="blue"){
+								$("#blueitem").show();
+								$("#car-show").attr("src","img/blue.png");
+						}	
+						if($(this).attr("id")=="red"){
+								$("#reditem").show();
+								$("#car-show").attr("src","img/red.png");
+						}	
+						if($(this).attr("id")=="white"){
+								$("#whiteitem").show();
+								$("#car-show").attr("src","img/white.png");
+						}	
+						if($(this).attr("id")=="black"){
+								$("#blackitem").show();
+								$("#car-show").attr("src","img/black.png");
+						}
+					}
+						
+						
+					
+					}
+				)
+					
+
+
+
+
+				$("#searchicon").click(
+					function() {
+						if (search == 1) {
+							$(".search").hide();
+							search = 0;
+						} else {
+							$(".search").show();
+							search = 1;
+						}
+					})
+
+
+				$("#loginicon").click(
+					function() {
+						$(".login").show();
+					}
+				)
+
+
+
+
+				$(".close-item").click(
+					function() {
+						$(".login").hide();
+					}
+				)
+
+
+
+				$("#like").click(
+					function() {
+						if ($("#like").hasClass("fa-heart-o")) {
+							$("#like").removeClass('fa-heart-o');
+							$("#like").removeClass('text-white');
+
+							$("#like").addClass('fa-heart');
+							$("#like").addClass('text-danger');
+						} else {
+							$("#like").removeClass('fa-heart');
+							$("#like").removeClass('text-danger');
+							$("#like").addClass('fa-heart-o');
+							$("#like").addClass('text-white');
+
+						}
+
+					}
+				)
+
+				$(".showimg").click(
+					function() {
+						$("#photo").attr("src", $(this).attr('src'))
+						$(".photo-show").show();
+					}
+				)
+
+				$("#photo").click(
+					function() {
+						$(".photo-show").hide();
+
+					}
+				)
+
+				$("#name").blur(
+					function() {
+						if ($(this).val().length < 2 || $(this).val().length > 5) {
+							$("#nametips").show();
+						} else {
+							$("#nametips").hide();
+						}
+
+						if ($("#checked").is(':checked') && ($("#name").val().length >= 2 && $("#name").val().length <= 5) && $(
+								"#number").val().length == 11)
+							$("#submit").removeAttr("disabled");
+						else
+							$("#submit").attr("disabled", true);
+					})
+
+
+
+
+				$("#number").blur(
+					function() {
+						if ($(this).val().length != 11) {
+							$("#phonetips").show();
+						} else {
+							$("#phonetips").hide();
+						}
+
+						if ($("#checked").is(':checked') && ($("#name").val().length >= 2 && $("#name").val().length <= 5) && $(
+								"#number").val().length == 11)
+							$("#submit").removeAttr("disabled");
+						else
+							$("#submit").attr("disabled", true);
+					})
+
+
+				$("#checked").change(
+					function() {
+						if ($(this).is(':checked') && ($("#name").val().length >= 2 && $("#name").val().length <= 5) && $("#number").val()
+							.length == 11)
+							$("#submit").removeAttr("disabled");
+						else
+							$("#submit").attr("disabled", true);
+
+					})
+
+
+				$("#submit").click(function() {
+
+					$('.alert').html('提交成功!').addClass('alert-success').velocity("fadeIn", 200);
+					setTimeout(function() {
+						$('.alert').velocity("fadeOut", 200);
+					}, 800)
+
+				})
+
+
+
+
+			});
+
+
+
+
+
+		//立即执行函数
+		$(function() {
+			//调用初始化下拉方法
+			initData();
+		});
+
+		//初始化dropdown中内容
+		function initData() {
+			var option = {
+				maxLevel: 3,
+				data: [{
+						typeId: 1,
+						typeParentId: 0,
+						typeName: "浙江",
+						level: 1,
+						childFlag: 1
+					},
+
+
+					{
+						typeId: 3,
+						typeParentId: 1,
+						typeName: "杭州",
+						level: 2,
+						childFlag: 1
+					},
+
+
+					{
+						typeId: 5,
+						typeParentId: 3,
+						typeName: "拱墅区4s店",
+						level: 3,
+						childFlag: 0
+					},
+					{
+						typeId: 6,
+						typeParentId: 3,
+						typeName: "西湖区4s店",
+						level: 3,
+						childFlag: 0
+					},
+
+
+
+				]
+			};
+			processData(option);
+		}
+		//js拼接html代码
+		function processData(option) {
+			for (var i = 1; i <= option.maxLevel; i++) {
+				if (i == 1) {
+					$.each(option.data, function(n, value) {
+						if (value.level == 1) {
+							if (value.childFlag == 0) {
+								var result = "<li><a tabindex=\"-1\" href=\"javascript:;\" id=\"typeId" + value.typeId +
+									"\" onclick=\"selectType('" + value.typeId + "','" + value.typeName + "')\">" + value.typeName + "</a></li>";
+								$("#asset_type_btn").next().append(result);
+							} else {
+								var result = "<li class=\"dropdown-submenu\"><a tabindex=\"-1\" class=\"disabled\" id=\"typeId" + value.typeId +
+									"\" href=\"javascript:;\">" + value.typeName + "</a><ul class=\"dropdown-menu\"></ul></li>";
+								$("#asset_type_btn").next().append(result);
+							}
+						}
+					});
+				} else {
+					$.each(option.data, function(n, value) {
+						if (value.level == i) {
+							if (value.childFlag == 0) {
+								var result = "<li><a tabindex=\"-1\" href=\"javascript:;\" id=\"typeId" + value.typeId +
+									"\" onclick=\"selectType('" + value.typeId + "','" + value.typeName + "')\">" + value.typeName + "</a></li>";
+								$("#" + "typeId" + value.typeParentId).next().append(result);
+							} else {
+								var result = "<li class=\"dropdown-submenu\"><a tabindex=\"-1\" id=\"typeId" + value.typeId +
+									"\" href=\"javascript:;\">" + value.typeName + "</a><ul class=\"dropdown-menu\"></ul></li>";
+								$("#" + "typeId" + value.typeParentId).next().append(result);
+							}
+						}
+					});
+				}
+			}
+		}
+
+		//点击后操作
+		function selectType(typeId, typeName) {
+			$("#asset_type_btn").html(typeName);
+
+		}
+	</script>
+
+	<body>
+
+
+
+		<script src="./velocity/velocity.min.js"></script>
+		
+		<div class="alert"></div>
+		<div class="search">
+			<input class="searchput" />
+			<i class="fa fa-search fa-lg nav-link" aria-hidden="true"></i>
+			<div class="mx-2">大家都在搜索:</div>
+			<div class="nav-link">双12优惠</div>
+			<div class="nav-link">最新车型</div>
+			<div class="nav-link">无畏共联盟</div>
+		</div>
+		
+			
+		
+		<div class="login">
+			<div class="login-card">
+				<h2 class="mb-5">登录AMG车友俱乐部</h2>
+				<div class="input"><input placeholder="请输入用户名/邮箱/手机号" />
+					<a class="findpass" href="signin.html" style="text-decoration: none;">注册账号</a>
+				</div>
+				<div class="input"><input placeholder="请输入密码" type="password" />
+					<div class="findpass">找回密码</div>
+				</div>
+		
+				<button type="button" class="btn btn-primary button">登录</button>
+				<div class="other-login"><i class="fa fa-weixin fa-lg" id="wechat"></i> <i class="fa fa-qq fa-lg " id="qq"></i> <i
+					 class="fa fa-weibo fa-lg" id="weibo"></i></div>
+			</div>
+		
+			<i class="fa fa-times fa-3x close-item"></i>
+		</div>
+		
+		
+		
+		
+		<div class="photo-show ">
+			<img src="" id="photo" />
+		
+		</div>
+
+		<div id="main d-flex align-items-center flex-column justify-content-center">
+			<div class="d-flex align-items-center flex-column nav-bg " id="main">
+				<ul class="nav justify-content-center my-nav align-items-end pt-5">
+
+					<a href="index.html"><img src="./img/logo.png" class="my-logo-img"></a>
+					<li class="nav-item "><a href="汽车广场.html" class=" nav-link">车型广场</a></li>
+					<li class=" nav-item "><a href="#" class=" nav-link  ">品牌天地</a></li>
+					<li class="nav-item "><a href="用户服务.html" class=" nav-link  ">售后服务</a></li>
+					<li class=" nav-item "><a  class=" nav-link  " href="#"><i class="fa fa-user fa-lg"" aria-hidden=" true" id="loginicon"></i></a></li>
+					<li class="nav-item "><a  class=" nav-link  " href="#"><i class="fa fa-search fa-lg"" aria-hidden="true" id="searchicon"></i></a></li>
+				</ul>
+				<h5 class="text-white  mt-4">长轴距A级车</h5>
+				<h1 class="text-white">这才是新生代豪华轿车该有的样子</h1>
+				<HR align="center" color="white" SIZE="1" class="mt-1" width="100">
+				<h5 class="text-white">颠覆相信</h5>
+				<div class="d-flex align-items-center flex-row justify-content-between col-11">
+					<div class="d-flex align-items-start flex-column justify-content-center  w-25">
+
+						<button class="btn btn-primary w-50 mt-4 py-2 my-shadow">金融计算机</button>
+						<button class="btn btn-light w-50 mt-4 py-2 my-shadow">下载资料</button>
+					</div>
+					<div class="d-flex align-items-end flex-row justify-content-end  w-25 h-25 ">
+						<i class="fa fa-heart-o fa-2x text-white" id="like" aria-hidden="true"></i>
+						<h5 class="mx-1 text-white">收藏</h5>
+					</div>
+
+				</div>
+
+
+			</div>
+
+
+
+
+			<div class="w-100 my-5 ">
+				<div class="d-flex align-items-center flex-column justify-content-center " id="h3-2">
+					<header class="d-flex flex-row justify-content-center align-items-center  mb-3  mt-5 col-9">
+						<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+						<h1>全车预览</h1>
+						<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+					</header>
+				</div>
+
+
+
+				<div class="container pb-4" >
+
+					<div class="tab-content mb-5">
+						<!-- 这个类是必须的，否则异常 -->
+
+						<div id="con1" class="tab-pane active mt-3">
+							<div class="d-flex align-items-center flex-row justify-content-center ">
+								<div class="w-25 d-flex align-items-center flex-column justify-content-center py-4">
+									
+									<div class="w-100 d-flex align-items-center flex-row justify-content-start my-3">
+										<div class="mr-4"><img src="img/icon1.png" ></div>
+										<div class="my-tab-word">
+											<div>厂家指导价</div>
+											<div><b class="bold">21.18</b>万元</div>
+											
+										</div>
+									</div>
+									<div class="w-100 d-flex align-items-center flex-row justify-content-start my-3">
+										<div class="mr-4"><img src="img/icon2.png" ></div>
+										<div class="my-tab-word ">
+											<div>轴距</div>
+											<div><b class="bold">2720</b>mm</div>
+											
+										</div>
+									</div>
+									<div class="w-100 d-flex align-items-center flex-row justify-content-start my-3">
+										
+										<div class="mr-4"><img src="img/icon3.png" ></div>
+										<div class="my-tab-word">
+											<div>最低油耗</div>
+											<div><b class="bold">4.9</b>L/100KM</div>
+											
+										</div>
+									</div>
+									<div class="w-100 d-flex align-items-center flex-row justify-content-start my-3">
+										
+										<div class="mr-4"><img src="img/icon4.png" ></div>
+										<div class="my-tab-word">
+											<div>安全辅助项</div>
+											<div><b class="bold">23</b>项</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="w-50" >
+									<img src="img/blue.png" class="w-100 mr-5" id="car-show">
+								</div>
+								<div style="width: 15%; " class="d-flex align-items-start flex-column justify-content-start ml-5">
+									<div class="d-flex align-items-center flex-row justify-content-start my-3 ">
+										<div style="background-color: #485878;" class="color-item color-active" id="blue"></div>
+										<div class="color-icon m-2" id="blueitem">午夜蓝</div>
+									</div>
+									<div class="d-flex align-items-center flex-row justify-content-start my-3">
+										<div style="background-color: #222222;" class="color-item" id="black"></div>
+										<div class="color-icon m-2" id="blackitem">耀夜黑</div>
+									</div>
+									<div class="d-flex align-items-center flex-row justify-content-start my-3">
+										<div style="background-color: #eeeeee;" class="color-item" id="white"></div>
+										<div class="color-icon m-2" id="whiteitem">极地白</div>
+									</div>
+									<div class="d-flex align-items-center flex-row justify-content-start my-3">
+										<div style="background-color: red;" class="color-item" id="red"></div>
+										<div class="color-icon m-2" id="reditem">热烈红</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="con2" class="tab-pane fade mt-3">
+							<div class="inside w-100 d-flex align-items-end flex-row justify-content-end ">
+								<div style="width: 10%; " class="d-flex align-items-start flex-column justify-content-start align-self-end">
+									<div class="d-flex align-items-center flex-row justify-content-start my-2 ">
+										<div style="background-color:#ffffcc;" class="color-item color-active" id="light"></div>
+										<div class="color-icon m-2 text-white" id="lightitem">淡色</div>
+									</div>
+									<div class="d-flex align-items-center flex-row justify-content-start my-2">
+										<div style="background-color: #000033;" class="color-item" id="dark"></div>
+										<div class="color-icon m-2 text-white" id="darkitem">深色</div>
+									</div>
+								
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="w-100 d-flex align-items-center flex-column justify-content-center mt-5">
+						<ul class="nav nav-tabs w-25 " role="tablist">
+							<li class="nav-item my-tabs"><a href="#con1" class="nav-link active d-flex align-items-center flex-row justify-content-center" style="font-weight: 800;" data-toggle="tab">外饰</a></li>
+							<li class="nav-item my-tabs"><a href="#con2" class="nav-link  d-flex align-items-center flex-row justify-content-center" style="font-weight: 800;" data-toggle="tab">内饰</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="d-flex align-items-center flex-column justify-content-center " id="h3-2">
+				<header class="d-flex flex-row justify-content-center align-items-center mt-5 md-3 col-9">
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+					<h1>这才是先锋智能该有的样子</h1>
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+				</header>
+			</div>
+			<div class="d-flex align-items-center flex-column justify-content-center my-5">
+				理念超前，与时俱进。 用智慧定义属于自己的未来，这才是新生代豪华轿车该有的样子。
+			</div>
+
+
+
+			<img src="img/a-1.jpg" class="w-100 mb-5">
+
+
+			<div class="d-flex align-items-center flex-column justify-content-center ">
+				<div class="d-flex align-items-center flex-row justify-content-center w-75 my-3">
+
+					<div class="d-flex align-items-start flex-column justify-content-center showtext">
+						<h2 class="mb-5">我的未来，你好</h2>
+						<div>
+							这不是科幻电影，是能自主学习的MBUX。通过触摸屏、触控键、触摸板，或者仅仅一句“你好，奔驰”，你就能随时唤醒智能助手。不仅如此，它还能语音识别包括中文、英文、德文在内的13种语言，让你能用自己习惯的方式，与爱车无间沟通。此外，远程软件更新（OTA）支持通过云端互联进行远程软件更新升级，令您的爱车实现功能进化和性能提升，给您带来更便捷精彩的出行生活。当接收到更新推送时，一键即可轻松升级，省时更省心。
+						</div>
+					</div>
+					<img src="img/a-2.jpg" title="点击查看大图" class="showimg ml-5 my-2">
+				</div>
+				<div class="d-flex align-items-center flex-row justify-content-center w-75 my-3">
+					<img src="img/a-3.jpg" title="点击查看大图" class="showimg mr-5 my-2">
+					<div class="d-flex align-items-start flex-column justify-content-center showtext">
+						<h2 class="mb-5">精彩，联袂上演</h2>
+						<div>
+							两块10.25英寸高清显示屏，打造科幻感十足的宽屏驾驶舱。左侧的数字仪表盘，三种显示风格由你随心定义，重要信息一览无余；右侧的媒体显示屏，能任你自由触控，乐享行车途中的无限精彩。</div>
+					</div>
+				</div>
+				<div class="d-flex align-items-center flex-row justify-content-center w-75 my-3">
+
+					<div class="d-flex align-items-start flex-column justify-content-center showtext">
+						<h2 class="mb-5">我的视界，大点更好</h2>
+						<div>
+							借助 Apple® CarPlay®
+							和百度Carlife®，手机上的应用也能被搬到你的爱车上来。没听完的音乐，在车上继续听；小屏幕的地图，放大看；回复好友短信，用说的……有了智能手机互联系统，你的行车生活将变得更便捷、更有趣。</div>
+					</div>
+					<img src="img/a-4.jpg" title="点击查看大图" class="showimg ml-5 my-2">
+				</div>
+				<div class="d-flex align-items-center flex-row justify-content-center w-75 my-3">
+					<img src="img/a-5.jpg" title="点击查看大图" class="showimg mr-5 my-2">
+					<div class="d-flex align-items-start flex-column justify-content-center showtext">
+						<h2 class="mb-5">让我低头？不可能</h2>
+						<div>
+							在前方的风挡玻璃上，将关键信息尽收眼底， 使你能够专注于前方路况和交通状况，不用低头，自然高调。</div>
+					</div>
+				</div>
+			</div>
+			<div style="background-color: #E6E6E6;" class="w-100 my-5 ">
+				<div class="d-flex align-items-center flex-column justify-content-center " id="h3-2">
+					<header class="d-flex flex-row justify-content-center align-items-center  mb-3  mt-5 col-9">
+						<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+						<h1>配置选择</h1>
+						<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+					</header>
+				</div>
+				<div class="d-flex align-items-center flex-row justify-content-center mt-5 pb-5">
+					<div class="my-card">
+						<img src="img/car-buy.png" class="mb-4">
+						<h3 class="mb-4">A 180 L 运动轿车</h3>
+						<div class="liningword">
+							<div><span>加速用时: </span><span><b>9.3</b>秒</span></div>
+							<div><span>额定功耗: </span><span><b>100</b>瓦</span></div>
+							<div><span>综合油耗: </span><span><b>5.4</b>升</span></div>
+							<div><span>指导价格: </span><span><b>23.8</b>万</span></div>
+						</div>
+						<div class="d-flex align-items-center flex-row justify-content-center w-100 ">
+							<button class="btn btn-light w-50 m-3 py-2 " style="border: #000000 1px solid;">立即下单</button>
+							<button class="btn btn-primary w-50 m-3 py-2">详细配置</button>
+						</div>
+
+					</div>
+
+					<div class="my-card">
+						<img src="img/car-buy.png" class="mb-4">
+						<h3 class="mb-4">A 180 L 轿车</h3>
+						<div class="liningword">
+							<div><span>加速用时: </span><span><b>9.0</b>秒</span></div>
+							<div><span>额定功耗: </span><span><b>100</b>瓦</span></div>
+							<div><span>综合油耗: </span><span><b>5.4</b>升</span></div>
+							<div><span>指导价格: </span><span><b>21.18</b>万</span></div>
+						</div>
+						<div class="d-flex align-items-center flex-row justify-content-center w-100 ">
+							<button class="btn btn-light w-50 m-3 py-2 " style="border: #000000 1px solid;">立即下单</button>
+							<button class="btn btn-primary w-50 m-3 py-2">详细配置</button>
+						</div>
+
+					</div>
+
+
+					<div class="my-card">
+						<img src="img/car-buy.png" class="mb-4">
+						<h3 class="mb-4">A 180 L 运时尚型</h3>
+						<div class="liningword">
+							<div><span>加速用时: </span><span><b>8.3</b>秒</span></div>
+							<div><span>额定功耗: </span><span><b>120</b>瓦</span></div>
+							<div><span>综合油耗: </span><span><b>5.6</b>升</span></div>
+							<div><span>指导价格: </span><span><b>26.48</b>万</span></div>
+						</div>
+						<div class="d-flex align-items-center flex-row justify-content-center w-100 ">
+							<button class="btn btn-light w-50 m-3 py-2 " style="border: #000000 1px solid;">立即下单</button>
+							<button class="btn btn-primary w-50 m-3 py-2">详细配置</button>
+						</div>
+
+					</div>
+
+				</div>
+
+
+			</div>
+			<div class="d-flex align-items-center flex-column justify-content-center " id="h3-2">
+				<header class="d-flex flex-row justify-content-center align-items-center  mb-3  mt-5 col-9">
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+					<h1>预约试驾</h1>
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+				</header>
+			</div>
+			<div class="d-flex align-items-center flex-row justify-content-end w-100 my-form">
+				<div class="d-flex align-items-end flex-column justify-content-center w-75">
+
+					<div class="d-flex align-items-center flex-row justify-content-start w-75 my-3">
+						<span class="w-25">真实姓名:</span>
+						<input type="text" class="w-50" placeholder="请输入姓名" id="name">
+						<span class="error-tips w-25" id="nametips">
+							请输入2-5位姓名
+						</span>
+					</div>
+					<div class="d-flex align-items-center flex-row justify-content-start w-75 mb-3">
+						<span class="w-25"></span>
+						<div class="w-50">
+							<label><input type="radio" name="sex" value="男生" class="mx-2" checked="checked">女士</label>
+							<label><input type="radio" name="sex" value="女生" class="mx-2">先生</label>
+						</div>
+						<span class="error-tips w-25" id="sextips">
+
+						</span>
+
+					</div>
+
+					<div class="d-flex align-items-center flex-row justify-content-startr w-75 my-3">
+						<span class="w-25">电话号码:</span>
+						<input type="text" class="w-50" placeholder="请输入11位电话号码" id="number">
+						<span class="error-tips w-25" id="phonetips">
+							请输入11位电话
+						</span>
+
+					</div>
+					<div class="d-flex align-items-center flex-row justify-content-start w-75 my-3">
+						<span class="w-25">经销商:</span>
+						<div class=" w-50">
+
+							<div class="dropdown" style="border-bottom: #A9A9A9 1px solid;">
+								<a id="asset_type_btn" role="button" data-toggle="dropdown" class=" btn btn-default w-100 d-flex align-items-center flex-row justify-content-start"
+								 href="javascript:;">
+									拱墅区4s店 <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="assert_type_btn">
+								</ul>
+							</div>
+
+						</div>
+						<span class="error-tips w-25" id="shoptips">
+							请选择经销商
+						</span>
+
+					</div>
+					<div class="my-3 d-flex align-items-center flex-row justify-content-center w-75">
+
+						<label><input type="checkbox" name="degree" value="0" class="mx-2" id="checked">我已经阅读并且同意<a style="color: #00BFFF;">试驾协议</a></label>
+
+						</span>
+					</div>
+					<div class="d-flex align-items-start flex-row justify-content-start w-75 my-3">
+						<span class="w-25"></span>
+						<button type="button" class="btn btn-primary button w-50" id="submit" disabled="disabled">提交</button>
+
+					</div>
+
+
+				</div>
+				<img src="img/yuyue.jpg" style="width: 45%;">
+
+			</div>
+			<div class="d-flex align-items-center flex-column justify-content-center w-100 my-form">
+
+				<div class="d-flex align-items-center flex-row justify-content-start " style="width: 80%;">
+					<HR align="left" width="200" color="#9d9d9d" SIZE="3">
+				</div>
+				<div class="d-flex align-items-center flex-row justify-content-start my-desc">
+					产品（含具体配置、相关细节等）以经销商展示、销售的适用于中国大陆的具体车型及产品为准。<br><br>
+					本产品网页中提及的所有价格（包括整车、配件、金融产品等）均为厂商建议零售价格。<br><br>
+					厂商建议零售价格仅为建议，不具有任何约束力。<br><br>
+					具体的零售交易价格、产品配置及交易细节请与相关授权经销商协商确定。<br><br>
+					“先享后选-星智享”融资租赁方案暂不适用于新疆、西藏、长治、漳州、安庆等地区（详细金融产品提供情况敬请咨询当地授权经销商）。<br><br>
+					“先享后选-星智享”融资租赁方案由梅赛德斯-奔驰租赁有限公司（“奔驰租赁”）提供，更多详情请咨询梅赛德斯-奔驰授权经销商，具体方案内容和购买、置换及展期选项的适用条件以最终签订合同为准。<br>
+					<br>
+					更多详情，敬请莅临梅赛德斯-奔驰当地授权经销商，或致电400-810-8880、400-818-1188。<br>
+				</div>
+			</div>
+			<div class="d-flex align-items-center flex-row justify-content-center w-100 my-form my-5">
+				<div>分享给你的好友</div> <i class="fa fa-share-alt mx-3 mylink"></i>
+			</div>
+
+
+
+			<div class="d-flex flex-row justify-content-center align-items-end">
+				<div class="footleft">
+
+					<div class="d-flex align-items-start flex-row justify-content-around my-2" style="width: 100%;">
+						<div>
+							<h5 class="mx-3">经销商招募</h5>
+							<div class="nav-link">TEL:123-123-12345</div>
+							<div class="nav-link">招募官网</div>
+						</div>
+						<div>
+							<h5 class="mx-3">APP下载</h5>
+							<div class="d-flex align-items-center flex-row justify-content-center nav-link">
+								<i class="fa fa-android mr-1" aria-hidden="true"></i>
+								<div>安卓APP</div>
+
+							</div>
+							<div class="d-flex align-items-center flex-row justify-content-center nav-link">
+								<i class="fa fa-apple mr-1" aria-hidden="true"></i>
+								<div>IOS-APP</div>
+
+							</div>
+						</div>
+						<div>
+							<h5 class="mx-3">经销商招募</h5>
+							<div class="d-flex align-items-center flex-row justify-content-center nav-link " id="wechat">
+								<i class="fa fa-wechat mr-1" aria-hidden="true"></i>
+								<div>微信小程序</div>
+
+							</div>
+							<div class="d-flex align-items-center flex-row justify-content-start nav-link" id="weibo">
+								<i class="fa fa-weibo mr-1" aria-hidden="true"></i>
+								<div>微博账号</div>
+
+							</div>
+							<div class="d-flex align-items-center flex-row justify-content-start nav-link">
+								<i class="fa fa-facebook-official mr-1" aria-hidden="true"></i>
+								<div>FaceBook</div>
+
+							</div>
+						</div>
+						<div>
+							<h5 class="mx-3">热线电话</h5>
+							<div class="nav-link">TEL:123-123-12345</div>
+							<div class="nav-link">TEL:222-222-12124</div>
+						</div>
+					</div>
+					<div class="d-flex align-items-center flex-row justify-content-center" style="width: 100%;">
+						<div class=" nav-link">网站地图</div>
+						<div class=" nav-link">隐私政策</div>
+						<div class=" nav-link">用户协议</div>
+						<div class=" nav-link">法律声明</div>
+						<div class=" nav-link">投诉电话</div>
+
+					</div>
+					<div class="d-flex align-items-center flex-row justify-content-center" style="width: 100%;">
+						<div class=" nav-link">京ICP备09046804号-2</div>
+						<div class=" nav-link">京公网安备 11010502035702号</div>
+					</div>
+				</div>
+				<div class="footright mt-5">
+					<div class="align-self-end mx-4 my-3   d-flex flex-column justify-content-center align-items-start footword">
+
+						<h3>AMG车主俱乐部</h3>
+						<div>AMG车主俱乐部是为AMG尊贵车主打造的专属在线社区。<br>
+							在这里，您可以第一时间了解AMG新车资讯，更可参与AMG车主专属活动，与AMG车主进行畅所欲言地交流。</div>
+						<div class="mt-5 ml-5" style="font-size: 36px;"> <a  href="signin.html" style="text-decoration: none;color: white;">立即加入</a></div>
+						<HR align="left" color="#9d9d9d" SIZE="1" class="mt-1 underline mx-5">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	
+	</body>
+</html>
+
+
+
+<style type="text/css">
+	
+		
+	.inside{
+		width: 100%;
+		height: 600px;
+		background: url(img/inside2.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	.color-icon{
+		color: #222222;
+		font-size: 20px;
+		
+	}
+	
+	.color-item{
+		margin: 8px;
+		width: 30px;
+		height: 30px;
+		border-radius: 30px;
+		box-shadow: #9D9D9D 2px 2px 2px;
+	}
+	
+	.color-active{
+		border: #000000 2px solid;
+		box-shadow: none;
+		
+	}
+	
+	
+	.my-tab-word{
+		font-size: 20px;
+	}
+	.bold{
+		margin-right: 5px;
+		font-size: 28px;
+		font-weight: 600;
+	}
+	.my-tabs {
+		width: 50%;
+		background-color: #A9A9A9;
+		border: #A9A9A9 1px solid;
+
+	}
+
+
+
+	.show-underline:hover .underline {
+		transition: 1s;
+		width: 90px;
+	}
+
+	.alert {
+		display: none;
+		position: fixed;
+		top: 0%;
+		left: 50%;
+		min-width: 200px;
+		margin-left: -100px;
+		z-index: 99999;
+		padding: 15px;
+		border: 1px solid transparent;
+		border-radius: 4px;
+	}
+
+	.alert-success {
+		color: #3c763d;
+		background-color: #dff0d8;
+		border-color: #d6e9c6;
+	}
+
+	.alert-info {
+		color: #31708f;
+		background-color: #d9edf7;
+		border-color: #bce8f1;
+	}
+
+	.alert-warning {
+		color: #8a6d3b;
+		background-color: #fcf8e3;
+		border-color: #faebcc;
+	}
+
+	.alert-danger {
+		color: #a94442;
+		background-color: #f2dede;
+		border-color: #ebccd1;
+	}
+
+
+	button[disabled] {
+		opacity: 0.5;
+	}
+
+	.error-tips {
+		color: red;
+		font-size: 16px;
+		margin-left: 10px;
+	}
+
+	.mylink:hover {
+		color: #007BFF;
+	}
+
+	.my-desc {
+		width: 80%;
+		color: #222222;
+		font-weight: 100;
+		font-size: 12px;
+	}
+
+	.my-form {
+		color: #222222;
+		font-size: 20px;
+	}
+
+	.my-form input {
+		padding: 5px 14px;
+		border: 0px;
+		border-bottom: #A9A9A9 1px solid;
+		font-size: 16px;
+	}
+
+	.dropdown-submenu {
+		position: relative;
+		padding-left: 0.625rem;
+		color: #9D9D9D;
+
+	}
+
+	.dropdown-submenu>.dropdown-menu {
+		top: 0;
+		left: 100%;
+		margin-top: -9px;
+		margin-left: -1px;
+		-webkit-border-radius: 0 6px 6px 6px;
+		-moz-border-radius: 0 6px 6px;
+		border-radius: 0 6px 6px 6px;
+		padding-left: 0.625rem;
+
+	}
+
+	.dropdown-submenu:hover>.dropdown-menu {
+		display: block;
+
+	}
+
+	.dropdown-submenu>a:after {
+		display: block;
+		content: " ";
+		float: right;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+		border-width: 5px 0 5px 5px;
+		border-left-color: #ccc;
+		margin-top: 5px;
+		margin-right: -10px;
+
+	}
+
+	.dropdown-submenu:hover>a:after {
+		border-left-color: #fff;
+
+
+
+	}
+
+	.dropdown-submenu.pull-left {
+		float: none;
+
+	}
+
+	.dropdown-submenu.pull-left>.dropdown-menu {
+		left: -100%;
+		margin-left: 10px;
+		-webkit-border-radius: 6px 0 6px 6px;
+		-moz-border-radius: 6px 0 6px 6px;
+		border-radius: 6px 0 6px 6px;
+
+	}
+
+	.liningword div {
+		display: flex;
+		flex-flow: row;
+		width: 80%;
+		justify-content: space-between;
+		align-items: flex-end;
+
+	}
+
+	.liningword b {
+		font-size: 24px;
+		font-weight: 400;
+	}
+
+	.liningword {
+		display: flex;
+		flex-flow: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+
+
+	}
+
+	.my-card img {
+		transition: 0.1s;
+		width: 90%;
+	}
+
+	.my-card {
+		transition: 0.1s;
+		width: 20%;
+		height: 470px;
+		box-shadow: 0 0 5px 5px rgba(200, 200, 200, 0.6);
+		padding: 20px;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		border: #CCCCCC 1px solid;
+		color: #222222;
+		background-color: rgba(255, 255, 255, 0.8);
+		border-radius: 10px;
+		margin: 10px 30px;
+
+
+	}
+
+
+	.my-card:hover {
+		width: 20%;
+		height: 460px;
+		box-shadow: 0 0 3px 3px rgba(200, 200, 200, 0.6);
+		padding: 20px;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		border: #CCCCCC 1px solid;
+		color: #222222;
+		background-color: rgba(240, 240, 240, 0.8);
+		border-radius: 10px;
+
+
+	}
+
+
+
+
+	.photo-show {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	#photo {
+		width: 70%;
+		height: 80%;
+		box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.6);
+
+	}
+
+	.showtext {
+		width: 45%;
+	}
+
+	.showimg {
+		width: 40%;
+	}
+
+	.pic {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+		justify-content: center;
+		z-index: 100;
+	}
+
+	.show-pic {
+		z-index: 99;
+		width: 100%;
+
+	}
+
+	.my-shadow {
+		box-shadow: 3px 3px 5px #9D9D9D;
+	}
+
+
+	.close-item {
+		position: absolute;
+		top: 10;
+		right: 10;
+		color: white;
+	}
+
+	#qq:hover {
+		color: #00BFFF;
+	}
+
+	.other-login {
+		display: flex;
+		flex-flow: row;
+
+		width: 55%;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 30px;
+	}
+
+	.button {
+		margin-top: 20px;
+		width: 60%;
+		height: 50px;
+		background-color: #00BFFF;
+		border: #00BFFF;
+
+	}
+
+	.findpass {
+		margin-left: 10px;
+		color: deepskyblue;
+
+	}
+
+	.findpass:hover {
+
+		color: #007bff;
+
+	}
+
+
+	.input {
+
+		display: flex;
+		flex-flow: row;
+		width: 60%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	::-webkit-input-placeholder {
+		/* WebKit browsers */
+		color: #ccc;
+		font-weight: 100;
+	}
+
+	.login-card {
+		width: 40%;
+		height: 60%;
+		background-color: white;
+		box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.6);
+		display: flex;
+		flex-flow: column;
+
+		position: fixed;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.login-card input {
+		position: relative;
+		border: 0px;
+		border-bottom: 2px solid #e6e6e6;
+		font-size: 16px;
+		margin: 10px 0;
+		width: 75%;
+
+	}
+
+	.login {
+		display: flex;
+		flex-flow: column;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: 100;
+		
+
+	}
+
+	.searchput {
+		width: 40%;
+		color: #222222;
+	}
+
+	.search {
+
+		color: white;
+		width: 100%;
+		height: 10%;
+		background-color: #222222;
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	.word {
+		font-size: 36px;
+		color: #ffffff;
+
+
+	}
+
+	#show-car {
+		width: 100%;
+	}
+
+	[id^="show"] {
+		opacity: 0;
+	}
+
+	#wechat:hover {
+		color: springgreen;
+	}
+
+	#weibo:hover {
+		color: yellow;
+	}
+
+
+	.footword {
+		width: 40%;
+		height: 80%;
+	}
+
+	.footword:hover hr {
+		transition: 1s;
+		width: 140px;
+	}
+
+
+	.footleft {
+		display: flex;
+		flex-flow: column;
+		color: #FFFFFF;
+		justify-content: center;
+		align-items: flex-start;
+		width: 55%;
+		height: 320px;
+		background-color: darkgray;
+	}
+
+
+	.footright {
+		display: flex;
+		flex-flow: column;
+		color: #FFFFFF;
+		justify-content: center;
+		align-items: flex-start;
+		transition: 1s;
+		width: 55%;
+		height: 400px;
+		background: url(img/fan.jpg);
+		background-size: cover;
+		box-shadow: #9D9D9D -10px -10px 10px;
+		transition: 1s;
+	}
+
+	.footright:hover {
+
+		transition: 1s;
+		width: 55%;
+		height: 400px;
+		background: url(img/amg-story-1.jpg);
+		background-size: cover;
+		box-shadow: #eeeeee -8px -8px 10px;
+	}
+
+
+
+
+	.service {
+		background-image: url(img/service.jpg);
+		background-size: cover;
+
+	}
+
+
+
+
+	.nav-bg {
+		background-image: url(img/nav-car.jpg);
+		height: 750px;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+
+
+	.my-logo-img {
+		height: 70px;
+	}
+
+	.my-nav {
+		width: 100%;
+		height: 100px;
+		display: flex;
+		flex-flow: row;
+		background-color: #000000;
+		align-items: flex-end;
+		justify-content: center;
+		padding-bottom: 10px;
+
+	}
+
+	.underline {
+		width: 0px;
+	}
+
+	.show-underline:hover .underline {
+		transition: 1s;
+		width: 90px;
+	}
+
+
+
+	.nav-link {
+		color: white;
+	}
+
+	.nav-link:hover {
+		color: deepskyblue;
+	}
+</style>

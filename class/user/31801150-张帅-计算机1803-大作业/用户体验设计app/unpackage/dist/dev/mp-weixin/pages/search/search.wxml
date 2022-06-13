@@ -1,0 +1,1 @@
+<view><view class="title"><input class="title-input"/><icon type="search" size="18" colo="{{true}}" focus="{{true}}"></icon></view><view style="height:100rpx;"></view></view>

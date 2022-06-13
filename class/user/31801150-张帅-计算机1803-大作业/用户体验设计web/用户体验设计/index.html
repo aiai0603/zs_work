@@ -1,0 +1,1094 @@
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>梅赛德斯奔驰</title>
+		
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/4.5.0/css/bootstrap.min.css">  
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->  
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>  
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->  
+		<script src="http://cdn.bootcss.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+		<link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+	</head>
+
+
+	<body>
+	
+		<script src="./velocity/velocity.min.js"></script>
+	
+		<img id="loading-lt1" src="img/luntai.png" alt="">
+		<img id="loading-lt2" src="img/luntai.png" alt="">
+		<img id="loading-logo" src="img/logo-bg.png" />
+		<img id="loading" src="img/car.png" />
+		<div id="loading1"></div>
+		<div id="loading2"></div>
+		<div id="loading3"></div>
+	
+		<div class="search" >
+			<input  class="searchput" />
+			<i class="fa fa-search fa-lg nav-link" aria-hidden="true"></i>
+			<div class="mx-2">大家都在搜索:</div>
+			<div class="nav-link">双12优惠</div>
+			<div class="nav-link">最新车型</div>
+			<div class="nav-link">无畏共联盟</div>
+		</div>
+		
+		
+		<div class="login">
+			<div class="login-card">
+				<h2 class="mb-5">登录AMG车友俱乐部</h2>
+				<div class="input"><input placeholder="请输入用户名/邮箱/手机号"/> <a class="findpass" href="signin.html" style="text-decoration: none;">注册账号</a></div>
+				<div class="input"><input placeholder="请输入密码" type="password" /><div class="findpass">找回密码</div></div>
+			
+				<button type="button" class="btn btn-primary button">登录</button>
+				<div class="other-login"><i class="fa fa-weixin fa-lg" id="wechat"></i> <i class="fa fa-qq fa-lg " id="qq" ></i> <i class="fa fa-weibo fa-lg" id="weibo"></i></div>
+			</div>
+			
+			<i class="fa fa-times fa-3x close-item" ></i>
+		</div>
+		
+		
+		
+		
+		<div id="main d-flex align-items-center flex-column justify-content-center">
+			<div class="d-flex align-items-center flex-column justify-content-between nav-bg pb-5 ">
+				<ul class="nav justify-content-center my-nav">
+
+					<a href="index.html"><img src="./img/logo.png" class="my-logo-img"></a>
+					<li class="nav-item "><a href="汽车广场.html" class=" nav-link">车型广场</a></li>
+					<li class=" nav-item "><a href="#" class=" nav-link  ">品牌天地</a></li>
+					<li class="nav-item "><a href="用户服务.html" class=" nav-link  ">售后服务</a></li>
+					<li class=" nav-item "><a  class=" nav-link  " href="#"><i class="fa fa-user fa-lg"" aria-hidden=" true" id="loginicon"></i></a></li>
+					<li class="nav-item "><a  class=" nav-link  " href="#"><i class="fa fa-search fa-lg"" aria-hidden="true" id="searchicon"></i></a></li>
+				</ul>
+				<div class="d-flex align-items-center  justify-content-center"><img src="img/logo-signal.png" id="logo"><img id="word"
+					 src="img/word.png"></div>
+
+			</div>
+			<div class="d-flex align-items-center flex-column justify-content-center ">
+				<header class="d-flex flex-row justify-content-center align-items-center mt-5 md-3 col-9">
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+					<h1>品牌活动</h1>
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+				</header>
+			</div>
+
+			<div class="pt-5 px-3 d-flex align-items-center flex-column justify-content-center">
+				<div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
+
+					<ol class="carousel-indicators">
+						<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+						<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+						<li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="./img/lb1.jpg" class="d-block w-100" alt="...">
+
+						</div>
+						<div class="carousel-item">
+							<img src="./img/lb2.jpg" class="d-block w-100" alt="...">
+							<div class="carousel-caption d-md-block">
+
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="./img/lb3.jpg" class="d-block w-100" alt="...">
+
+						</div>
+						<div class="carousel-item">
+							<img src="./img/lb4.jpg" class="d-block w-100" alt="...">
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+			<div class="d-flex align-items-center flex-column justify-content-center " id="h3-2">
+				<header class="d-flex flex-row justify-content-center align-items-center mt-5 md-3 col-9">
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+					<h1>精品车型</h1>
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+				</header>
+			</div>
+			<div class="d-flex flex-column justify-content-center align-items-center">
+				<div class="d-flex flex-row justify-content-center align-items-center" style="width: 100%">
+					<div class="d-flex flex-row justify-content-between align-items-center mt-3 " id="show-car" >
+						<header class="d-flex flex-column justify-content-center align-items-center mt-2  " >
+							<h2 class="mt-5 mb-4">精选全年销售冠军 <br> 性价比最高车型</h2>
+							<div class="card mx-3 touch" style="width: 30rem;">
+								<img src="./img/2-2.jpg" class="card-img-top my-shadow" >
+								<div class="hidden-pic" >
+									<a href="car.html" style="text-decoration: none;color: white;">
+									<h3>BRABOS</h3>
+									<div>>了解更多</div>
+									</a>
+								</div>
+							</div>
+							<div class="align-self-start mx-4 show-underline">
+								<HR align="center" width="200" color="#9d9d9d" SIZE="1">
+								<h3>BRABOS</h3>
+								<a href="car.html" style="text-decoration: none;color: black;"><div class="take-more" >>了解更多</div></a>
+								<HR align="left" color="#9d9d9d" SIZE="1" class="mt-1 underline">
+							</div>
+						</header>
+						<header class="d-flex flex-column justify-content-center align-items-center mt-2  ">
+							<div class="card mx-3 touch" style="width: 30rem;">
+								<img src="./img/2-1.jpg" class="card-img-top my-shadow" alt="...">
+								<div class="hidden-pic">
+									<h3>MB 1286</h3>
+									<div>>了解更多</div>
+								</div>
+							</div>
+							<div class="align-self-start  mx-4 show-underline">
+								<HR align="center" width="200" color="#9d9d9d" SIZE="1">
+								<h3>MB 1286</h3>
+								<div class="take-more">>了解更多</div>
+								<HR align="left" color="#9d9d9d" SIZE="1" class="mt-1 underline">
+
+							</div>
+						</header>
+
+					</div>
+				</div>
+				<button type="button" class="btn btn-outline-secondary my-shadow ">更多车型</button>
+
+
+			</div>
+			<div class="d-flex align-items-center flex-column justify-content-center " id="h3-1">
+				<header class="d-flex flex-row justify-content-center align-items-center mt-5 mb-3 col-9">
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+					<h1>品牌信息</h1>
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+				</header>
+			</div>
+
+			<div class="d-flex flex-column justify-content-center align-items-center">
+				<div class="d-flex flex-column justify-content-center align-items-center">
+
+					<header class="d-flex flex-row justify-content-center align-items-center mt-2 mb-4 " id="show1">
+						<div class="card mx-3 touch-2" style="width: 40rem;">
+							<img src="./img/news-1.jpg" class="card-img-top my-shadow" alt="...">
+							<div class="hidden-pic-2">
+								<h3>2019F1世界锦标赛，并肩前行</h3>
+								<div>>了解更多</div>
+							</div>
+						</div>
+						<div class="align-self-start mx-4 my-3 show-underline my-text d-flex flex-column justify-content-between align-items-start">
+
+							<h3>2019F1世界锦标赛，并肩前行</h3>
+							<div>2019F1大奖赛全新赛季即将开战，再度进化的F1战车，以其强大的性能，卓越的设计，
+								吸引了大量的关注与期待。人们翘首以盼，银箭再度席卷F1赛场，这辆速度猛兽是如何诞生的？
+								下面为你揭晓</div>
+							<div class="take-more mt-3">>了解更多</div>
+							<HR align="left" color="#9d9d9d" SIZE="1" class="mt-1 underline">
+						</div>
+					</header>
+
+					<header class="d-flex flex-row justify-content-center align-items-center mt-2 mb-3 "  id="show2">
+
+						<div class="align-self-start mx-4 my-3 show-underline my-text d-flex flex-column justify-content-between align-items-start" >
+
+							<h3>梅赛德斯邀您一起，无畏共联盟</h3>
+							<div>与梅赛德斯-奔驰携手的四年，我们也与广大玩家共同见证了中国军团一步步崛起，两度登顶荣耀之巅的壮举！LPL已不仅仅是电竞赛事，更是一种生活方式，是陪伴，是热爱，是奋斗，更是陪伴大家踏上征途，并肩作战的伙伴！</div>
+							<div class="take-more mt-3">>了解更多</div>
+							<HR align="left" color="#9d9d9d" SIZE="1" class="mt-1 underline">
+						</div>
+						<div class="card mx-3 touch-2" style="width: 40rem;">
+							<img src="./img/news-2.jpg" class="card-img-top my-shadow" alt="...">
+							<div class="hidden-pic-2">
+								<h3>梅赛德斯邀您一起，无畏共联盟</h3>
+								<div>>了解更多</div>
+							</div>
+						</div>
+					</header>
+
+
+					<header class="d-flex flex-row justify-content-center align-items-center mt-2 mb-3 "  id="show3">
+						<div class="card mx-3 touch-2" style="width: 40rem;">
+							<img src="./img/new-3.jpg" class="card-img-top my-shadow" alt="...">
+							<div class="hidden-pic-2">
+								<h3>奔驰 X Virgil Abloh全球巡展</h3>
+								<div>>了解更多</div>
+							</div>
+						</div>
+						<div class="align-self-start mx-4 my-3 show-underline my-text d-flex flex-column justify-content-between align-items-start">
+
+							<h3>奔驰 X Virgil Abloh全球巡展</h3>
+							<div>梅赛德斯-奔驰携手Off-White首席创意总监兼创始人及路易威登（Louis Vuitton）男装艺术总监Virgil Abloh，打造双方跨界合作的首个力作——以G级越野车为设计灵感的艺术概念车。</div>
+							<div class="take-more mt-3">> 了解更多</div>
+							<HR align="left" color="#9d9d9d" SIZE="1" class="mt-1 underline">
+						</div>
+					</header>
+
+				</div>
+				<button type="button" class="btn btn-outline-secondary my-shadow mt-2">更多信息</button>
+			</div>
+			<div class="d-flex align-items-center flex-column justify-content-center ">
+				<header class="d-flex flex-row justify-content-center align-items-center mt-5 mb-3 col-9">
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+					<h1>售后服务</h1>
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+				</header>
+			</div>
+			<div class="d-flex align-items-center flex-column justify-content-center ">
+				<header class="d-flex flex-column justify-content-center align-items-center mt-3 mb-3 col-9">
+
+					<h2>全心全意服务，给每一位用户</h2>
+					<h1 style="color: coral;">最佳体验</h1>
+
+				</header>
+			</div>
+			<div class="d-flex flex-column justify-content-center align-items-center">
+				<div class="d-flex flex-row justify-content-center align-items-center service my-shadow">
+					<div class="  touch-3">
+						<div class="hidden-pic-3">
+							<h4>售后服务</h4>
+							<div> <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+						</div>
+					</div>
+					<div class="  touch-3">
+						<div class="hidden-pic-3">
+							<h4>联系客服</h4>
+							<div> <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+						</div>
+					</div>
+					<div class="  touch-3">
+						<div class="hidden-pic-3">
+							<h4>预约保养</h4>
+							<div> <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+						</div>
+					</div>
+					<div class="  touch-3">
+						<div class="hidden-pic-3">
+							<h4>预约保养</h4>
+							<div> <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+						</div>
+					</div>
+					<div class=" touch-3">
+						<div class="hidden-pic-3">
+							<h4>车迷组织</h4>
+							<div> <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+						</div>
+					</div>
+
+				</div>
+				<button type="button" class="btn btn-outline-secondary my-shadow mt-4 mb-5">更多体验</button>
+			</div>
+
+			<div class="d-flex flex-row justify-content-center align-items-end">
+				<div class="footleft">
+				
+					<div  class="d-flex align-items-start flex-row justify-content-around my-2" style="width: 100%;">
+						<div>
+							<h5 class="mx-3">经销商招募</h5>
+							<div class="nav-link">TEL:123-123-12345</div>
+							<div class="nav-link">招募官网</div>
+						</div>
+						<div>
+							<h5 class="mx-3">APP下载</h5>
+							<div class="d-flex align-items-center flex-row justify-content-center nav-link" >
+								<i class="fa fa-android mr-1" aria-hidden="true"></i>
+								<div>安卓APP</div>
+								
+							</div>
+							<div class="d-flex align-items-center flex-row justify-content-center nav-link" >
+								<i class="fa fa-apple mr-1" aria-hidden="true"></i>
+								<div>IOS-APP</div>
+								
+							</div>
+						</div>
+						<div>
+							<h5 class="mx-3">经销商招募</h5>
+							<div class="d-flex align-items-center flex-row justify-content-center nav-link " id="wechat">
+								<i class="fa fa-wechat mr-1" aria-hidden="true"></i>
+								<div>微信小程序</div>
+								
+							</div>
+							<div class="d-flex align-items-center flex-row justify-content-start nav-link" id="weibo">
+								<i class="fa fa-weibo mr-1" aria-hidden="true"></i>
+								<div>微博账号</div>
+								
+							</div>
+							<div class="d-flex align-items-center flex-row justify-content-start nav-link" >
+								<i class="fa fa-facebook-official mr-1" aria-hidden="true"></i>
+								<div>FaceBook</div>
+								
+							</div>
+						</div>
+						<div>
+							<h5 class="mx-3">热线电话</h5>
+							<div class="nav-link">TEL:123-123-12345</div>
+							<div class="nav-link">TEL:222-222-12124</div>
+						</div>
+					</div>
+					<div class="d-flex align-items-center flex-row justify-content-center" style="width: 100%;">
+						<div class=" nav-link">网站地图</div>
+						<div class=" nav-link">隐私政策</div>
+						<div class=" nav-link">用户协议</div>
+						<div class=" nav-link">法律声明</div>
+						<div class=" nav-link">投诉电话</div>
+
+					</div>
+					<div class="d-flex align-items-center flex-row justify-content-center" style="width: 100%;">
+						<div class=" nav-link">京ICP备09046804号-2</div>
+						<div class=" nav-link">京公网安备 11010502035702号</div>
+					</div>
+					
+				</div>
+				<div class="footright mt-5">
+					<div class="align-self-end mx-4 my-3   d-flex flex-column justify-content-center align-items-start footword">
+
+						<h3>AMG车主俱乐部</h3>
+						<div>AMG车主俱乐部是为AMG尊贵车主打造的专属在线社区。<br>
+							在这里，您可以第一时间了解AMG新车资讯，更可参与AMG车主专属活动，与AMG车主进行畅所欲言地交流。</div>
+						<div class="mt-5 ml-5" style="font-size: 36px;"> <a  href="signin.html" style="text-decoration: none;color: white;">立即加入</a></div>
+						<HR align="left" color="#9d9d9d" SIZE="1" class="mt-1 underline mx-5">
+					</div>
+				</div>
+				
+			</div>
+			
+			<script type="text/javascript">
+				var flag=1;
+				var flagCar=1;
+				var search=0;
+			
+					$(
+					function(){
+						$(document).ready(
+						function(){  
+						    $(".search").hide();
+							$(".login").hide();
+						})
+						
+			
+						$("#searchicon").click(
+							function(){
+								if(search==1){
+									$(".search").hide();
+									search=0;
+								}else{
+									$(".search").show();
+									search=1;
+								}
+							})
+							
+						
+					$("#loginicon").click(
+						function(){
+							$(".login").show();
+							}
+						)
+						
+						
+						
+					
+					$(".close-item").click(
+						function(){
+							$(".login").hide();
+						}
+						)
+						
+					
+						$(window).scroll(function(){
+						
+						var this_scrollTop = $(this).scrollTop();
+						if(this_scrollTop>$("#h3-2").offset().top-600&&flagCar==1 ){
+							$("#show-car").velocity({opacity:1,width:"70%"}, { duration: 1500 });
+							flagCar=0;
+						}
+			
+						if(this_scrollTop>$("#h3-1").offset().top-600&&flag==1 ){
+							$("#show1").velocity("fadeIn", 2000);
+							$("#show2").velocity("fadeIn", 2000);
+							$("#show3").velocity("fadeIn", 2000);
+							flag=0;
+						}
+						});
+					});
+			</script>
+
+	</body>
+</html>
+
+
+
+<style type="text/css">
+	.close-item{
+		position: absolute;
+		top: 10;
+		right: 10;
+		color: white;
+	}
+	
+	#qq:hover{
+		color: #00BFFF;
+	}
+	.other-login{
+		display: flex;
+		flex-flow: row;
+		
+		width: 55%;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 30px;
+	}
+	.button{
+		margin-top: 20px;
+		width: 60%;
+		height: 50px;
+		background-color: #00BFFF;
+		border: #00BFFF;
+		
+	}
+	
+	.findpass{
+		margin-left: 10px;
+		color:  deepskyblue;
+	
+	}
+	.findpass:hover{
+		
+		color:  #007bff;
+	
+	}
+	
+	
+	.input{
+		
+		display: flex;
+		flex-flow: row;
+		width: 60%;
+		justify-content: center;
+		align-items: center;
+	}
+	::-webkit-input-placeholder { /* WebKit browsers */ 
+		color: #ccc; 
+	}
+	.login-card{
+		width: 40%;
+		height: 60%;
+		background-color: white;
+		box-shadow: 0 0 5px 5px rgba(255,255,255,0.6);
+		display: flex;
+		flex-flow: column;
+		
+		position: fixed;
+		justify-content: center;
+		align-items: center;
+	}
+	.login-card input{
+		position:relative;
+		 border:0px;
+		 border-bottom:2px solid #e6e6e6;
+		 font-size: 16px;
+		 margin: 10px 0;
+		width: 75%;
+		  
+	}
+	.login{
+		display: flex;
+		flex-flow: column;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0,0,0,0.8);
+		z-index: 100;
+		
+	}
+	.searchput{
+		width: 40%;
+		color:#222222;
+	}
+	.search{
+		
+		color: white;
+		width: 100%;
+		height: 10%;
+		background-color: #222222;
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	
+
+	
+	#show-car{
+		width: 100%;
+	}
+	
+	[id^="show"]{
+		opacity: 0;
+	}
+	#wechat:hover{
+		color: springgreen;
+	}
+	
+	#weibo:hover{
+		color: yellow;
+	}
+	
+	
+	.footword {
+		width: 40%;
+		height: 80%;
+	}
+
+	.footword:hover hr {
+		transition: 1s;
+		width: 140px;
+	}
+
+
+	.footleft {
+		display: flex;
+		flex-flow: column;
+		color: #FFFFFF;
+		justify-content: center;
+		align-items: flex-start;
+		width: 55%;
+		height: 320px;
+		background-color: darkgray;
+	}
+
+
+	.footright {
+		display: flex;
+		flex-flow: column;
+		color: #FFFFFF;
+		justify-content: center;
+		align-items: flex-start;
+		transition: 1s;
+		width: 55%;
+		height: 400px;
+		background: url(img/fan.jpg);
+		background-size: cover;
+		box-shadow: #9D9D9D -10px -10px 10px;
+		transition: 1s;
+	}
+
+	.footright:hover {
+
+		transition: 1s;
+		width: 55%;
+		height: 400px;
+		background: url(img/amg-story-1.jpg);
+		background-size: cover;
+		box-shadow: #eeeeee -8px -8px 10px;
+	}
+
+
+	.service {
+		background-image: url(img/service.jpg);
+		background-size: cover;
+
+	}
+
+	.my-text {
+		width: 26%;
+	}
+
+	.take-more {
+		font-size: 20px;
+	}
+
+	.my-shadow {
+		box-shadow: 3px 3px 5px #9D9D9D;
+	}
+
+	.underline {
+		width: 0px;
+	}
+
+	.show-underline:hover .underline {
+		transition: 1s;
+		width: 90px;
+	}
+
+	.take-more {
+		width: 100px;
+		border: #9D9D9D 0px 0px 1px 0px solid;
+
+	}
+
+
+	.touch:hover .hidden-pic {
+		width: 100%;
+	}
+
+	.touch:hover .hidden-pic h3 {
+		opacity: 1;
+
+	}
+
+	.touch:hover .hidden-pic div {
+		opacity: 1;
+
+	}
+
+	.touch-3 {
+		width: 12rem;
+		height: 26rem;
+		position: relative;
+		border: white solid 1px;
+	}
+
+
+	.touch-2:hover .hidden-pic-2 {
+		opacity: 1;
+	}
+
+	.touch-2:hover .hidden-pic-2 h3 {
+		opacity: 1;
+	}
+
+	.touch-2:hover .hidden-pic-2 div {
+		opacity: 1;
+	}
+
+	.hidden-pic-2 {
+
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		transition: 1s;
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+	}
+
+	.hidden-pic-3 div {
+		border-radius: 20px;
+		width: 30px;
+		height: 30px;
+		border: #FFFFFF solid 2px;
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
+		align-items: center;
+
+		font-weight: 100;
+	}
+
+	.hidden-pic-3 span {
+		width: 15px;
+		height: 15px;
+	}
+
+	.hidden-pic-3 {
+
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		justify-content: flex-end;
+		color: white;
+		transition: 1s;
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.1);
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 2;
+		padding-bottom: 70px;
+	}
+
+
+	.hidden-pic-3:hover {
+
+
+		transition: 1s;
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.4);
+
+
+		padding-bottom: 100px;
+	}
+
+	.hidden-pic-3:hover div {
+
+		background-color: #FFFFFF;
+	}
+
+	.hidden-pic-3:hover div i {
+
+		color: black;
+	}
+
+
+	.hidden-pic div {
+		transition-delay: 0.2s;
+		opacity: 0;
+	}
+
+	.hidden-pic h3 {
+		transition-delay: 0.2s;
+		opacity: 0;
+	}
+
+	.hidden-pic {
+
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		transition: 1s;
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 0%;
+	}
+
+	.shadow:hover {
+		box-shadow: #9D9D9D 1px 1px;
+	}
+
+
+	@-webkit-keyframes turnRound {
+		0% {
+			opacity: 0;
+
+		}
+
+		100% {
+			opacity: 1;
+			-webkit-transform: rotate(720deg);
+		}
+	}
+
+	@keyframes fadeInLeft {
+		0% {
+			opacity: 0;
+			transform: translateX(-120px);
+
+		}
+
+		50% {
+
+			opacity: 0;
+			transform: translateX(-120px);
+		}
+
+		100% {
+			opacity: 1;
+
+			transform: translateX(0);
+		}
+	}
+
+
+	@keyframes TurnLeft {
+
+		0% {
+			opacity: 1;
+			left: 0;
+			z-index: 20;
+		}
+
+
+
+		100% {
+			opacity: 1;
+			left: 3040px;
+			z-index: 20;
+		}
+	}
+
+	@keyframes TurnLeft2 {
+
+		0% {
+			opacity: 1;
+			left: -1520px;
+			z-index: 20;
+		}
+
+		100% {
+			opacity: 1;
+			left: 1520px;
+			z-index: 20;
+		}
+
+	}
+
+
+	@keyframes TurnLeft3 {
+
+		0% {
+			opacity: 1;
+			left: -3040px;
+			z-index: 20;
+		}
+
+
+
+
+		100% {
+			opacity: 1;
+			left: 0px;
+			z-index: 20;
+
+		}
+
+
+	}
+
+
+
+
+
+	@keyframes TurnLeft4 {
+		0% {
+			opacity: 1;
+			z-index: 99;
+		}
+
+		99% {
+			opacity: 1;
+			z-index: 99;
+		}
+
+		100% {
+			opacity: 0;
+			z-index: -1;
+
+		}
+	}
+
+	@keyframes TurnLeft5 {
+		0% {
+
+			opacity: 1;
+			z-index: 100;
+		}
+
+		99% {
+			opacity: 1;
+			z-index: 100;
+		}
+
+		100% {
+			opacity: 0;
+			z-index: -1;
+			-webkit-transform: rotate(-1800deg);
+		}
+	}
+
+
+
+
+	#logo {
+		animation-delay: 1.8s;
+		-webkit-animation-name: "turnRound";
+		/*动画名称，需要跟@keyframes定义的名称一致*/
+		-webkit-animation-duration: 1s;
+		/*动画持续的时间长*/
+		-webkit-animation-iteration-count: 1;
+		/*动画循环播放的次数为1 infinite为无限次*/
+
+	}
+
+
+	#word {
+		animation-delay: 1.9s;
+		-webkit-animation-name: "fadeInLeft";
+		/*动画名称，需要跟@keyframes定义的名称一致*/
+		-webkit-animation-duration: 2s;
+		/*动画持续的时间长*/
+		-webkit-animation-iteration-count: 1;
+		/*动画循环播放的次数为1 infinite为无限次*/
+	}
+
+	#loading-lt1 {
+		opacity: 0;
+		left: 38.82%;
+		top: 72.76%;
+		width: 65px;
+		height: 65px;
+		position: fixed;
+		z-index: -1;
+
+		-webkit-animation-name: "TurnLeft5";
+		/*动画名称，需要跟@keyframes定义的名称一致*/
+		-webkit-animation-duration: 2s;
+		/*动画持续的时间长*/
+		-webkit-animation-iteration-count: 1;
+		/*动画循环播放的次数为1 infinite为无限次*/
+	}
+
+	#loading-lt2 {
+		opacity: 0;
+		left: 54.15%;
+		top: 72.76%;
+		width: 65px;
+		height: 65px;
+		position: fixed;
+		z-index: -1;
+
+		-webkit-animation-name: "TurnLeft5";
+		/*动画名称，需要跟@keyframes定义的名称一致*/
+		-webkit-animation-duration: 2s;
+		/*动画持续的时间长*/
+		-webkit-animation-iteration-count: 1;
+		/*动画循环播放的次数为1 infinite为无限次*/
+	}
+
+
+
+
+	#loading {
+		opacity: 0;
+		left: 32%;
+		top: 48%;
+		position: fixed;
+		z-index: -1;
+
+		-webkit-animation-name: "TurnLeft4";
+		/*动画名称，需要跟@keyframes定义的名称一致*/
+		-webkit-animation-duration: 2s;
+		/*动画持续的时间长*/
+		-webkit-animation-iteration-count: 1;
+		/*动画循环播放的次数为1 infinite为无限次*/
+
+	}
+
+
+	#loading-logo {
+		opacity: 0;
+		left: 32%;
+		top: 30%;
+		position: fixed;
+		z-index: -1;
+
+		-webkit-animation-name: "TurnLeft4";
+		/*动画名称，需要跟@keyframes定义的名称一致*/
+		-webkit-animation-duration: 2s;
+		/*动画持续的时间长*/
+		-webkit-animation-iteration-count: 1;
+		/*动画循环播放的次数为1 infinite为无限次*/
+
+	}
+
+	#loading1 {
+		opacity: 0;
+		background-image: url(img/showbg.jpg);
+		background-size: cover;
+		position: fixed;
+
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		z-index: -1;
+
+
+		-webkit-animation-name: "TurnLeft";
+		/*动画名称，需要跟@keyframes定义的名称一致*/
+		-webkit-animation-duration: 2.0s;
+		/*动画持续的时间长*/
+		-webkit-animation-iteration-count: 1;
+		/*动画循环播放的次数为1 infinite为无限次*/
+	}
+
+	#loading2 {
+		opacity: 0;
+		background-image: url(img/showbg2.jpg);
+		background-size: cover;
+		position: fixed;
+
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		z-index: -1;
+
+
+		-webkit-animation-name: "TurnLeft2";
+		/*动画名称，需要跟@keyframes定义的名称一致*/
+		-webkit-animation-duration: 2.0s;
+		/*动画持续的时间长*/
+		-webkit-animation-iteration-count: 1;
+		/*动画循环播放的次数为1 infinite为无限次*/
+	}
+
+	#loading3 {
+		opacity: 0;
+		background-image: url(img/showbg.jpg);
+		background-size: cover;
+		position: fixed;
+		left: -1520px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		z-index: -1;
+
+
+
+		-webkit-animation-name: "TurnLeft3";
+		/*动画名称，需要跟@keyframes定义的名称一致*/
+		-webkit-animation-duration: 2s;
+		/*动画持续的时间长*/
+		-webkit-animation-iteration-count: 1;
+		/*动画循环播放的次数为1 infinite为无限次*/
+	}
+
+
+
+
+	.nav-bg {
+		background-image: url(img/nav.jpg);
+		height: 750px;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+
+
+	.my-logo-img {
+		height: 70px;
+	}
+
+	.my-nav {
+		width: 100%;
+		height: 100px;
+		display: flex;
+		flex-flow: row;
+		align-items: flex-end;
+		justify-content: center;
+
+	}
+
+
+	.nav-link {
+		color: white;
+	}
+
+	.nav-link:hover {
+		color: deepskyblue;
+	}
+</style>

@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>汽车广场</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+		 crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		 crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		 crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		 crossorigin="anonymous"></script>
+		 
+		<link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+		<script type="text/javascript">
+			var carlist = [{img:'./img/car1.jpg',name:'长轴距A级轿车',price:'厂商零售价¥21.18万起/月供¥476起',title1:'两块10.25英寸高清显示屏',title2:'不用低头，自然高调',title3:'随车安装的无线充电设备',title4:'搭载线性马达的多点触摸板'},{img:'./img/car2.jpg',name:'A级掀背车',price:'厂商零售价¥23.28万起/月供¥476起',title1:'个性凌厉的外观',title2:'全景式滑动天窗',title3:'双10.25英寸中央触摸显示屏',title4:'Burmester®环绕立体声音响系统'},{img:'./img/car3.jpg',name:'长轴距C级运动轿车',price:'厂商建议零售价¥30.78万起/月供¥521起',title1:'数字化仪表盘,三种显示风格',title2:'承袭S级轿车的车内空气调节组件',title3:'AMG独特的运动风设计',title4:'随车安装的无线充电设备'},{img:'./img/car4.jpg',name:'B级运动旅行车',price:'厂商建议零售价¥23.98万起*/',title1:'鹰眼般的LED大灯，节能不减性能',title2:'1542mm的车高，舒适的车内空间。',title3:'后排座椅靠背可进行折叠',title4:'倾情打造声临其境般的美妙享受。'},{img:'./img/car5.jpg',name:'长轴距C级轿车',price:'厂商建议零售价¥31.98万起/月供¥541起',title1:'鹰眼般的LED大灯，节能不减性能',title2:'为全家提供更舒适的车内空间。',title3:'后排座椅按照40:20:40的比例折叠',title4:'倾情打造声临其境般的美妙享受'},{img:'./img/car6.jpg',name:'标准轴距C级车运动版',price:'厂商建议零售价¥31.88万起/月供¥489起',title1:'车内灯光尽管随心切换；',title2:'你的数字化仪表盘，当然由你做主。',title3:'AMG独特的运动风设计',title4:'支持云端互联进行远程软件更新升级'},{img:'./img/car7.jpg',name:'C级旅行轿车',price:'厂商建议零售价¥36.08万起/月供¥777起',title1:'车顶系统配有深色安全的大面积玻璃',title2:'采用几何多光束 LED 技术的大灯',title3:'提供多种非常实用的整理装备',title4:'该款舒适型悬挂带有可调减震系统'},{img:'./img/car8.jpg',name:'梅赛德斯-AMG C63',price:'厂商建议零售价¥92.28万起/月供¥1,527起',title1:'AMG 4.0升V8双涡轮增压发动机',title2:'AMG SPEEDSHIFT MCT 9G变速箱',title3:'可变声级 AMG 高性能排气系统',title4:'AMG 外观组件 极富视觉冲击力'}]
+			$(function(){		 
+			   $('#car1').hover(
+			   function(){
+				   $('.carimg').attr('src',carlist[0].img)
+				   $('.card-title').html(carlist[0].name)
+				   $('.card-text').html(carlist[0].price)
+				   $('#title1').html(carlist[0].title1)
+				   $('#title2').html(carlist[0].title2)
+				   $('#title3').html(carlist[0].title3)
+				   $('#title4').html(carlist[0].title4)
+			   }
+			   )
+			   $('#car2').hover(
+			   function(){
+			   				   $('.carimg').attr('src',carlist[1].img)
+			   				   $('.card-title').html(carlist[1].name)
+			   				   $('.card-text').html(carlist[1].price)
+			   				   $('#title1').html(carlist[1].title1)
+			   				   $('#title2').html(carlist[1].title2)
+			   				   $('#title3').html(carlist[1].title3)
+			   				   $('#title4').html(carlist[1].title4)
+			   }
+			   )
+			   $('#car3').hover(
+			   function(){
+			   				   $('.carimg').attr('src',carlist[2].img)
+			   				   $('.card-title').html(carlist[2].name)
+			   				   $('.card-text').html(carlist[2].price)
+			   				   $('#title1').html(carlist[2].title1)
+			   				   $('#title2').html(carlist[2].title2)
+			   				   $('#title3').html(carlist[2].title3)
+			   				   $('#title4').html(carlist[2].title4)
+			   }
+			   )
+			   $('#car4').hover(
+			   function(){
+			   				   $('.carimg').attr('src',carlist[3].img)
+			   				   $('.card-title').html(carlist[3].name)
+			   				   $('.card-text').html(carlist[3].price)
+			   				   $('#title1').html(carlist[3].title1)
+			   				   $('#title2').html(carlist[3].title2)
+			   				   $('#title3').html(carlist[3].title3)
+			   				   $('#title4').html(carlist[3].title4)
+			   }
+			   )
+			   $('#car5').hover(
+			   function(){
+			   				   $('.carimg').attr('src',carlist[4].img)
+			   				   $('.card-title').html(carlist[4].name)
+			   				   $('.card-text').html(carlist[4].price)
+			   				   $('#title1').html(carlist[4].title1)
+			   				   $('#title2').html(carlist[4].title2)
+			   				   $('#title3').html(carlist[4].title3)
+			   				   $('#title4').html(carlist[4].title4)
+			   }
+			   )
+			   $('#car6').hover(
+			   function(){
+			   				   $('.carimg').attr('src',carlist[5].img)
+			   				   $('.card-title').html(carlist[5].name)
+			   				   $('.card-text').html(carlist[5].price)
+			   				   $('#title1').html(carlist[5].title1)
+			   				   $('#title2').html(carlist[5].title2)
+			   				   $('#title3').html(carlist[5].title3)
+			   				   $('#title4').html(carlist[5].title4)
+			   }
+			   )
+			   $('#car7').hover(
+			   function(){
+			   				   $('.carimg').attr('src',carlist[6].img)
+			   				   $('.card-title').html(carlist[6].name)
+			   				   $('.card-text').html(carlist[6].price)
+			   				   $('#title1').html(carlist[6].title1)
+			   				   $('#title2').html(carlist[6].title2)
+			   				   $('#title3').html(carlist[6].title3)
+			   				   $('#title4').html(carlist[6].title4)
+			   }
+			   )
+			   $('#car8').hover(
+			   function(){
+			   				   $('.carimg').attr('src',carlist[7].img)
+			   				   $('.card-title').html(carlist[7].name)
+			   				   $('.card-text').html(carlist[7].price)
+			   				   $('#title1').html(carlist[7].title1)
+			   				   $('#title2').html(carlist[7].title2)
+			   				   $('#title3').html(carlist[7].title3)
+			   				   $('#title4').html(carlist[7].title4)
+			   }
+			   )
+			   
+			   $('#tjhcar1').click(
+				   function(){
+					   $('#tjhh').css("color",'#007bff')
+					   $('#tjhm').css("color",'#000000')
+				   }
+			   )
+			   $('#tjcar2').click(
+			   		function(){
+						$('#tjhh').css("color",'#000000')
+			   			$('#tjhm').css("color",'#007bff')
+			   		}
+			   )
+			});
+		</script>
+	</head>
+	<body>
+		<script src="./velocity/velocity.min.js"></script>
+		<div class="d-flex align-items-center flex-xl-column justify-content-between nav-bg pb-5">
+			<ul class="nav justify-content-center my-nav">
+		
+				<a href="index.html"><img src="./img/logo.png" class="my-logo-img"></a>
+				<li class="nav-item "><a href="汽车广场.html" class=" nav-link">车型广场</a></li>
+				<li class=" nav-item "><a href="#" class=" nav-link  ">品牌天地</a></li>
+				<li class="nav-item "><a href="用户服务.html" class=" nav-link  ">售后服务</a></li>
+				<li class=" nav-item "><a href="signin.html" class=" nav-link  "><i class="fa fa-user fa-lg"" aria-hidden=" true"></i></a></li>
+				<li class="nav-item "><a href="#" class=" nav-link  "><i class="fa fa-search fa-lg"" aria-hidden=" true"></i></a></li>
+		
+			</ul>
+			<div class="d-flex align-items-center  justify-content-center"><img src="img/logo-signal.png" id="logo"><img id="word"
+				 src="img/word.png"></div>		
+		</div>
+			<ul class="nav  my-choose" style="height: 80px;">
+			  <li  class="nav-item active" style="margin-left: 8%;">
+			    <h2 data-toggle="tab" data-target="#Individual" class="nav-link " href="#">轿车</h2>
+			  </li>
+			  <li  class="nav-item">
+			    <h2 data-toggle="tab" data-target="#Do_ment" class="nav-link" href="#">SUV</h2>
+			  </li>
+			  <li  class="nav-item">
+			    <h2 data-toggle="tab" data-target="#Administration" class="nav-link" href="#">轿跑车&敞篷跑车</h2>
+			  </li>
+			  <div class="d-flex flex-xl-row align-items-center" style="margin-left: 450px;">
+			  	<div style="width: 3px; height: 50px; border-left: #FFFFFF 3px solid; "></div>
+				<h5 style="margin-left: 100px;color: #FFFFFF;">车型介绍</h5>
+			  </div>
+			</ul>
+			<div class="d-flex flex-xl-row">
+				<div  class="tab-content tabBar d-flex flex-xl-row justify-content-center" style="width: 100%;">
+					<div class="tab-pane in active" id="Individual" style="transition: 1s;">
+							<div class="bt1" style="">
+								<h3>轿车</h3>
+								<hr style="border:4px solid #987cb9" width="5%" color="#987cb9" align="left">
+							</div>
+							<div class="d-flex flex-xl-column">
+								<div class="d-flex flex-xl-row justify-content-center align-items-center" style="margin-top: 3%;">
+									<div class="d-flex flex-xl-column mx-3 touch align-items-center" style="width: 10rem;height: 10rem;" id="car1">
+										<a href="car.html"><img src="img/car1.jpg" class="card-img-top my-shadow"></a>
+										<h5 style="height: 40px;">长轴距A级轿车</h5>
+										<h6>¥21.18万起</h6>
+									</div >
+									<div class="d-flex flex-xl-column mx-3 touch align-items-center" style="width: 10rem;height: 10rem;" id="car2">
+										<img src="img/car2.jpg" class="card-img-top my-shadow">
+										<h5 style="height: 40px;">A级掀背车</h5>
+										<h6>¥23.28万起</h6>
+									</div>
+									<div class="d-flex flex-xl-column mx-3 touch align-items-center" style="width: 10rem;height: 10rem;" id="car3">
+										<img src="img/car3.jpg" class="card-img-top my-shadow">
+										<h5 style="height: 40px;">长轴距C级运动轿车</h5>
+										<h6>¥30.78万起</h6>
+									</div>
+									<div class="d-flex flex-xl-column mx-3 touch align-items-center" style="width: 10rem;height: 10rem;" id="car4">
+										<img src="img/car4.jpg" class="card-img-top my-shadow">
+										<h5 style="height: 40px;">B级运动旅行车</h5>
+										<h6>¥23.98万起</h6>
+									</div>
+								</div>
+								<div class="d-flex flex-xl-row justify-content-center align-items-center" style="margin-top: 3%;" id="car5">
+									<div class="mx-3 touch" style="width: 10rem;height: 10rem;">
+										<img src="img/car5.jpg" class="card-img-top my-shadow">
+										<h5 style="height: 40px;">长轴距C级轿车</h5>
+										<h6>¥31.98万起</h6>
+									</div >
+									<div class="mx-3 touch" style="width: 10rem;height: 10rem;" id="car6">
+										<img src="img/car6.jpg" class="card-img-top my-shadow">
+										<h5 style="height: 40px;">标准轴距C级车运动版</h5>
+										<h6>¥31.88万起</h6>
+									</div>
+									<div class="mx-3 touch" style="width: 10rem;height: 10rem;" id="car7">
+										<img src="img/car7.jpg" class="card-img-top my-shadow">
+										<h5 style="height: 40px;">C级旅行轿车</h5>
+										<h6>¥36.08万起</h6>
+									</div>
+									<div class="mx-3 touch" style="width: 10rem;height: 10rem;" id="car8">
+										<img src="img/car8.jpg" class="card-img-top my-shadow">
+										<h5 style="height: 40px;">梅赛德斯-AMG C63</h5>
+										<h6>¥92.28万起</h6>
+									</div>
+								</div>
+							</div>				
+					</div>
+					<div class="tab-pane fade" style="transition: 1s;" id="Do_ment">
+						<div class="bt1" style="">
+							<h3>SUV</h3>
+							<hr style="border:4px solid #987cb9" width="5%" color="#987cb9" align="left">
+						</div>
+						<div class="d-flex flex-xl-column">
+							<div class="d-flex flex-xl-row justify-content-center align-items-center" style="margin-top: 3%;">
+								<div class="d-flex flex-xl-column mx-3 touch align-items-center" style="width: 10rem;height: 10rem;">
+									<img src="img/car1.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">全新GLA SUV</h5>
+									<h6>¥27.68万起</h6>
+								</div >
+								<div class="d-flex flex-xl-column mx-3 touch align-items-center" style="width: 10rem;height: 10rem;">
+									<img src="img/car2.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">GLB SUV</h5>
+									<h6>¥29.28万起</h6>
+								</div>
+								<div class="d-flex flex-xl-column mx-3 touch align-items-center" style="width: 10rem;height: 10rem;">
+									<img src="img/car3.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">长轴距GLC SUV</h5>
+									<h6>¥39.78万起</h6>
+								</div>
+								<div class="d-flex flex-xl-column mx-3 touch align-items-center" style="width: 10rem;height: 10rem;">
+									<img src="img/car4.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">GLC轿跑SUV</h5>
+									<h6>¥46.08万起</h6>
+								</div>
+							</div>
+							<div class="d-flex flex-xl-row align-items-center" style="margin-top: 3%;">
+								<div class="mx-3 touch" style="width: 10rem;height: 10rem;">
+									<img src="img/car5.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">AMG GLC434 MATIC</h5>
+									<h6>¥65.88万起</h6>
+								</div >
+								<div class="mx-3 touch" style="width: 10rem;height: 10rem;">
+									<img src="img/car6.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">AMG GLC434 MATIC轿跑SUV</h5>
+									<h6>¥68.68万起</h6>
+								</div>
+								<div class="mx-3 touch" style="width: 10rem;height: 10rem;">
+									<img src="img/car7.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">GLE SUV</h5>
+									<h6>¥69.98万起</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" style="transition: 1s;" id="Administration">
+						<div class="bt1" style="">
+							<h3>轿跑车&敞篷跑车</h3>
+							<hr style="border:4px solid #987cb9" width="5%" color="#987cb9" align="left">
+						</div>
+						<div class="d-flex flex-xl-column">
+							<div class="d-flex flex-xl-row justify-content-center align-items-center" style="margin-top: 3%;">
+								<div class="d-flex flex-xl-column mx-3 touch align-items-center" style="width: 10rem;height: 10rem;">
+									<img src="img/car1.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">新一代E级跑车</h5>
+									<h6>¥52.48万起</h6>
+								</div >
+								<div class="d-flex flex-xl-column mx-3 touch align-items-center" style="width: 10rem;height: 10rem;">
+									<img src="img/car2.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">新一代E级敞篷轿跑车</h5>
+									<h6>¥63.68万起</h6>
+								</div>
+								<div class="d-flex flex-xl-column mx-3 touch align-items-center" style="width: 10rem;height: 10rem;">
+									<img src="img/car3.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">S级轿跑车</h5>
+									<h6>¥121.88万起</h6>
+								</div>
+								<div class="d-flex flex-xl-column mx-3 touch align-items-center" style="width: 10rem;height: 10rem;">
+									<img src="img/car4.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">AMG C63轿跑车</h5>
+									<h6>¥93.58万起</h6>
+								</div>
+							</div>
+							<div class="d-flex flex-xl-row align-items-center" style="margin-top: 3%;">
+								<div class="mx-3 touch" style="width: 10rem;height: 10rem;">
+									<img src="img/car5.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">全新GLA四门轿跑车</h5>
+									<h6>¥29.98万起</h6>
+								</div >
+								<div class="mx-3 touch" style="width: 10rem;height: 10rem;">
+									<img src="img/car6.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">全新GLA五门猎跑车</h5>
+									<h6>¥29.98万起</h6>
+								</div>
+								<div class="mx-3 touch" style="width: 10rem;height: 10rem;">
+									<img src="img/car7.jpg" class="card-img-top my-shadow">
+									<h5 style="height: 40px;">C级轿跑车</h5>
+									<h6>¥34.68万起</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			   	<div id="" style="width: 45%;height: 600px;" class="d-flex align-items-center">
+			   		<div class="card info-wrap" style="width: 20rem;height: 80%;">
+			   		  <img class="card-img-top carimg" src="./img/2-1.jpg" alt="Card image cap">
+			   		  <div class="card-body d-flex flex-xl-column justify-content-center align-items-center">
+			   		    <h4 class="card-title">长轴距A级轿车</h4>
+			   		    <p class="card-text">厂商零售价¥23.28万起/月供¥476起</p>
+						<hr style="border:1px solid #987cb9" width="90%" color="#987cb9" align="center">
+						<div class="d-flex flex-xl-column" style="color: #00AAD2;">
+							<p id="title1">个性凌厉的外观</p>
+							<p id="title2">全景式滑动天窗</p>
+							<p id="title3">双10.25英寸中央触摸显示屏</p>
+							<p id="title4">Burmester®环绕立体声音响系统</p>
+						</div>			
+			   		  </div>
+			   		</div>
+			   	</div>
+			</div>
+			<div class="d-flex align-items-center flex-xl-column justify-content-center " id="h3-1" style="margin-top: -3%;">
+				<header class="d-flex flex-row justify-content-center align-items-center mt-5 mb-3 col-9">
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+					<h1>车辆资讯</h1>
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+				</header>
+			</div>
+			<div class="col-lg-12 d-flex align-items-center flex-xl-column justify-content-center" >
+	               <div class="bd-example col-lg-10">
+	                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+	                   <ol class="carousel-indicators">
+	                     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+	                     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+	                     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+	                   </ol>
+	                   <div class="carousel-inner">
+	                     <div class="carousel-item active">
+	                       <img src="./img/zx-01.jpg" class="d-block w-100" alt="...">
+	                       <div class="carousel-caption d-none d-md-block">
+	                         <h2>星耀新途 聚势前行</h2>
+	                         <p>梅赛德斯-奔驰夺目亮相2019深港澳国际车展 全新腾势概念车Concept X全球首发</p>
+	                       </div>
+	                     </div>
+	                     <div class="carousel-item">
+	                       <img src="./img/zx-02.jpg" class="d-block w-100" alt="...">
+	                       <div class="carousel-caption d-none d-md-block">
+	                         <h2>山水人合 巾帼梦启</h2>
+	                         <p>梅赛德斯-奔驰星愿基金举办世界遗产地可持续生计创意体验坊</p>
+	                       </div>
+	                     </div>
+	                     <div class="carousel-item">
+	                       <img src="./img/zx-03.jpg" class="d-block w-100" alt="...">
+	                       <div class="carousel-caption d-none d-md-block">
+	                         <h2>全新梅赛德斯-奔驰GLS SUV全球首秀</h2>
+	                         <p>4月17日，全新梅赛德斯-奔驰GLS SUV在纽约国际车展全球首发，开启了全新旅程。</p>
+	                       </div>
+	                     </div>
+	                   </div>
+	                   <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+	                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	                     <span class="sr-only">Previous</span>
+	                   </a>
+	                   <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+	                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	                     <span class="sr-only">Next</span>
+	                   </a>
+	                 </div>
+	               </div>
+			</div>
+			<div class="d-flex align-items-center flex-xl-column justify-content-center " id="h3-1">
+				<header class="d-flex flex-row justify-content-center align-items-center mt-5 mb-3 col-9">
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+					<h1>个性化推荐</h1>
+					<HR align="center" width="300" color="#9d9d9d" SIZE="1">
+				</header>
+			</div>
+			<div class="col-lg-12 d-flex align-items-center flex-xl-column justify-content-center">
+				<div class="d-flex flex-xl-row justify-content-start recommend" style="border: 1px solid #333333;">
+				       <div class="d-flex flex-xl-column align-items-center recommendlist">
+				       	  <h4 style="margin-top: 5%;">请选择以下选项来为您推荐车辆</h4>
+						  <div class="d-flex flex-xl-row" style="width: 100%;margin-top: 5%;">
+						  	 <div class=" form-group col-md-6" style="margin-left: 5%;">
+						  	 	<h5>汽车种类</h5>
+								<select class="form-control col-md-9">
+								  <option></option>
+								  <option>长轴距轿车</option>
+								  <option>SUV</option>
+								  <option>轿跑车&敞篷跑车</option>
+								  <option>MPV</option>
+								  <option>纯电动车</option>
+								</select>
+						  	 </div>
+							 <div class="form-group col-md-6">
+							 	<h5>汽车排量</h5>
+							 	<select class="form-control col-md-9">
+							 		<option></option>
+									<option>小型排量</option>
+									<option>中型排量</option>
+									<option>大型排量</option>
+							 	</select>
+							 </div>
+						  </div>
+						  <div class="d-flex flex-xl-row" style="width: 100%;margin-top: 5%;">
+						  	 <div class="form-group col-md-6" style="margin-left: 5%;">
+						  	 	<h5>颜色选择</h5>
+						  				<select class="form-control col-md-9">
+						  					<option></option>
+											<option>银灰色</option>
+											<option>红色</option>
+											<option>蓝色</option>
+											<option>黑色</option>
+											<option>黄黑色</option>
+						  				</select>
+						  	 </div>
+						  			<div class="form-group col-md-6" >
+						  				<h5>车型类型</h5>
+						  					<select class="form-control col-md-9">
+						  						<option></option>
+												<option>A型</option>
+												<option>B型</option>
+												<option>C型</option>
+												<option>D型</option>
+						  					</select>
+						  			</div>
+						  </div>
+						  <div class="d-flex flex-xl-row" style="width: 100%;margin-top: 5%;">
+							  <div class="form-group" style="margin-left: 8%;">
+							  	   <h5>价格区间</h5>
+							  		<div class="d-flex flex-xl-row">
+							  			<input class="price" style="height: 40px;border-radius: 15px;" type="text" name="" id="" placeholder="最低价"/>
+							  			<hr align="center" width="60px" color="#9d9d9d" SIZE="1">
+							  			<input class="price" style="height: 40px;border-radius: 15px;" type="text" name="" id="" placeholder="最高价"/>
+							  		</div>
+							  </div>
+						  </div>						  
+						  <div class="d-flex flex-xl-row justify-content-center align-items-center" style="width: 100%; height: 25%;">
+						  	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">生成推荐车辆</button>
+							  <div class="modal fade" id="myModal">
+							     <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+							       <div class="modal-content">
+							    
+							         <!-- 模态框头部 -->
+							         <div class="modal-header">
+							           <h4 class="modal-title">推荐车辆</h4>
+							           <button type="button" class="close" data-dismiss="modal">&times;</button>
+							         </div>
+							    
+							         <!-- 模态框主体 -->
+							         <div class="modal-body">
+							           <div class="d-flex flex-xl-column" style="width: 100%;">
+							           	   <ul class="nav my-choose d-flex flex-xl-row justify-content-center">
+							           	     <li  class="nav-item active d-flex flex-xl-column align-items-center"  style="width: 50%; background-color: white;">
+							           	        <img src="./img/car1.jpg" data-toggle="tab" data-target="#list1" class="nav-link " href="#" id="tjhcar1">
+												<h3 id="tjhh">全新腾势X纯电SUV</h3>
+							           	     </li>
+							           	     <li  class="nav-item d-flex flex-xl-column align-items-center" style="width: 50%;background-color: white;">
+							           	       <img src="./img/car2.jpg" data-toggle="tab" data-target="#list2" class="nav-link" href="#" id="tjcar2">
+											   <h3 id="tjhm">全新腾势X插电式混动SUV</h3>
+							           	     </li>
+							           	   </ul>
+										   	<div  class="tab-content tabBar" style="width: 100%;">
+										   		<div class="tab-pane in active" id="list1">
+													<table class="table">
+													  <thead>
+													    <tr>
+													      <th scope="col">配置功能描述</th>
+													      <th scope="col">启航版</th>
+													      <th scope="col">经典版</th>
+													      <th scope="col">运动版</th>
+													    </tr>
+													  </thead>
+													  <tbody>
+													    <tr>
+													      <th scope="row">建议零售价</th>
+													      <td>¥319,800</td>
+													      <td>¥325,800</td>
+													      <td>¥349,800</td>
+													    </tr>
+													    <tr>
+													      <th scope="row">驱动类型</th>
+													      <td>前轮驱动</td>
+													      <td>前轮驱动</td>
+													      <td>智能电四驱</td>
+													    </tr>
+													    <tr>
+													      <th scope="row">最大功率</th>
+													      <td>180</td>
+													      <td>180</td>
+													      <td>360</td>
+													    </tr>
+													  </tbody>
+													</table>
+											    </div>
+												<div class="tab-pane" id="list2">
+													<table class="table">
+													  <thead>
+													    <tr>
+													      <th scope="col">配置功能描述</th>
+													      <th scope="col">启航版</th>
+													      <th scope="col">经典版</th>
+													      <th scope="col">运动版</th>
+													    </tr>
+													  </thead>
+													  <tbody>
+													    <tr>
+													      <th scope="row">建议零售价</th>
+													      <td>¥289,800</td>
+													      <td>¥299,800</td>
+													      <td>¥306,800</td>
+													    </tr>
+													    <tr>
+													      <th scope="row">驱动类型</th>
+													      <td>智能电四驱</td>
+													      <td>智能电四驱</td>
+													      <td>智能电四驱</td>
+													    </tr>
+													    <tr>
+													      <th scope="row">最大功率</th>
+													      <td>431</td>
+													      <td>431</td>
+													      <td>431</td>
+													    </tr>
+													  </tbody>
+													</table>
+												</div>
+											</div>
+							           </div>
+							         </div>
+							    
+							         <!-- 模态框底部 -->
+							         <div class="modal-footer">
+							           <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+							         </div>
+							    
+							       </div>
+							     </div>
+							   </div>
+						  </div>
+				       </div>
+					   <img src="img/timg.jpg" style="width: 40%;height: 100%;">			  
+				</div>
+			</div>
+             <div class="d-flex flex-xl-row justify-content-center align-items-end">
+             	<div class="footleft">
+             	
+             		<div  class="d-flex align-items-start flex-xl-row justify-content-around my-2" style="width: 100%;">
+             			<div>
+             				<h5 class="mx-3">经销商招募</h5>
+             				<div class="nav-link">TEL:123-123-12345</div>
+             				<div class="nav-link">招募官网</div>
+             			</div>
+             			<div>
+             				<h5 class="mx-3">APP下载</h5>
+             				<div class="d-flex align-items-center flex-xl-row justify-content-center nav-link" >
+             					<i class="fa fa-android mr-1" aria-hidden="true"></i>
+             					<div>安卓APP</div>
+             					
+             				</div>
+             				<div class="d-flex align-items-center flex-xl-row justify-content-center nav-link" >
+             					<i class="fa fa-apple mr-1" aria-hidden="true"></i>
+             					<div>IOS-APP</div>
+             					
+             				</div>
+             			</div>
+             			<div>
+             				<h5 class="mx-3">经销商招募</h5>
+             				<div class="d-flex align-items-center flex-xl-row justify-content-center nav-link " id="wechat">
+             					<i class="fa fa-wechat mr-1" aria-hidden="true"></i>
+             					<div>微信小程序</div>
+             					
+             				</div>
+             				<div class="d-flex align-items-center flex-xl-row justify-content-start nav-link" id="weibo">
+             					<i class="fa fa-weibo mr-1" aria-hidden="true"></i>
+             					<div>微博账号</div>
+             					
+             				</div>
+             				<div class="d-flex align-items-center flex-xl-row justify-content-start nav-link" >
+             					<i class="fa fa-facebook-official mr-1" aria-hidden="true"></i>
+             					<div>FaceBook</div>
+             					
+             				</div>
+             			</div>
+             			<div>
+             				<h5 class="mx-3">热线电话</h5>
+             				<div class="nav-link">TEL:123-123-12345</div>
+             				<div class="nav-link">TEL:222-222-12124</div>
+             			</div>
+             		</div>
+             		<div class="d-flex align-items-center flex-xl-row justify-content-center" style="width: 100%;">
+             			<div class=" nav-link">网站地图</div>
+             			<div class=" nav-link">隐私政策</div>
+             			<div class=" nav-link">用户协议</div>
+             			<div class=" nav-link">法律声明</div>
+             			<div class=" nav-link">投诉电话</div>
+             
+             		</div>
+             		<div class="d-flex align-items-center flex-xl-row justify-content-center" style="width: 100%;">
+             			<div class=" nav-link">京ICP备09046804号-2</div>
+             			<div class=" nav-link">京公网安备 11010502035702号</div>
+             		</div>
+             	</div>
+             	<div class="footright mt-5">
+             		<div class="align-self-end mx-4 my-3   d-flex flex-xl-column justify-content-center align-items-start footword">
+             
+             			<h3>AMG车主俱乐部</h3>
+             			<div>AMG车主俱乐部是为AMG尊贵车主打造的专属在线社区。<br>
+             				在这里，您可以第一时间了解AMG新车资讯，更可参与AMG车主专属活动，与AMG车主进行畅所欲言地交流。</div>
+             			<div class="mt-5 ml-5" style="font-size: 36px;">立即加入</div>
+             			<HR align="left" color="#9d9d9d" SIZE="1" class="mt-1 underline mx-5">
+             		</div>
+             	</div>
+             </div>
+	</body>
+</html>
+<style type="text/css">
+	input::-ms-input-placeholder{text-align: center;}
+	input::-webkit-input-placeholder{text-align: center;}
+	#show-car{
+		width: 100%;
+	}
+	[id^="show"]{
+		opacity: 0;
+	}
+	#wechat:hover{
+		color: springgreen;
+	}
+	
+	#weibo:hover{
+		color: yellow;
+	}
+	
+	
+	.footword {
+		width: 40%;
+		height: 80%;
+	}
+	
+	.footword:hover hr {
+		transition: 1s;
+		width: 140px;
+	}
+	
+	
+	.footleft {
+		display: flex;
+		flex-flow: column;
+		color: #FFFFFF;
+		justify-content: center;
+		align-items: flex-start;
+		width: 55%;
+		height: 320px;
+		background-color: darkgray;
+	}
+	
+	
+	.footright {
+		display: flex;
+		flex-flow: column;
+		color: #FFFFFF;
+		justify-content: center;
+		align-items: flex-start;
+		transition: 1s;
+		width: 55%;
+		height: 400px;
+		background: url(img/fan.jpg);
+		background-size: cover;
+		box-shadow: #9D9D9D -10px -10px 10px;
+		display: ;
+	}
+	
+	.footright:hover {
+	
+		transition: 1s;
+		width: 55%;
+		height: 400px;
+		background: url(img/fan.jpg);
+		background-size: cover;
+		box-shadow: #eeeeee -8px -8px 10px;
+	}
+	.price{
+		width: 70%;
+	}
+	.recommendlist{
+		width: 60%;
+		height: 100%;
+	}
+	.recommend{
+		width: 70%;
+		height: 500px;
+	}
+	.info-wrap{
+		    box-shadow: 0 0.05rem 1rem 0 rgba(0, 0, 0, 0.4);
+		    background-color: #ffffff;
+		    z-index: 3;
+	}
+	.tabBar{
+		width: 80%;
+	}
+	.carlist{
+		width: 60%;
+		background-color: #EEEEEE;
+	}
+	.individual{
+		width: 100%;
+		height: 60%;
+		background-color: #00BFFF;
+	}
+	.bt1{		
+		display: flex;
+		flex-direction: column;
+		margin-top: 2%;
+		
+	}
+	.jslist{
+		width: 65%;
+		height: 100%;
+		
+	}
+	.my-choose{
+		width: 100%;
+		background-color: #333333;
+		flex-flow: row;
+	    align-items: center;
+	}
+	.my-choose-item{
+		color: #FFFFFF;
+	}
+	.nav-bg {
+		background-image: url(img/carlist1.jpg);
+		height: 750px;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+		
+	.my-logo-img {
+		height: 70px;
+	}
+	
+	.my-nav {
+		width: 100%;
+		height: 90px;
+		display: flex;
+		flex-flow: row;
+		align-items: flex-end;
+		justify-content: center;
+	
+	}
+	
+	
+	.nav-link {
+		color: white;
+	}
+	
+	.nav-link:hover {
+		color: deepskyblue;
+	}
+</style>
