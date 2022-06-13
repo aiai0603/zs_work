@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		table{
+			border: 1px solid #e9e9e9;
+			border-collapse:collapse;
+			border-spacing: 0;
+			empty-cells: show;
+			width: 600px;
+			
+		}
+		th,td{
+			padding: 8px 16px;
+			border: 1px solid #e9e9e9;
+			text-align: left;
+			text-align: center;
+		}
+		th{
+			background: #f7f7f7;
+			color: #5c6b77;
+			font-weight: 600;
+			white-space: nowrap;
+		}
+		#book{
+			width: 600px;
+			height: 130px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-flow: column;
+		}
+		#book>div{
+			background: #f7f7f7;
+			color: #5c6b77;
+			font-weight: 600;
+			white-space: nowrap;
+			width: 598px;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-flow: row;
+			
+			border: 1px solid #e9e9e9;
+			
+		
+			
+		}
+		label,button{
+			margin: 3px;
+		}
+		#total{
+			background: #f7f7f7;
+			
+			white-space: nowrap;
+			width: 598px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-flow: row;
+			
+			border: 1px solid #e9e9e9;
+			
+		}
+	</style>
+	<body>
+		<div id="app">
+			<div  id="book">
+				<h1>图书管理</h1>
+				<div>
+					<label for="id">
+						编号：
+					</label>
+					<input type="text" id="id"  v-model="id" :disabled="flag" v-focus/>
+					<label for="name">
+						名字：
+					</label>
+					<input type="text" id="name" v-model="name" />
+					<button type="button" @click="handle" :disabled="suflag">提交</button>
+					
+				</div>
+				
+				
+			</div>
+			<div id="total">
+				<span>
+					总数：
+				</span>
+				<span>
+					{{total}}
+				</span>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>编号</th>
+						<th>名称</th>
+						<th>时间</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr :key='item.id' v-for='item in books'>
+						<td>{{item.id}}</td>
+						<td>{{item.name}}</td>
+						<td>{{item.date | formatDate}}</td>
+						<td> 
+							<a href="" @click.prevent='toedit(item.id)'  >修改</a>
+							<span>|</span>
+							<a href="" @click.prevent="todelete(item.id)">删除</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</div>
+		
+		
+		
+		<script type="text/javascript" src="vue.js">
+			
+		</script>
+		<script type="text/javascript">
+			Vue.directive('focus',{
+				inserted:function(el){
+					el.focus();
+				}
+			});
+			var padDate = function(value){
+				return value <10?'0'+value:value;
+			}
+			var vm =new Vue({
+				el:'#app',
+				
+				data:{
+					id:'',
+					name:'',
+					flag:false,
+					suflag:false,
+					books:[
+						{
+							id:1,
+							name:'book1',
+							date: new Date()
+						},
+						{
+							id:2,
+							name:'book2',
+							date: new Date()
+						},
+						{
+							id:3,
+							name:'book3',
+							date: new Date()
+						}
+					]
+				},
+				methods:{
+					handle:function(){
+						if(this.flag)
+						{
+							this.books.some((item) => {
+								if(item.id==this.id){
+									item.name=this.name;
+									item.date=new Date();
+									return true;
+								}
+							});
+							this.flag=false;
+						}
+						else{
+						var book={};
+						book.name=this.name;
+						book.id=this.id;
+						book.date=new Date();
+						this.books.push(book);
+						
+						}
+						this.id='';
+						this.name='';
+						
+						
+					},
+					toedit:function(id){
+						
+						this.flag=true;
+						var book=this.books.filter(function(item){
+							return item.id==id;
+						});
+						this.id=book[0].id;
+						this.name=book[0].name;
+						
+						
+						
+						
+					},
+					todelete:function(id){
+						var index = this.books.findIndex(function(item){
+							return item.id==id;
+						});
+						this.books.splice(index,1);
+					}
+				},
+				computed:{
+					total:function(){
+						return this.books.length;
+					}
+				},
+				filters:
+				{
+					formatDate:function(value)
+					{
+					var date=new Date(value);
+					var year=date.getFullYear();
+					var month=padDate(date.getUTCMonth()+1);
+					var day=padDate(date.getDate());
+					var weeks=['日','一','二','三','四','五','六'];
+					var week='星期'+weeks[date.getDay()];
+					var hours=padDate(date.getHours());
+					var minutes=padDate(date.getMinutes());
+					var seconds=padDate(date.getSeconds());
+					return year+'年'+month+'月'+day+'日'+week+'   '+hours+':'+minutes+':'+seconds;
+				}
+				},
+				watch:{
+					name:function(val){
+						var flag=this.books.some(function(item){
+							return item.name == val;
+						});
+						if(flag){
+							this.suflag=true;
+						}
+						else{
+							this.suflag=false;
+						}
+					}
+				}
+			})
+			
+		</script>
+	</body>
+</html>

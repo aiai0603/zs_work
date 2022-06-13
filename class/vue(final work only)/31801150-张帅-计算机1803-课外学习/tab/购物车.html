@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+			
+		.contain{
+			width: 300px;
+			
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		.title{
+			width: 400px;
+			height: 50px;
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 20px;
+			background-color: aquamarine;
+		}
+		.total{
+			width: 400px;
+			height: 50px;
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 18px;
+			background-color: skyblue;
+		}
+		.total>button{
+			margin-left: 20px;
+		}
+		.item{
+			width: 400px;
+			height: 50px;
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			
+			background-color: papayawhip;
+		}
+		.name{
+			width: 200px;
+			height: 50px;
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 18px;
+			
+		}
+		#change{
+			width: 150px;
+			height: 50px;
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 18px;
+			
+		}
+		.num{
+			width: 25px;
+			
+		}
+		#change a{
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 18px;
+			background-color: #E9E9E9;
+			width: 20px;
+			height: 20px;
+			margin: 10px;
+			border: 1px solid;
+			
+		}
+		.del{
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 24px;
+			font-weight: 1000;
+			color: red;
+		}
+	</style>
+	<body>
+		<div id="app">
+			<div class="contain">
+				
+					
+				<my-cart></my-cart>
+				
+			</div>
+			
+		</div>
+		
+	<script type="text/javascript" src="vue.js">
+		
+	</script>
+	<script type="text/javascript">
+		var CartTitle={
+			props:['uname'],
+			template:`
+				<div class="title">{{uname}}的商品</div>
+			`
+			
+		}
+		var CartList={
+			props:['list'],
+			template:`
+			<div>
+			<div v-for='item in list' class="item" :key="item.id" >
+				<div class="name">{{item.name}}</div>
+					<div id="change">
+						<a @click.prevent='add(item.id)'>+</a>
+						<input type="text" class="num" :value='item.count' @blur='changenum(item.id,$event)'/>
+						<a @click.prevent='sub(item.id)'>-</a>
+					</div>
+				<div class="del" @click="del">x</div>
+			</div>
+			</div>
+			`,
+			methods:{
+				changenum:function(id,event){
+					this.$emit('change-num',{
+						id: id,
+						num: event.target.value,
+						type:'change'
+					});
+				},
+				del:function(){
+					this.$emit('cart-del','id');
+				},	
+				sub:function(id){
+					this.$emit('change-num',{
+						id: id,
+						type:'sub'
+					});
+				},
+				add:function(id){
+					this.$emit('change-num',{
+						id: id,
+						type:'add'
+					});
+				}
+			}
+		}
+		var CartTotal={
+			props:['list'],
+			template:`
+			<div class="total">
+			<span>总价:{{total}}</span>
+			<button>结算</button>
+			</div>
+			`,
+			computed:{
+				total:function(){
+					var t=0;
+					this.list.forEach(item=>{
+						t+=item.price*item.count;
+					});
+					return t;
+				}
+			}
+		} 
+		Vue.component('my-cart',{
+			template:`
+			<div class="cart">
+				<cart-title :uname="uname"></cart-title>
+				<cart-list :list="list" @change-num='changenum($event)'  @cart-del='delcart($event)' ></cart-list>
+				<cart-total :list="list"></cart-total>
+			</div>`,
+			data:function(){
+				return{
+					uname:'zs',
+					list:[{
+								id:1,
+								name: 'iPhone 7',
+								price: 6188,
+								count: 1,
+								
+							},
+							{
+								id:2,
+								name: 'iPad Pro',
+								price: 5888,
+								count: 1,
+								
+							},
+							{
+								id:3,
+								name: 'MacBook Pro',
+								price: 21488,
+								count: 1,
+								
+							}
+						],
+				}
+			},
+			components:{
+				'cart-title':CartTitle,
+				'cart-list':CartList,
+				'cart-total':CartTotal
+			},
+			methods:{
+				delcart:function(id){
+					var index=this.list.findIndex(item=>{
+						return item.id==id;
+					});
+					this.list.splice(index,1);
+				},
+				changenum:function(val){
+					if(val.type=='change')
+					{
+						this.list.some(item=>{
+							if(item.id==val.id){
+								item.count = val.num;
+								return true;
+							}
+						});
+					}
+					else if(val.type=='sub')
+					{
+						this.list.some(item=>{
+							if(item.id==val.id){
+								item.count--;
+								return true;
+							}
+						});
+					}
+					else if(val.type=='add')
+					{
+						this.list.some(item=>{
+							if(item.id==val.id){
+								item.count++;
+								return true;
+							}
+						});
+					}
+					
+				}
+			}
+		})
+		
+		var vm=new Vue({
+			el:'#app',
+			data:{
+				
+			}
+		})
+	</script>
+	</body>
+</html>

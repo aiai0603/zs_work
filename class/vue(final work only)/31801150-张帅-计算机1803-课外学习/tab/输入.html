@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#app{
+			display: flex;
+			flex-flow: column;
+			height: 400px;
+		}
+		div{
+			height: 70px;
+		}
+	</style>
+	<body>
+		<div id="app">
+			<form >
+				
+			
+			<div >
+				<span>
+					请输入：
+				</span>
+				<span >
+					<input type="text" v-model="namea"/>
+				</span>
+			</div>
+			<div>
+				<span>
+					性别：
+				</span>
+				<span >
+					<input type="radio" id="man" value="1" v-model="gender"/>
+					<label for="man">男</label>
+					<input type="radio" id="woman" value="2" v-model="gender"/>
+					<label for="woman">女</label>
+					
+				</span>
+			</div>
+			<div>
+				<span>
+					爱好：
+				</span>
+				<span >
+					<input type="checkbox" id="c" value="1" v-model="hobby"/>
+					<label for="c">唱歌</label>
+					<input type="checkbox" id="t" value="2" v-model="hobby"/>
+					<label for="t">跳舞</label>
+					<input type="checkbox" id="rap" value="3" v-model="hobby"/>
+					<label for="rap">rap</label>
+					
+				</span>
+			</div>
+			<div>
+				<span>
+					工作：
+				</span>
+				
+					<select v-model="job">
+						<option value="0">请选择</option>
+						<option value="1">医生</option>
+						<option value="2">公务员</option>
+						<option value="3">国企</option>
+						<option value="4">教师</option>
+						<option value="5">私企</option>
+						<option value="6">其他</option>
+						
+					</select>
+					
+				
+			</div>
+			<div >
+				<span>
+					介绍：
+				</span>
+				<textarea v-model="des">
+					
+				</textarea>
+			</div>
+			<div>
+				<input type="submit" value="提交" @click.prevent="handle"/>
+			</div>
+			
+		</form>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="vue.js">
+		
+	</script>
+	<script type="text/javascript">
+			var vm=new Vue({
+				el:'#app',
+				data:{
+					namea:'12',
+					gender:1,
+					hobby:[2,3],
+					job:3,
+					des:"2121210"
+				},
+				methods:{
+					handle:function(){
+						console.log(this.namea);
+						console.log(this.gender);
+						console.log(this.hobby);
+						console.log(this.job);
+					}
+				},
+			})
+	</script>
+</html>
