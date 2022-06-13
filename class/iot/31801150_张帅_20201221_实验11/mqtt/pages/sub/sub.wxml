@@ -1,0 +1,19 @@
+<!--pages/receive/receive.wxml-->
+<view class="container">
+ 
+ <view class="input-item"> 
+ <view>topic:  </view>
+<input class="input"  placeholder="请输入主题" 
+ bindinput="TopicInput" value="{{topic}}"/>
+
+</view>
+<button style="margin:20rpx" bindtap="mqttsub" type="{{button_type}}">{{sub_text}}</button>
+<view class="page-content">
+       
+      
+        <view class="sub">
+            <rich-text nodes="{{msg}}" style="height:500rpx;"></rich-text>
+        </view>
+      </view>
+
+</view>

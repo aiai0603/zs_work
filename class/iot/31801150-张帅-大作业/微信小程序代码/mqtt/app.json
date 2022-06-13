@@ -1,0 +1,39 @@
+{
+  "pages":[
+   
+    "pages/connect/connect",
+    "pages/led/led",
+    "pages/send/send",
+    "pages/receive/receive",
+    "pages/change/change",
+    "pages/mine/mine",
+    "pages/history/history"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智能管理系统",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "#0081ff",
+    "list": [{
+      "pagePath":  "pages/receive/receive",
+      "text": "资产信息",
+      "iconPath": "icon/emqx-grey.jpg",
+      "selectedIconPath": "icon/emqx.jpg"
+    },{
+      "pagePath": "pages/change/change",
+      "text": "更改设备",
+      "iconPath": "icon/emqx-grey.jpg",
+      "selectedIconPath": "icon/emqx.jpg"
+    },{
+      "pagePath":  "pages/mine/mine",
+      "text": "我的信息",
+      "iconPath": "icon/emqx-grey.jpg",
+      "selectedIconPath": "icon/emqx.jpg"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

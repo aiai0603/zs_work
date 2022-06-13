@@ -1,0 +1,19 @@
+.input-item{
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 10rpx;
+  color: white;
+}
+
+.input{
+  margin-left: 30rpx;
+  border-bottom: 1rpx solid white;
+  font-size: 30rpx;
+
+}
+
+page{
+  background-color: rgba(0,0,0,0.9);
+}
+
+

@@ -1,0 +1,42 @@
+<view class="menu_box">
+ <text class='menu1 {{menuTapCurrent=="0"?"borders":""}}' data-current="0" catchtap="menuTap">移除</text>
+ <text class='menu2 {{menuTapCurrent=="1"?"borders":""}}' data-current="1" catchtap="menuTap">增加</text>
+</view>
+<view class="tab1" hidden="{{menuTapCurrent!='0'}}">
+   <view wx:for="{{equip}}" class="item">
+      <view class="number">
+          {{item.ename}}
+      </view>
+
+
+      <view wx:if="{{item.state==1}}"  style="color:green;" class="state">
+         在线
+      </view>
+      <view wx:if="{{item.state==0}}"  style="color:grey;" class="state">
+         不在线
+      </view>
+      <view wx:if="{{item.state==2}}"  style="color:yellow;" class="state">
+         环境异常
+      </view>
+      <view  wx:if="{{item.state==3}}" style="color:red;" class="state">
+         移动异常
+      </view>
+
+
+      <view class="button" data-eid="{{item.id}}" bindtap="unmanager">  
+          移除
+      </view>
+   </view>
+</view>
+<view class="tab2" hidden="{{menuTapCurrent!='1'}}">
+
+  <view class="input-item"> 
+    <view class="word">编号:  </view>
+    <input class="input" name="username" placeholder="请输入编号" 
+    bindinput="enameInput" value="{{ename}}" />
+  </view>
+
+  <button style="background:#0081ff;color:white;width:90%" bindtap="sumbit">添加</button>
+ 
+
+</view>

@@ -1,0 +1,75 @@
+.menu_box{
+  display: flex;
+  height: 80rpx;
+ }
+ .number{
+   font-weight: 800;
+ }
+ .state{
+   width: 40%;
+   font-size: 36rpx;
+   font-weight: 600;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+ }
+ .item{
+   padding: 30rpx;
+   border-radius: 30rpx;
+   display: flex;
+   flex-flow: row;
+   justify-content: space-around;
+   align-items: center;
+   background-color: #fff;
+   margin:20rpx;
+   box-shadow: #ccc 0rpx 0rpx 3rpx 3rpx;
+ }
+ .menu1,.menu2{
+  flex: 1;
+  font-size:30rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #fff;
+ }
+ .borders{
+  border-bottom: 4rpx solid #0081ff;
+  color: #0081ff;
+ }
+Page{
+  background-color: #f0f0f0;
+
+}
+
+.button{
+  font-size: 36rpx;
+  border: #0081ff 1rpx solid;
+  color: #0081ff;
+  padding: 10rpx 20rpx;
+  border-radius: 10rpx;
+  font-weight: 800;
+}
+
+.input-item{
+  display: flex;
+  flex-flow: row;
+  font-size: 40rpx;
+  margin: 30rpx;
+  padding: 20rpx ;
+background-color: #fff;
+border-radius: 20rpx;
+
+
+
+}
+.word{
+  padding:0 20rpx;
+  font-weight: 800;
+}
+.input{
+  margin-left: 30rpx;
+ 
+  font-size: 30rpx;
+
+}
+

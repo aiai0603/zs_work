@@ -1,0 +1,27 @@
+/* pages/history/history.wxss */
+/**index.wxss**/
+ec-canvas {
+  width: 100%;
+  height: 120%;
+}
+Page{
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+.box {
+
+  height:500rpx;
+  width: 96%;
+  margin:2%;
+  background-color: #fff;
+ display: flex;
+ flex-flow: column;
+ justify-content: flex-start;
+ align-items: center;
+  padding:30rpx 0;
+  border-radius: 30rpx;
+  box-shadow: #eeeeee 0px 0px 5px 5px;
+  
+  
+  } 

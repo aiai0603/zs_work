@@ -1,0 +1,56 @@
+<!--pages/receive/receive.wxml-->
+<view class="menu_box">
+ <view  wx:for="{{equip}}" class="item" class='menu {{menuTapCurrent==index?"borders":""}}'
+ style="color:{{item.state!=1?'red':''}}" catchtap="menuTap" data-current="{{index}}">
+    {{item.ename}}
+ </view>
+</view>
+
+<view class="title">
+    <view class="title-number">编号：{{equip[menuTapCurrent].ename}}</view>
+   
+   
+        <view class="title-sign" style="background-color:green" wx:if="{{equip[menuTapCurrent].state===1}}"></view>
+        <view style="color:green" class="sign-word" wx:if="{{equip[menuTapCurrent].state===1}}">正常</view>
+
+        <view class="title-sign" style="background-color:grey" wx:if="{{equip[menuTapCurrent].state===0}}"></view>
+        <view style="color:grey" class="sign-word" wx:if="{{equip[menuTapCurrent].state===0}}">断线</view>
+
+
+        <view class="title-sign" style="background-color:yellow" wx:if="{{equip[menuTapCurrent].state===2}}"></view>
+        <view style="color:yellow" class="sign-word" wx:if="{{equip[menuTapCurrent].state===2}}">环境异常</view>
+
+        <view class="title-sign" style="background-color:red" wx:if="{{equip[menuTapCurrent].state===3}}"></view>
+        <view style="color:red" class="sign-word" wx:if="{{equip[menuTapCurrent].state===3}}"> 移动异常</view>
+   
+</view>
+
+
+<view class="warning">
+    <view class="warning-title">
+        <view style="font-weight:600"> 异常情况</view>  <view><switch class="tui-fr" checked="{{equip[menuTapCurrent].deleteflag==0}}" bindchange="changeSwitch"  />{{equip[menuTapCurrent].deleteflag==0?"正在保护":"失去保护"}}</view>
+    </view>
+    <view wx:if="{{warning.length==0}}" class="none-warning"> 暂无异常</view>
+    <view wx:else class="has-warning" > 
+            <view wx:for="{{warning}}" class="has-warning-item">
+                <view>{{item.msg}}</view>
+                <view style="font-size:30rpx">{{item.sendTime}}</view>
+                <view class="deal-button" bindtap="deal" data-id="{{item.id}}">处理</view>
+            </view>
+    </view>
+</view>
+
+<view class="tah">
+    <view style="font-weight:600;font-size:40rpx">实时温湿度情况</view>
+    <view class="box">
+         <view class="chartsitem">
+            <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+        </view>
+        <view class="chartsitem">
+            <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec2 }}"></ec-canvas>
+        </view>
+    </view>
+    <view style="font-size:32rpx;color:grey;align-self:flex-end;padding:20rpx 20rpx 0 0"
+    bindtap="history" data-id="{{equip[menuTapCurrent].id}}">查看近24小时记录</view>
+</view>
+

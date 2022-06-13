@@ -1,0 +1,28 @@
+{
+  "pages":[
+    "pages/connect/connect",
+    "pages/pub/pub",
+    "pages/sub/sub"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ZUCCZS",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath":  "pages/sub/sub",
+      "text": "Sub",
+      "iconPath": "icon/emqx-grey.jpg",
+      "selectedIconPath": "icon/emqx.jpg"
+    },{
+      "pagePath":  "pages/pub/pub",
+      "text": "Pub",
+      "iconPath": "icon/emqx-grey.jpg",
+      "selectedIconPath": "icon/emqx.jpg"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

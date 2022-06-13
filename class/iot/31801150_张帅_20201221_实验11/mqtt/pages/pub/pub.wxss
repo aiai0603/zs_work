@@ -1,0 +1,14 @@
+
+.input-item{
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 10rpx;
+}
+
+.input{
+  margin-left: 30rpx;
+  border-bottom: 1rpx solid black;
+  font-size: 30rpx;
+
+}
+

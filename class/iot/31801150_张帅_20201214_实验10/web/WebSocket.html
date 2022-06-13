@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>WebSocket</title>
+	<!-- mqtt.js -->
+	<script src="./WebSocket_files/mqtt.min.js"></script>
+</head>
+<style type="text/css">
+	body{
+		background-color: #111111;
+	}
+	#connection{
+		background-color: #222222;
+		color: white;
+		padding: 20px 20px;
+		
+		
+	}
+	#connection input{
+		background-color:#222222;
+		color: white;
+		border: 1px #eeeeee solid;
+		margin: 20px 30px 10px 10px;
+		
+		
+	}
+	
+		
+	button[disabled]{
+		opacity: 0.6;
+		}
+	
+	#pub input{
+		background-color:#222222;
+		color: white;
+		border: 1px #eeeeee solid;
+		margin: 20px 30px 10px 10px;
+		
+	}
+	
+	#sub input{
+		background-color:#222222;
+		color: white;
+		border: 1px #eeeeee solid;
+		margin: 20px 30px 10px 10px;
+		
+	}
+		
+
+		
+	#on{
+		color: #ffffff;
+		background-color: limegreen;
+		width: 100px;
+		height: 40px;
+		padding: 0px;
+	}
+	#off{
+		background-color: orangered;
+		color: #ffffff;
+		width: 100px;
+		height: 40px;
+		padding: 0px;
+	}
+	
+	input{
+		width: 300px;
+		height: 30px;
+		border-radius: 5px;
+		padding-left: 10px;
+	}
+	
+	button{
+		
+	
+		margin: 20px 30px 10px 10px;
+		border-radius: 5px;
+		
+	}
+	
+	select{
+		background-color: #222222;
+		color: #ffffff;
+		width: 100px;
+		height: 30px;
+		padding-left: 10px;
+		margin-left: 10px;
+		border-radius: 5px;
+		
+	}
+	
+	#pub_button{
+		color: #ffffff;
+		background-color: limegreen;
+		width: 100px;
+		height: 40px;
+		padding: 0px;
+	}
+	
+	#sub_on_button{
+		
+		color: #ffffff;
+		background-color: limegreen;
+		width: 100px;
+		height: 40px;
+		padding: 0px;
+	}
+	
+	#sub_off_button{
+		color: #ffffff;
+		background-color: orangered;
+		width: 100px;
+		height: 40px;
+		padding: 0px;
+	}
+	#sub_qos{
+		
+		margin: 20px 30px 10px 10px;
+	}
+	
+	th{
+		height: 40px;
+	}
+	
+	td{
+		height: 40px;
+		padding-left: 10px;
+	}
+	
+	#pub{
+		background-color:#222222;height:100%;width:49%;float:left;color: white;border-radius: 10px;margin: 5px; }
+		#sub{
+			background-color:#222222;height:100%;width:49%;float:left;color: white;border-right: 1px;border-radius: 10px;margin: 5px 0px 5px 20px;}
+	
+	
+</style>
+<body>
+	<h2  style="color: white;padding-left: 20px;">WebSocket</h2>
+	<div id="connection">
+  		<form id="connection_form" name="connection_form" method="post">
+			<h3>连接</h3>
+    		<b>主机地址: </b><input type="text" value="47.100.136.15" id="host">
+			<b>端口: </b><input type="text" value="8083" id="port">
+			<b>Path: </b><input type="text" value="/mqtt" id="path">
+			<br>
+			<b>用 户 名：</b><input type="text" id="username">
+			<b>密码: </b><input type="text" id="password">
+			<br>
+			<button type="button" onclick="connection() " id="on">连接</button>
+			<button type="button"  disabled="disabled" id="off" onclick="disconnect()">断开连接</button>
+		
+			<b >当前连接状态：</b>
+			<b id="info" style="color: blue;">未连接</b>
+  		</form>
+	</div>
+	<br>
+	<div id="pub">
+		<h3 style="padding-left:20px">推送</h3>
+  		<form style="padding-left:20px">
+			<b>Topic:</b>&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" id="pub_topic">
+			<br>
+			<b>Payload:</b>
+			<input type="text" id="pub_payload">
+			<br>
+			<b>Qos:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<select name="qos" id="pub_qos" style="margin-bottom: 31px;">
+				<option value="0" selected="">0</option>
+				<option value="1">1</option>
+        		<option value="2">2</option>
+	  		</select>&nbsp;&nbsp;
+			<button type="button"  id="pub_button" disabled="disabled" onclick="pub()">确认推送</button>
+		</form>
+		<table width="100%" border="1" id="pub_Tbl">
+			<tbody>
+	    	<tr>
+      			<th scope="col" name="topic">Topic</th>
+      			<th scope="col" name="payload">Payload</th>
+      			<th scope="col" name="qos">Qos</th>
+        	</tr>
+      		</tbody>
+		</table>
+	</div>
+	<div id="sub" >
+		<h3 style="padding-left:20px">订阅</h3>
+		<form style="padding-left:20px">
+			<b>Topic:</b>&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" id="sub_topic">
+			<br>
+			<b>Qos:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<select name="pub_qos" id="sub_qos" >
+				<option value="0" selected="">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+			</select>&nbsp;&nbsp;
+			<br>
+			<button type="button"  id="sub_on_button" disabled="disabled" onclick="sub_on()">订阅</button>
+			<button type="button"  id="sub_off_button" disabled="disabled" onclick="sub_off()">取消订阅</button>
+		</form>
+		<br>
+		<table width="100%" border="1" id="sub_Tbl">
+	  		<tbody>
+	    	<tr>
+      			<th scope="col">Topic</th>
+      			<th scope="col">Payload</th>
+      			<th scope="col">Qos</th>
+        	</tr>
+		</tbody>
+		</table>
+	</div>
+
+
+
+<script>
+	//连接
+	var options;
+	var client;
+	var connectioning=false;
+	function connection() {
+		if(host.value ==""||port.value==""||host.value ==" "||port.value==" "){
+			window.alert("主机地址和端口不能为空");
+			return;
+		}
+		options = {
+			
+			clientId: 'mqttjs_' + Math.random().toString(16).substr(2, 8),
+			username: username.value,
+			password: password.value
+		}
+		console.log("ws://"+host.value+":"+port.value+path.value);
+		
+		try{
+			client = mqtt.connect("ws://"+host.value+":"+port.value+path.value,options);
+			document.getElementById ("on").setAttribute("disabled", "disabled");
+			document.getElementById ("info").innerHTML =("连接中");
+			document.getElementById ("info").style.color = 'orange';
+			connectioning=true;
+			setTimeout(function () {
+				if(connectioning == true){
+					window.alert("连接超时");
+					document.getElementById ("info").innerHTML =("连接超时");
+					document.getElementById ("info").style.color = 'red';
+					document.getElementById ("on").removeAttribute("disabled");
+					connectioning = false;
+					client.end();
+				}
+			},5000);
+			client.on('connect', function () {
+				connectioning=false;
+				
+				document.getElementById ("info").innerHTML =("连接成功");
+				document.getElementById ("info").style.color = 'green';
+				
+				document.getElementById ("off").removeAttribute("disabled");
+				document.getElementById ("pub_button").removeAttribute("disabled");
+				document.getElementById ("sub_on_button").removeAttribute("disabled");
+			
+				document.getElementById ("host").setAttribute("disabled", "disabled");
+				document.getElementById ("port").setAttribute("disabled", "disabled");
+				document.getElementById ("path").setAttribute("disabled", "disabled");
+				document.getElementById ("username").setAttribute("disabled", "disabled");
+				document.getElementById ("password").setAttribute("disabled", "disabled");
+			})
+		}
+		catch (err) {
+			window.alert("连接失败!!!\n错误信息："+err)
+		
+			document.getElementById ("info").innerHTML =("连接失败")
+			document.getElementById ("info").style.color = 'red';
+		}
+	}
+	function disconnect(){
+		connectioning=false
+	
+		document.getElementById ("info").innerHTML =("未连接");
+		document.getElementById ("info").style.color = 'blue';
+	
+		document.getElementById ("on").removeAttribute("disabled");
+		document.getElementById ("off").setAttribute("disabled", "disabled");
+		document.getElementById ("pub_button").setAttribute("disabled", "disabled");
+		document.getElementById ("sub_on_button").setAttribute("disabled", "disabled");
+		document.getElementById ("sub_off_button").setAttribute("disabled", "disabled");
+		
+		document.getElementById ("host").removeAttribute("disabled");
+		document.getElementById ("port").removeAttribute("disabled");
+		document.getElementById ("path").removeAttribute("disabled");
+		document.getElementById ("username").removeAttribute("disabled");
+		document.getElementById ("password").removeAttribute("disabled");
+		
+		client.end(true);
+	}
+	function pub() {
+		if(pub_topic.value == "" ||pub_payload.value == ""||pub_topic.value == " " ||pub_payload.value == " "){
+			window.alert("Topic 和  Payload 不能为空");
+			return;
+		}
+		var pub_options={
+			qos: parseInt(pub_qos.value)
+		};
+		try{
+			client.publish(pub_topic.value,pub_payload.value,pub_options,function (e){
+				var oTr = document.getElementById("pub_Tbl").insertRow(1);
+				var aText = new Array();
+				aText[0] = document.createTextNode(pub_topic.value);
+				aText[1] = document.createTextNode(pub_payload.value);
+				aText[2] = document.createTextNode(pub_qos.value);
+				for (var index = 0; index < aText.length; index++) {
+					var oTd = oTr.insertCell(index);
+					oTd.appendChild(aText[index]);
+				}
+			});
+		}
+		catch (err) {
+			window.alert("发送失败\n错误信息:"+err)
+		}
+	}
+	function sub_on() {
+		console.log(client.messageIdToTopic)
+		options = {
+			
+			clientId: 'mqttjs_' + Math.random().toString(16).substr(2, 8),
+			username: username.value,
+			password: password.value
+		}
+		console.log("ws://"+host.value+":"+port.value+path.value);
+		if(sub_topic.value == ""||sub_topic.value == " "){
+			window.alert("Topic 不能为空");
+			return;
+		}
+		var sub_option = {
+			qos: parseInt(sub_qos.value)
+		}
+		client.subscribe(sub_topic.value,sub_option,function (err,granted) {
+			if (!err) {
+				console.log(granted);
+				document.getElementById ("sub_qos").setAttribute("disabled", "disabled");
+				document.getElementById ("sub_topic").setAttribute("disabled", "disabled");
+				document.getElementById ("sub_off_button").removeAttribute("disabled");
+				document.getElementById ("sub_on_button").setAttribute("disabled", "disabled");
+
+			} else {
+				window.alert("订阅失败\n错误信息:" + err)
+			}
+		})
+		client.on('message', function (topic, payload,packet){
+			console.log(packet);
+			var oTr = document.getElementById("sub_Tbl").insertRow(1);
+			var aText = new Array();
+			aText[0] = document.createTextNode(topic);
+			aText[1] = document.createTextNode(payload);
+			aText[2] = document.createTextNode(packet.qos);
+			for (var index = 0; index < aText.length; index++) {
+				var oTd = oTr.insertCell(index);
+				oTd.appendChild(aText[index]);
+			}
+		})
+	}
+	function sub_off() {
+		client.unsubscribe(sub_topic.value,function (err){
+			if(err){
+				window.alert("取消订阅失败\n错误原因:"+err);
+			}
+			document.getElementById ("sub_qos").removeAttribute("disabled");
+			document.getElementById ("sub_topic").removeAttribute("disabled");
+			document.getElementById ("sub_on_button").removeAttribute("disabled");
+			document.getElementById ("sub_off_button").setAttribute("disabled", "disabled");
+
+		})
+	}
+</script>
+</body></html>

@@ -1,0 +1,18 @@
+<view class="container">
+  
+  <view style="font-weight:800;margin:30rpx;font-size:50rpx">资产管理系统</view>
+ <image src="../../img/logo.jpg" style="width:60%;height:360rpx;margin-bottom:50rpx"></image>
+  
+  
+  <view class="input-item"> 
+    <view >账号:  </view>
+    <input class="input" name="username" placeholder="请输入账号" 
+    bindinput="NameInput" value="{{username}}"/></view>
+    <view class="input-item"> 
+    <view>密码:  </view>
+    <input class="input" name="password" type="password" laceholder="请输入密码" 
+    bindinput="PswInput" value="{{passsword}}"/></view>
+
+  <button style="margin:50rpx 20rpx 0;background:#0081ff;color:white;width:90%" bindtap="connectmqtt">登录</button>
+
+</view>

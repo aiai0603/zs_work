@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="input-item"> 
+    <view>地址:  </view>
+  <input class="input" name="ipAddress" placeholder="请输入ip地址" 
+    bindinput="AddressInput" value="{{address}}"/></view>
+    <view class="input-item"> 
+    <view>端口:  </view>
+  <input class="input" name="port" placeholder="请输入端口号" 
+    bindinput="PortInput" value="{{port}}"/></view>
+    <view class="input-item"> 
+    <view>路径:  </view>
+  <input class="input" name="path" placeholder="请输入路径" 
+    bindinput="PathInput" value="{{path}}"/></view>
+    <view class="input-item"> 
+    <view>账号:  </view>
+  <input class="input" name="username" placeholder="请输入账号" 
+    bindinput="NameInput" value="{{username}}"/></view>
+    <view class="input-item"> 
+    <view>密码:  </view>
+  <input class="input" name="password" placeholder="请输入密码" 
+    bindinput="PswInput" value="{{passsword}}"/></view>
+    <button style="margin:20rpx" bindtap="connectmqtt" type="primary">连接</button>
+    <view>{{tips}}</view>
+</view>

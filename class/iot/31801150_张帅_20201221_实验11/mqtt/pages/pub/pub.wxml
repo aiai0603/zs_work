@@ -1,0 +1,15 @@
+<!--pages/send/send.wxml-->
+<!--index.wxml-->
+<view class="container">
+  <view class="input-item"> 
+    <view>topic:  </view>
+  <input class="input"  placeholder="请输入主题" 
+    bindinput="TopicInput" value="{{topic}}"/></view>
+    <view  class="input-item"> 
+      <view>信息:  </view>
+  <input class="input"  placeholder="请输入信息" 
+    bindinput="MsgInput"  value="{{msg}}"/>
+  </view>
+    <button style="margin:20rpx" bindtap="sendmqtt" type="primary">发送</button>
+</view>
+

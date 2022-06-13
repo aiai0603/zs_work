@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="input-item"> 
+    <view>topic:  </view>
+  <input class="input"  placeholder="请输入主题" 
+    bindinput="TopicInput" value="{{topic}}"/></view>
+
+
+  <view class="input-item"> 
+    <view>R数值:  </view>
+  <input class="input" placeholder="R数值区间：0-255" 
+    bindinput="RInput" value="{{value.valueR}}"/></view>
+ 
+    <view  class="input-item"> 
+      <view>G数值:  </view>
+  <input class="input"  placeholder="G数值区间：0-255" 
+    bindinput="GInput" value="{{value.valueG}}"/></view>
+
+    <view  class="input-item"> 
+      <view>B数值:  </view>
+  <input class="input"  placeholder="B数值区间：0-255" 
+    bindinput="BInput"  value="{{value.valueB}}"/></view>
+
+    <button style="margin:20rpx" bindtap="sendmqtt">发送</button>
+</view>

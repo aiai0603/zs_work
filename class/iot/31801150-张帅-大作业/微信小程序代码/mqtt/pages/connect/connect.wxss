@@ -1,0 +1,34 @@
+.input-item{
+  display: flex;
+  flex-flow: row;
+  font-size: 40rpx;
+  margin-bottom: 10rpx;
+  border-bottom: 1rpx #cccccc solid;
+  margin-top: 30rpx;
+  padding: 20rpx 0;
+  width: 90%;
+
+}
+.input{
+  margin-left: 30rpx;
+  font-size: 40rpx;
+
+}
+
+page{
+  background-color: white;
+}
+
+.login{
+  background-color: #ffff;
+  width: 90%;
+  border-radius: 50rpx;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100rpx 0;
+  box-shadow: #eeeeee 0px 0px 3px 3px;
+}
+
+

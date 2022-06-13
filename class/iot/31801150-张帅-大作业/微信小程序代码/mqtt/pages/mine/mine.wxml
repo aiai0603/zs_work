@@ -1,0 +1,6 @@
+<view class="admin">
+<image src="../../icon/emqx.jpg" class="admin-img"></image>
+<view>{{name}}</view>
+</view>
+
+<button style="border:1rpx red solid;color:red;width:90%;margin-top:20rpx" bindtap="quit">退出登录</button>
