@@ -1,0 +1,9 @@
+a:active     {	font-family: Arial;	font-size: 12px; color: #000000;text-decoration: none;}
+a:link       {  font-family: Arial; font-size: 12px; color: #000000;text-decoration: none;}
+a:visited    {  font-family: Arial; font-size: 12px; color: #2c476f;text-decoration: none;}
+a:hover 	 {  font-family: Arial; font-size: 12px; color: #FF6600;text-decoration: none;}
+body         {  font-family: Arial; font-size: 12px}
+li           {  font-family: Arial; font-size: 12px}
+ol           {  font-family: Arial; font-size: 12px}
+table        {  font-family: Arial; font-size: 12px}
+td           {  font-family: Arial; font-size: 12px}

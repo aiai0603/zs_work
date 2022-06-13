@@ -1,0 +1,134 @@
+BODY
+{
+	FONT-FAMILY: "宋体";
+	FONT-SIZE: 12pt;
+	text-decoration: none;
+	line-height: 150%;
+	background-color: #FBFDFF;
+	FONT-SIZE: 12pt;background:#ffffff;
+text-decoration: none;
+SCROLLBAR-FACE-COLOR: #0099cc;
+SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; 
+SCROLLBAR-SHADOW-COLOR: #CBEEF8; 
+SCROLLBAR-3DLIGHT-COLOR: #CBEEF8; 
+SCROLLBAR-ARROW-COLOR: #330000; 
+SCROLLBAR-TRACK-COLOR: #D5EBFB; 
+SCROLLBAR-DARKSHADOW-COLOR: #00000;
+}
+TD
+{
+	FONT-FAMILY: "宋体";
+	FONT-SIZE: 12pt;
+}
+}
+p {
+	font-size: 12px;
+}
+li {
+	font-size: 12px;
+}
+input {
+	font-size: 12px;
+}
+a:link{
+color:blue;
+text-decoration:none
+}
+a:visited{
+color:blue;
+text-decoration:none
+}
+a:hover{
+text-decoration:underline
+}
+textarea {
+	font-size: 12px;
+}
+select {
+	font-size: 12pxt;
+	border: 1px solid #000000;
+}
+
+Button
+{
+	FONT-SIZE: 9pt;
+	HEIGHT: 12px; 
+}
+Select
+{
+	FONT-SIZE: 9pt;
+	HEIGHT: 20px;
+}
+A
+{
+	TEXT-DECORATION: none;
+	color: #000000;
+
+}
+A:hover
+{
+	COLOR: #428EFF;
+	text-decoration: underline;
+
+}
+BODY
+{
+	FONT-FAMILY: "宋体";
+	FONT-SIZE: 9pt;
+	text-decoration: none;
+	line-height: 150%;
+	background-color: #FBFDFF;
+	FONT-SIZE: 9pt;background:#ffffff;
+text-decoration: none;
+SCROLLBAR-FACE-COLOR: #0099cc;
+SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; 
+SCROLLBAR-SHADOW-COLOR: #CBEEF8; 
+SCROLLBAR-3DLIGHT-COLOR: #CBEEF8; 
+SCROLLBAR-ARROW-COLOR: #330000; 
+SCROLLBAR-TRACK-COLOR: #D5EBFB; 
+SCROLLBAR-DARKSHADOW-COLOR: #00000;
+}
+TD
+{
+	FONT-FAMILY: "宋体";
+	FONT-SIZE: 9pt;
+}
+
+A
+{
+	TEXT-DECORATION: none;
+	color: #000000;
+
+}
+
+.title
+{
+	background:url(../images/topBar_bg.gif);
+}
+.border
+{
+	border: 1px solid #0099CC;
+}
+.tdbg{
+	background:#CBEEF8;
+	line-height: 120%;
+}
+.topbg
+{
+	background:url(../Images/topbg.gif);
+	color: #FFFFFF;
+
+}
+.bgcolor {
+	background-color: #CBEEF8;
+}
+
+.logbutton {
+	font-family: "tahoma", "arial";
+	font-size: 12px;
+	color: #000000;
+	background-color: #FFFFFF;
+	height: 20px;
+	width: 60px;
+	border: 1px solid #739684;
+}

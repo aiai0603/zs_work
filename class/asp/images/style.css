@@ -1,0 +1,54 @@
+TD {
+	FONT-SIZE: 12px; LINE-HEIGHT: 18px
+}
+.middle {
+	BORDER-RIGHT: #0099ff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #0099ff 1px solid; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #0099ff 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #0099ff 1px solid; HEIGHT: 20px; BACKGROUND-COLOR: #ffffff
+}
+A:link {
+	COLOR: #0f65ec; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #0f65ec; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #0f65ec; TEXT-DECORATION: underline
+}
+A.dh {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.dh:link {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.dh:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.dh:hover {
+	FONT-WEIGHT: bold; COLOR: #ffffff
+}
+A.red {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.red:link {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.red:visited {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.red:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+.input {
+	BORDER-RIGHT: #0099ff 1px; PADDING-RIGHT: 0px; BORDER-TOP: #0099ff 1px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #0099ff 1px; COLOR: #0f65ec; PADDING-TOP: 0px; BORDER-BOTTOM: #0099ff 1px solid; HEIGHT: 14px; BACKGROUND-COLOR: #ffffff
+}
+.inputgoto {
+	BORDER-RIGHT: #0099ff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #0099ff 1px solid; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #0099ff 1px solid; COLOR: #0f65ec; PADDING-TOP: 0px; BORDER-BOTTOM: #0099ff 1px solid; HEIGHT: 16px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: center
+}
+.inputMid {
+	BORDER-RIGHT: #0099ff 1px; PADDING-RIGHT: 0px; BORDER-TOP: #0099ff 1px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #0099ff 1px; COLOR: #0f65ec; PADDING-TOP: 0px; BORDER-BOTTOM: #0099ff 1px solid; HEIGHT: 14px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: center
+}
+.input_kuang {
+	BORDER-RIGHT: #0099ff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #0099ff 1px solid; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #0099ff 1px solid; COLOR: #0f65ec; PADDING-TOP: 0px; BORDER-BOTTOM: #0099ff 1px solid; BACKGROUND-COLOR: #ffffff
+}
+#1234 {
+	FONT-SIZE: 12px; FILTER: shadow(color=#9999FF,direction=150); HEIGHT: 10px
+}
